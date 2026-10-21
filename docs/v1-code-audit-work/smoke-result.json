@@ -1,0 +1,16 @@
+{
+  "javaVersion": "21.0.12.1",
+  "health": {
+    "application": "memory-game6085",
+    "database": "SQLite",
+    "status": "UP"
+  },
+  "htmlTitlePresent": true,
+  "assetSizes": {
+    "/assets/index-Bvlb058h.js": 101408,
+    "/assets/index-BUufkFtO.css": 25577
+  },
+  "gameCreated": true,
+  "cardCount": 12,
+  "allCardSymbolsHidden": true
+}

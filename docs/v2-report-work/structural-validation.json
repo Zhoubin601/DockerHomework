@@ -1,0 +1,13 @@
+{
+  "pages": 18,
+  "figures": 11,
+  "tables": 7,
+  "tocEntries": 28,
+  "allEmbeddedImagesMatchOriginals": true,
+  "figure4": "02-build-progress.png",
+  "xmlAndRelations": "passed",
+  "tocMatchesRender": true,
+  "chineseTextComplete": true,
+  "rawAndV1Unchanged": true,
+  "sha256": "ea45f858c2230140c93bc059cad3d782c8e92ca3ede9e81b3aae423a77919f09"
+}

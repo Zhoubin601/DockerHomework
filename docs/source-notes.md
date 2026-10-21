@@ -1,5 +1,22 @@
 # 资料来源
 
+## 2026-10-21 v2 修订来源
+
+- 用户在 v1 复核后明确要求“修改生成v2”，沿用已确认大纲和身份信息。
+- 环境恢复说明来源：`docs/docker-experiment-notes.md` 第7–12行、`Code/memory-game6085/scripts/start-docker-runtime.ps1`、`docs/docker-evidence/01-environment.txt`；WSL2/Linux 引擎还可由 `results.json` 的内核与引擎信息核实。
+- 图4使用已有原图 `docs/docker-evidence/02-build-progress.png`，与 v2 Word 嵌入字节一致；历史安装/首次配置截图资料仍未提供，没有补造。
+- 新构建与启动验证来源：`docs/v2-code-work/maven-package.log`、`backend-test-results.txt`、`validation.json`；这些记录不替代原 Windows Docker 发布/拉取日志。
+- v2 变更与边界：`docs/20261021-v2-changes.md`；Word结构、目录、图片匹配与原文件保留检查：`docs/v2-report-work/structural-validation.json`。
+
+## 2026-10-21 当前 v1 全交付物复核
+
+- 原始依据仍为 `raw/要求.png`；本次重新直接查看原图，并读取 `output/v1/` 内 Word 与两个 ZIP，未仅沿用历史结论。
+- Word 正文有7个表格、11张嵌入截图；图片与 `docs/docker-evidence/` 中对应 PNG 字节一致。正式报告及原始要求图 SHA-256 与先前检查记录一致。
+- 图4实际使用 `02-build.png`，已有 `02-build-progress.png` 含 `Building jar`、`repackage`、`BUILD SUCCESS`，可直接用于后续补强；现有证据包未包含这张补充图。
+- 新增交付完整性发现：源码包 README 第113行引用的 `scripts/start-docker-runtime.ps1` 未收入该 ZIP；项目 `Code/` 中存在对应文件。
+- 当前判断及分级建议：`docs/20261021-v1-delivery-audit.md`；配套独立核查：`docs/v1-audit-20261021-code.md`、`docs/v1-audit-20261021-evidence.md`。
+- 本次不修改原始要求、v1成品或应用源代码，不重新执行 Docker 实验，不查阅外部资料。
+
 ## 2026-10-21 v1 报告复查来源
 
 - 原始要求：raw/要求.png。本轮重新查看原图，要求为部署 Docker 环境、已有 Spring Boot 项目、项目名末尾加学号后四位、打包发布、发布后演示拉取、所有过程截图汇总一个 Word。

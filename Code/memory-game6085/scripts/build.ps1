@@ -19,7 +19,7 @@ try {
 } finally { Pop-Location }
 Push-Location (Join-Path $projectRoot 'backend')
 try {
-    & $Maven -B -ntp package
+    & $Maven -B -ntp clean package
     if ($LASTEXITCODE -ne 0) { throw '后端构建或测试失败。' }
 } finally { Pop-Location }
 Write-Host '构建完成。可运行：java -jar backend/target/memory-game6085.jar'

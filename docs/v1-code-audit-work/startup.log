@@ -1,0 +1,24 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-21T12:10:17.050Z  INFO 854 --- [memory-game6085] [           main] cn.memorygarden.GardenApplication        : Starting GardenApplication v1.0.0 using Java 21.0.12.1 with PID 854 (/workspace/DockerHomework/docs/v1-code-audit-work/memory-game6085.jar started by agent in /workspace/DockerHomework)
+2026-10-21T12:10:17.054Z  INFO 854 --- [memory-game6085] [           main] cn.memorygarden.GardenApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-10-21T12:10:18.122Z  INFO 854 --- [memory-game6085] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 39823 (http)
+2026-10-21T12:10:18.145Z  INFO 854 --- [memory-game6085] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T12:10:18.145Z  INFO 854 --- [memory-game6085] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T12:10:18.166Z  INFO 854 --- [memory-game6085] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1066 ms
+2026-10-21T12:10:18.424Z  INFO 854 --- [memory-game6085] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-10-21T12:10:18.692Z  INFO 854 --- [memory-game6085] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 39823 (http) with context path '/'
+2026-10-21T12:10:18.704Z  INFO 854 --- [memory-game6085] [           main] cn.memorygarden.GardenApplication        : Started GardenApplication in 2.185 seconds (process running for 2.704)
+2026-10-21T12:10:18.848Z  INFO 854 --- [memory-game6085] [io-39823-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T12:10:18.848Z  INFO 854 --- [memory-game6085] [io-39823-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T12:10:18.850Z  INFO 854 --- [memory-game6085] [io-39823-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-21T12:10:19.156Z  INFO 854 --- [memory-game6085] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T12:10:19.183Z  INFO 854 --- [memory-game6085] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

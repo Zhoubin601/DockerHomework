@@ -20,3 +20,13 @@
 .DS_Store
 Thumbs.db
 ~$*
+
+# Reproducible v2 working copies; canonical deliverables are in output/v2.
+/docs/v2-code-work/*.zip
+/docs/v2-evidence-work/*.zip
+/docs/v2-report-work/*.docx
+/docs/v2-report-work/contact-pass*.png
+/docs/v2-report-work/render-pass*/
+/docs/v2-report-work/render-final/
+/docs/v2-report-work/render-font-check/
+/docs/v2-report-work/render-layout-check/

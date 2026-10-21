@@ -2,6 +2,18 @@
 
 日期：2026-10-21。
 
+## 2026-10-21 v2 更新提交
+
+用户在 v2 交付后明确要求“提交至远端”。本轮目标为现有 origin 的 main 分支：
+https://github.com/Zhoubin601/DockerHomework 。
+
+- 推送前远端 main 与本地基线均为 `2a7be0c844975a68d95c47effd1be7ecbb0cfaf7`；当前工作分支名为 work，使用显式 `HEAD:main` 推送，不强制改写远端历史。
+- 提交 v2 五个交付文件、README 与干净构建脚本修改、可复用报告修订脚本、v1复核与v2变更记录、最终渲染及验证记录。
+- raw 与 output/v1 保持原字节；v2 文件与 release-manifest.json 核对。
+- 新增针对 v2 重复打包副本及试排版图片的 Git 忽略规则；文件继续保存在本地。正式成品以 output/v2 为准，最终 render-release 图片与 PDF 作为检查记录入库。
+- 沿用已有后端3项测试及隔离启动验证结果，不为本轮 Git 提交重新执行 Docker 实验。
+- 提交前检查差异、暂存文件体积与常见凭据；推送后核对远端 main 与本地提交，以及 output/v2 是否进入远端提交。
+
 用户明确要求：将当前项目根目录下的所有文件提交至 https://github.com/Zhoubin601/DockerHomework 。
 
 ## 提交范围

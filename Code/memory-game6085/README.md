@@ -21,7 +21,8 @@
 memory-game6085/
 ├─ frontend/             Vue3 + Vite 页面、图案和浏览器测试
 ├─ backend/              Spring Boot API、SQLite 和后端测试
-├─ scripts/build.ps1     Windows 本地构建脚本
+├─ scripts/build.ps1     Windows 本地干净构建脚本
+├─ scripts/start-docker-runtime.ps1  原实验机器的 Docker 启动排障脚本
 ├─ Dockerfile            多阶段构建：前端 → JAR → JRE
 ├─ compose.yaml          单容器部署和持久化数据卷
 └─ README.md
@@ -40,7 +41,7 @@ memory-game6085/
 java -jar backend/target/memory-game6085.jar
 ```
 
-构建脚本会使用 PATH 中的 Maven，或已有 Maven Wrapper 缓存。找不到时可以指定：
+构建脚本先构建前端，再执行 Maven `clean package`，避免旧的前端资源残留在 JAR 中。脚本会使用 PATH 中的 Maven，或已有 Maven Wrapper 缓存。找不到时可以指定：
 
 ```powershell
 .\scripts\build.ps1 -Maven 'C:\你的Maven目录\bin\mvn.cmd'
@@ -87,7 +88,7 @@ Compose 将 `memory-game6085-data` 命名数据卷挂载到 `/app/data`；数据
 
 ## 镜像发布与拉取
 
-本次实验已按用户确认，使用本机私有 Registry 完成实际发布与拉取。仓库只绑定本机 5000 端口，无需外部账户。
+本实验使用本机私有 Registry 完成实际发布与拉取。仓库只绑定本机 5000 端口，无需外部账户。
 
 ```powershell
 docker run -d --name memory-game6085-registry -p 127.0.0.1:5000:5000 -e OTEL_TRACES_EXPORTER=none --mount type=volume,source=memory-game6085-registry-data,target=/var/lib/registry registry:3
@@ -108,9 +109,9 @@ docker run -d --name memory-game6085-pulled -p 127.0.0.1:18085:8080 -e DATA_DIR=
 curl.exe http://localhost:18085/api/health
 ```
 
-当前实验已完成，运行中的应用容器名为 `memory-game6085-pulled`。若要重跑 Compose，先停止该项目容器以释放 18085；若要重新创建同名实验容器，先检查并处理对应旧容器。`docker compose down` 保留命名数据卷。
+报告中的发布与拉取实验已完成，实验结束时应用容器名为 `memory-game6085-pulled`。若要重跑 Compose，先检查并停止该项目容器以释放 18085；若要重新创建同名实验容器，先检查并处理对应旧容器。`docker compose down` 保留命名数据卷。
 
-本机 Docker Desktop 出现遗留 socket 错误时，可以在 Docker Desktop 未运行的情况下执行 `scripts/start-docker-runtime.ps1`，使用独立运行时缓存目录启动。该脚本只改变子进程环境，不修改系统级环境变量。
+原实验机器的 Docker Desktop 曾出现遗留 socket 错误。配套的 `scripts/start-docker-runtime.ps1` 用于在 Docker Desktop 未运行时，以独立运行时缓存目录启动该机器上的 Docker Desktop；脚本只改变子进程环境，不修改系统级环境变量。脚本使用 Windows 默认安装路径，仅作为本次排障记录，不是一般部署的必需步骤。
 
 ## 验证 SQLite 持久化
 

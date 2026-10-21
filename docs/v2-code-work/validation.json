@@ -1,0 +1,29 @@
+{
+  "health": {
+    "application": "memory-game6085",
+    "database": "SQLite",
+    "status": "UP"
+  },
+  "assetSizes": {
+    "/assets/index-Bvlb058h.js": 101408,
+    "/assets/index-BUufkFtO.css": 25577
+  },
+  "gameCreated": true,
+  "cardCount": 12,
+  "allCardSymbolsHidden": true,
+  "jarStaticAssetCount": 2,
+  "zipEntries": 30,
+  "zipSha256": "ad99d1e6bdadaaa0783670d9a4dc350bd02c020d69ea7a87fb9cbb9c6bfdb570",
+  "jarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+  "frontEndRebuilt": true,
+  "backendRebuiltFromEmptyTarget": true,
+  "mavenOffline": true,
+  "tests": {
+    "run": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "smokeProcessStopped": true,
+  "temporaryDataRemoved": true
+}

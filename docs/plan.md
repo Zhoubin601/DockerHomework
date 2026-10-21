@@ -1,5 +1,19 @@
 # 执行计划
 
+## 2026-10-21 v2 修订与交付
+
+用户已在 v1 审核后明确要求“修改生成v2”，沿用已确认的九部分大纲和身份信息，无需重复确认。
+
+1. 保留 raw 与 output/v1，记录其校验和。
+2. 在 Word 环境章节补充沿用 Windows Docker Desktop、WSL2/Linux 引擎、子进程独立缓存恢复与命令验证的真实步骤，不伪造历史安装截图。
+3. 将图4替换为已有 02-build-progress.png，改善可读性并更新截图来源索引，清理交付过程口吻。
+4. 同步扩充证据包；源码包补入实际存在的启动辅助脚本，修正 README 口吻，采用干净构建清除旧前端资源。
+5. 使用内置 documents 技能与渲染器检查全部页、目录、页码、图片和表格；完成 ZIP/JAR 验证后写入 output/v2。
+
+工具说明：当前环境未提供 minimax-docx，已向用户说明，改用已找到的内置 documents 技能、python-docx/OOXML 和打包渲染器，不改用云端文档服务。
+
+完成：v2 五个交付文件已生成于 output/v2；Word 最终18页、11张真实截图、7个表格，28项目录与最终渲染页码一致，全部页面视觉复核通过；两个 ZIP 与 JAR 验证通过。raw 与 v1 校验和保持一致。详细变更及历史安装截图限制见 docs/20261021-v2-changes.md，最终清单见 docs/v2-report-work/release-manifest.json。
+
 ## 2026-10-21 v1 报告检查
 
 1. 以 raw/要求.png 为准，直接读取 output/v1/20261021-docker-lab-report-v1.docx，核对六项作业要求。
