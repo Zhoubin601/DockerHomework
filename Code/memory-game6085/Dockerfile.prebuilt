@@ -1,0 +1,10 @@
+# Package the verified deliverable JAR; the standard Dockerfile builds from source.
+FROM eclipse-temurin:21-jre-jammy
+RUN groupadd --system garden && useradd --system --gid garden --home-dir /app garden \
+    && mkdir -p /app/data && chown -R garden:garden /app
+WORKDIR /app
+COPY --chown=garden:garden dist-artifacts/memory-game6085.jar /app/app.jar
+USER garden
+ENV DATA_DIR=/app/data PORT=8080
+EXPOSE 8080
+ENTRYPOINT ["java", "-XX:MaxRAMPercentage=70.0", "-jar", "/app/app.jar"]

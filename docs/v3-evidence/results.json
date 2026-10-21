@@ -1,0 +1,40 @@
+{
+  "experiment": "v3 Linux supplementary experiment",
+  "capturedAt": "2026-10-21T13:34:02.815389+00:00",
+  "environmentSource": "Platform-provisioned Docker reused; isolated network, volumes and containers configured in this experiment",
+  "dockerVersion": "28.4.0",
+  "composeVersion": "2.40.3",
+  "os": "Debian GNU/Linux 13 (trixie) (containerized)",
+  "storageDriver": "vfs",
+  "imageTag": "1.0.1-v3",
+  "localRegistry": "localhost:15085",
+  "imageId": "sha256:cd0d87b180cc1916dea642a7d1d5b62988c943de635577dd44f1d0229aae43d9",
+  "repoDigests": [
+    "localhost:15085/memory-game6085@sha256:fe814da12f1ebd9dbbfc85dcab5af55d9ef098b9261bc706f0df362746f78c85"
+  ],
+  "oldContainer": "263d322a4f4c7b1a2a211d61429d0e6ac18fb5e5fa77c5fb4f783871004577d1",
+  "newContainer": "50fb7d90259a8f7b690edbd591711676d26021e46deacd99c72682293b5b2c91",
+  "containerImageId": "sha256:cd0d87b180cc1916dea642a7d1d5b62988c943de635577dd44f1d0229aae43d9",
+  "volume": "memory-game6085-v3-data",
+  "network": "memory-game6085-v3-net",
+  "applicationUrl": "http://127.0.0.1:18086",
+  "jarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+  "containerJarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+  "jarMatchesContainer": true,
+  "leaderboardPreserved": true,
+  "containerChanged": true,
+  "savedScore": {
+    "id": 1,
+    "nickname": "6085v3实验",
+    "difficulty": "easy",
+    "moves": 11,
+    "durationMs": 7268,
+    "createdAt": "2026-10-21T13:30:47.356448060Z"
+  },
+  "health": {
+    "database": "SQLite",
+    "status": "UP",
+    "application": "memory-game6085"
+  },
+  "windowsExperimentUnchanged": true
+}

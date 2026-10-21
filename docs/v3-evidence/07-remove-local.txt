@@ -1,0 +1,17 @@
+Script started on 2026-10-21 13:32:36+00:00 [COMMAND="bash /workspace/DockerHomework/docs/v3-evidence/07-remove-local.sh" TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="134" LINES="50"]
+Linux v3 - remove only v3 application container and both local image tags
++ date -u +%Y-%m-%dT%H:%M:%SZ
+2026-10-21T13:32:36Z
++ docker rm -f memory-game6085-v3-app
+memory-game6085-v3-app
++ docker image rm localhost:15085/memory-game6085:1.0.1-v3 memory-game6085:1.0.1-v3
+Untagged: localhost:15085/memory-game6085:1.0.1-v3
+Untagged: localhost:15085/memory-game6085@sha256:fe814da12f1ebd9dbbfc85dcab5af55d9ef098b9261bc706f0df362746f78c85
+Untagged: memory-game6085:1.0.1-v3
+Deleted: sha256:cd0d87b180cc1916dea642a7d1d5b62988c943de635577dd44f1d0229aae43d9
++ docker image ls --filter 'reference=*memory-game6085*1.0.1-v3' --format '{{.Repository}}:{{.Tag}} {{.ID}}'
+No v3 image rows above. Named data volume is retained:
++ docker volume inspect memory-game6085-v3-data --format '{{.Name}} {{.Driver}}'
+memory-game6085-v3-data local
+
+Script done on 2026-10-21 13:32:37+00:00 [COMMAND_EXIT_CODE="0"]

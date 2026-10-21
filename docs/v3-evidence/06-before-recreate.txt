@@ -1,0 +1,12 @@
+Script started on 2026-10-21 13:32:20+00:00 [COMMAND="bash /workspace/DockerHomework/docs/v3-evidence/06-before-recreate.sh" TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="134" LINES="50"]
+Linux v3 - record actual saved score and original container before recreation
++ date -u +%Y-%m-%dT%H:%M:%SZ
+2026-10-21T13:32:20Z
++ curl --fail --silent 'http://127.0.0.1:18086/api/leaderboard?difficulty=easy'
+{"scores":[{"id":1,"nickname":"6085v3实验","difficulty":"easy","moves":11,"durationMs":7268,"createdAt":"2026-10-21T13:30:47.356448060Z"}],"total":1,"bestDurationMs":7268}
++ docker inspect memory-game6085-v3-app --format 'Container={{.Id}} Image={{.Image}} Volume={{(index .Mounts 0).Name}}'
+Container=263d322a4f4c7b1a2a211d61429d0e6ac18fb5e5fa77c5fb4f783871004577d1 Image=sha256:cd0d87b180cc1916dea642a7d1d5b62988c943de635577dd44f1d0229aae43d9 Volume=memory-game6085-v3-data
++ docker exec memory-game6085-v3-app sha256sum /app/app.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /app/app.jar
+
+Script done on 2026-10-21 13:32:21+00:00 [COMMAND_EXIT_CODE="0"]

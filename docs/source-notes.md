@@ -1,5 +1,23 @@
 # 资料来源
 
+## 2026-10-21 v3 修复来源
+
+- 本轮实际成功证据位于docs/v3-evidence，包含真实终端PNG、transcript、命令脚本、results.json、前后完整榜单与浏览器截图。新实验为Linux，Docker28.4.0/Compose2.40.3，镜像1.0.1-v3、本机仓库15085、应用18086；原Windows事实未替换。
+- 实际交付JAR与容器内JAR哈希一致，push/pull摘要一致，重建后完整榜单保留；记录为6085v3实验、11步、7268ms。最终28页Word和各文件摘要见docs/v3-work/release-manifest.json。
+
+- 用户当前指令：“修复所有生成v3”。修复范围以本轮v2核查记录和raw/要求.png为依据，保持已确认的项目与报告结构。
+- 基线：最新远端ef396fe的output/v2，旧版本与原图哈希见docs/v3-work/baseline-sha256.json。
+- 当前实际环境：Debian GNU/Linux 13云工作区，Docker已由运行平台部署；无法访问原Windows桌面，不能提供原机器历史安装或首次配置画面。
+- 本轮计划新增真实Linux环境配置、构建、运行与发布/拉取证据，记录实际命令、时间和结果；与既有Windows证据分别保存，不把Linux结果改写成Windows实验结果。
+
+## 2026-10-21 最新 v2 输出复核来源
+
+- 本地原工作区仍为 `2a7be0c`；经 GitHub 连接器读取最新 main，确认新增提交 `ef396feb359c338f0fec442facc5ea368fafeef5` 及 `output/v2/`，随后 fetch 并独立检出到 `/workspace/DockerHomework-v2-review/`。
+- 来源链接：https://github.com/Zhoubin601/DockerHomework/commit/ef396feb359c338f0fec442facc5ea368fafeef5 ；读取日期：2026-10-21。未查询外部技术资料。
+- 直接查看 `raw/要求.png`，核查最新检出的 v2 Word、两个ZIP、对应源码及原始实验PNG/TXT/JSON；未将本地旧v1代作v2。
+- 最终Word哈希 `ea45f858c2230140c93bc059cad3d782c8e92ca3ede9e81b3aae423a77919f09` 与提交内release记录一致；实际图4已换成 `02-build-progress.png`。
+- 历史安装/首次配置截图仍未提供，新增第5页为环境沿用、恢复与验证说明。详细结论和修改建议见 `docs/20261021-v2-output-review.md`。
+
 ## 2026-10-21 v2 修订来源
 
 - 用户在 v1 复核后明确要求“修改生成v2”，沿用已确认大纲和身份信息。

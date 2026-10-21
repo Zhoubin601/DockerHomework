@@ -1,0 +1,14 @@
+{
+  "sourceZipEntries": 34,
+  "sourceZipSha256": "756be48ccab68e6483e5643c580c807729487cf6128b97e8f798607fa28ca13e",
+  "evidenceZipEntries": 77,
+  "evidenceZipSha256": "e72799c44032b038b6a2bd73c60d71f3668f342768dded23ab3596ff87c2485d",
+  "jarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+  "jarAssets": [
+    "BOOT-INF/classes/static/assets/index-BUufkFtO.css",
+    "BOOT-INF/classes/static/assets/index-Bvlb058h.js"
+  ],
+  "jarMatchesActualContainer": true,
+  "baselineUnchanged": true,
+  "zipCRC": "passed"
+}

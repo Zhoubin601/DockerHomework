@@ -1,0 +1,33 @@
+Script started on 2026-10-21 13:19:51+00:00 [COMMAND="bash /workspace/DockerHomework/docs/v3-evidence/01-linux-config.sh" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="134" LINES="42"]
+Linux supplementary experiment - existing platform Docker daemon
+
+6085-v3$ date -u +%Y-%m-%dT%H:%M:%SZ 
+2026-10-21T13:19:51Z
+
+6085-v3$ docker version --format Client=\{\{.Client.Version\}\}\ Server=\{\{.Server.Version\}\} 
+Client=28.4.0 Server=28.4.0
+
+6085-v3$ docker info --format OS=\{\{.OperatingSystem\}\}\;\ Driver=\{\{.Driver\}\}\;\ Kernel=\{\{.KernelVersion\}\} 
+OS=Debian GNU/Linux 13 (trixie) (containerized); Driver=vfs; Kernel=6.18.55
+
+6085-v3$ docker compose version 
+Docker Compose version v2.40.3
+
+6085-v3$ docker network create --label course=memory-game6085-v3 memory-game6085-v3-net 
+ab4a326d2978f99b78d695ee32ffc1aca42c3c4a43a6e70f3e63559084201f91
+
+6085-v3$ docker volume create --label course=memory-game6085-v3 memory-game6085-v3-data 
+memory-game6085-v3-data
+
+6085-v3$ docker volume create --label course=memory-game6085-v3 memory-game6085-v3-registry-data 
+memory-game6085-v3-registry-data
+
+6085-v3$ docker network inspect memory-game6085-v3-net --format Network=\{\{.Name\}\}\ Driver=\{\{.Driver\}\} 
+Network=memory-game6085-v3-net Driver=bridge
+
+6085-v3$ docker volume inspect memory-game6085-v3-data --format Volume=\{\{.Name\}\}\ Driver=\{\{.Driver\}\} 
+Volume=memory-game6085-v3-data Driver=local
+
+Platform Docker reused; isolated v3 network and volumes configured.
+
+Script done on 2026-10-21 13:19:51+00:00 [COMMAND_EXIT_CODE="0"]

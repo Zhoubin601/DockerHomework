@@ -1,0 +1,21 @@
+Script started on 2026-10-21 13:32:49+00:00 [COMMAND="bash /workspace/DockerHomework/docs/v3-evidence/08-registry-pull.sh" TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="134" LINES="50"]
+Linux v3 - pull the published version after local image removal
++ date -u +%Y-%m-%dT%H:%M:%SZ
+2026-10-21T13:32:49Z
++ docker pull localhost:15085/memory-game6085:1.0.1-v3
+1.0.1-v3: Pulling from memory-game6085
+
+[1A[2Kdc541b8d0272: Already exists [1B
+[1A[2Kf5c13179339d: Already exists [1B
+[1A[2K22d3391d8c49: Already exists [1B
+[1A[2K9ddd6de30055: Already exists [1B
+[1A[2Kd18e088bcb32: Already exists [1B
+[1A[2Ka7cc26c8ce18: Already exists [1B
+[1A[2K4f4fb700ef54: Already exists [1B
+[1A[2K38bcc9d2dc56: Already exists [1BDigest: sha256:fe814da12f1ebd9dbbfc85dcab5af55d9ef098b9261bc706f0df362746f78c85
+Status: Downloaded newer image for localhost:15085/memory-game6085:1.0.1-v3
+localhost:15085/memory-game6085:1.0.1-v3
++ docker image inspect localhost:15085/memory-game6085:1.0.1-v3 --format 'ImageID={{.Id}} RepoDigests={{json .RepoDigests}}'
+ImageID=sha256:cd0d87b180cc1916dea642a7d1d5b62988c943de635577dd44f1d0229aae43d9 RepoDigests=["localhost:15085/memory-game6085@sha256:fe814da12f1ebd9dbbfc85dcab5af55d9ef098b9261bc706f0df362746f78c85"]
+
+Script done on 2026-10-21 13:32:49+00:00 [COMMAND_EXIT_CODE="0"]

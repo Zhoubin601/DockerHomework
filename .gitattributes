@@ -1,0 +1,2 @@
+# Preserve original terminal transcripts, including CR/LF and ANSI control bytes.
+docs/v3-evidence/*.txt -text -whitespace

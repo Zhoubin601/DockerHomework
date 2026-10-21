@@ -1,0 +1,35 @@
+{
+  "pages": 28,
+  "figures": 20,
+  "tables": 8,
+  "tocEntries": 39,
+  "allPagesVisuallyPassed": true,
+  "rawV1V2Unchanged": true,
+  "files": [
+    {
+      "path": "output/v3/20261021-docker-lab-report-v3.docx",
+      "bytes": 1736288,
+      "sha256": "e068090733fdc3e31389de7e1ba4d0c3872a095ba9bc9807b27a9cfff4fcfdc1"
+    },
+    {
+      "path": "output/v3/20261021-docker-evidence-v3.zip",
+      "bytes": 2338969,
+      "sha256": "e72799c44032b038b6a2bd73c60d71f3668f342768dded23ab3596ff87c2485d"
+    },
+    {
+      "path": "output/v3/20261021-memory-game6085-v3.zip",
+      "bytes": 31521277,
+      "sha256": "756be48ccab68e6483e5643c580c807729487cf6128b97e8f798607fa28ca13e"
+    },
+    {
+      "path": "output/v3/20261021-memory-game6085-desktop-v3.png",
+      "bytes": 219487,
+      "sha256": "b0394ea41619d2c6eff61774e4a9264e044afb2f081978a597e06c4ce4b393b6"
+    },
+    {
+      "path": "output/v3/20261021-memory-game6085-mobile-v3.png",
+      "bytes": 145582,
+      "sha256": "b0f009ba33b8b81e15e1c614009b77fd483c77d8834dc5a250cfd1eaa078efcb"
+    }
+  ]
+}

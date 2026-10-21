@@ -1,0 +1,19 @@
+Script started on 2026-10-21 13:33:31+00:00 [COMMAND="bash /workspace/DockerHomework/docs/v3-evidence/09-recreate-verify.sh" TERM="xterm-256color" TTY="/dev/pts/8" COLUMNS="134" LINES="50"]
+Linux v3 - new container from pulled image, same named volume
++ date -u +%Y-%m-%dT%H:%M:%SZ
+2026-10-21T13:33:31Z
++ docker run -d --name memory-game6085-v3-pulled --network memory-game6085-v3-net -p 127.0.0.1:18086:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-v3-data,target=/app/data localhost:15085/memory-game6085:1.0.1-v3
+50fb7d90259a8f7b690edbd591711676d26021e46deacd99c72682293b5b2c91
++ curl --fail --silent http://127.0.0.1:18086/api/health
+{"database":"SQLite","status":"UP","application":"memory-game6085"}
++ docker inspect memory-game6085-v3-pulled --format 'Container={{.Id}} Image={{.Image}} Volume={{(index .Mounts 0).Name}}'
+Container=50fb7d90259a8f7b690edbd591711676d26021e46deacd99c72682293b5b2c91 Image=sha256:cd0d87b180cc1916dea642a7d1d5b62988c943de635577dd44f1d0229aae43d9 Volume=memory-game6085-v3-data
++ docker exec memory-game6085-v3-pulled sha256sum /app/app.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /app/app.jar
++ curl --fail --silent 'http://127.0.0.1:18086/api/leaderboard?difficulty=easy'
+{"scores":[{"id":1,"nickname":"6085v3实验","difficulty":"easy","moves":11,"durationMs":7268,"createdAt":"2026-10-21T13:30:47.356448060Z"}],"total":1,"bestDurationMs":7268}
++ python /workspace/DockerHomework/docs/v3-evidence/compare-results.py
+LeaderboardPreserved=True ContainerChanged=True
+OldContainer=263d322a4f4c NewContainer=50fb7d90259a
+
+Script done on 2026-10-21 13:33:35+00:00 [COMMAND_EXIT_CODE="0"]

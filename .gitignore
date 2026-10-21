@@ -30,3 +30,12 @@ Thumbs.db
 /docs/v2-report-work/render-final/
 /docs/v2-report-work/render-font-check/
 /docs/v2-report-work/render-layout-check/
+
+# Reproducible v3 working copies; final deliverables and final visual QA remain.
+/docs/v3-work/*.zip
+/docs/v3-report-work/*.docx
+/docs/v3-report-work/render-first/
+/docs/v3-report-work/render-layout/
+/docs/v3-evidence/*-pid.txt
+/docs/v3-evidence/*-launch.log
+/docs/v3-evidence/Xorg.*.log

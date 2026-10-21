@@ -4,6 +4,31 @@
 
 技术栈：Vue3 + Vite + Spring Boot + SQLite + Java 21。项目名以学号后四位 `6085` 结尾。
 
+## v3 交付与实验版本
+
+`v3` 是本次交付资料的版本号。配套 JAR 沿用 v2 已验证的干净构建，应用源码和功能未变；预构建镜像直接复制这个交付 JAR。JAR 的 SHA-256 为：
+
+```text
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0
+```
+
+报告区分两次真实实验，镜像标签不混用：
+
+| 实验 | 镜像版本 | 本机仓库 | 应用端口 |
+| --- | --- | --- | --- |
+| 原 Windows 实验 | `memory-game6085:1.0.0` | `localhost:5000` | `18085` |
+| v3 Linux 补充实验 | `memory-game6085:1.0.1-v3` | `localhost:15085` | `18086` |
+
+原 Windows 实验使用此前已安装的 Docker Desktop；Linux 补充实验使用云工作区已经部署的 Docker Engine，记录本轮实际环境准备、镜像打包和运行操作。Linux 截图不能说明原 Windows 安装过程。两套仓库都仅用于各自本机实验，不能作为其他机器直接拉取镜像的地址；本项目没有提供公开镜像仓库。
+
+源码包内的可执行文件位于 `dist-artifacts/memory-game6085.jar`。解压后可用 Java 21 直接运行：
+
+```text
+java -jar dist-artifacts/memory-game6085.jar
+```
+
+重新从源码构建的方法见下文；本地构建结果仍输出到 `backend/target/`。完整的多阶段构建 `Dockerfile` 和复制交付 JAR 的 `Dockerfile.prebuilt` 同时保留。
+
 ## 游戏功能
 
 - 轻松（6 对）、标准（8 对）、挑战（12 对）三种难度。
@@ -23,7 +48,10 @@ memory-game6085/
 ├─ backend/              Spring Boot API、SQLite 和后端测试
 ├─ scripts/build.ps1     Windows 本地干净构建脚本
 ├─ scripts/start-docker-runtime.ps1  原实验机器的 Docker 启动排障脚本
+├─ scripts/package-prebuilt.ps1     从源码干净构建并更新交付 JAR
 ├─ Dockerfile            多阶段构建：前端 → JAR → JRE
+├─ Dockerfile.prebuilt   将已验证 JAR 打包到 JRE 镜像
+├─ dist-artifacts/       可执行 JAR 与 SHA-256 清单
 ├─ compose.yaml          单容器部署和持久化数据卷
 └─ README.md
 ```
@@ -86,7 +114,52 @@ Compose 将 `memory-game6085-data` 命名数据卷挂载到 `/app/data`；数据
 
 第一次构建会下载 Node、Maven、JRE 基础镜像，以及 npm / Maven 依赖，需要网络。后续构建可复用缓存。
 
-## 镜像发布与拉取
+### v3 预构建 JAR 镜像
+
+在项目根目录使用下列 Linux 命令打包交付 JAR。它不在镜像中重新执行 Maven；所复制的文件就是 `dist-artifacts/` 下经校验的 JAR。
+
+```sh
+sha256sum -c dist-artifacts/SHA256SUMS
+docker build -f Dockerfile.prebuilt -t memory-game6085:1.0.1-v3 .
+docker volume create memory-game6085-v3-data
+docker run -d --name memory-game6085-v3-app -p 127.0.0.1:18086:8080 \
+  -e DATA_DIR=/app/data \
+  --mount type=volume,source=memory-game6085-v3-data,target=/app/data \
+  memory-game6085:1.0.1-v3
+curl -fsS http://127.0.0.1:18086/api/health
+```
+
+`Dockerfile.prebuilt` 使用普通用户 `garden`，容器端口仍为8080；本机18086用于与原实验端口区分。重新执行前，先检查同名的本项目容器和端口占用，避免覆盖既有实验。
+
+若在 Windows 上修改了应用源码，可执行 `.\scripts\package-prebuilt.ps1` 重新构建并复制 JAR。该脚本显示新文件的 SHA-256，并同步更新 `dist-artifacts/SHA256SUMS`，随后应构建新的镜像标签。若需从源码直接构建镜像，继续使用标准 `Dockerfile` 或 Compose。
+
+### v3 Linux 镜像发布与拉取
+
+下列命令使用独立的 v3 仓库、容器和数据卷，保留原实验资源。删除操作仅针对上一节创建的 v3 应用容器及两个 v3 镜像标签，数据卷继续保留。
+
+```sh
+docker volume create memory-game6085-v3-registry-data
+docker run -d --name memory-game6085-v3-registry -p 127.0.0.1:15085:5000 \
+  -e OTEL_TRACES_EXPORTER=none \
+  --mount type=volume,source=memory-game6085-v3-registry-data,target=/var/lib/registry \
+  registry:3
+docker tag memory-game6085:1.0.1-v3 localhost:15085/memory-game6085:1.0.1-v3
+docker push localhost:15085/memory-game6085:1.0.1-v3
+curl -fsS http://127.0.0.1:15085/v2/memory-game6085/tags/list
+docker rm -f memory-game6085-v3-app
+docker image rm localhost:15085/memory-game6085:1.0.1-v3 memory-game6085:1.0.1-v3
+docker image ls --filter reference='*memory-game6085*1.0.1-v3'
+docker pull localhost:15085/memory-game6085:1.0.1-v3
+docker run -d --name memory-game6085-v3-pulled -p 127.0.0.1:18086:8080 \
+  -e DATA_DIR=/app/data \
+  --mount type=volume,source=memory-game6085-v3-data,target=/app/data \
+  localhost:15085/memory-game6085:1.0.1-v3
+curl -fsS http://127.0.0.1:18086/api/health
+```
+
+仓库容器若已存在，检查后使用 `docker start memory-game6085-v3-registry`，不重复创建同名容器。再次执行本实验前也需检查 v3 应用容器，避免同名或端口冲突。可在原 v3 应用中完成并保存一局，再执行上述移除和拉取流程，对比新容器的排行榜验证成绩保留。
+
+## 原 Windows 镜像发布与拉取
 
 本实验使用本机私有 Registry 完成实际发布与拉取。仓库只绑定本机 5000 端口，无需外部账户。
 

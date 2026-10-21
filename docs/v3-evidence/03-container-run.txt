@@ -1,0 +1,20 @@
+Script started on 2026-10-21 13:28:55+00:00 [COMMAND="bash /workspace/DockerHomework/docs/v3-evidence/03-container-run.sh" TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="134" LINES="50"]
+Linux v3 - run the new image with isolated network and data volume
++ date -u +%Y-%m-%dT%H:%M:%SZ
+2026-10-21T13:28:55Z
++ docker run -d --name memory-game6085-v3-app --network memory-game6085-v3-net -p 127.0.0.1:18086:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-v3-data,target=/app/data memory-game6085:1.0.1-v3
+263d322a4f4c7b1a2a211d61429d0e6ac18fb5e5fa77c5fb4f783871004577d1
++ docker ps --filter name=memory-game6085-v3-app --format 'Name={{.Names}} Ports={{.Ports}}'
+Name=memory-game6085-v3-app Ports=127.0.0.1:18086->8080/tcp
++ curl --fail --silent http://127.0.0.1:18086/api/health
+{"application":"memory-game6085","database":"SQLite","status":"UP"}
++ docker exec memory-game6085-v3-app id
+uid=999(garden) gid=999(garden) groups=999(garden)
++ sha256sum /workspace/DockerHomework/Code/memory-game6085/dist-artifacts/memory-game6085.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /workspace/DockerHomework/Code/memory-game6085/dist-artifacts/memory-game6085.jar
++ docker exec memory-game6085-v3-app sha256sum /app/app.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /app/app.jar
++ docker inspect memory-game6085-v3-app --format 'Container={{.Id}} Volume={{(index .Mounts 0).Name}}'
+Container=263d322a4f4c7b1a2a211d61429d0e6ac18fb5e5fa77c5fb4f783871004577d1 Volume=memory-game6085-v3-data
+
+Script done on 2026-10-21 13:28:59+00:00 [COMMAND_EXIT_CODE="0"]

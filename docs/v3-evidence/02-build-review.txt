@@ -1,0 +1,45 @@
+Script started on 2026-10-21 13:28:47+00:00 [COMMAND="bash /workspace/DockerHomework/docs/v3-evidence/02-build-review.sh" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="134" LINES="50"]
+Linux v3 - repeatable image build from the exact deliverable JAR
++ date -u +%Y-%m-%dT%H:%M:%SZ
+2026-10-21T13:28:47Z
++ sha256sum -c dist-artifacts/SHA256SUMS
+dist-artifacts/memory-game6085.jar: OK
++ docker build --progress=plain --pull=false -f Dockerfile.prebuilt -t memory-game6085:1.0.1-v3 .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.prebuilt
+#1 transferring dockerfile: 528B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-jammy
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 145B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 92B done
+#5 DONE 0.0s
+
+#6 [3/4] WORKDIR /app
+#6 CACHED
+
+#7 [2/4] RUN groupadd --system garden && useradd --system --gid garden --home-dir /app garden     && mkdir -p /app/data && chown -R garden:garden /app
+#7 CACHED
+
+#8 [4/4] COPY --chown=garden:garden dist-artifacts/memory-game6085.jar /app/app.jar
+#8 CACHED
+
+#9 exporting to image
+#9 exporting layers done
+#9 writing image sha256:cd0d87b180cc1916dea642a7d1d5b62988c943de635577dd44f1d0229aae43d9 done
+#9 naming to docker.io/library/memory-game6085:1.0.1-v3 done
+#9 DONE 0.0s
++ docker image inspect memory-game6085:1.0.1-v3 --format 'ImageID={{.Id}} User={{.Config.User}}'
+ImageID=sha256:cd0d87b180cc1916dea642a7d1d5b62988c943de635577dd44f1d0229aae43d9 User=garden
+
+Script done on 2026-10-21 13:28:47+00:00 [COMMAND_EXIT_CODE="0"]
