@@ -1,5 +1,13 @@
 # GitHub 提交记录
 
+## 2026-10-21 v4 推送
+
+- 用户明确授权“修改生成v4，然后推送”，目标沿用origin的Zhoubin601/DockerHomework，分支main。远端复核基线为14a2cbb，本地工作分支为work。
+- 本次提交v3独立核查记录、v4五份正式交付物、README及新增报告生成／目录更新脚本、v4来源与验证记录、最终29页渲染及视觉检查记录。
+- 不改写raw或v1—v3，不变更应用逻辑、唯一交付JAR和历史实验标签；v4预览沿用v3原字节。
+- 工作副本ZIP/DOCX及早期渲染按新增规则忽略，保留本地文件；正式文件以output/v4为准，最终渲染仅作为docs核查记录。
+- 推送前核对完整差异、常见凭据模式、文件大小和release-manifest；使用普通快进HEAD:main推送，完成后核对远端main与本地HEAD及五份交付物。
+
 ## 2026-10-21 v3 推送
 
 - 用户在v3生成后明确要求“推送”，目标沿用项目origin：Zhoubin601/DockerHomework，远端分支main。

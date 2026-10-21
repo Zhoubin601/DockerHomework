@@ -1,0 +1,66 @@
+{
+  "raw/要求.png": {
+    "bytes": 35411,
+    "sha256": "12c0240d5dcd5cfe16d4ff241fa28e113b3a5c3ecd8bb08c26db8c05b7336b1a"
+  },
+  "output/v1/20261021-docker-evidence-v1.zip": {
+    "bytes": 1014558,
+    "sha256": "8b4d393333f9ef1a1bec47431392c90700260e7cf22d0bcdda2d1eb4667076e9"
+  },
+  "output/v1/20261021-docker-lab-report-v1.docx": {
+    "bytes": 1127397,
+    "sha256": "3e11b7bb523787b90fec5e471e4ea7903c5bd508a63fb657d061f78f24db263f"
+  },
+  "output/v1/20261021-memory-game6085-desktop-v1.png": {
+    "bytes": 203936,
+    "sha256": "76433e762d10d32c41d0513b1e5917e52f08531f0c44cb7a22e7fd33be41255e"
+  },
+  "output/v1/20261021-memory-game6085-mobile-v1.png": {
+    "bytes": 130277,
+    "sha256": "89ffe10770d8da9bcaf1210f18bbb3096e9ec57e65b387560893a7e3e08d4ecc"
+  },
+  "output/v1/20261021-memory-game6085-v1.zip": {
+    "bytes": 31687068,
+    "sha256": "bff73fbdc01b3874f1792a5fbbcb02c0da9582c8c9a585eda36ddfe344e708f2"
+  },
+  "output/v2/20261021-docker-evidence-v2.zip": {
+    "bytes": 1154711,
+    "sha256": "a1fe816a7cf209be0f495e8f619fa1408c3f3837a5a4ad9b9c0729b148c699e6"
+  },
+  "output/v2/20261021-docker-lab-report-v2.docx": {
+    "bytes": 1111095,
+    "sha256": "ea45f858c2230140c93bc059cad3d782c8e92ca3ede9e81b3aae423a77919f09"
+  },
+  "output/v2/20261021-memory-game6085-desktop-v2.png": {
+    "bytes": 203936,
+    "sha256": "76433e762d10d32c41d0513b1e5917e52f08531f0c44cb7a22e7fd33be41255e"
+  },
+  "output/v2/20261021-memory-game6085-mobile-v2.png": {
+    "bytes": 130277,
+    "sha256": "89ffe10770d8da9bcaf1210f18bbb3096e9ec57e65b387560893a7e3e08d4ecc"
+  },
+  "output/v2/20261021-memory-game6085-v2.zip": {
+    "bytes": 31516652,
+    "sha256": "ad99d1e6bdadaaa0783670d9a4dc350bd02c020d69ea7a87fb9cbb9c6bfdb570"
+  },
+  "output/v3/20261021-docker-evidence-v3.zip": {
+    "bytes": 2338969,
+    "sha256": "e72799c44032b038b6a2bd73c60d71f3668f342768dded23ab3596ff87c2485d"
+  },
+  "output/v3/20261021-docker-lab-report-v3.docx": {
+    "bytes": 1736288,
+    "sha256": "e068090733fdc3e31389de7e1ba4d0c3872a095ba9bc9807b27a9cfff4fcfdc1"
+  },
+  "output/v3/20261021-memory-game6085-desktop-v3.png": {
+    "bytes": 219487,
+    "sha256": "b0394ea41619d2c6eff61774e4a9264e044afb2f081978a597e06c4ce4b393b6"
+  },
+  "output/v3/20261021-memory-game6085-mobile-v3.png": {
+    "bytes": 145582,
+    "sha256": "b0f009ba33b8b81e15e1c614009b77fd483c77d8834dc5a250cfd1eaa078efcb"
+  },
+  "output/v3/20261021-memory-game6085-v3.zip": {
+    "bytes": 31521277,
+    "sha256": "756be48ccab68e6483e5643c580c807729487cf6128b97e8f798607fa28ca13e"
+  }
+}

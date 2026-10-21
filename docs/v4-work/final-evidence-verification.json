@@ -1,0 +1,229 @@
+{
+  "scope": "Independent v4 evidence and package file inspection; no application or Docker execution",
+  "documents": {
+    "path": "docs/v4-report-work/20261021-docker-lab-report-v4.docx",
+    "sha256": "b994d30b27959cf9c6eec6446077be4f7cef66015b736571f9b1fed375db3ebd",
+    "crcPassed": true,
+    "imageCount": 21,
+    "uniqueMediaCount": 21,
+    "images": [
+      {
+        "caption": "图1  记忆花园容器运行页面",
+        "media": "word/media/image1.png",
+        "sha256": "76433e762d10d32c41d0513b1e5917e52f08531f0c44cb7a22e7fd33be41255e",
+        "sourceMatches": [
+          "docs/docker-evidence/04-container-home.png"
+        ]
+      },
+      {
+        "caption": "图2  Docker Client 与 Server 版本及项目名称检查",
+        "media": "word/media/image2.png",
+        "sha256": "e2015352c4dfecf428dfeed99f31e10d2bb18ff1826cc1a98056b7f0ecfbaa04",
+        "sourceMatches": [
+          "docs/docker-evidence/01-environment.png"
+        ]
+      },
+      {
+        "caption": "图3  容器中完成配对并保存演示成绩",
+        "media": "word/media/image3.png",
+        "sha256": "f84f894f17227220c570d0030698447db9159197fcb7dea239ed5efb5bfac941",
+        "sourceMatches": [
+          "docs/docker-evidence/05-container-completed.png"
+        ]
+      },
+      {
+        "caption": "图4  Spring Boot JAR 打包成功并导出 Docker 镜像",
+        "media": "word/media/image12.png",
+        "sha256": "771e7ca6b90a30573133ceee92352345709c4541e74948aeb8735235dc85f4f9",
+        "sourceMatches": [
+          "docs/docker-evidence/02-build-progress.png"
+        ]
+      },
+      {
+        "caption": "图5  应用容器运行状态 端口映射 健康检查与普通用户",
+        "media": "word/media/image5.png",
+        "sha256": "ac018982ea66eae7bde4be81233b44787d360202b7d8f867305db6ef5f5a00a8",
+        "sourceMatches": [
+          "docs/docker-evidence/03b-container-run.png"
+        ]
+      },
+      {
+        "caption": "图6  镜像实际推送成功与仓库标签查询",
+        "media": "word/media/image6.png",
+        "sha256": "650fd64f00fb6a7cda6aebea81b9a68c154ec687eeea931ef3871859fc1dffa2",
+        "sourceMatches": [
+          "docs/docker-evidence/05-registry-push.png"
+        ]
+      },
+      {
+        "caption": "图7  移除实验容器和本地镜像 数据卷仍然保留",
+        "media": "word/media/image7.png",
+        "sha256": "c2d8d272f833d9a0155e7f14c06cfb2e5fa2f01b0f1b6eb5bba08df69e1ca8d0",
+        "sourceMatches": [
+          "docs/docker-evidence/06-remove-local.png"
+        ]
+      },
+      {
+        "caption": "图8  从 Registry 重新拉取成功",
+        "media": "word/media/image8.png",
+        "sha256": "b3d4ec093b80595174644ca0dbe3fca1284dbfa44e4eca0eafca5bc7616f1fd1",
+        "sourceMatches": [
+          "docs/docker-evidence/07-registry-pull.png"
+        ]
+      },
+      {
+        "caption": "图9  重建前的容器标识 成绩与数据卷",
+        "media": "word/media/image9.png",
+        "sha256": "ed80b8d3eac7954f7170c96a351b5c41244c08a213ef21d6a513ac9ab530c65a",
+        "sourceMatches": [
+          "docs/docker-evidence/04-data-before.png"
+        ]
+      },
+      {
+        "caption": "图10  使用拉取镜像创建新容器并确认容器标识",
+        "media": "word/media/image10.png",
+        "sha256": "ac24868186a3984417047ed7249200219569a4de54a3e1335b68cf677e2d8c20",
+        "sourceMatches": [
+          "docs/docker-evidence/08-run-pulled-image.png"
+        ]
+      },
+      {
+        "caption": "图11  重建后榜单一致 数据卷仍挂载到同一目录",
+        "media": "word/media/image11.png",
+        "sha256": "cd3cdae7ba61c6f0d431c0a0c0a813da64dd9b81688a5255d3ac39aa953a242e",
+        "sourceMatches": [
+          "docs/docker-evidence/09-data-after.png"
+        ]
+      },
+      {
+        "caption": "图A1a 首次创建独立网络及数据卷",
+        "media": "word/media/image4.png",
+        "sha256": "ad191a1c8b4d93af6a701671a236f06e6cab9501b042bd02106e654ff4ae26d7",
+        "sourceMatches": [
+          "docs/v3-evidence/01-resource-creation.png"
+        ]
+      },
+      {
+        "caption": "图A1b Linux引擎及网络和数据卷配置验证",
+        "media": "word/media/image13.png",
+        "sha256": "3230eda4a029e38b911daaf1150a67303c7680451bc749fb8e7b42b9b05b862f",
+        "sourceMatches": [
+          "docs/v3-evidence/01-config-review.png"
+        ]
+      },
+      {
+        "caption": "图A2 校验交付JAR并成功构建1.0.1-v3镜像",
+        "media": "word/media/image14.png",
+        "sha256": "a30c0dd7fcf61afd463ed6380ef14de0c74e1492ca4ea1356705e280be649e05",
+        "sourceMatches": [
+          "docs/v3-evidence/02-build-review.png"
+        ]
+      },
+      {
+        "caption": "图A3 新容器运行成功且容器内外JAR摘要相同",
+        "media": "word/media/image15.png",
+        "sha256": "5b072d87f1b7a5db2ad8e7141d20a9b621ceb384fca3ddaa9a826618c13aa19f",
+        "sourceMatches": [
+          "docs/v3-evidence/03-container-run.png"
+        ]
+      },
+      {
+        "caption": "图A4 Linux容器内完成牌局并实际保存成绩",
+        "media": "word/media/image16.png",
+        "sha256": "654ec2ad3d94636f6001bd9f90f233d15340609322508793d10b2c8ef084d6aa",
+        "sourceMatches": [
+          "docs/v3-evidence/05-game-saved.png"
+        ]
+      },
+      {
+        "caption": "图A5 启动本机Registry并实际推送新镜像",
+        "media": "word/media/image17.png",
+        "sha256": "86a424c53ed592ad2ee01b7db3f173736de6135610ba8ea68ad529f131ac1f09",
+        "sourceMatches": [
+          "docs/v3-evidence/04-registry-push.png"
+        ]
+      },
+      {
+        "caption": "图A6 应用容器及本地镜像已移除而数据卷保留",
+        "media": "word/media/image18.png",
+        "sha256": "b093120f7b6661e38df43faee26bfc908396d5106296a56360e3db54b386eb8d",
+        "sourceMatches": [
+          "docs/v3-evidence/07-remove-local.png"
+        ]
+      },
+      {
+        "caption": "图A7 本地镜像移除后从Registry实际拉取成功",
+        "media": "word/media/image19.png",
+        "sha256": "ba2ec6daa56499f08af42bd8e3b42ac1ec1d9df2c5eed64717785176fbb48194",
+        "sourceMatches": [
+          "docs/v3-evidence/08-registry-pull.png"
+        ]
+      },
+      {
+        "caption": "图A8 拉取镜像重建后JAR及完整排行榜校验通过",
+        "media": "word/media/image20.png",
+        "sha256": "85af099a81e4f583c9341e98a72aec6e864bee1341c922b77b388e78d60f1709",
+        "sourceMatches": [
+          "docs/v3-evidence/09-recreate-verify.png"
+        ]
+      },
+      {
+        "caption": "图A9 新容器页面仍显示原已保存成绩",
+        "media": "word/media/image21.png",
+        "sha256": "7ed03f381dc1bd11523bd715090e43cccbfedadacaffaf4a497b9d9d2db99509",
+        "sourceMatches": [
+          "docs/v3-evidence/10-after-recreate-ui.png"
+        ]
+      }
+    ],
+    "all21ImagesMatchOriginalSources": true,
+    "A1a": {
+      "expectedSource": "docs/v3-evidence/01-resource-creation.png",
+      "passed": true,
+      "caption": "图A1a 首次创建独立网络及数据卷"
+    },
+    "A1b": {
+      "expectedSource": "docs/v3-evidence/01-config-review.png",
+      "passed": true,
+      "caption": "图A1b Linux引擎及网络和数据卷配置验证"
+    },
+    "linuxExperimentTagRetained": true
+  },
+  "packages": {
+    "evidence": {
+      "path": "docs/v4-work/20261021-docker-evidence-v4.zip",
+      "sha256": "2c7c80eeff70c92d4883e8f811167d4949dc343112167c5c135e81aba0ea2395",
+      "entries": 77,
+      "crcPassed": true,
+      "sameEntrySetAsV3": true,
+      "changedFromV3": [
+        "README.txt",
+        "manifest-sha256.json"
+      ],
+      "originalEvidenceEntriesChecked": 75,
+      "originalEvidenceMismatches": [],
+      "allOriginalEvidencePreserved": true,
+      "manifestEntriesChecked": 76,
+      "manifestMismatches": [],
+      "linuxSourceMismatches": []
+    },
+    "source": {
+      "path": "docs/v4-work/20261021-memory-game6085-v4.zip",
+      "sha256": "33091eaf5338e16814a2fe47b87a323bbc9c31d9faea11c482f1ce28c6e5021f",
+      "entries": 34,
+      "crcPassed": true,
+      "sameEntrySetAsV3": true,
+      "changedFromV3": [
+        "memory-game6085/README.md"
+      ],
+      "uniqueJar": "memory-game6085/dist-artifacts/memory-game6085.jar",
+      "jarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+      "jarUnchangedFromV3": true,
+      "jarMatchesWorkspaceDelivery": true,
+      "jarMatchesRecordedLinuxContainer": true,
+      "jarCrcPassed": true,
+      "readmeRetainsLinuxTag": true
+    }
+  },
+  "passed": true
+}

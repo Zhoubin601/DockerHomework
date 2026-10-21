@@ -1,5 +1,24 @@
 # 资料来源
 
+## 2026-10-21 v4 修订来源
+
+- 最终独立核查：docs/v4-work/content-review.md验证11条新增命令与原脚本／日志一致；final-evidence-verification.json验证21张图与源PNG、两个ZIP及旧证据字节一致。全部29页视觉检查分别记录于docs/v4-report-work/visual-qa-pages1-15.md和visual-qa-pages16-29.md，两份均绑定最终DOCX摘要。
+- 正式文件已写入output/v4；最终Word SHA256为b994d30b27959cf9c6eec6446077be4f7cef66015b736571f9b1fed375db3ebd；原始图及v1—v3共16份文件摘要保持不变，最终清单见docs/v4-work/release-manifest.json。
+
+- 用户明确授权“修改生成v4，然后推送”；范围以docs/20261021-v3-output-review.md为依据，沿用既有九章结构、姓名和学号。
+- Word新增图源为docs/v3-evidence/01-resource-creation.png：真实网络和应用／仓库数据卷创建过程，配套首次日志01-linux-config.txt；现有01-config-review.png继续证明随后配置检查。
+- 可复制命令与结果来源：docs/v3-evidence/03-container-run.txt、04-registry-push.txt、09-recreate-verify.txt及results.json；Linux镜像仍为1.0.1-v3，不将资料改版写成新实验。
+- 旧原始图及v1—v3共16份文件摘要保存于docs/v4-work/baseline-sha256.json；v4预览沿用v3截图，业务源码与交付JAR不变。
+- 原Windows历史安装、首次配置及启动恢复操作截图仍未提供，Linux也沿用平台已有Docker引擎；保持如实说明，不伪造缺失材料。
+
+## 2026-10-21 最新 v3 独立复查
+
+- 按用户“拉取最新，检查v3”的要求，将当前仓库从ef396fe快进到origin/main的14a2cbb；原始要求仍为raw/要求.png，已直接查看。
+- 直接读取output/v3五个交付文件，对照docs/v3-evidence、docs/docker-evidence及Code/memory-game6085；未只沿用历史自检结论，未查询外部技术资料。
+- 重新渲染DOCX 28页，与既有最终页面逐页像素一致；20张图与原PNG字节匹配，39项目录页码独立核对通过。记录：docs/v3-audit-work/docx-checks.json、render-comparison.json、final-checks.json。
+- 新发现：Word附录A1只嵌入01-config-review.png；真实创建过程图01-resource-creation.png已在来源和证据ZIP，但未放Word。Docker安装、首次配置及Windows恢复过程截图仍未提供，见docs/20261021-v3-changes.md:36。
+- ZIP/JAR、摘要与现有Docker凭证一致；抽取交付JAR隔离启动通过，记录docs/v3-audit-work/package/verification.json。判断与建议见docs/20261021-v3-output-review.md；未改正式交付物。
+
 ## 2026-10-21 v3 修复来源
 
 - 本轮实际成功证据位于docs/v3-evidence，包含真实终端PNG、transcript、命令脚本、results.json、前后完整榜单与浏览器截图。新实验为Linux，Docker28.4.0/Compose2.40.3，镜像1.0.1-v3、本机仓库15085、应用18086；原Windows事实未替换。

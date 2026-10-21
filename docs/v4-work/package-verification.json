@@ -1,0 +1,34 @@
+{
+  "sourceZipEntries": 34,
+  "sourceZipSha256": "33091eaf5338e16814a2fe47b87a323bbc9c31d9faea11c482f1ce28c6e5021f",
+  "sourceChangesFromV3": [
+    "memory-game6085/README.md"
+  ],
+  "evidenceZipEntries": 77,
+  "evidenceZipSha256": "2c7c80eeff70c92d4883e8f811167d4949dc343112167c5c135e81aba0ea2395",
+  "evidenceChangesFromV3": [
+    "README.txt",
+    "manifest-sha256.json"
+  ],
+  "allOriginalEvidencePreserved": true,
+  "jarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+  "jarUnchangedFromV3": true,
+  "jarAssets": [
+    "BOOT-INF/classes/static/assets/index-BUufkFtO.css",
+    "BOOT-INF/classes/static/assets/index-Bvlb058h.js"
+  ],
+  "jarMatchesRecordedV3Container": true,
+  "dockerExperimentRerun": false,
+  "baselineUnchanged": true,
+  "zipCRC": "passed",
+  "previewsToReuse": {
+    "desktop": {
+      "source": "output/v3/20261021-memory-game6085-desktop-v3.png",
+      "sha256": "b0394ea41619d2c6eff61774e4a9264e044afb2f081978a597e06c4ce4b393b6"
+    },
+    "mobile": {
+      "source": "output/v3/20261021-memory-game6085-mobile-v3.png",
+      "sha256": "b0f009ba33b8b81e15e1c614009b77fd483c77d8834dc5a250cfd1eaa078efcb"
+    }
+  }
+}

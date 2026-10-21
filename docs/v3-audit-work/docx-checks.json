@@ -1,0 +1,171 @@
+{
+  "sha256": "e068090733fdc3e31389de7e1ba4d0c3872a095ba9bc9807b27a9cfff4fcfdc1",
+  "crcError": null,
+  "xmlParsed": 18,
+  "tables": 8,
+  "figures": 20,
+  "mediaMatches": {
+    "word/media/image3.png": [
+      "docs/docker-evidence/05-container-completed.png"
+    ],
+    "word/media/image8.png": [
+      "docs/docker-evidence/07-registry-pull.png"
+    ],
+    "word/media/image2.png": [
+      "docs/docker-evidence/01-environment.png"
+    ],
+    "word/media/image7.png": [
+      "docs/docker-evidence/06-remove-local.png"
+    ],
+    "word/media/image11.png": [
+      "docs/docker-evidence/09-data-after.png"
+    ],
+    "word/media/image1.png": [
+      "docs/docker-evidence/04-container-home.png"
+    ],
+    "word/media/image6.png": [
+      "docs/docker-evidence/05-registry-push.png"
+    ],
+    "word/media/image10.png": [
+      "docs/docker-evidence/08-run-pulled-image.png"
+    ],
+    "word/media/image5.png": [
+      "docs/docker-evidence/03b-container-run.png"
+    ],
+    "word/media/image9.png": [
+      "docs/docker-evidence/04-data-before.png"
+    ],
+    "word/media/image12.png": [
+      "docs/docker-evidence/02-build-progress.png"
+    ],
+    "word/media/image4.png": [
+      "docs/v3-evidence/01-config-review.png"
+    ],
+    "word/media/image13.png": [
+      "docs/v3-evidence/02-build-review.png"
+    ],
+    "word/media/image14.png": [
+      "docs/v3-evidence/03-container-run.png"
+    ],
+    "word/media/image15.png": [
+      "docs/v3-evidence/05-game-saved.png"
+    ],
+    "word/media/image16.png": [
+      "docs/v3-evidence/04-registry-push.png"
+    ],
+    "word/media/image17.png": [
+      "docs/v3-evidence/07-remove-local.png"
+    ],
+    "word/media/image18.png": [
+      "docs/v3-evidence/08-registry-pull.png"
+    ],
+    "word/media/image19.png": [
+      "docs/v3-evidence/09-recreate-verify.png"
+    ],
+    "word/media/image20.png": [
+      "docs/v3-evidence/10-after-recreate-ui.png"
+    ]
+  },
+  "figureDescriptions": [
+    {
+      "index": 1,
+      "description": "记忆花园容器运行页面",
+      "widthEmu": 3384000
+    },
+    {
+      "index": 2,
+      "description": "Docker Client 与 Server 版本及项目名称检查",
+      "widthEmu": 5688000
+    },
+    {
+      "index": 3,
+      "description": "容器中完成配对并保存演示成绩",
+      "widthEmu": 4860000
+    },
+    {
+      "index": 4,
+      "description": "Spring Boot JAR 打包、repackage、BUILD SUCCESS 与 Docker 镜像导出",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 5,
+      "description": "应用容器运行状态 端口映射 健康检查与普通用户",
+      "widthEmu": 5904000
+    },
+    {
+      "index": 6,
+      "description": "镜像实际推送成功与仓库标签查询",
+      "widthEmu": 5904000
+    },
+    {
+      "index": 7,
+      "description": "移除实验容器和本地镜像 数据卷仍然保留",
+      "widthEmu": 5292000
+    },
+    {
+      "index": 8,
+      "description": "从 Registry 重新拉取成功",
+      "widthEmu": 5292000
+    },
+    {
+      "index": 9,
+      "description": "重建前的容器标识 成绩与数据卷",
+      "widthEmu": 5760000
+    },
+    {
+      "index": 10,
+      "description": "使用拉取镜像创建新容器并确认容器标识",
+      "widthEmu": 5760000
+    },
+    {
+      "index": 11,
+      "description": "重建后榜单一致 数据卷仍挂载到同一目录",
+      "widthEmu": 5760000
+    },
+    {
+      "index": 12,
+      "description": "图A1 Linux引擎及独立网络和数据卷配置验证 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 13,
+      "description": "图A2 校验交付JAR并成功构建1.0.1-v3镜像 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 14,
+      "description": "图A3 新容器运行成功且容器内外JAR摘要相同 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 15,
+      "description": "图A4 Linux容器内完成牌局并实际保存成绩 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 16,
+      "description": "图A5 启动本机Registry并实际推送新镜像 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 17,
+      "description": "图A6 应用容器及本地镜像已移除而数据卷保留 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 18,
+      "description": "图A7 本地镜像移除后从Registry实际拉取成功 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 19,
+      "description": "图A8 拉取镜像重建后JAR及完整排行榜校验通过 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    },
+    {
+      "index": 20,
+      "description": "图A9 新容器页面仍显示原已保存成绩 实际终端或浏览器截图",
+      "widthEmu": 5903999
+    }
+  ]
+}

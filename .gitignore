@@ -39,3 +39,9 @@ Thumbs.db
 /docs/v3-evidence/*-pid.txt
 /docs/v3-evidence/*-launch.log
 /docs/v3-evidence/Xorg.*.log
+
+# Reproducible v4 working copies; retain final page renders and verification.
+/docs/v4-work/*.zip
+/docs/v4-report-work/*.docx
+/docs/v4-report-work/render-first/
+/docs/v4-report-work/render-layout/

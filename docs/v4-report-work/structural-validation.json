@@ -1,0 +1,78 @@
+{
+  "pages": 29,
+  "tocEntries": 39,
+  "tocPagesMatchFinalRender": true,
+  "bookmarksUnique": true,
+  "xmlAndZip": "passed",
+  "figures": 21,
+  "tables": 8,
+  "noDraftOrRevisionNodes": true,
+  "all29PagesVisuallyInspected": true,
+  "mediaMatches": {
+    "word/media/image3.png": [
+      "docs/docker-evidence/05-container-completed.png"
+    ],
+    "word/media/image8.png": [
+      "docs/docker-evidence/07-registry-pull.png"
+    ],
+    "word/media/image2.png": [
+      "docs/docker-evidence/01-environment.png"
+    ],
+    "word/media/image7.png": [
+      "docs/docker-evidence/06-remove-local.png"
+    ],
+    "word/media/image11.png": [
+      "docs/docker-evidence/09-data-after.png"
+    ],
+    "word/media/image1.png": [
+      "docs/docker-evidence/04-container-home.png"
+    ],
+    "word/media/image6.png": [
+      "docs/docker-evidence/05-registry-push.png"
+    ],
+    "word/media/image10.png": [
+      "docs/docker-evidence/08-run-pulled-image.png"
+    ],
+    "word/media/image5.png": [
+      "docs/docker-evidence/03b-container-run.png"
+    ],
+    "word/media/image9.png": [
+      "docs/docker-evidence/04-data-before.png"
+    ],
+    "word/media/image12.png": [
+      "docs/docker-evidence/02-build-progress.png"
+    ],
+    "word/media/image4.png": [
+      "docs/v3-evidence/01-resource-creation.png"
+    ],
+    "word/media/image13.png": [
+      "docs/v3-evidence/01-config-review.png"
+    ],
+    "word/media/image14.png": [
+      "docs/v3-evidence/02-build-review.png"
+    ],
+    "word/media/image15.png": [
+      "docs/v3-evidence/03-container-run.png"
+    ],
+    "word/media/image16.png": [
+      "docs/v3-evidence/05-game-saved.png"
+    ],
+    "word/media/image17.png": [
+      "docs/v3-evidence/04-registry-push.png"
+    ],
+    "word/media/image18.png": [
+      "docs/v3-evidence/07-remove-local.png"
+    ],
+    "word/media/image19.png": [
+      "docs/v3-evidence/08-registry-pull.png"
+    ],
+    "word/media/image20.png": [
+      "docs/v3-evidence/09-recreate-verify.png"
+    ],
+    "word/media/image21.png": [
+      "docs/v3-evidence/10-after-recreate-ui.png"
+    ]
+  },
+  "rawAndOlderReleaseFilesUnchanged": 16,
+  "sha256": "b994d30b27959cf9c6eec6446077be4f7cef66015b736571f9b1fed375db3ebd"
+}

@@ -1,0 +1,9 @@
+{
+  "stagedFilesBeforeThisRecord": 67,
+  "totalStagedBytes": 46164807,
+  "textEntriesScanned": 121,
+  "credentialPatternsDetected": false,
+  "allFilesBelow50MiB": true,
+  "stagedBytesMatchWorkingFiles": true,
+  "largestFile": "output/v4/20261021-memory-game6085-v4.zip"
+}

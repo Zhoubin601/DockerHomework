@@ -1,0 +1,262 @@
+{
+  "tocEntries": 39,
+  "allTocPagesCorrect": true,
+  "toc": [
+    {
+      "heading": "一 实验目的与任务要求",
+      "tocPage": 3,
+      "actualFirstPage": 3,
+      "passed": true
+    },
+    {
+      "heading": "二 实验环境与项目结构",
+      "tocPage": 4,
+      "actualFirstPage": 4,
+      "passed": true
+    },
+    {
+      "heading": "2.1 实验配置与项目目录",
+      "tocPage": 4,
+      "actualFirstPage": 4,
+      "passed": true
+    },
+    {
+      "heading": "2.2 环境启动与验证",
+      "tocPage": 5,
+      "actualFirstPage": 5,
+      "passed": true
+    },
+    {
+      "heading": "三 系统设计与持久化",
+      "tocPage": 6,
+      "actualFirstPage": 6,
+      "passed": true
+    },
+    {
+      "heading": "3.1 应用结构",
+      "tocPage": 6,
+      "actualFirstPage": 6,
+      "passed": true
+    },
+    {
+      "heading": "3.2 SQLite 数据设计",
+      "tocPage": 6,
+      "actualFirstPage": 6,
+      "passed": true
+    },
+    {
+      "heading": "3.3 容器数据卷",
+      "tocPage": 6,
+      "actualFirstPage": 6,
+      "passed": true
+    },
+    {
+      "heading": "四 本地构建与功能验证",
+      "tocPage": 7,
+      "actualFirstPage": 7,
+      "passed": true
+    },
+    {
+      "heading": "4.1 本地构建与自动验证",
+      "tocPage": 7,
+      "actualFirstPage": 7,
+      "passed": true
+    },
+    {
+      "heading": "4.2 容器中的真实游戏操作",
+      "tocPage": 7,
+      "actualFirstPage": 7,
+      "passed": true
+    },
+    {
+      "heading": "五 Docker 镜像构建与运行",
+      "tocPage": 8,
+      "actualFirstPage": 8,
+      "passed": true
+    },
+    {
+      "heading": "5.1 多阶段构建",
+      "tocPage": 8,
+      "actualFirstPage": 8,
+      "passed": true
+    },
+    {
+      "heading": "5.2 JAR 打包与镜像导出",
+      "tocPage": 9,
+      "actualFirstPage": 9,
+      "passed": true
+    },
+    {
+      "heading": "5.3 启动容器与接口检查",
+      "tocPage": 10,
+      "actualFirstPage": 10,
+      "passed": true
+    },
+    {
+      "heading": "六 镜像发布与拉取",
+      "tocPage": 11,
+      "actualFirstPage": 11,
+      "passed": true
+    },
+    {
+      "heading": "6.1 启动本机镜像仓库",
+      "tocPage": 11,
+      "actualFirstPage": 11,
+      "passed": true
+    },
+    {
+      "heading": "6.2 标记与推送镜像",
+      "tocPage": 11,
+      "actualFirstPage": 11,
+      "passed": true
+    },
+    {
+      "heading": "6.3 删除本地镜像后重新拉取",
+      "tocPage": 12,
+      "actualFirstPage": 12,
+      "passed": true
+    },
+    {
+      "heading": "七 容器重建与持久化验证",
+      "tocPage": 14,
+      "actualFirstPage": 14,
+      "passed": true
+    },
+    {
+      "heading": "7.1 记录重建前的数据",
+      "tocPage": 14,
+      "actualFirstPage": 14,
+      "passed": true
+    },
+    {
+      "heading": "7.2 使用拉取镜像创建新容器",
+      "tocPage": 15,
+      "actualFirstPage": 15,
+      "passed": true
+    },
+    {
+      "heading": "7.3 对比重建后的成绩",
+      "tocPage": 16,
+      "actualFirstPage": 16,
+      "passed": true
+    },
+    {
+      "heading": "八 实验结果与问题分析",
+      "tocPage": 17,
+      "actualFirstPage": 17,
+      "passed": true
+    },
+    {
+      "heading": "8.1 启动与端口问题",
+      "tocPage": 17,
+      "actualFirstPage": 17,
+      "passed": true
+    },
+    {
+      "heading": "8.2 实验总结",
+      "tocPage": 17,
+      "actualFirstPage": 17,
+      "passed": true
+    },
+    {
+      "heading": "九 参考资料与证据来源",
+      "tocPage": 18,
+      "actualFirstPage": 18,
+      "passed": true
+    },
+    {
+      "heading": "9.1 原Windows实验截图来源索引",
+      "tocPage": 18,
+      "actualFirstPage": 18,
+      "passed": true
+    },
+    {
+      "heading": "附录A v3 Linux补充部署与复现",
+      "tocPage": 19,
+      "actualFirstPage": 19,
+      "passed": true
+    },
+    {
+      "heading": "A1 环境来源与独立资源配置",
+      "tocPage": 19,
+      "actualFirstPage": 19,
+      "passed": true
+    },
+    {
+      "heading": "A2 配套JAR打包为新镜像",
+      "tocPage": 20,
+      "actualFirstPage": 20,
+      "passed": true
+    },
+    {
+      "heading": "A3 容器运行与交付文件校验",
+      "tocPage": 21,
+      "actualFirstPage": 21,
+      "passed": true
+    },
+    {
+      "heading": "A4 实际游戏与成绩保存",
+      "tocPage": 22,
+      "actualFirstPage": 22,
+      "passed": true
+    },
+    {
+      "heading": "A5 本机仓库发布镜像",
+      "tocPage": 23,
+      "actualFirstPage": 23,
+      "passed": true
+    },
+    {
+      "heading": "A6 移除本地镜像并保留数据卷",
+      "tocPage": 24,
+      "actualFirstPage": 24,
+      "passed": true
+    },
+    {
+      "heading": "A7 从仓库重新拉取",
+      "tocPage": 25,
+      "actualFirstPage": 25,
+      "passed": true
+    },
+    {
+      "heading": "A8 重建容器并核对成绩保留",
+      "tocPage": 26,
+      "actualFirstPage": 26,
+      "passed": true
+    },
+    {
+      "heading": "A9 浏览器复核重建后的榜单",
+      "tocPage": 27,
+      "actualFirstPage": 27,
+      "passed": true
+    },
+    {
+      "heading": "A10 补充证据来源与版本对应",
+      "tocPage": 28,
+      "actualFirstPage": 28,
+      "passed": true
+    }
+  ],
+  "all11OriginalFilesUnchanged": true,
+  "originalFiles": {
+    "raw/要求.png": true,
+    "output/v1/20261021-docker-evidence-v1.zip": true,
+    "output/v1/20261021-docker-lab-report-v1.docx": true,
+    "output/v1/20261021-memory-game6085-desktop-v1.png": true,
+    "output/v1/20261021-memory-game6085-mobile-v1.png": true,
+    "output/v1/20261021-memory-game6085-v1.zip": true,
+    "output/v2/20261021-docker-evidence-v2.zip": true,
+    "output/v2/20261021-docker-lab-report-v2.docx": true,
+    "output/v2/20261021-memory-game6085-desktop-v2.png": true,
+    "output/v2/20261021-memory-game6085-mobile-v2.png": true,
+    "output/v2/20261021-memory-game6085-v2.zip": true
+  },
+  "all5ReleaseFilesMatchManifest": true,
+  "releaseFiles": {
+    "output/v3/20261021-docker-lab-report-v3.docx": true,
+    "output/v3/20261021-docker-evidence-v3.zip": true,
+    "output/v3/20261021-memory-game6085-v3.zip": true,
+    "output/v3/20261021-memory-game6085-desktop-v3.png": true,
+    "output/v3/20261021-memory-game6085-mobile-v3.png": true
+  }
+}
