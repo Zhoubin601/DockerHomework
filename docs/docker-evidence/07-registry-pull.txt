@@ -1,0 +1,43 @@
+**********************
+PowerShell transcript start
+Start time: 20261021191507
+Username: ZHOUBIBI\a3185
+RunAs User: ZHOUBIBI\a3185
+Configuration Name: 
+Machine: ZHOUBIBI (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\a3185\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -NoLogo -NoProfile -File D:\2026Autumn Semester File\云计算\Docker作业\Code\memory-game6085\scripts\evidence-terminal.ps1 -QueueDirectory D:\2026Autumn Semester File\云计算\Docker作业\Code\memory-game6085\.qa\terminal-queue
+Process ID: 22928
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+PS memory-game6085> docker pull localhost:5000/memory-game6085:1.0.0
+1.0.0: Pulling from memory-game6085
+44136fa355b3: Download complete
+a58c83948cbd: Pull complete
+875cadd98702: Pull complete
+4f4fb700ef54: Pull complete
+5c96282465bd: Download complete
+Digest: sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a15e66
+Status: Downloaded newer image for localhost:5000/memory-game6085:1.0.0
+localhost:5000/memory-game6085:1.0.0
+
+PS memory-game6085> docker image inspect localhost:5000/memory-game6085:1.0.0 --format '{{json .RepoDigests}}'
+["localhost:5000/memory-game6085@sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a1
+5e66"]
+
+PS memory-game6085> docker image ls --filter reference='localhost:5000/memory-game6085'
+                                                                                   Info ->  U In Use
+IMAGE                                  ID             DISK USAGE   CONTENT SIZE   EXTRA
+localhost:5000/memory-game6085:1.0.0   e4eb4cb25dd6        469MB          130MB
+
+**********************
+PowerShell transcript end
+End time: 20261021191509
+**********************

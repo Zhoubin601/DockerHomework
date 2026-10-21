@@ -1,0 +1,15 @@
+:root {
+  --page: #f8f7f2;
+  --surface: #fffefb;
+  --ink: #2d392e;
+  --muted: #64705c;
+  --green: #284f40;
+  --green-hover: #1c3e31;
+  --sage-wash: #eaf0df;
+  --border: #e3e5d9;
+  --focus: #a6782b;
+  --radius-panel: 18px;
+  --speed: 180ms ease;
+  --font-body: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', system-ui, sans-serif;
+  --font-numeric: 'Bahnschrift', 'Aptos', 'Segoe UI', sans-serif;
+}

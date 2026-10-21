@@ -1,0 +1,190 @@
+[1] Added paragraph at /body/p[@paraId=00100000]
+  WARNING: style 'Title' was not defined in the styles part; added Word's built-in definition ('Title')
+[2] Added paragraph at /body/p[@paraId=00100002]
+[3] Added paragraph at /body/p[@paraId=00100004]
+[4] Added paragraph at /body/p[@paraId=00100006]
+[5] Added paragraph at /body/p[@paraId=00100008]
+[6] Added paragraph at /body/p[@paraId=0010000A]
+[7] Added paragraph at /body/p[@paraId=0010000C]
+[8] Added paragraph at /body/p[@paraId=0010000E]
+[9] Added picture at /body/p[@paraId=0010000E]/r[2]
+[10] Added paragraph at /body/p[@paraId=00100010]
+[11] Added paragraph at /body/p[@paraId=00100012]
+[12] Added paragraph at /body/p[@paraId=00100014]
+[13] Added paragraph at /body/p[@paraId=00100016]
+[14] Added paragraph at /body/p[@paraId=00100018]
+  WARNING: style 'Heading1' was not defined in the styles part; added Word's built-in definition ('heading 1')
+[15] Added paragraph at /body/p[@paraId=0010001A]
+[16] Added paragraph at /body/p[@paraId=0010001C]
+[17] Added paragraph at /body/p[@paraId=0010001E]
+[18] Added paragraph at /body/p[@paraId=00100020]
+[19] Added table at /body/tbl[1]
+[20] /body/tbl[1] (table) cols=2 rows=10 _gridCols=2 border.top=single border.top.sz=4 border.top.color=#D9D9D9 border.bottom=single border.bottom.sz=4 border.bottom.color=#D9D9D9 border.insideH=single border.insideH.sz=4 border.insideH.color=#D9D9D9 border.insideV=single border.insideV.sz=4 border.insideV.color=#D9D9D9 border.left=single border.left.sz=4 border.left.color=#D9D9D9 border.right=single border.right.sz=4 border.right.color=#D9D9D9 width=9354 padding.top=79 padding.bottom=79 padding.left=79 padding.right=79 colWidths=1871dxa,7483dxa
+/body/tbl[1]/tr[1] (row) children=2
+/body/tbl[1]/tr[2] (row) children=2
+/body/tbl[1]/tr[3] (row) children=2
+/body/tbl[1]/tr[4] (row) children=2
+/body/tbl[1]/tr[5] (row) children=2
+/body/tbl[1]/tr[6] (row) children=2
+/body/tbl[1]/tr[7] (row) children=2
+/body/tbl[1]/tr[8] (row) children=2
+/body/tbl[1]/tr[9] (row) children=2
+/body/tbl[1]/tr[10] (row) children=2
+
+[21] Updated /body/tbl[1]/tr[1]/tc[1]: text=项目, font=宋体, size=10pt, valign=center, align=left, bold=true, fill=E9EDEB, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[22] Updated /body/tbl[1]/tr[1]/tc[2]: text=实际配置或版本, font=宋体, size=10pt, valign=center, align=left, bold=true, fill=E9EDEB, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[23] Updated /body/tbl[1]/tr[2]/tc[1]: text=操作系统, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[24] Updated /body/tbl[1]/tr[2]/tc[2]: text=Microsoft Windows 11 家庭版 中文版，64 位，10.0.26300, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[25] Updated /body/tbl[1]/tr[3]/tc[1]: text=Java, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[26] Updated /body/tbl[1]/tr[3]/tc[2]: text=OpenJDK 21.0.11, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[27] Updated /body/tbl[1]/tr[4]/tc[1]: text=Node.js / npm, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[28] Updated /body/tbl[1]/tr[4]/tc[2]: text=Node.js 24.14.1 / npm 11.11.0, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[29] Updated /body/tbl[1]/tr[5]/tc[1]: text=Maven, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[30] Updated /body/tbl[1]/tr[5]/tc[2]: text=3.9.16，使用本机已有 Wrapper 缓存, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[31] Updated /body/tbl[1]/tr[6]/tc[1]: text=前端, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[32] Updated /body/tbl[1]/tr[6]/tc[2]: text=Vue 3.5.44、Vite 7.3.7，以 package-lock.json 为准, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[33] Updated /body/tbl[1]/tr[7]/tc[1]: text=后端与数据库, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[34] Updated /body/tbl[1]/tr[7]/tc[2]: text=Spring Boot 4.1.1、SQLite JDBC 3.53.4.0, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[35] Updated /body/tbl[1]/tr[8]/tc[1]: text=Docker, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[36] Updated /body/tbl[1]/tr[8]/tc[2]: text=客户端 29.8.2；Linux 引擎启动失败，尚无 Server 成功连接记录, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[37] Updated /body/tbl[1]/tr[9]/tc[1]: text=项目目录, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[38] Updated /body/tbl[1]/tr[9]/tc[2]: text=Code/memory-game6085/, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[39] Updated /body/tbl[1]/tr[10]/tc[1]: text=访问与数据, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[40] Updated /body/tbl[1]/tr[10]/tc[2]: text=http://localhost:8080；data/garden.db, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[41] Added paragraph at /body/p[@paraId=0010004A]
+[42] Added paragraph at /body/p[@paraId=0010004C]
+[43] Added paragraph at /body/p[@paraId=0010004E]
+[44] Added paragraph at /body/p[@paraId=00100050]
+[45] Added paragraph at /body/p[@paraId=00100052]
+[46] Added paragraph at /body/p[@paraId=00100054]
+[47] Added paragraph at /body/p[@paraId=00100056]
+  WARNING: style 'Heading2' was not defined in the styles part; added Word's built-in definition ('heading 2')
+[48] Added paragraph at /body/p[@paraId=00100058]
+[49] Added paragraph at /body/p[@paraId=0010005A]
+[50] Added paragraph at /body/p[@paraId=0010005C]
+[51] Added paragraph at /body/p[@paraId=0010005E]
+[52] Added paragraph at /body/p[@paraId=00100060]
+[53] Added paragraph at /body/p[@paraId=00100062]
+[54] Added table at /body/tbl[2]
+[55] /body/tbl[2] (table) cols=2 rows=8 _gridCols=2 border.top=single border.top.sz=4 border.top.color=#D9D9D9 border.bottom=single border.bottom.sz=4 border.bottom.color=#D9D9D9 border.insideH=single border.insideH.sz=4 border.insideH.color=#D9D9D9 border.insideV=single border.insideV.sz=4 border.insideV.color=#D9D9D9 border.left=single border.left.sz=4 border.left.color=#D9D9D9 border.right=single border.right.sz=4 border.right.color=#D9D9D9 width=9354 padding.top=79 padding.bottom=79 padding.left=79 padding.right=79 colWidths=2381dxa,6973dxa
+/body/tbl[2]/tr[1] (row) children=2
+/body/tbl[2]/tr[2] (row) children=2
+/body/tbl[2]/tr[3] (row) children=2
+/body/tbl[2]/tr[4] (row) children=2
+/body/tbl[2]/tr[5] (row) children=2
+/body/tbl[2]/tr[6] (row) children=2
+/body/tbl[2]/tr[7] (row) children=2
+/body/tbl[2]/tr[8] (row) children=2
+
+[56] Updated /body/tbl[2]/tr[1]/tc[1]: text=验证内容, font=宋体, size=10pt, valign=center, align=left, bold=true, fill=E9EDEB, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[57] Updated /body/tbl[2]/tr[1]/tc[2]: text=结果与证据, font=宋体, size=10pt, valign=center, align=left, bold=true, fill=E9EDEB, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[58] Updated /body/tbl[2]/tr[2]/tc[1]: text=前端构建, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[59] Updated /body/tbl[2]/tr[2]/tc[2]: text=npm run build 成功，生成静态资源, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[60] Updated /body/tbl[2]/tr[3]/tc[1]: text=后端测试, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[61] Updated /body/tbl[2]/tr[3]/tc[2]: text=3 项通过，0 失败、0 错误；见 surefire-reports, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[62] Updated /body/tbl[2]/tr[4]/tc[1]: text=浏览器端到端测试, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[63] Updated /body/tbl[2]/tr[4]/tc[2]: text=3 项通过；覆盖完整游戏、昵称校验、保存和刷新榜单, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[64] Updated /body/tbl[2]/tr[5]/tc[1]: text=暂停与重新开始, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[65] Updated /body/tbl[2]/tr[5]/tc[2]: text=暂停不计时，保留已翻牌状态；重开前确认, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[66] Updated /body/tbl[2]/tr[6]/tc[1]: text=SQLite 服务重启, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[67] Updated /body/tbl[2]/tr[6]/tc[2]: text=重启前后同一难度排行榜的完整内容一致, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[68] Updated /body/tbl[2]/tr[7]/tc[1]: text=界面自动审核, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[69] Updated /body/tbl[2]/tr[7]/tc[2]: text=5 种尺寸无横向溢出，相关 axe 自动规则未检出违规, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[70] Updated /body/tbl[2]/tr[8]/tc[1]: text=Compose 配置, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[71] Updated /body/tbl[2]/tr[8]/tc[2]: text=docker compose config --quiet 解析通过，不能据此认定容器启动成功, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[72] Added paragraph at /body/p[@paraId=00100084]
+[73] Added paragraph at /body/p[@paraId=00100086]
+[74] Added paragraph at /body/p[@paraId=00100088]
+[75] Added paragraph at /body/p[@paraId=0010008A]
+[76] Added picture at /body/p[@paraId=0010008A]/r[2]
+[77] Added paragraph at /body/p[@paraId=0010008C]
+[78] Added paragraph at /body/p[@paraId=0010008E]
+[79] Added paragraph at /body/p[@paraId=00100090]
+[80] Added paragraph at /body/p[@paraId=00100092]
+[81] Added picture at /body/p[@paraId=00100092]/r[2]
+[82] Added paragraph at /body/p[@paraId=00100094]
+[83] Added paragraph at /body/p[@paraId=00100096]
+[84] Added paragraph at /body/p[@paraId=00100098]
+[85] Added paragraph at /body/p[@paraId=0010009A]
+[86] Added paragraph at /body/p[@paraId=0010009C]
+[87] Added paragraph at /body/p[@paraId=0010009E]
+[88] Added paragraph at /body/p[@paraId=001000A0]
+[89] Added paragraph at /body/p[@paraId=001000A2]
+[90] Added paragraph at /body/p[@paraId=001000A4]
+[91] Added paragraph at /body/p[@paraId=001000A6]
+[92] Added paragraph at /body/p[@paraId=001000A8]
+[93] Added paragraph at /body/p[@paraId=001000AA]
+[94] Added paragraph at /body/p[@paraId=001000AC]
+[95] Added paragraph at /body/p[@paraId=001000AE]
+[96] Added paragraph at /body/p[@paraId=001000B0]
+[97] Added paragraph at /body/p[@paraId=001000B2]
+[98] Added paragraph at /body/p[@paraId=001000B4]
+[99] Added paragraph at /body/p[@paraId=001000B6]
+[100] Added paragraph at /body/p[@paraId=001000B8]
+[101] Added paragraph at /body/p[@paraId=001000BA]
+[102] Added paragraph at /body/p[@paraId=001000BC]
+[103] Added paragraph at /body/p[@paraId=001000BE]
+[104] Added paragraph at /body/p[@paraId=001000C0]
+[105] Added paragraph at /body/p[@paraId=001000C2]
+[106] Added paragraph at /body/p[@paraId=001000C4]
+[107] Added paragraph at /body/p[@paraId=001000C6]
+[108] Added paragraph at /body/p[@paraId=001000C8]
+[109] Added paragraph at /body/p[@paraId=001000CA]
+[110] Added paragraph at /body/p[@paraId=001000CC]
+[111] Added paragraph at /body/p[@paraId=001000CE]
+[112] Added paragraph at /body/p[@paraId=001000D0]
+[113] Added paragraph at /body/p[@paraId=001000D2]
+[114] Added paragraph at /body/p[@paraId=001000D4]
+[115] Added paragraph at /body/p[@paraId=001000D6]
+[116] Added paragraph at /body/p[@paraId=001000D8]
+[117] Added paragraph at /body/p[@paraId=001000DA]
+[118] Added paragraph at /body/p[@paraId=001000DC]
+[119] Added paragraph at /body/p[@paraId=001000DE]
+[120] Added paragraph at /body/p[@paraId=001000E0]
+[121] Added paragraph at /body/p[@paraId=001000E2]
+[122] Added paragraph at /body/p[@paraId=001000E4]
+[123] Added paragraph at /body/p[@paraId=001000E6]
+[124] Added paragraph at /body/p[@paraId=001000E8]
+[125] Added paragraph at /body/p[@paraId=001000EA]
+[126] Added paragraph at /body/p[@paraId=001000EC]
+[127] Added table at /body/tbl[3]
+[128] /body/tbl[3] (table) cols=2 rows=8 _gridCols=2 border.top=single border.top.sz=4 border.top.color=#D9D9D9 border.bottom=single border.bottom.sz=4 border.bottom.color=#D9D9D9 border.insideH=single border.insideH.sz=4 border.insideH.color=#D9D9D9 border.insideV=single border.insideV.sz=4 border.insideV.color=#D9D9D9 border.left=single border.left.sz=4 border.left.color=#D9D9D9 border.right=single border.right.sz=4 border.right.color=#D9D9D9 width=9354 padding.top=79 padding.bottom=79 padding.left=79 padding.right=79 colWidths=2891dxa,6463dxa
+/body/tbl[3]/tr[1] (row) children=2
+/body/tbl[3]/tr[2] (row) children=2
+/body/tbl[3]/tr[3] (row) children=2
+/body/tbl[3]/tr[4] (row) children=2
+/body/tbl[3]/tr[5] (row) children=2
+/body/tbl[3]/tr[6] (row) children=2
+/body/tbl[3]/tr[7] (row) children=2
+/body/tbl[3]/tr[8] (row) children=2
+
+[129] Updated /body/tbl[3]/tr[1]/tc[1]: text=环节, font=宋体, size=10pt, valign=center, align=left, bold=true, fill=E9EDEB, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[130] Updated /body/tbl[3]/tr[1]/tc[2]: text=当前结果, font=宋体, size=10pt, valign=center, align=left, bold=true, fill=E9EDEB, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[131] Updated /body/tbl[3]/tr[2]/tc[1]: text=小游戏开发与本地运行, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[132] Updated /body/tbl[3]/tr[2]/tc[2]: text=已完成，已生成可执行 JAR 和真实页面截图, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[133] Updated /body/tbl[3]/tr[3]/tc[1]: text=SQLite 成绩持久化, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[134] Updated /body/tbl[3]/tr[3]/tc[2]: text=本地应用重启验证通过, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[135] Updated /body/tbl[3]/tr[4]/tc[1]: text=Dockerfile 与 Compose, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[136] Updated /body/tbl[3]/tr[4]/tc[2]: text=已编写，Compose 语法解析通过, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[137] Updated /body/tbl[3]/tr[5]/tc[1]: text=Docker 引擎与镜像构建, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[138] Updated /body/tbl[3]/tr[5]/tc[2]: text=未完成，本机 Docker Desktop 启动失败, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[139] Updated /body/tbl[3]/tr[6]/tc[1]: text=镜像发布与拉取, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[140] Updated /body/tbl[3]/tr[6]/tc[2]: text=未完成，尚无仓库账户及实际成功记录, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[141] Updated /body/tbl[3]/tr[7]/tc[1]: text=容器数据卷持久化, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[142] Updated /body/tbl[3]/tr[7]/tc[2]: text=已配置，尚未实测, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=F7F8F6, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[143] Updated /body/tbl[3]/tr[8]/tc[1]: text=作业提交所需终端截图, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[144] Updated /body/tbl[3]/tr[8]/tc[2]: text=尚未采集完整，必须补齐后再形成提交版, font=宋体, size=10pt, valign=center, align=left, bold=false, fill=FFFFFF, color=000000, padding.top=0.13cm, padding.bottom=0.13cm, padding.left=0.16cm, padding.right=0.16cm
+[145] Added paragraph at /body/p[@paraId=0010010E]
+[146] Added paragraph at /body/p[@paraId=00100110]
+[147] Added paragraph at /body/p[@paraId=00100112]
+[148] Added paragraph at /body/p[@paraId=00100114]
+[149] Added paragraph at /body/p[@paraId=00100116]
+[150] Added paragraph at /body/p[@paraId=00100118]
+[151] Added paragraph at /body/p[@paraId=0010011A]
+[152] Added paragraph at /body/p[@paraId=0010011C]
+[153] Added paragraph at /body/p[@paraId=0010011E]
+[154] Added paragraph at /body/p[@paraId=00100120]
+[155] Added paragraph at /body/p[@paraId=00100122]
+[156] Added paragraph at /body/p[@paraId=00100124]
+
+Batch complete: 156 succeeded, 0 failed, 156 total

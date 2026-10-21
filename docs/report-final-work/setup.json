@@ -1,0 +1,1 @@
+[{"command": "set", "path": "/", "props": {"pageWidth": "21cm", "pageHeight": "29.7cm", "marginTop": "2cm", "marginBottom": "2cm", "marginLeft": "2.2cm", "marginRight": "2.2cm", "marginHeader": "1cm", "marginFooter": "1cm"}}, {"command": "set", "path": "/styles/Normal", "props": {"font": "宋体", "size": "11pt", "color": "000000"}}]

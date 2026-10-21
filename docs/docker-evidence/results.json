@@ -1,0 +1,111 @@
+{
+  "completedAt": "2026-10-21T19:17:02.175925+08:00",
+  "imageTag": "localhost:5000/memory-game6085:1.0.0",
+  "digest": "sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a15e66",
+  "imageId": "sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a15e66",
+  "imageBytes": 468816363,
+  "beforeContainerId": "c247b7360b52a870fbe560d61e438e099969e9557f20e019f3802cc2e3cc7acb",
+  "afterContainerId": "dd8b4bb17b509de864c8b757dafe663e38c9a335dab0ab7efe4dc5f1ef6428c2",
+  "volume": "memory-game6085-data",
+  "dataDestination": "/app/data",
+  "leaderboardPreserved": true,
+  "leaderboard": {
+    "scores": [
+      {
+        "id": 1,
+        "nickname": "6085实验",
+        "difficulty": "easy",
+        "moves": 12,
+        "durationMs": 6950,
+        "createdAt": "2026-10-21T11:13:25.973841496Z"
+      }
+    ],
+    "total": 1,
+    "bestDurationMs": 6950
+  },
+  "health": {
+    "status": "UP",
+    "application": "memory-game6085",
+    "database": "SQLite"
+  },
+  "dockerVersion": {
+    "Client": {
+      "Version": "29.8.2",
+      "ApiVersion": "1.56",
+      "DefaultAPIVersion": "1.56",
+      "GitCommit": "7fc2dff",
+      "GoVersion": "go1.26.8",
+      "Os": "windows",
+      "Arch": "amd64",
+      "BuildTime": "Wed Sep 30 19:35:42 2026",
+      "Context": "desktop-linux"
+    },
+    "Server": {
+      "Platform": {
+        "Name": "Docker Desktop 4.95.0 (242831)"
+      },
+      "Version": "29.8.2",
+      "ApiVersion": "1.56",
+      "MinAPIVersion": "1.40",
+      "Os": "linux",
+      "Arch": "amd64",
+      "Components": [
+        {
+          "Name": "Engine",
+          "Version": "29.8.2",
+          "Details": {
+            "ApiVersion": "1.56",
+            "Arch": "amd64",
+            "BuildTime": "Wed Sep 30 19:32:25 2026",
+            "Experimental": "false",
+            "GitCommit": "8af9fe3",
+            "GoVersion": "go1.26.8",
+            "KernelVersion": "6.6.114.1-microsoft-standard-WSL2",
+            "MinAPIVersion": "1.40",
+            "Module": "github.com/moby/moby/v2",
+            "ModuleVersion": "v2.0.0+unknown",
+            "Os": "linux"
+          }
+        },
+        {
+          "Name": "containerd",
+          "Version": "v2.3.6",
+          "Details": {
+            "GitCommit": "ee2735368117d2eb259779949d5e75cdafec9761"
+          }
+        },
+        {
+          "Name": "runc",
+          "Version": "1.5.1",
+          "Details": {
+            "GitCommit": "v1.5.1-0-g8f2685a4"
+          }
+        },
+        {
+          "Name": "docker-init",
+          "Version": "0.19.0",
+          "Details": {
+            "GitCommit": "de40ad0"
+          }
+        }
+      ],
+      "GitCommit": "8af9fe3",
+      "GoVersion": "go1.26.8",
+      "KernelVersion": "6.6.114.1-microsoft-standard-WSL2",
+      "BuildTime": "2026-09-30T19:32:25.000000000+00:00"
+    }
+  },
+  "hostPort": 18085,
+  "containerPort": 8080,
+  "registryPort": 5000,
+  "stages": [
+    "02-build",
+    "03b-container-run",
+    "04-data-before",
+    "05-registry-push",
+    "06-remove-local",
+    "07-registry-pull",
+    "08-run-pulled-image",
+    "09-data-after"
+  ]
+}

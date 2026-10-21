@@ -1,0 +1,33 @@
+**********************
+PowerShell transcript start
+Start time: 20261021191536
+Username: ZHOUBIBI\a3185
+RunAs User: ZHOUBIBI\a3185
+Configuration Name: 
+Machine: ZHOUBIBI (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\a3185\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -NoLogo -NoProfile -File D:\2026Autumn Semester File\云计算\Docker作业\Code\memory-game6085\scripts\evidence-terminal.ps1 -QueueDirectory D:\2026Autumn Semester File\云计算\Docker作业\Code\memory-game6085\.qa\terminal-queue
+Process ID: 22928
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+PS memory-game6085> docker run -d --name memory-game6085-pulled -p 127.0.0.1:18085:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-data,target=/app/data localhost:5000/memory-game6085:1.0.0
+dd8b4bb17b509de864c8b757dafe663e38c9a335dab0ab7efe4dc5f1ef6428c2
+
+PS memory-game6085> docker ps --filter name=memory-game6085-pulled --format 'Container={{.Names}} Image={{.Image}} Ports={{.Ports}}'
+Container=memory-game6085-pulled Image=localhost:5000/memory-game6085:1.0.0 Ports=127.0.0.1:18085->8
+080/tcp
+
+PS memory-game6085> docker inspect memory-game6085-pulled --format 'AfterContainer={{.Id}}'
+AfterContainer=dd8b4bb17b509de864c8b757dafe663e38c9a335dab0ab7efe4dc5f1ef6428c2
+
+**********************
+PowerShell transcript end
+End time: 20261021191537
+**********************

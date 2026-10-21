@@ -1,0 +1,13 @@
+node_modules/
+frontend/dist/
+backend/target/
+data/
+*.db
+*.db-shm
+*.db-wal
+*.log
+.idea/
+.vscode/
+test-results/
+.qa/
+playwright-report/

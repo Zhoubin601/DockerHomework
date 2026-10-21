@@ -1,0 +1,634 @@
+**********************
+PowerShell transcript start
+Start time: 20261021172719
+Username: ZHOUBIBI\a3185
+RunAs User: ZHOUBIBI\a3185
+Configuration Name: 
+Machine: ZHOUBIBI (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\a3185\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -NoLogo -NoProfile -ExecutionPolicy Bypass -File D:\2026Autumn Semester File\云计算\Docker作业\Code\memory-game6085\scripts\evidence-terminal.ps1 -QueueDirectory D:\2026Autumn Semester File\云计算\Docker作业\Code\memory-game6085\.qa\terminal-queue
+Process ID: 20532
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+PS memory-game6085> docker compose --progress plain build
+ Image memory-game6085:1.0.0 Building
+#1 [internal] load local bake definitions
+#1 reading from stdin 620B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 863B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/maven:3.9.9-eclipse-temurin-21
+#3 DONE 0.1s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-jammy
+#4 DONE 0.1s
+
+#5 [internal] load metadata for docker.io/library/node:24-bookworm-slim
+#5 DONE 0.1s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 145B done
+#6 DONE 0.0s
+
+#7 [frontend 1/6] FROM docker.io/library/node:24-bookworm-slim@sha256:91acba91b842bec0bf7ea6f5e09c644c7ccad72c4996ed9616d861d1c7cd60d4
+#7 resolve docker.io/library/node:24-bookworm-slim@sha256:91acba91b842bec0bf7ea6f5e09c644c7ccad72c4996ed9616d861d1c7cd60d4 0.1s done
+#7 CACHED
+
+#8 [stage-2 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf04
+8db0
+#8 resolve docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0 0.1s d
+one
+#8 DONE 0.1s
+
+#9 [backend 1/7] FROM docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b
+10211e
+#9 resolve docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b10211e 0.1s
+ done
+#9 ...
+
+#10 [internal] load build context
+#10 transferring context: 1.86kB 0.0s done
+#10 DONE 0.0s
+
+#8 [stage-2 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf04
+8db0
+#8 extracting sha256:cf1a5487baaf7d71eb78fd0888933c6cdecb40e59edb896511aa0ef4a896031e
+#8 ...
+
+#9 [backend 1/7] FROM docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b
+10211e
+#9 DONE 0.5s
+
+#9 [backend 1/7] FROM docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b
+10211e
+#9 extracting sha256:d9d352c11bbd3880007953ed6eec1cbace76898828f3434984a0ca60672fdf5a
+#9 ...
+
+#7 [frontend 1/6] FROM docker.io/library/node:24-bookworm-slim@sha256:91acba91b842bec0bf7ea6f5e09c644c7ccad72c4996ed9616d861d1c7cd60d4
+#7 extracting sha256:11422d7ca1a44390a32bd8d8d9dc5946b4d053b3bbd9507d682e35584ba84a26 0.8s done
+#7 DONE 0.9s
+
+#7 [frontend 1/6] FROM docker.io/library/node:24-bookworm-slim@sha256:91acba91b842bec0bf7ea6f5e09c644c7ccad72c4996ed9616d861d1c7cd60d4
+#7 extracting sha256:a653317058ab43d7be3eb09299ae0796b7e03728c1b9ae7ceae2346d156f9622 0.1s done
+#7 extracting sha256:9291ec92c8fa35ad1bf326e184dd41940f3e0d184e426c418c6c3659f7b6d945
+#7 ...
+
+#8 [stage-2 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf04
+8db0
+#8 extracting sha256:cf1a5487baaf7d71eb78fd0888933c6cdecb40e59edb896511aa0ef4a896031e 0.8s done
+#8 extracting sha256:f5c13179339d83404d86b92f445e2692eb870962a738a4383da35394859e46fa 0.6s done
+#8 DONE 1.5s
+
+#8 [stage-2 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf04
+8db0
+#8 extracting sha256:22d3391d8c4912e306bcf7153bab3c68fe06476ef652c930e39b65dea9140eed
+#8 ...
+
+#7 [frontend 1/6] FROM docker.io/library/node:24-bookworm-slim@sha256:91acba91b842bec0bf7ea6f5e09c644c7ccad72c4996ed9616d861d1c7cd60d4
+#7 extracting sha256:9291ec92c8fa35ad1bf326e184dd41940f3e0d184e426c418c6c3659f7b6d945 1.3s done
+#7 DONE 2.2s
+
+#7 [frontend 1/6] FROM docker.io/library/node:24-bookworm-slim@sha256:91acba91b842bec0bf7ea6f5e09c644c7ccad72c4996ed9616d861d1c7cd60d4
+#7 extracting sha256:28dd28afb857c536697a041fbd34e5dc571b74a906ed839855df978a530596c7 0.1s done
+#7 extracting sha256:d33a5de3e00b2751b6fef7ea0e3f0e0e310637000cbfe2d9079c3637750d7ab0 0.0s done
+#7 DONE 2.3s
+
+#9 [backend 1/7] FROM docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b
+10211e
+#9 extracting sha256:d9d352c11bbd3880007953ed6eec1cbace76898828f3434984a0ca60672fdf5a 0.9s done
+#9 extracting sha256:380ab39b4f9f66f5491f1e6c6e1b00af781c9e67017d5194267c1eb1b1ea9d61 0.6s done
+#9 extracting sha256:fdf9441e6dddb8defe5d23ab009dd1a3d91ad4f953b4d53d9e904e1adcae03de
+#9 ...
+
+#8 [stage-2 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf04
+8db0
+#8 extracting sha256:22d3391d8c4912e306bcf7153bab3c68fe06476ef652c930e39b65dea9140eed 1.0s done
+#8 extracting sha256:9ddd6de30055ac5bdcb28bc67e61aa12ab2c46949cfa24571411b2a9b9fd4873 0.1s done
+#8 extracting sha256:d18e088bcb32fde124a4553022c55d42c394a352ce80c57bdbf902ffa0441a52 0.1s done
+#8 DONE 2.7s
+
+#11 [stage-2 2/4] RUN groupadd --system garden && useradd --system --gid garden --home-dir /app garden     && mkdir -p /app/data && chow
+n -R garden:garden /app
+#11 ...
+
+#12 [frontend 2/6] WORKDIR /build/frontend
+#12 DONE 0.8s
+
+#13 [frontend 3/6] COPY frontend/package*.json ./
+#13 DONE 0.1s
+
+#14 [frontend 4/6] RUN npm ci --no-audit --no-fund
+#14 ...
+
+#11 [stage-2 2/4] RUN groupadd --system garden && useradd --system --gid garden --home-dir /app garden     && mkdir -p /app/data && chow
+n -R garden:garden /app
+#11 DONE 0.7s
+
+#15 [stage-2 3/4] WORKDIR /app
+#15 DONE 0.1s
+
+#9 [backend 1/7] FROM docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b
+10211e
+#9 extracting sha256:fdf9441e6dddb8defe5d23ab009dd1a3d91ad4f953b4d53d9e904e1adcae03de 1.8s done
+#9 extracting sha256:14ea0157e6cfd88563f52f3de2252f96d1de76755323a4e666dc06bfdc169362 0.0s done
+#9 extracting sha256:99f05f209f6fd19181ffd50612236193ad46991100ff9ffc79e5b5d7f15f0e06 0.0s done
+#9 extracting sha256:52fd01a09145cd9d4a6b5a5e02abea836a1e0b59167645cb4945260b39389858
+#9 extracting sha256:52fd01a09145cd9d4a6b5a5e02abea836a1e0b59167645cb4945260b39389858 0.9s done
+#9 DONE 4.8s
+
+#14 [frontend 4/6] RUN npm ci --no-audit --no-fund
+#14 ...
+
+#9 [backend 1/7] FROM docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b
+10211e
+#9 extracting sha256:903243de14d5324cd69215ac4e249070a8a95725e01db0e0a8a7a91e819842a2 0.1s done
+#9 extracting sha256:100a2f749ec88b1edeb1a262140d5ff15deb223ddb60db02b007fbd02e430c01 0.0s done
+#9 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.0s done
+#9 extracting sha256:ac08ec036c80487483481b8b4099c337b9f50c5a6fa61a916e0714fd6a25808b 0.0s done
+#9 DONE 5.0s
+
+#16 [backend 2/7] WORKDIR /build/backend
+#16 DONE 0.1s
+
+#14 [frontend 4/6] RUN npm ci --no-audit --no-fund
+#14 ...
+
+#17 [backend 3/7] COPY backend/pom.xml ./
+#17 DONE 0.1s
+
+#18 [backend 4/7] RUN mvn -B -ntp dependency:go-offline
+#18 2.091 [INFO] Scanning for projects...
+#18 ...
+
+#14 [frontend 4/6] RUN npm ci --no-audit --no-fund
+#14 19.19
+#14 19.19 added 41 packages in 19s
+#14 19.19 npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+#14 19.19 npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+#14 19.19 npm warn install-scripts
+#14 19.19 npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+#14 19.19 npm notice
+#14 19.19 npm notice New major version of npm available! 11.19.1 -> 12.2.0
+#14 19.19 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#14 19.19 npm notice To update run: npm install -g npm@12.2.0
+#14 19.19 npm notice
+#14 DONE 19.3s
+
+#19 [frontend 5/6] COPY frontend/ ./
+#19 DONE 0.1s
+
+#18 [backend 4/7] RUN mvn -B -ntp dependency:go-offline
+#18 ...
+
+#20 [frontend 6/6] RUN npm run build
+#20 0.339
+#20 0.339 > memory-game6085@1.0.0 build
+#20 0.339 > vite build
+#20 0.339
+#20 0.545 vite v7.3.7 building client environment for production...
+#20 0.584 transforming...
+#20 1.636 ✓ 1562 modules transformed.
+#20 1.700 rendering chunks...
+#20 1.704 computing gzip size...
+#20 1.707 dist/index.html                   0.67 kB │ gzip:  0.47 kB
+#20 1.707 dist/assets/index-BUufkFtO.css   25.58 kB │ gzip:  6.53 kB
+#20 1.707 dist/assets/index-Bvlb058h.js   101.41 kB │ gzip: 39.63 kB
+#20 1.707 ✓ built in 1.15s
+#20 DONE 1.8s
+
+#18 [backend 4/7] RUN mvn -B -ntp dependency:go-offline
+#18 32.30 [INFO]
+#18 32.30 [INFO] ------------------< cn.memorygarden:memory-game6085 >-------------------
+#18 32.30 [INFO] Building memory-game6085 1.0.0
+#18 32.30 [INFO]   from pom.xml
+#18 32.30 [INFO] --------------------------------[ jar ]---------------------------------
+#18 32.31 [INFO]
+#18 32.31 [INFO] --- dependency:3.10.0:go-offline (default-cli) @ memory-game6085 ---
+#18 70.42 [INFO] Resolved plugin: maven-compiler-plugin-3.15.0.jar
+#18 70.42 [INFO] Resolved plugin dependency:
+#18 72.84 [INFO]       maven-compiler-plugin-3.15.0.jar
+#18 72.84 [INFO]       asm-9.9.1.jar
+#18 72.84 [INFO]       maven-shared-utils-3.4.2.jar
+#18 72.84 [INFO]       slf4j-api-1.7.36.jar
+#18 72.84 [INFO]       commons-io-2.11.0.jar
+#18 72.84 [INFO]       maven-shared-incremental-1.1.jar
+#18 72.84 [INFO]       plexus-java-1.5.2.jar
+#18 72.84 [INFO]       qdox-2.2.0.jar
+#18 72.84 [INFO]       plexus-compiler-api-2.16.2.jar
+#18 72.84 [INFO]       plexus-compiler-manager-2.16.2.jar
+#18 72.84 [INFO]       javax.inject-1.jar
+#18 72.84 [INFO]       plexus-xml-3.0.1.jar
+#18 72.84 [INFO]       plexus-compiler-javac-2.16.2.jar
+#18 72.84 [INFO]       plexus-utils-4.0.2.jar
+#18 72.84 [INFO] Resolved plugin: maven-surefire-plugin-3.5.6.jar
+#18 72.84 [INFO] Resolved plugin dependency:
+#18 76.92 [INFO]       maven-surefire-plugin-3.5.6.jar
+#18 76.92 [INFO]       surefire-api-3.5.6.jar
+#18 76.92 [INFO]       surefire-logger-api-3.5.6.jar
+#18 76.92 [INFO]       surefire-shared-utils-3.5.6.jar
+#18 76.92 [INFO]       surefire-extensions-api-3.5.6.jar
+#18 76.92 [INFO]       maven-surefire-common-3.5.6.jar
+#18 76.92 [INFO]       surefire-booter-3.5.6.jar
+#18 76.92 [INFO]       surefire-extensions-spi-3.5.6.jar
+#18 76.92 [INFO]       maven-resolver-util-1.4.1.jar
+#18 76.92 [INFO]       maven-resolver-api-1.4.1.jar
+#18 76.92 [INFO]       maven-common-artifact-filters-3.4.0.jar
+#18 76.92 [INFO]       slf4j-api-1.7.36.jar
+#18 76.92 [INFO]       plexus-java-1.5.2.jar
+#18 76.92 [INFO]       asm-9.9.1.jar
+#18 76.92 [INFO]       qdox-2.2.0.jar
+#18 76.92 [INFO] Resolved plugin: maven-jar-plugin-3.5.1.jar
+#18 76.92 [INFO] Resolved plugin dependency:
+#18 88.10 [INFO]       maven-jar-plugin-3.5.1.jar
+#18 88.10 [INFO]       file-management-3.2.0.jar
+#18 88.10 [INFO]       plexus-utils-4.0.3.jar
+#18 88.10 [INFO]       maven-archiver-3.6.6.jar
+#18 88.10 [INFO]       plexus-interpolation-1.29.jar
+#18 88.10 [INFO]       plexus-xml-3.0.1.jar
+#18 88.10 [INFO]       plexus-archiver-4.12.0.jar
+#18 88.10 [INFO]       plexus-io-3.6.0.jar
+#18 88.10 [INFO]       commons-compress-1.28.0.jar
+#18 88.10 [INFO]       commons-codec-1.19.0.jar
+#18 88.10 [INFO]       commons-lang3-3.18.0.jar
+#18 88.10 [INFO]       xz-1.12.jar
+#18 88.10 [INFO]       zstd-jni-1.5.7-9.jar
+#18 88.10 [INFO]       javax.inject-1.jar
+#18 88.10 [INFO]       slf4j-api-1.7.36.jar
+#18 88.10 [INFO]       commons-io-2.22.0.jar
+#18 88.10 [INFO] Resolved plugin: maven-clean-plugin-3.5.0.jar
+#18 88.10 [INFO] Resolved plugin dependency:
+#18 88.10 [INFO]       maven-clean-plugin-3.5.0.jar
+#18 88.10 [INFO]       plexus-utils-4.0.2.jar
+#18 88.10 [INFO] Resolved plugin: maven-install-plugin-3.1.4.jar
+#18 88.11 [INFO] Resolved plugin dependency:
+#18 89.71 [INFO]       maven-install-plugin-3.1.4.jar
+#18 89.71 [INFO]       maven-resolver-util-1.9.22.jar
+#18 89.71 [INFO]       maven-resolver-api-1.9.22.jar
+#18 89.71 [INFO]       plexus-utils-4.0.1.jar
+#18 89.71 [INFO]       plexus-xml-3.0.1.jar
+#18 89.71 [INFO] Resolved plugin: maven-site-plugin-3.12.1.jar
+#18 89.71 [INFO] Resolved plugin dependency:
+#18 150.7 [INFO]       maven-site-plugin-3.12.1.jar
+#18 150.7 [INFO]       maven-reporting-api-3.1.1.jar
+#18 150.7 [INFO]       maven-reporting-exec-1.6.0.jar
+#18 150.7 [INFO]       maven-artifact-3.2.5.jar
+#18 150.7 [INFO]       maven-core-3.2.5.jar
+#18 150.7 [INFO]       maven-repository-metadata-3.2.5.jar
+#18 150.7 [INFO]       maven-model-builder-3.2.5.jar
+#18 150.7 [INFO]       maven-aether-provider-3.2.5.jar
+#18 150.7 [INFO]       aether-spi-1.0.0.v20140518.jar
+#18 150.7 [INFO]       aether-impl-1.0.0.v20140518.jar
+#18 150.7 [INFO]       aether-api-1.0.0.v20140518.jar
+#18 150.7 [INFO]       org.eclipse.sisu.plexus-0.3.5.jar
+#18 150.7 [INFO]       javax.annotation-api-1.2.jar
+#18 150.7 [INFO]       cdi-api-1.2.jar
+#18 150.7 [INFO]       org.eclipse.sisu.inject-0.3.5.jar
+#18 150.7 [INFO]       sisu-guice-3.2.3-no_aop.jar
+#18 150.7 [INFO]       javax.inject-1.jar
+#18 150.7 [INFO]       aopalliance-1.0.jar
+#18 150.7 [INFO]       guava-16.0.1.jar
+#18 150.7 [INFO]       plexus-classworlds-2.5.2.jar
+#18 150.7 [INFO]       plexus-sec-dispatcher-1.3.jar
+#18 150.7 [INFO]       plexus-cipher-1.4.jar
+#18 150.7 [INFO]       maven-model-3.2.5.jar
+#18 150.7 [INFO]       maven-plugin-api-3.2.5.jar
+#18 150.7 [INFO]       maven-settings-3.2.5.jar
+#18 150.7 [INFO]       maven-settings-builder-3.2.5.jar
+#18 150.7 [INFO]       aether-util-1.0.0.v20140518.jar
+#18 150.7 [INFO]       maven-shared-utils-3.3.4.jar
+#18 150.7 [INFO]       commons-io-2.6.jar
+#18 150.7 [INFO]       maven-archiver-3.5.2.jar
+#18 150.7 [INFO]       commons-compress-1.20.jar
+#18 150.7 [INFO]       plexus-interpolation-1.26.jar
+#18 150.7 [INFO]       plexus-archiver-4.2.7.jar
+#18 150.7 [INFO]       plexus-io-3.2.0.jar
+#18 150.7 [INFO]       snappy-0.4.jar
+#18 150.7 [INFO]       xz-1.9.jar
+#18 150.7 [INFO]       plexus-i18n-1.0-beta-10.jar
+#18 150.7 [INFO]       plexus-utils-3.4.2.jar
+#18 150.7 [INFO]       doxia-sink-api-1.11.1.jar
+#18 150.7 [INFO]       doxia-logging-api-1.11.1.jar
+#18 150.7 [INFO]       doxia-core-1.11.1.jar
+#18 150.7 [INFO]       plexus-container-default-2.1.0.jar
+#18 150.7 [INFO]       xbean-reflect-3.7.jar
+#18 150.7 [INFO]       google-collections-1.0.jar
+#18 150.7 [INFO]       plexus-component-annotations-2.1.1.jar
+#18 150.7 [INFO]       commons-lang3-3.8.1.jar
+#18 150.7 [INFO]       commons-text-1.3.jar
+#18 150.7 [INFO]       httpclient-4.5.13.jar
+#18 150.7 [INFO]       commons-logging-1.2.jar
+#18 150.7 [INFO]       commons-codec-1.11.jar
+#18 150.7 [INFO]       httpcore-4.4.14.jar
+#18 150.7 [INFO]       doxia-module-xhtml-1.11.1.jar
+#18 150.7 [INFO]       doxia-module-xhtml5-1.11.1.jar
+#18 150.7 [INFO]       doxia-module-apt-1.11.1.jar
+#18 150.7 [INFO]       doxia-module-xdoc-1.11.1.jar
+#18 150.7 [INFO]       doxia-module-fml-1.11.1.jar
+#18 150.7 [INFO]       doxia-module-markdown-1.11.1.jar
+#18 150.7 [INFO]       flexmark-all-0.42.14.jar
+#18 150.7 [INFO]       flexmark-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-abbreviation-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-admonition-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-anchorlink-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-aside-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-attributes-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-autolink-0.42.14.jar
+#18 150.7 [INFO]       autolink-0.6.0.jar
+#18 150.7 [INFO]       flexmark-ext-definition-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-emoji-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-enumerated-reference-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-escaped-character-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-footnotes-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-gfm-issues-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-gfm-strikethrough-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-gfm-tables-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-gfm-tasklist-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-gfm-users-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-gitlab-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-jekyll-front-matter-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-jekyll-tag-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-media-tags-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-macros-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-ins-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-xwiki-macros-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-superscript-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-tables-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-toc-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-typographic-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-wikilink-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-yaml-front-matter-0.42.14.jar
+#18 150.7 [INFO]       flexmark-ext-youtube-embedded-0.42.14.jar
+#18 150.7 [INFO]       flexmark-formatter-0.42.14.jar
+#18 150.7 [INFO]       flexmark-html-parser-0.42.14.jar
+#18 150.7 [INFO]       jsoup-1.10.2.jar
+#18 150.7 [INFO]       flexmark-jira-converter-0.42.14.jar
+#18 150.7 [INFO]       flexmark-profile-pegdown-0.42.14.jar
+#18 150.7 [INFO]       flexmark-util-0.42.14.jar
+#18 150.7 [INFO]       flexmark-youtrack-converter-0.42.14.jar
+#18 150.7 [INFO]       doxia-module-confluence-1.11.1.jar
+#18 150.7 [INFO]       doxia-module-docbook-simple-1.11.1.jar
+#18 150.7 [INFO]       doxia-module-twiki-1.11.1.jar
+#18 150.7 [INFO]       doxia-decoration-model-1.11.1.jar
+#18 150.7 [INFO]       doxia-site-renderer-1.11.1.jar
+#18 150.7 [INFO]       doxia-skin-model-1.11.1.jar
+#18 150.7 [INFO]       plexus-velocity-1.2.jar
+#18 150.7 [INFO]       velocity-1.7.jar
+#18 150.7 [INFO]       commons-lang-2.4.jar
+#18 150.7 [INFO]       velocity-tools-2.0.jar
+#18 150.7 [INFO]       commons-beanutils-1.7.0.jar
+#18 150.7 [INFO]       commons-digester-1.8.jar
+#18 150.7 [INFO]       commons-chain-1.1.jar
+#18 150.7 [INFO]       dom4j-1.1.jar
+#18 150.7 [INFO]       oro-2.0.8.jar
+#18 150.7 [INFO]       commons-collections-3.2.2.jar
+#18 150.7 [INFO]       doxia-integration-tools-1.11.1.jar
+#18 150.7 [INFO]       jetty-server-9.4.46.v20220331.jar
+#18 150.7 [INFO]       javax.servlet-api-3.1.0.jar
+#18 150.7 [INFO]       jetty-http-9.4.46.v20220331.jar
+#18 150.7 [INFO]       jetty-io-9.4.46.v20220331.jar
+#18 150.7 [INFO]       jetty-servlet-9.4.46.v20220331.jar
+#18 150.7 [INFO]       jetty-security-9.4.46.v20220331.jar
+#18 150.7 [INFO]       jetty-util-ajax-9.4.46.v20220331.jar
+#18 150.7 [INFO]       jetty-webapp-9.4.46.v20220331.jar
+#18 150.7 [INFO]       jetty-xml-9.4.46.v20220331.jar
+#18 150.7 [INFO]       jetty-util-9.4.46.v20220331.jar
+#18 150.7 [INFO] Resolved plugin: maven-resources-plugin-3.5.0.jar
+#18 150.7 [INFO] Resolved plugin dependency:
+#18 152.8 [INFO]       maven-resources-plugin-3.5.0.jar
+#18 152.8 [INFO]       maven-filtering-3.5.0.jar
+#18 152.8 [INFO]       slf4j-api-1.7.36.jar
+#18 152.8 [INFO]       plexus-build-api-1.2.0.jar
+#18 152.8 [INFO]       javax.inject-1.jar
+#18 152.8 [INFO]       plexus-build-api-0.0.7.jar
+#18 152.8 [INFO]       org.eclipse.sisu.plexus-0.9.0.M4.jar
+#18 152.8 [INFO]       plexus-interpolation-1.29.jar
+#18 152.8 [INFO]       plexus-utils-3.6.0.jar
+#18 152.8 [INFO] Resolved plugin: spring-boot-maven-plugin-4.1.1.jar
+#18 152.8 [INFO] Resolved plugin dependency:
+#18 176.1 [INFO]       spring-boot-maven-plugin-4.1.1.jar
+#18 176.1 [INFO]       spring-boot-buildpack-platform-4.1.1.jar
+#18 176.1 [INFO]       jna-platform-5.17.0.jar
+#18 176.1 [INFO]       jna-5.17.0.jar
+#18 176.1 [INFO]       commons-compress-1.27.1.jar
+#18 176.1 [INFO]       commons-codec-1.17.1.jar
+#18 176.1 [INFO]       commons-lang3-3.16.0.jar
+#18 176.1 [INFO]       httpclient5-5.6.4.jar
+#18 176.1 [INFO]       httpcore5-5.4.3.jar
+#18 176.1 [INFO]       httpcore5-h2-5.4.3.jar
+#18 176.1 [INFO]       tomlj-1.0.0.jar
+#18 176.1 [INFO]       antlr4-runtime-4.7.2.jar
+#18 176.1 [INFO]       jsr305-3.0.2.jar
+#18 176.1 [INFO]       jackson-databind-3.1.5.jar
+#18 176.1 [INFO]       jackson-annotations-2.21.jar
+#18 176.1 [INFO]       jackson-core-3.1.5.jar
+#18 176.1 [INFO]       spring-boot-loader-tools-4.1.1.jar
+#18 176.1 [INFO]       maven-common-artifact-filters-3.4.0.jar
+#18 176.1 [INFO]       slf4j-api-1.7.36.jar
+#18 176.1 [INFO]       maven-resolver-util-1.4.1.jar
+#18 176.1 [INFO]       maven-resolver-api-1.4.1.jar
+#18 176.1 [INFO]       plexus-build-api-0.0.7.jar
+#18 176.1 [INFO]       spring-core-7.0.9.jar
+#18 176.1 [INFO]       commons-logging-1.3.5.jar
+#18 176.1 [INFO]       jspecify-1.0.0.jar
+#18 176.1 [INFO]       spring-context-7.0.9.jar
+#18 176.1 [INFO]       spring-aop-7.0.9.jar
+#18 176.1 [INFO]       spring-beans-7.0.9.jar
+#18 176.1 [INFO]       spring-expression-7.0.9.jar
+#18 176.1 [INFO]       micrometer-observation-1.16.7.jar
+#18 176.1 [INFO]       micrometer-commons-1.16.7.jar
+#18 176.1 [INFO]       maven-shade-plugin-3.6.0.jar
+#18 176.1 [INFO]       plexus-utils-3.5.1.jar
+#18 176.1 [INFO]       asm-9.7.jar
+#18 176.1 [INFO]       asm-commons-9.7.jar
+#18 176.1 [INFO]       asm-tree-9.7.jar
+#18 176.1 [INFO]       jdom2-2.0.6.1.jar
+#18 176.1 [INFO]       commons-io-2.16.1.jar
+#18 176.1 [INFO]       jdependency-2.10.jar
+#18 176.1 [INFO] Resolved plugin: maven-deploy-plugin-3.1.4.jar
+#18 176.1 [INFO] Resolved plugin dependency:
+#18 176.1 [INFO]       maven-deploy-plugin-3.1.4.jar
+#18 176.1 [INFO]       plexus-utils-4.0.1.jar
+#18 176.1 [INFO]       plexus-xml-3.0.1.jar
+#18 176.1 [INFO]       maven-resolver-util-1.9.22.jar
+#18 176.1 [INFO]       maven-resolver-api-1.9.22.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-starter-webmvc-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-starter-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-starter-logging-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: logback-classic-1.5.38.jar
+#18 224.8 [INFO] Resolved dependency: logback-core-1.5.38.jar
+#18 224.8 [INFO] Resolved dependency: log4j-to-slf4j-2.25.5.jar
+#18 224.8 [INFO] Resolved dependency: log4j-api-2.25.5.jar
+#18 224.8 [INFO] Resolved dependency: jul-to-slf4j-2.0.18.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-autoconfigure-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: jakarta.annotation-api-3.0.0.jar
+#18 224.8 [INFO] Resolved dependency: snakeyaml-2.6.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-starter-jackson-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-jackson-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: jackson-databind-3.1.5.jar
+#18 224.8 [INFO] Resolved dependency: jackson-annotations-2.21.jar
+#18 224.8 [INFO] Resolved dependency: jackson-core-3.1.5.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-starter-tomcat-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-starter-tomcat-runtime-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-web-server-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: tomcat-embed-core-11.0.24.jar
+#18 224.8 [INFO] Resolved dependency: tomcat-embed-websocket-11.0.24.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-tomcat-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-http-converter-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-context-7.0.9.jar
+#18 224.8 [INFO] Resolved dependency: spring-web-7.0.9.jar
+#18 224.8 [INFO] Resolved dependency: spring-beans-7.0.9.jar
+#18 224.8 [INFO] Resolved dependency: micrometer-observation-1.17.1.jar
+#18 224.8 [INFO] Resolved dependency: micrometer-commons-1.17.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-webmvc-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-servlet-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-webmvc-7.0.9.jar
+#18 224.8 [INFO] Resolved dependency: spring-aop-7.0.9.jar
+#18 224.8 [INFO] Resolved dependency: spring-expression-7.0.9.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-starter-validation-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-validation-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: tomcat-embed-el-11.0.24.jar
+#18 224.8 [INFO] Resolved dependency: hibernate-validator-9.1.3.Final.jar
+#18 224.8 [INFO] Resolved dependency: jakarta.validation-api-3.1.1.jar
+#18 224.8 [INFO] Resolved dependency: jboss-logging-3.6.3.Final.jar
+#18 224.8 [INFO] Resolved dependency: classmate-1.7.3.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-starter-test-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-test-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-boot-test-autoconfigure-4.1.1.jar
+#18 224.8 [INFO] Resolved dependency: json-path-2.10.0.jar
+#18 224.8 [INFO] Resolved dependency: slf4j-api-2.0.18.jar
+#18 224.8 [INFO] Resolved dependency: jakarta.xml.bind-api-4.0.5.jar
+#18 224.8 [INFO] Resolved dependency: jakarta.activation-api-2.1.4.jar
+#18 224.8 [INFO] Resolved dependency: json-smart-2.6.0.jar
+#18 224.8 [INFO] Resolved dependency: accessors-smart-2.6.0.jar
+#18 224.8 [INFO] Resolved dependency: asm-9.7.1.jar
+#18 224.8 [INFO] Resolved dependency: assertj-core-3.27.7.jar
+#18 224.8 [INFO] Resolved dependency: byte-buddy-1.18.11.jar
+#18 224.8 [INFO] Resolved dependency: awaitility-4.3.0.jar
+#18 224.8 [INFO] Resolved dependency: hamcrest-3.0.jar
+#18 224.8 [INFO] Resolved dependency: junit-jupiter-6.0.3.jar
+#18 224.8 [INFO] Resolved dependency: junit-jupiter-api-6.0.3.jar
+#18 224.8 [INFO] Resolved dependency: opentest4j-1.3.0.jar
+#18 224.8 [INFO] Resolved dependency: junit-platform-commons-6.0.3.jar
+#18 224.8 [INFO] Resolved dependency: apiguardian-api-1.1.2.jar
+#18 224.8 [INFO] Resolved dependency: junit-jupiter-params-6.0.3.jar
+#18 224.8 [INFO] Resolved dependency: junit-jupiter-engine-6.0.3.jar
+#18 224.8 [INFO] Resolved dependency: junit-platform-engine-6.0.3.jar
+#18 224.8 [INFO] Resolved dependency: mockito-core-5.23.0.jar
+#18 224.8 [INFO] Resolved dependency: byte-buddy-agent-1.18.11.jar
+#18 224.8 [INFO] Resolved dependency: objenesis-3.3.jar
+#18 224.8 [INFO] Resolved dependency: mockito-junit-jupiter-5.23.0.jar
+#18 224.8 [INFO] Resolved dependency: jsonassert-1.5.3.jar
+#18 224.8 [INFO] Resolved dependency: android-json-0.0.20131108.vaadin1.jar
+#18 224.8 [INFO] Resolved dependency: spring-core-7.0.9.jar
+#18 224.8 [INFO] Resolved dependency: commons-logging-1.3.6.jar
+#18 224.8 [INFO] Resolved dependency: jspecify-1.0.1.jar
+#18 224.8 [INFO] Resolved dependency: spring-test-7.0.9.jar
+#18 224.8 [INFO] Resolved dependency: xmlunit-core-2.11.0.jar
+#18 224.8 [INFO] Resolved dependency: sqlite-jdbc-3.53.4.0.jar
+#18 224.8 [INFO] ------------------------------------------------------------------------
+#18 224.8 [INFO] BUILD SUCCESS
+#18 224.8 [INFO] ------------------------------------------------------------------------
+#18 224.8 [INFO] Total time:  03:42 min
+#18 224.8 [INFO] Finished at: 2026-10-21T09:31:10Z
+#18 224.8 [INFO] ------------------------------------------------------------------------
+#18 DONE 224.9s
+
+#21 [backend 5/7] COPY backend/src ./src
+#21 DONE 0.2s
+
+#22 [backend 6/7] COPY --from=frontend /build/frontend/dist /build/frontend/dist
+#22 DONE 0.1s
+
+#23 [backend 7/7] RUN mvn -B -ntp package
+#23 1.476 [INFO] Scanning for projects...
+#23 1.738 [INFO]
+#23 1.738 [INFO] ------------------< cn.memorygarden:memory-game6085 >-------------------
+#23 1.738 [INFO] Building memory-game6085 1.0.0
+#23 1.738 [INFO]   from pom.xml
+#23 1.738 [INFO] --------------------------------[ jar ]---------------------------------
+#23 2.066 [INFO]
+#23 2.066 [INFO] --- resources:3.5.0:resources (default-resources) @ memory-game6085 ---
+#23 2.168 [INFO] Copying 1 resource from src/main/resources to target/classes
+#23 2.177 [INFO] Copying 0 resource from src/main/resources to target/classes
+#23 2.177 [INFO]
+#23 2.177 [INFO] --- resources:3.5.0:copy-resources (copy-vue) @ memory-game6085 ---
+#23 2.184 [INFO] Copying 4 resources from ../frontend/dist to target/classes/static
+#23 2.186 [INFO]
+#23 2.186 [INFO] --- compiler:3.15.0:compile (default-compile) @ memory-game6085 ---
+#23 2.332 [INFO] Recompiling the module because of changed source code.
+#23 2.341 [INFO] Compiling 5 source files with javac [debug parameters release 21] to target/classes
+#23 3.248 [INFO]
+#23 3.248 [INFO] --- resources:3.5.0:testResources (default-testResources) @ memory-game6085 ---
+#23 3.252 [INFO] skip non existing resourceDirectory /build/backend/src/test/resources
+#23 3.252 [INFO]
+#23 3.252 [INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ memory-game6085 ---
+#23 3.260 [INFO] Recompiling the module because of changed dependency.
+#23 3.261 [INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+#23 3.497 [INFO]
+#23 3.497 [INFO] --- surefire:3.5.6:test (default-test) @ memory-game6085 ---
+#23 3.604 [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+#23 5.887 [INFO]
+#23 5.887 [INFO] -------------------------------------------------------
+#23 5.887 [INFO]  T E S T S
+#23 5.887 [INFO] -------------------------------------------------------
+#23 6.441 [INFO] Running cn.memorygarden.GardenTests
+#23 12.12 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.670 s -- in cn.memorygarden.GardenTests
+#23 12.13 [INFO]
+#23 12.13 [INFO] Results:
+#23 12.13 [INFO]
+#23 12.13 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+#23 12.13 [INFO]
+#23 12.14 [INFO]
+#23 12.14 [INFO] --- jar:3.5.1:jar (default-jar) @ memory-game6085 ---
+#23 12.33 [INFO] Building jar: /build/backend/target/memory-game6085.jar
+#23 12.37 [INFO]
+#23 12.37 [INFO] --- spring-boot:4.1.1:repackage (repackage) @ memory-game6085 ---
+#23 12.65 [INFO] Replacing main artifact /build/backend/target/memory-game6085.jar with repackaged archive, adding nested dependencies i
+n BOOT-INF/.
+#23 12.65 [INFO] The original artifact has been renamed to /build/backend/target/memory-game6085.jar.original
+#23 12.65 [INFO] ------------------------------------------------------------------------
+#23 12.66 [INFO] BUILD SUCCESS
+#23 12.66 [INFO] ------------------------------------------------------------------------
+#23 12.66 [INFO] Total time:  11.203 s
+#23 12.66 [INFO] Finished at: 2026-10-21T09:31:23Z
+#23 12.66 [INFO] ------------------------------------------------------------------------
+#23 DONE 12.7s
+
+#24 [stage-2 4/4] COPY --from=backend --chown=garden:garden /build/backend/target/memory-game6085.jar /app/app.jar
+#24 DONE 0.1s
+
+#25 exporting to image
+#25 exporting layers
+#25 exporting layers 0.8s done
+#25 exporting manifest sha256:f684a0923c081d157c6269e88bd3b911fd07ee1f59fb2c66bba4c601d44cad6b 0.0s done
+#25 exporting config sha256:b6137842289c3ec59cb8db5ee2bc66d6458b093aed3268aac8d3c321d3934dd9 0.0s done
+#25 exporting attestation manifest sha256:7b5b84ba531bf1faee1ce74b450e08f9f1d4d6a32838fdf6d8806a6e8e9432aa 0.0s done
+#25 exporting manifest list sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a15e66
+#25 exporting manifest list sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a15e66 0.0s done
+#25 naming to docker.io/library/memory-game6085:1.0.0 done
+#25 unpacking to docker.io/library/memory-game6085:1.0.0
+#25 unpacking to docker.io/library/memory-game6085:1.0.0 0.2s done
+#25 DONE 1.1s
+
+#26 resolving provenance for metadata file
+#26 DONE 0.0s
+ Image memory-game6085:1.0.0 Built
+
+PS memory-game6085> docker image ls --filter reference=memory-game6085 --format 'Name={{.Repository}}:{{.Tag}}  ID={{.ID}}  Size={{.Size}}'
+Name=memory-game6085:1.0.0  ID=e4eb4cb25dd6  Size=469MB
+
+**********************
+PowerShell transcript end
+End time: 20261021173125
+**********************

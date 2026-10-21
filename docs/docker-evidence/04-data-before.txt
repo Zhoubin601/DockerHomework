@@ -1,0 +1,38 @@
+**********************
+PowerShell transcript start
+Start time: 20261021191339
+Username: ZHOUBIBI\a3185
+RunAs User: ZHOUBIBI\a3185
+Configuration Name: 
+Machine: ZHOUBIBI (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\a3185\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -NoLogo -NoProfile -File D:\2026Autumn Semester File\云计算\Docker作业\Code\memory-game6085\scripts\evidence-terminal.ps1 -QueueDirectory D:\2026Autumn Semester File\云计算\Docker作业\Code\memory-game6085\.qa\terminal-queue
+Process ID: 22928
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+PS memory-game6085> docker inspect memory-game6085-garden-1 --format 'BeforeContainer={{.Id}}'
+BeforeContainer=c247b7360b52a870fbe560d61e438e099969e9557f20e019f3802cc2e3cc7acb
+
+PS memory-game6085> Invoke-RestMethod 'http://localhost:18085/api/leaderboard?difficulty=easy' | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath '../../docs/docker-evidence/before-leaderboard.json' -Encoding utf8
+
+PS memory-game6085> (Invoke-RestMethod 'http://localhost:18085/api/leaderboard?difficulty=easy').scores | Format-Table id,nickname,moves,durationMs
+
+id nickname moves durationMs
+-- -------- ----- ----------
+ 1 6085实验    12       6950
+
+
+PS memory-game6085> docker volume inspect memory-game6085-data --format 'Volume={{.Name}} Driver={{.Driver}}'
+Volume=memory-game6085-data Driver=local
+
+**********************
+PowerShell transcript end
+End time: 20261021191343
+**********************

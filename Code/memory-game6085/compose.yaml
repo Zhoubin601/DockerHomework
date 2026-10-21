@@ -1,0 +1,16 @@
+name: memory-game6085
+services:
+  garden:
+    build: .
+    image: memory-game6085:1.0.0
+    ports:
+      - "127.0.0.1:${GARDEN_PORT:-18085}:8080"
+    environment:
+      DATA_DIR: /app/data
+    volumes:
+      - garden-data:/app/data
+    restart: unless-stopped
+    stop_grace_period: 15s
+volumes:
+  garden-data:
+    name: memory-game6085-data
