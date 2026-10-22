@@ -1,0 +1,17 @@
+2026-10-22T04:16:12.568653+00:00
+> docker volume inspect memory-game6085-v5verify-20261022-data
+[
+    {
+        "CreatedAt": "2026-10-22T04:14:53Z",
+        "Driver": "local",
+        "Labels": {
+            "codex.memory6085.test": "20261022"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/memory-game6085-v5verify-20261022-data/_data",
+        "Name": "memory-game6085-v5verify-20261022-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
+ExitCode=0

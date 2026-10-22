@@ -1,0 +1,4 @@
+2026-10-22T04:14:57.895099+00:00
+> docker cp memory-game6085-v5verify-20261022-app:/app/app.jar "D:\2026Autumn Semester File\云计算\Docker作业\docs\v5-local-acceptance-20261022\docker-roundtrip\source-image-app.jar"
+
+ExitCode=0

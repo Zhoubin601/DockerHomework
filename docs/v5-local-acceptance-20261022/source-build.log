@@ -1,0 +1,69 @@
+
+added 41 packages in 15s
+
+> memory-game6085@1.0.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1562 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.67 kB │ gzip:  0.47 kB
+dist/assets/index-BUufkFtO.css   25.58 kB │ gzip:  6.53 kB
+dist/assets/index-Bvlb058h.js   101.41 kB │ gzip: 39.63 kB
+✓ built in 2.07s
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< cn.memorygarden:memory-game6085 >-------------------
+[INFO] Building memory-game6085 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ memory-game6085 ---
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ memory-game6085 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:copy-resources (copy-vue) @ memory-game6085 ---
+[INFO] Copying 4 resources from ..\frontend\dist to target\classes\static
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ memory-game6085 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 5 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ memory-game6085 ---
+[INFO] skip non existing resourceDirectory D:\2026Autumn Semester File\云计算\Docker作业\docs\v5-local-acceptance-20261022\unpacked\memory-game6085\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ memory-game6085 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ memory-game6085 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cn.memorygarden.GardenTests
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.928 s -- in cn.memorygarden.GardenTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ memory-game6085 ---
+[INFO] Building jar: D:\2026Autumn Semester File\云计算\Docker作业\docs\v5-local-acceptance-20261022\unpacked\memory-game6085\backend\target\memory-game6085.jar
+[INFO] 
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ memory-game6085 ---
+[INFO] Replacing main artifact D:\2026Autumn Semester File\云计算\Docker作业\docs\v5-local-acceptance-20261022\unpacked\memory-game6085\backend\target\memory-game6085.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to D:\2026Autumn Semester File\云计算\Docker作业\docs\v5-local-acceptance-20261022\unpacked\memory-game6085\backend\target\memory-game6085.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.512 s
+[INFO] Finished at: 2026-10-22T12:14:35+08:00
+[INFO] ------------------------------------------------------------------------
+构建完成。可运行：java -jar backend/target/memory-game6085.jar

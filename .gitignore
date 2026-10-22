@@ -60,3 +60,14 @@ Thumbs.db
 /docs/v5-report-work/render-pass*/
 /docs/v5-report-work/*.html
 /docs/v5-work/*-local.txt
+
+# v5 independent local acceptance: keep verification evidence, exclude duplicates.
+/docs/v5-local-acceptance-20261022/unpacked/
+/docs/v5-local-acceptance-20261022/*.jar
+/docs/v5-local-acceptance-20261022/*.docx
+/docs/v5-local-acceptance-20261022/*.html
+/docs/v5-local-acceptance-20261022/docker-prepare.log
+/docs/v5-local-acceptance-20261022/docker-roundtrip.log
+/docs/v5-local-acceptance-20261022/docker-roundtrip/source-image-app.jar
+/docs/v5-local-acceptance-20261022/docker-roundtrip/original-containers.*
+/docs/v5-local-acceptance-20261022/docker-roundtrip/final-containers.txt

@@ -1,0 +1,6 @@
+2026-10-22T04:14:53.388886+00:00
+> docker network inspect memory-game6085-v5verify-20261022-net
+[]
+Error response from daemon: network memory-game6085-v5verify-20261022-net not found
+
+ExitCode=1

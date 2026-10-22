@@ -1,0 +1,137 @@
+{
+  "release": [
+    {
+      "path": "output\\v5\\20261022-docker-evidence-v5.zip",
+      "sha256": "35455609c9a986f1bc448794140d05053e9a032354a9027cf6124a7be5ec82b3",
+      "matches": true
+    },
+    {
+      "path": "output\\v5\\20261022-docker-lab-report-v5.docx",
+      "sha256": "397fd74b20f657f391f26137b13b1c8a2103976a39564b2520ae28156645dc1e",
+      "matches": true
+    },
+    {
+      "path": "output\\v5\\20261022-memory-game6085-desktop-v5.png",
+      "sha256": "9b2455fd4982a04dd3f8c3b6a7e80a0193df6377323e2423196e90fbb1e2fd00",
+      "matches": true
+    },
+    {
+      "path": "output\\v5\\20261022-memory-game6085-mobile-v5.png",
+      "sha256": "7ee823e8976e292d740ca533acf63df196c35608984dd22e5af07b5fe8a7272a",
+      "matches": true
+    },
+    {
+      "path": "output\\v5\\20261022-memory-game6085-v5.zip",
+      "sha256": "1bfbf5399a7344ebc78f874b30c8e97dc52d9f111740437244417d296b05964c",
+      "matches": true
+    }
+  ],
+  "sourcePackage": {
+    "entries": 34,
+    "crcValid": true,
+    "workspaceDifferences": [],
+    "jarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0"
+  },
+  "evidencePackage": {
+    "entries": 132,
+    "crcValid": true,
+    "manifestEntries": 131,
+    "manifestFailures": []
+  },
+  "report": {
+    "images": 22,
+    "tables": 9,
+    "mediaSources": [
+      {
+        "part": "word/media/image15.png",
+        "evidenceSource": "linux-v3/03-container-run.png"
+      },
+      {
+        "part": "word/media/image1.png",
+        "evidenceSource": "windows-original/04-container-home.png"
+      },
+      {
+        "part": "word/media/image2.png",
+        "evidenceSource": "windows-original/01-environment.png"
+      },
+      {
+        "part": "word/media/image3.png",
+        "evidenceSource": "windows-original/05-container-completed.png"
+      },
+      {
+        "part": "word/media/image4.png",
+        "evidenceSource": "windows-original/02-build-progress.png"
+      },
+      {
+        "part": "word/media/image5.png",
+        "evidenceSource": "windows-original/03b-container-run.png"
+      },
+      {
+        "part": "word/media/image6.png",
+        "evidenceSource": "windows-original/05-registry-push.png"
+      },
+      {
+        "part": "word/media/image7.png",
+        "evidenceSource": "windows-original/06-remove-local.png"
+      },
+      {
+        "part": "word/media/image8.png",
+        "evidenceSource": "windows-original/07-registry-pull.png"
+      },
+      {
+        "part": "word/media/image9.png",
+        "evidenceSource": "windows-original/04-data-before.png"
+      },
+      {
+        "part": "word/media/image10.png",
+        "evidenceSource": "windows-original/08-run-pulled-image.png"
+      },
+      {
+        "part": "word/media/image11.png",
+        "evidenceSource": "windows-original/09-data-after.png"
+      },
+      {
+        "part": "word/media/image13.png",
+        "evidenceSource": "linux-v3/01-config-review.png"
+      },
+      {
+        "part": "word/media/image16.png",
+        "evidenceSource": "linux-v3/05-game-saved.png"
+      },
+      {
+        "part": "word/media/image17.png",
+        "evidenceSource": "linux-v3/04-registry-push.png"
+      },
+      {
+        "part": "word/media/image18.png",
+        "evidenceSource": "linux-v3/07-remove-local.png"
+      },
+      {
+        "part": "word/media/image19.png",
+        "evidenceSource": "linux-v3/08-registry-pull.png"
+      },
+      {
+        "part": "word/media/image20.png",
+        "evidenceSource": "linux-v3/09-recreate-verify.png"
+      },
+      {
+        "part": "word/media/image21.png",
+        "evidenceSource": "linux-v3/10-after-recreate-ui.png"
+      },
+      {
+        "part": "word/media/image22.png",
+        "evidenceSource": "windows-localtest-20261022/after-recreate-ui.png"
+      },
+      {
+        "part": "word/media/image12.png",
+        "evidenceSource": "linux-v3/01-resource-creation.png"
+      },
+      {
+        "part": "word/media/image14.png",
+        "evidenceSource": "linux-v3/02-build-review.png"
+      }
+    ],
+    "unresolvedMarkerLines": [],
+    "trackedChanges": 0
+  }
+}

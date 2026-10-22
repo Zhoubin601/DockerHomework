@@ -1,0 +1,54 @@
+{
+  "completedAt": "2026-10-22T04:16:17.653960+00:00",
+  "sourceBuild": "Dockerfile.prebuilt, exact v5 deliverable JAR",
+  "oldContainer": "7971e4f6dc38307f19e588c1a4dab5e1e0dac51470aef2445559987b608760c8",
+  "newContainer": "1b82e375e7acedb036a040de76da9b25ba528a8352b168fb6f0272a08a99d90a",
+  "containerChanged": true,
+  "leaderboardPreserved": true,
+  "beforeLeaderboard": {
+    "scores": [
+      {
+        "id": 1,
+        "nickname": "测试花匠6085",
+        "difficulty": "easy",
+        "moves": 12,
+        "durationMs": 8406,
+        "createdAt": "2026-10-22T04:15:43.701212178Z"
+      }
+    ],
+    "total": 1,
+    "bestDurationMs": 8406
+  },
+  "afterLeaderboard": {
+    "scores": [
+      {
+        "id": 1,
+        "nickname": "测试花匠6085",
+        "difficulty": "easy",
+        "moves": 12,
+        "durationMs": 8406,
+        "createdAt": "2026-10-22T04:15:43.701212178Z"
+      }
+    ],
+    "total": 1,
+    "bestDurationMs": 8406
+  },
+  "pushRepoDigests": [
+    "memory-game6085@sha256:67a1115528ecc27718c97181e0019d8341224cde7fc4b480f1822618066d6136",
+    "localhost:15087/memory-game6085@sha256:67a1115528ecc27718c97181e0019d8341224cde7fc4b480f1822618066d6136"
+  ],
+  "pullRepoDigests": [
+    "localhost:15087/memory-game6085@sha256:67a1115528ecc27718c97181e0019d8341224cde7fc4b480f1822618066d6136"
+  ],
+  "repoDigestsMatch": true,
+  "localTagsAbsentBeforePull": true,
+  "originalContainersUnchanged": true,
+  "applicationUrl": "http://127.0.0.1:18088",
+  "registry": "localhost:15087",
+  "dataVolume": "memory-game6085-v5verify-20261022-data",
+  "health": {
+    "status": "UP",
+    "application": "memory-game6085",
+    "database": "SQLite"
+  }
+}

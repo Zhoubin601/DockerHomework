@@ -1,0 +1,14 @@
+{
+  "baseCommit": "80222d5022dbfb6661f0933f98ad71281213ca25",
+  "stagedFiles": 109,
+  "stagedBytes": 7149685,
+  "largestFile": {
+    "path": "docs/v5-local-acceptance-20261022/report-review.pdf",
+    "bytes": 1797896
+  },
+  "textFilesScanned": 69,
+  "credentialPatternFailures": [],
+  "rawAndOutputUnchanged": 26,
+  "temporaryDuplicatesExcluded": true,
+  "unrelatedContainerDetailsExcluded": true
+}

@@ -1,0 +1,5 @@
+2026-10-22T04:14:57.427628+00:00
+> docker exec memory-game6085-v5verify-20261022-app id
+uid=999(garden) gid=999(garden) groups=999(garden)
+
+ExitCode=0

@@ -1,0 +1,5 @@
+2026-10-22T04:14:57.621631+00:00
+> docker exec memory-game6085-v5verify-20261022-app sha256sum /app/app.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /app/app.jar
+
+ExitCode=0

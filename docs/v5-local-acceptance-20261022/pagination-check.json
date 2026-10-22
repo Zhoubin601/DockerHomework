@@ -1,0 +1,303 @@
+{
+  "pages": 31,
+  "tables": 9,
+  "images": 22,
+  "verifiedTocEntries": 42,
+  "allHeadingAndTocPagesMatch": true,
+  "headings": [
+    {
+      "heading": "一 实验目的与任务要求",
+      "level": 1,
+      "page": 3,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "二 实验环境与项目结构",
+      "level": 1,
+      "page": 4,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "2.1 实验配置与项目目录",
+      "level": 2,
+      "page": 4,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "2.2 环境启动与验证",
+      "level": 2,
+      "page": 5,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "三 系统设计与持久化",
+      "level": 1,
+      "page": 6,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "3.1 应用结构",
+      "level": 2,
+      "page": 6,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "3.2 SQLite 数据设计",
+      "level": 2,
+      "page": 6,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "3.3 容器数据卷",
+      "level": 2,
+      "page": 6,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "四 本地构建与功能验证",
+      "level": 1,
+      "page": 7,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "4.1 本地构建与自动验证",
+      "level": 2,
+      "page": 7,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "4.2 容器中的真实游戏操作",
+      "level": 2,
+      "page": 7,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "五 Docker 镜像构建与运行",
+      "level": 1,
+      "page": 8,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "5.1 多阶段构建",
+      "level": 2,
+      "page": 8,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "5.2 JAR 打包与镜像导出",
+      "level": 2,
+      "page": 9,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "5.3 启动容器与接口检查",
+      "level": 2,
+      "page": 10,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "六 镜像发布与拉取",
+      "level": 1,
+      "page": 11,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "6.1 启动本机镜像仓库",
+      "level": 2,
+      "page": 11,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "6.2 标记与推送镜像",
+      "level": 2,
+      "page": 11,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "6.3 删除本地镜像后重新拉取",
+      "level": 2,
+      "page": 12,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "七 容器重建与持久化验证",
+      "level": 1,
+      "page": 14,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "7.1 记录重建前的数据",
+      "level": 2,
+      "page": 14,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "7.2 使用拉取镜像创建新容器",
+      "level": 2,
+      "page": 15,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "7.3 对比重建后的成绩",
+      "level": 2,
+      "page": 16,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "八 实验结果与问题分析",
+      "level": 1,
+      "page": 17,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "8.1 启动与端口问题",
+      "level": 2,
+      "page": 17,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "8.2 实验总结",
+      "level": 2,
+      "page": 17,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "九 参考资料与证据来源",
+      "level": 1,
+      "page": 18,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "9.1 原Windows实验截图来源索引",
+      "level": 2,
+      "page": 18,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "附录A Linux补充部署与复现",
+      "level": 1,
+      "page": 19,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A1 环境来源与独立资源配置",
+      "level": 2,
+      "page": 19,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A2 配套JAR打包为新镜像",
+      "level": 2,
+      "page": 21,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A3 容器运行与交付文件校验",
+      "level": 2,
+      "page": 22,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A4 实际游戏与成绩保存",
+      "level": 2,
+      "page": 23,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A5 本机仓库发布镜像",
+      "level": 2,
+      "page": 24,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A6 移除本地镜像并保留数据卷",
+      "level": 2,
+      "page": 25,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A7 从仓库重新拉取",
+      "level": 2,
+      "page": 26,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A8 重建容器并核对成绩保留",
+      "level": 2,
+      "page": 27,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A9 浏览器复核重建后的榜单",
+      "level": 2,
+      "page": 28,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "A10 补充证据来源与版本对应",
+      "level": 2,
+      "page": 29,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "附录B 本机复测与结果核对",
+      "level": 1,
+      "page": 30,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "B1 2026年10月22日本机验证",
+      "level": 2,
+      "page": 30,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    },
+    {
+      "heading": "B2 拉取重建后的浏览器复核",
+      "level": 2,
+      "page": 31,
+      "headingInRealPage": true,
+      "tocPageMatches": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+2026-10-22T04:14:54.060149+00:00
+> docker run -d --name memory-game6085-v5verify-20261022-registry --label codex.memory6085.test=20261022 --network memory-game6085-v5verify-20261022-net -p 127.0.0.1:15087:5000 -e OTEL_TRACES_EXPORTER=none --mount type=volume,source=memory-game6085-v5verify-20261022-registry-data,target=/var/lib/registry registry:3
+044b5d74c7706e6198af56e59ed169bbe274dd18afadade7e75a0a7adbd28bf1
+
+ExitCode=0

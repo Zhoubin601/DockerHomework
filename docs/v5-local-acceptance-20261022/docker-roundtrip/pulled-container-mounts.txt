@@ -1,0 +1,5 @@
+2026-10-22T04:16:17.288339+00:00
+> docker inspect memory-game6085-v5verify-20261022-pulled --format "{{json .Mounts}}"
+[{"Type":"volume","Name":"memory-game6085-v5verify-20261022-data","Source":"/var/lib/docker/volumes/memory-game6085-v5verify-20261022-data/_data","Destination":"/app/data","Driver":"local","Mode":"z","RW":true,"Propagation":""}]
+
+ExitCode=0

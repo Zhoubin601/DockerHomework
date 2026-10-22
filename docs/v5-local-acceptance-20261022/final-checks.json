@@ -1,0 +1,47 @@
+{
+  "gitCommit": "80222d5022dbfb6661f0933f98ad71281213ca25",
+  "remoteCommit": "80222d5022dbfb6661f0933f98ad71281213ca25",
+  "backendTests": {
+    "tests": "3",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "browserTests": "3 passed",
+  "pulledImageBrowser": {
+    "url": "http://127.0.0.1:18088/",
+    "savedScoreVisible": true,
+    "pageErrors": [],
+    "result": "passed"
+  },
+  "jarComparison": {
+    "sourceRebuild": {
+      "sha256": "2c3c252f5e19de2baf042bda22a0f92167b37f42855b14ba5768683517c21511",
+      "bootInfEntries": 61,
+      "bootInfMatchesDelivery": true,
+      "wholeJarMatchesDelivery": false
+    },
+    "dockerSource": {
+      "sha256": "6126a1faf7e80ec948c5be2b50d834c7f3a4ef9f65089fcd49431f532a1b1389",
+      "bootInfEntries": 61,
+      "bootInfMatchesDelivery": true,
+      "wholeJarMatchesDelivery": false
+    },
+    "dockerDelivery": {
+      "sha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+      "bootInfEntries": 61,
+      "bootInfMatchesDelivery": true,
+      "wholeJarMatchesDelivery": true
+    }
+  },
+  "deliveryJarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+  "rawAndOutputFilesChecked": 26,
+  "rawAndOutputChanged": [],
+  "dockerRoundtripPassed": true,
+  "originalContainersUnchanged": true,
+  "wordPages": 31,
+  "tocEntriesVerified": 42,
+  "wordSchema": "passed, zero errors",
+  "applicationUrl": "http://127.0.0.1:18088",
+  "historicalInstallScreenshots": "资料未提供；报告如实说明沿用已有引擎"
+}

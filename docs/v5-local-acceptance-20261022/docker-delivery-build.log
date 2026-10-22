@@ -1,0 +1,41 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.prebuilt
+#1 transferring dockerfile: 528B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-jammy
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 145B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0
+#4 resolve docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 33.64MB 2.4s done
+#5 DONE 2.4s
+
+#6 [2/4] RUN groupadd --system garden && useradd --system --gid garden --home-dir /app garden     && mkdir -p /app/data && chown -R garden:garden /app
+#6 CACHED
+
+#7 [3/4] WORKDIR /app
+#7 CACHED
+
+#8 [4/4] COPY --chown=garden:garden dist-artifacts/memory-game6085.jar /app/app.jar
+#8 DONE 0.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.7s done
+#9 exporting manifest sha256:31f180c51630f060adeb5d320b79261395841e0c2073a086e7fc3c1e76a5eb8a 0.0s done
+#9 exporting config sha256:b50bb2e86fd310c6eafc1db9339e3badce3e019f5bdf197122d06c99f6b6459c 0.0s done
+#9 exporting attestation manifest sha256:4572d9ec294667c804561d3050175c49b33a4b16ab067e0e283765a8a859e8a5 0.0s done
+#9 exporting manifest list sha256:67a1115528ecc27718c97181e0019d8341224cde7fc4b480f1822618066d6136 0.0s done
+#9 naming to docker.io/library/memory-game6085:v5verify-20261022 done
+#9 unpacking to docker.io/library/memory-game6085:v5verify-20261022
+#9 unpacking to docker.io/library/memory-game6085:v5verify-20261022 0.1s done
+#9 DONE 0.9s

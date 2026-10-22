@@ -1,0 +1,13 @@
+2026-10-22T04:16:12.715146+00:00
+> docker pull localhost:15087/memory-game6085:v5verify-20261022
+v5verify-20261022: Pulling from memory-game6085
+16bbf0635320: Pulling fs layer
+44136fa355b3: Already exists
+16bbf0635320: Already exists
+16bbf0635320: Pull complete
+0e893dc400f5: Download complete
+Digest: sha256:67a1115528ecc27718c97181e0019d8341224cde7fc4b480f1822618066d6136
+Status: Downloaded newer image for localhost:15087/memory-game6085:v5verify-20261022
+localhost:15087/memory-game6085:v5verify-20261022
+
+ExitCode=0

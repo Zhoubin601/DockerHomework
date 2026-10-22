@@ -193,3 +193,11 @@
 - 21张历史图保持原字节，新图来自docs/local-test-20261022/docker-roundtrip/after-recreate-ui.png；附录B的数字、摘要和容器标识来自results.json原件。
 - 源码包及证据包来源、132项证据成员、131项摘要清单、两张预览准确来源见docs/v5-work/package-validation.json和independent-package-audit.json。
 - 最终独立复核见docs/v5-work/independent-final-review.md；raw/与历史21份文件基线核验通过。
+
+## 2026-10-22 最新 v5 独立本机验收
+
+- 原始指导图：raw/要求.png，本轮直接查看。历史安装/首次配置截图仍资料未提供，不将环境可用当作安装过程截图齐全。
+- 代码来源：origin/main，仓库 https://github.com/Zhoubin601/DockerHomework ，读取日期2026-10-22；fetch及pull --ff-only后本机和远端均80222d5022dbfb6661f0933f98ad71281213ca25，无更新。
+- 直接测试output/v5实际源码ZIP，重构建成功，后端3/3；Docker源码构建复用缓存；精确交付JAR容器浏览器3/3，独立15087仓库push、移除本地标签后pull、18088新容器完整榜单保留均通过。三份JAR的BOOT-INF 61项均一致。
+- 直接核验v5五份文件摘要、ZIP CRC及131项证据清单；Word严格校验0错误，本机Word只读副本31页，42项目录均对实际PDF页通过。22张内嵌图全部匹配证据ZIP原图。
+- 来源日志与结果：docs/v5-local-acceptance-20261022/；提交判断：docs/20261022-v5-local-submission-review.md。raw/output 26份摘要无变化，原有容器ID和状态不变。未查询外部技术资料。
