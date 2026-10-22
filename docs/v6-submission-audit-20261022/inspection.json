@@ -1,0 +1,210 @@
+{
+  "date": "2026-10-22",
+  "files": {
+    "raw\\要求.png": {
+      "bytes": 35411,
+      "sha256": "12c0240d5dcd5cfe16d4ff241fa28e113b3a5c3ecd8bb08c26db8c05b7336b1a"
+    },
+    "output\\v6\\memory-game6085.docx": {
+      "bytes": 1191244,
+      "sha256": "fd4787b33ed40fede5c035b55a4779e346cedf982fe68c61b702d91409d8b28f"
+    },
+    "output\\v6\\memory-game6085.zip": {
+      "bytes": 31518816,
+      "sha256": "1bfbf5399a7344ebc78f874b30c8e97dc52d9f111740437244417d296b05964c"
+    }
+  },
+  "word": {
+    "crc_error": null,
+    "paragraphs": 169,
+    "tables": 6,
+    "images": [
+      {
+        "index": 1,
+        "member": "word/media/image1.png",
+        "dimensions": [
+          1440,
+          1348
+        ],
+        "sha256": "76433e762d10d32c41d0513b1e5917e52f08531f0c44cb7a22e7fd33be41255e",
+        "evidence_matches": [
+          "windows-original/04-container-home.png"
+        ]
+      },
+      {
+        "index": 2,
+        "member": "word/media/image2.png",
+        "dimensions": [
+          1680,
+          1064
+        ],
+        "sha256": "e2015352c4dfecf428dfeed99f31e10d2bb18ff1826cc1a98056b7f0ecfbaa04",
+        "evidence_matches": [
+          "windows-original/01-environment.png"
+        ]
+      },
+      {
+        "index": 3,
+        "member": "word/media/image3.png",
+        "dimensions": [
+          1440,
+          1100
+        ],
+        "sha256": "f84f894f17227220c570d0030698447db9159197fcb7dea239ed5efb5bfac941",
+        "evidence_matches": [
+          "windows-original/05-container-completed.png"
+        ]
+      },
+      {
+        "index": 4,
+        "member": "word/media/image4.png",
+        "dimensions": [
+          1680,
+          1064
+        ],
+        "sha256": "771e7ca6b90a30573133ceee92352345709c4541e74948aeb8735235dc85f4f9",
+        "evidence_matches": [
+          "windows-original/02-build-progress.png"
+        ]
+      },
+      {
+        "index": 5,
+        "member": "word/media/image5.png",
+        "dimensions": [
+          1248,
+          872
+        ],
+        "sha256": "ac018982ea66eae7bde4be81233b44787d360202b7d8f867305db6ef5f5a00a8",
+        "evidence_matches": [
+          "windows-original/03b-container-run.png"
+        ]
+      },
+      {
+        "index": 6,
+        "member": "word/media/image6.png",
+        "dimensions": [
+          1248,
+          872
+        ],
+        "sha256": "650fd64f00fb6a7cda6aebea81b9a68c154ec687eeea931ef3871859fc1dffa2",
+        "evidence_matches": [
+          "windows-original/05-registry-push.png"
+        ]
+      },
+      {
+        "index": 7,
+        "member": "word/media/image7.png",
+        "dimensions": [
+          1248,
+          872
+        ],
+        "sha256": "c2d8d272f833d9a0155e7f14c06cfb2e5fa2f01b0f1b6eb5bba08df69e1ca8d0",
+        "evidence_matches": [
+          "windows-original/06-remove-local.png"
+        ]
+      },
+      {
+        "index": 8,
+        "member": "word/media/image8.png",
+        "dimensions": [
+          1248,
+          872
+        ],
+        "sha256": "b3d4ec093b80595174644ca0dbe3fca1284dbfa44e4eca0eafca5bc7616f1fd1",
+        "evidence_matches": [
+          "windows-original/07-registry-pull.png"
+        ]
+      },
+      {
+        "index": 9,
+        "member": "word/media/image9.png",
+        "dimensions": [
+          1248,
+          872
+        ],
+        "sha256": "ed80b8d3eac7954f7170c96a351b5c41244c08a213ef21d6a513ac9ab530c65a",
+        "evidence_matches": [
+          "windows-original/04-data-before.png"
+        ]
+      },
+      {
+        "index": 10,
+        "member": "word/media/image10.png",
+        "dimensions": [
+          1248,
+          872
+        ],
+        "sha256": "ac24868186a3984417047ed7249200219569a4de54a3e1335b68cf677e2d8c20",
+        "evidence_matches": [
+          "windows-original/08-run-pulled-image.png"
+        ]
+      },
+      {
+        "index": 11,
+        "member": "word/media/image11.png",
+        "dimensions": [
+          1248,
+          872
+        ],
+        "sha256": "cd3cdae7ba61c6f0d431c0a0c0a813da64dd9b81688a5255d3ac39aa953a242e",
+        "evidence_matches": [
+          "windows-original/09-data-after.png"
+        ]
+      }
+    ],
+    "appendix_headings": [],
+    "appendix_references": [
+      "任务要求 | 本实验对应方式 | 项目名称包含学号后四位 | memory-game6085，学号后四位为 6085 | Spring Boot 项目打包发布 | Windows多阶段构建见第五章；Linux配套JAR及镜像见附录A2—A3 | 发布后演示拉取 | Windows仓库localhost:5000见第六章；Linux仓库localhost:15085见附录A5—A8 | 全过程截图汇总 | Windows图1—11；Linux图A1a、A1b及A2—A9；本机重建后图B1，均嵌入本Word | Docker 环境部署与验证 | 沿用已装引擎；Windows启动验证见2.2，Linux资源配置见附录A1",
+      "第二至九章记录原 Windows 实验。Linux 补充部署使用独立资源，环境配置和操作截图见附录 A。",
+      "原 Windows 环境沿用既有安装。本报告附录A补充本轮 Linux 环境的网络、数据卷、镜像及容器配置操作截图，两次环境的记录分别保留。"
+    ],
+    "external_image_links": []
+  },
+  "source_zip": {
+    "crc_error": null,
+    "members": [
+      "memory-game6085/.dockerignore",
+      "memory-game6085/.gitignore",
+      "memory-game6085/Dockerfile",
+      "memory-game6085/Dockerfile.prebuilt",
+      "memory-game6085/README.md",
+      "memory-game6085/backend/pom.xml",
+      "memory-game6085/backend/src/main/java/cn/memorygarden/ApiErrors.java",
+      "memory-game6085/backend/src/main/java/cn/memorygarden/GameService.java",
+      "memory-game6085/backend/src/main/java/cn/memorygarden/GardenApplication.java",
+      "memory-game6085/backend/src/main/java/cn/memorygarden/GardenController.java",
+      "memory-game6085/backend/src/main/java/cn/memorygarden/ScoreRepository.java",
+      "memory-game6085/backend/src/main/resources/application.properties",
+      "memory-game6085/backend/src/test/java/cn/memorygarden/GardenTests.java",
+      "memory-game6085/compose.yaml",
+      "memory-game6085/dist-artifacts/SHA256SUMS",
+      "memory-game6085/dist-artifacts/memory-game6085.jar",
+      "memory-game6085/frontend/index.html",
+      "memory-game6085/frontend/package-lock.json",
+      "memory-game6085/frontend/package.json",
+      "memory-game6085/frontend/playwright.config.js",
+      "memory-game6085/frontend/public/favicon.svg",
+      "memory-game6085/frontend/scripts/audit-ui.mjs",
+      "memory-game6085/frontend/scripts/v3-browser-evidence.mjs",
+      "memory-game6085/frontend/src/App.vue",
+      "memory-game6085/frontend/src/api.js",
+      "memory-game6085/frontend/src/components/PlantArt.vue",
+      "memory-game6085/frontend/src/main.js",
+      "memory-game6085/frontend/src/style.css",
+      "memory-game6085/frontend/src/tokens.css",
+      "memory-game6085/frontend/tests/garden.spec.js",
+      "memory-game6085/frontend/vite.config.js",
+      "memory-game6085/scripts/build.ps1",
+      "memory-game6085/scripts/package-prebuilt.ps1",
+      "memory-game6085/scripts/start-docker-runtime.ps1"
+    ],
+    "member_count": 34,
+    "differences_from_Code_ignoring_line_endings": [],
+    "same_bytes_as_v5_zip": true,
+    "jar_sha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+    "jar_manifest": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  dist-artifacts/memory-game6085.jar\n",
+    "pom": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <parent>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-parent</artifactId>\n    <version>4.1.1</version>\n    <relativePath/>\n  </parent>\n  <groupId>cn.memorygarden</groupId>\n  <artifactId>memory-game6085</artifactId>\n  <version>1.0.0</version>\n  <name>memory-game6085</name>\n  <description>记忆花园：Docker 课程翻牌小游戏</description>\n  <properties><java.version>21</java.version></properties>\n  <dependencies>\n    <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-webmvc</artifactId></dependency>\n    <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-validation</artifactId></dependency>\n    <dependency><groupId>org.xerial</groupId><artifactId>sqlite-jdbc</artifactId><version>3.53.4.0</version></dependency>\n    <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-test</artifactId><scope>test</scope></dependency>\n  </dependencies>\n  <build>\n    <finalName>memory-game6085</finalName>\n    <plugins>\n      <plugin><groupId>org.springframework.boot</groupId><artifactId>spring-boot-maven-plugin</artifactId></plugin>\n      <plugin>\n        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-resources-plugin</artifactId>\n        <executions><execution><id>copy-vue</id><phase>process-resources</phase><goals><goal>copy-resources</goal></goals>\n          <configuration><outputDirectory>${project.build.outputDirectory}/static</outputDirectory>\n            <resources><resource><directory>../frontend/dist</directory><filtering>false</filtering></resource></resources>\n          </configuration>\n        </execution></executions>\n      </plugin>\n    </plugins>\n  </build>\n</project>\n",
+    "dockerfile": "FROM node:24-bookworm-slim AS frontend\nWORKDIR /build/frontend\nCOPY frontend/package*.json ./\nRUN npm ci --no-audit --no-fund\nCOPY frontend/ ./\nRUN npm run build\n\nFROM maven:3.9.9-eclipse-temurin-21 AS backend\nWORKDIR /build/backend\nCOPY backend/pom.xml ./\nRUN mvn -B -ntp dependency:go-offline\nCOPY backend/src ./src\nCOPY --from=frontend /build/frontend/dist /build/frontend/dist\nRUN mvn -B -ntp package\n\nFROM eclipse-temurin:21-jre-jammy\nRUN groupadd --system garden && useradd --system --gid garden --home-dir /app garden \\\n    && mkdir -p /app/data && chown -R garden:garden /app\nWORKDIR /app\nCOPY --from=backend --chown=garden:garden /build/backend/target/memory-game6085.jar /app/app.jar\nUSER garden\nENV DATA_DIR=/app/data PORT=8080\nEXPOSE 8080\nENTRYPOINT [\"java\", \"-XX:MaxRAMPercentage=70.0\", \"-jar\", \"/app/app.jar\"]\n",
+    "compose": "name: memory-game6085\nservices:\n  garden:\n    build: .\n    image: memory-game6085:1.0.0\n    ports:\n      - \"127.0.0.1:${GARDEN_PORT:-18085}:8080\"\n    environment:\n      DATA_DIR: /app/data\n    volumes:\n      - garden-data:/app/data\n    restart: unless-stopped\n    stop_grace_period: 15s\nvolumes:\n  garden-data:\n    name: memory-game6085-data\n"
+  }
+}

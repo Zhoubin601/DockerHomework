@@ -1,0 +1,175 @@
+Spring Boot 小游戏Docker 容器化实验报告
+记忆花园 memory-game6085
+课程：2026云计算技术与架构
+姓名：周宇斌
+班级：软件2401
+学号：20246085
+实验日期：2026年10月21日
+
+图1 记忆花园容器运行页面
+本实验将 Vue3、Spring Boot 与 SQLite 记忆翻牌小游戏打包为 Docker 镜像，完成本机仓库发布、删除本地镜像后拉取和数据卷保留验证。
+目录
+一 实验目的与任务要求3
+二 实验环境与项目结构4
+2.1 实验配置与项目目录4
+2.2 环境启动与验证5
+三 系统设计与持久化6
+3.1 应用结构6
+3.2 SQLite 数据设计6
+3.3 容器数据卷6
+四 本地构建与功能验证7
+4.1 本地构建与自动验证7
+4.2 容器中的游戏操作与成绩保存7
+五 Docker 镜像构建与运行8
+5.1 多阶段构建8
+5.2 JAR 打包与镜像导出9
+5.3 启动容器与接口检查10
+六 镜像发布与拉取11
+6.1 启动本机镜像仓库11
+6.2 标记与推送镜像11
+6.3 删除本地镜像后重新拉取12
+七 容器重建与持久化验证14
+7.1 记录重建前的数据14
+7.2 使用拉取镜像创建新容器15
+7.3 对比重建后的成绩16
+八 实验结果与问题分析17
+8.1 启动与端口问题17
+8.2 实验总结17
+九 参考资料与证据来源18
+
+一 实验目的与任务要求
+本实验的目的是掌握 Spring Boot 应用容器化的基本过程，理解 Docker 镜像、容器、镜像仓库和持久化数据卷的作用，并通过实际命令和访问结果验证部署流程。
+在机器上部署 Docker 环境，将一个已有 Spring Boot 项目打包到 Docker 上发布，项目名称末尾加学号后四位；发布后演示拉取，所有过程截图放在一个 Word 文件中提交。
+任务要求 | 本实验对应方式 | 项目名称包含学号后四位 | memory-game6085，学号后四位为 6085 | Spring Boot 项目打包发布 | Windows多阶段构建见第五章；Linux配套JAR及镜像见附录A2—A3 | 发布后演示拉取 | Windows仓库localhost:5000见第六章；Linux仓库localhost:15085见附录A5—A8 | 全过程截图汇总 | Windows图1—11；Linux图A1a、A1b及A2—A9；本机重建后图B1，均嵌入本Word | Docker 环境部署与验证 | 沿用已装引擎；Windows启动验证见2.2，Linux资源配置见附录A1
+二 实验环境与项目结构
+第二至九章记录原 Windows 实验。Linux 补充部署使用独立资源，环境配置和操作截图见附录 A。
+2.1 实验配置与项目目录
+项目 | 本次实际配置 | 操作系统 | Windows 11 家庭版 中文版 64 位，10.0.26300 | 本地开发工具 | Java 21.0.11；Node.js 24.14.1；npm 11.11.0；Maven 3.9.16 | 应用技术栈 | Vue 3.5.44、Vite 7.3.7、Spring Boot 4.1.1、SQLite JDBC 3.53.4.0 | Docker 环境 | Docker Desktop 4.95.0；Client / Server 29.8.2；Compose 5.6.0 | 构建与运行镜像 | Node 24；Maven 3.9.9 + Java 21；Temurin 21 JRE | 源码目录 | Code/memory-game6085/ | 应用端口 | 宿主机 127.0.0.1:18085 → 容器 8080 | 镜像仓库 | 本机 Registry，127.0.0.1:5000 | 持久化目录 | memory-game6085-data → /app/data，数据库 garden.db
+frontend 保存 Vue 页面和图案，backend 保存 Spring Boot 接口及数据库逻辑，scripts 保存本地构建与实验辅助脚本。Dockerfile 与 compose.yaml 位于项目根目录。本实验采用 18085 作为宿主机端口。
+2.2 环境启动与验证
+本实验沿用 Windows 上已安装的 Docker Desktop，使用 WSL2 的 Linux 容器引擎。原有 WSL 数据目录继续使用。表中的环境版本取自本次实验机器，图2展示恢复启动后的实际验证结果。
+启动时遇到遗留 socket 故障，Docker Desktop 无法正常提供服务。为恢复启动，在 Docker Desktop 停止时执行下面的辅助脚本，仅为该子进程设置独立的 LOCALAPPDATA 运行时缓存目录，保留系统级环境变量。
+.\scripts\start-docker-runtime.ps1
+引擎启动后，在项目根目录执行版本与命名检查。docker version 同时返回 Client 和 Server 29.8.2，Engine 为 linux/amd64；Compose 返回 5.6.0，项目目录为 memory-game6085。随后执行第五章的构建与运行操作。
+原 Windows 环境沿用既有安装。本报告附录A补充本轮 Linux 环境的网络、数据卷、镜像及容器配置操作截图，两次环境的记录分别保留。
+docker version
+docker compose version
+Get-Item . | Select-Object Name, FullName
+
+图2 Docker Client 与 Server 版本及项目名称检查
+三 系统设计与持久化
+3.1 应用结构
+浏览器通过 Vue3 页面操作游戏，Spring Boot 提供牌局、翻牌、暂停、成绩提交和排行榜接口。前端构建结果复制到后端静态资源目录，再打入可执行 JAR，因此一个应用容器即可同时提供页面和接口。
+游戏提供轻松 6 对、标准 8 对和挑战 12 对三种难度。后端随机生成卡牌顺序并判断配对，负责步数和计时。未翻开的答案不会直接传给浏览器；暂停时保留本局状态并停止计时，恢复后继续游戏。
+3.2 SQLite 数据设计
+字段 | 用途 | game_id | 牌局唯一标识，防止同一局重复写入 | nickname / difficulty | 玩家昵称与难度，按难度分别查询排行榜 | moves / duration_ms | 服务端生成的步数与用时，作为排序依据 | created_at | 成绩记录创建时间
+运行中的牌局保存在服务端内存中；服务重启后需要重新开局。已提交成绩保存在 SQLite 数据库，排行榜按步数升序排列，步数相同再比较用时。持久化对象是已保存成绩，不包括未完成牌局。
+3.3 容器数据卷
+volumes:
+  - garden-data:/app/data
+# 命名数据卷的实际名称
+name: memory-game6085-data
+镜像保存应用程序，数据库由运行时生成并写入 /app/data。该目录挂载到命名数据卷后，删除应用容器不会自动删除成绩文件。实验重建容器时继续挂载同一数据卷，以验证程序与数据的生命周期可以分离。
+四 本地构建与功能验证
+4.1 本地构建与自动验证
+.\scripts\build.ps1
+java -jar backend/target/memory-game6085.jar
+本地构建已生成可执行 JAR。后端测试覆盖隐藏牌面、无效操作、暂停状态、服务端成绩统计和 SQLite 重新打开后的数据保留。浏览器测试覆盖完整配对、昵称校验、成绩提交、榜单刷新、窄屏布局以及接口失败后的重试。
+检查项目 | 结果 | npm run build | 成功生成前端静态资源 | 后端测试 | 3 项通过，0 失败，0 错误 | 浏览器端到端测试 | 3 项全部通过 | 界面检查 | 1440、768、375、812 横屏及 320 宽度无横向溢出 | 数据保存 | 完成牌局后可提交昵称并进入对应难度榜单
+4.2 容器中的游戏操作与成绩保存
+通过浏览器在应用容器中完成轻松难度的一局游戏，并以昵称“6085实验”保存成绩。服务端返回的记录编号为 1，成绩为 12 步、6.95 秒，用于演示成绩保存流程。
+
+图3 容器中完成配对并保存演示成绩
+五 Docker 镜像构建与运行
+5.1 多阶段构建
+第一阶段使用 Node 构建 Vue，第二阶段使用 Maven 编译和打包 Spring Boot，第三阶段只复制 JAR 到 Java 运行环境。以下为实际 Dockerfile 的关键流程；完整文件位于项目根目录。
+FROM node:24-bookworm-slim AS frontend
+WORKDIR /build/frontend
+COPY frontend/package*.json ./
+RUN npm ci --no-audit --no-fund
+COPY frontend/ ./
+RUN npm run build
+FROM maven:3.9.9-eclipse-temurin-21 AS backend
+WORKDIR /build/backend
+COPY backend/pom.xml ./
+RUN mvn -B -ntp dependency:go-offline
+COPY backend/src ./src
+COPY --from=frontend /build/frontend/dist /build/frontend/dist
+RUN mvn -B -ntp package
+FROM eclipse-temurin:21-jre-jammy
+# 创建普通用户与数据目录后复制 JAR
+COPY --from=backend --chown=garden:garden /build/backend/target/memory-game6085.jar /app/app.jar
+USER garden
+ENV DATA_DIR=/app/data PORT=8080
+EXPOSE 8080
+ENTRYPOINT ["java", "-XX:MaxRAMPercentage=70.0", "-jar", "/app/app.jar"]
+5.2 JAR 打包与镜像导出
+docker compose --progress plain build
+构建日志显示 Maven BUILD SUCCESS，最终镜像命名为 memory-game6085:1.0.0。Docker CLI 显示磁盘占用约 469 MB。首次基础镜像下载曾发生短读错误，完成基础镜像拉取后重新构建成功。
+
+图4 Spring Boot JAR 打包成功并导出 Docker 镜像
+5.3 启动容器与接口检查
+docker compose up -d --no-build
+docker compose ps
+curl.exe -s http://localhost:18085/api/health
+docker exec memory-game6085-garden-1 id
+应用容器运行后，18085 端口可访问游戏和 API。健康检查返回 status 为 UP，database 为 SQLite。容器内运行身份为 garden，UID 和 GID 均为 999，应用不使用 root 用户运行。
+
+图5 应用容器运行状态 端口映射 健康检查与普通用户
+浏览器访问 http://localhost:18085 可进入游戏。该地址映射至应用容器的 8080，前端和后端同源访问，SQLite 无需额外数据库容器。
+六 镜像发布与拉取
+6.1 启动本机镜像仓库
+本实验使用本机私有 Registry，仓库端口绑定 127.0.0.1:5000，镜像数据保存在 memory-game6085-registry-data 数据卷。仓库用于本机课程实验。
+docker run -d --name memory-game6085-registry -p 127.0.0.1:5000:5000 -e OTEL_TRACES_EXPORTER=none --mount type=volume,source=memory-game6085-registry-data,target=/var/lib/registry registry:3
+6.2 标记与推送镜像
+docker tag memory-game6085:1.0.0 localhost:5000/memory-game6085:1.0.0
+docker push localhost:5000/memory-game6085:1.0.0
+curl.exe -s http://localhost:5000/v2/memory-game6085/tags/list
+推送日志显示镜像层 Pushed，仓库标签查询返回 1.0.0。发布路径为 localhost:5000/memory-game6085:1.0.0。
+
+图6 镜像实际推送成功与仓库标签查询
+6.3 删除本地镜像后重新拉取
+为验证镜像来自仓库，先移除本实验应用容器，保留数据卷，并删除本地的两个实验镜像标签。镜像列表确认本地不存在 memory-game6085 后，再执行 pull。
+docker compose down
+docker image rm localhost:5000/memory-game6085:1.0.0 memory-game6085:1.0.0
+docker image ls
+docker pull localhost:5000/memory-game6085:1.0.0
+
+图7 移除实验容器和本地镜像 数据卷仍然保留
+
+图8 从 Registry 重新拉取成功
+拉取结果为 Downloaded newer image。推送与拉取的摘要一致，说明使用的是已发布的同一版本镜像。摘要记录如下：
+sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a15e66
+七 容器重建与持久化验证
+7.1 记录重建前的数据
+原容器中已保存轻松难度演示成绩。实验记录了原容器标识和完整排行榜响应；移除容器时未使用删除数据卷的参数。
+
+图9 重建前的容器标识 成绩与数据卷
+对比项 | 重建前的实际值 | 容器标识前 12 位 | c247b7360b52 | 成绩编号 / 昵称 | 1 / 6085实验 | 步数 / 用时 | 12 / 6950 ms | 数据卷 | memory-game6085-data
+7.2 使用拉取镜像创建新容器
+docker run -d --name memory-game6085-pulled -p 127.0.0.1:18085:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-data,target=/app/data localhost:5000/memory-game6085:1.0.0
+新容器标识前 12 位为 dd8b4bb17b50，与原容器不同。新容器直接使用拉取的仓库镜像，并继续挂载 memory-game6085-data 到 /app/data。
+
+图10 使用拉取镜像创建新容器并确认容器标识
+7.3 对比重建后的成绩
+新容器启动后，成绩编号、昵称、难度、步数、用时和创建时间均与重建前一致。程序比较了重建前后的完整排行榜 JSON，结果为 LeaderboardPreserved=True。记录仍为 6085实验、12 步、6950 ms。
+
+图11 重建后榜单一致 数据卷仍挂载到同一目录
+八 实验结果与问题分析
+实验环节 | 实际结果 | Docker 环境 | Client / Server 正常，Linux 引擎可用 | 应用与镜像构建 | 前端构建、后端测试和 Spring Boot JAR 打包成功 | 容器运行 | 页面和 API 可访问，健康检查 UP | 镜像发布 | 本机 Registry push 成功，可查询标签 1.0.0 | 镜像拉取 | 删除本地镜像后 pull 成功，摘要与推送一致 | 容器重建 | 新容器使用拉取镜像，容器标识与原容器不同 | SQLite 数据卷 | 重建前后的完整榜单一致，已保存成绩未丢失 | 实验截图 | 真实终端窗口与容器浏览器页面均已采集
+8.1 启动与端口问题
+Docker Desktop 最初因遗留 socket 无法访问而退出。原运行时目录改名被 Windows 拒绝，最终通过仅为 Docker Desktop 子进程设置独立运行时缓存目录恢复启动，系统级环境变量未修改。恢复后，Client 与 Server 均能响应，容器也可正常运行。
+首次构建遇到基础镜像下载中断；重新拉取所需基础镜像后完成构建。现有课堂项目占用 8080，因此将本实验宿主机端口调整为 18085，同时保留容器内部端口 8080。
+8.2 实验总结
+本实验完成了应用打包、镜像构建、容器访问、镜像发布与拉取，以及数据卷跨容器保留的完整验证。镜像用于分发应用程序，容器是运行实例，Registry 用于保存和分发镜像，数据卷用于保存独立于容器生命周期的数据库文件。
+重建前后，容器标识发生变化，已保存的成绩保持不变，说明容器重建后仍能读取原数据卷中的 SQLite 数据。后续复现实验时，应保持仓库地址、镜像版本、应用端口和数据卷名称一致。
+九 参考资料与证据来源
+实验项目为记忆花园 memory-game6085，采用 Vue3、Spring Boot 和 SQLite，镜像仓库为本机 Registry。
+项目源代码：Code/memory-game6085/；实验结果：docs/docker-evidence/results.json；各图来自同目录的真实终端和浏览器截图。
+技术资料查阅日期：2026年10月21日。
+Vue 官方文档：https://vuejs.org/guide/essentials/reactivity-fundamentals.html
+Vite 官方文档：https://vite.dev/guide/
+Spring Boot 官方文档：https://docs.spring.io/spring-boot/maven-plugin/packaging.html
+SQLite JDBC 官方仓库：https://github.com/xerial/sqlite-jdbc
+Docker 数据卷官方文档：https://docs.docker.com/engine/storage/volumes/
+CNCF Distribution 官方部署文档：https://distribution.github.io/distribution/about/deploying/

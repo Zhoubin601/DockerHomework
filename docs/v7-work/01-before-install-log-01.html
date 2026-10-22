@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#fff;color:#111;font-family:Arial,"Microsoft YaHei",sans-serif}h1{font-size:25px;margin:0 0 10px}p{font-size:17px;margin:5px 0 12px;color:#444}pre{font-family:Consolas,monospace;font-size:21px;line-height:1.35;white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;border:1px solid #b4bac2;padding:17px;margin:0}</style><h1>Docker 6085 补充实验 · 实际命令日志</h1><p>01-before-install.txt · 原日志第 1—28 行 · UTC 时间按日志保留</p><pre>Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/01-before-install.sh
+Started UTC: 2026-10-22T04:53:35.963679+00:00
+
++ date -Iseconds
+2026-10-22T04:53:36+00:00
++ cat /etc/os-release
++ head -6
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
++ uname -m
+x86_64
++ command -v docker
++ echo 'Docker CLI: not installed in this fresh Ubuntu environment'
++ command -v dockerd
+Docker CLI: not installed in this fresh Ubuntu environment
++ echo 'Docker Engine: not installed'
++ test -S /var/run/docker.sock
++ echo 'No Docker socket; host Docker socket is NOT mounted'
++ dpkg-query -W docker-ce docker-ce-cli containerd.io
+Docker Engine: not installed
+No Docker socket; host Docker socket is NOT mounted
++ true
+
+Actual exit code: 0</pre>

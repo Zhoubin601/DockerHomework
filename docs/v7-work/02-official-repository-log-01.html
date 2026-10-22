@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#fff;color:#111;font-family:Arial,"Microsoft YaHei",sans-serif}h1{font-size:25px;margin:0 0 10px}p{font-size:17px;margin:5px 0 12px;color:#444}pre{font-family:Consolas,monospace;font-size:21px;line-height:1.35;white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;border:1px solid #b4bac2;padding:17px;margin:0}</style><h1>Docker 6085 补充实验 · 实际命令日志</h1><p>02-official-repository.txt · 原日志第 1—31 行 · UTC 时间按日志保留</p><pre>Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/02-official-repository.sh
+Started UTC: 2026-10-22T04:53:36.533086+00:00
+
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ date -Iseconds
+2026-10-22T04:53:36+00:00
++ apt-get update
++ apt-get install -y ca-certificates curl
++ install -m 0755 -d /etc/apt/keyrings
++ curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
++ chmod a+r /etc/apt/keyrings/docker.asc
++ cat
++ cat /etc/apt/sources.list.d/docker.sources
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: noble
+Components: stable
+Architectures: amd64
+Signed-By: /etc/apt/keyrings/docker.asc
++ apt-get update
++ tail -8 /lab/02-docker-repository-full.log
+Get:1 https://download.docker.com/linux/ubuntu noble InRelease [48.5 kB]
+Get:2 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages [86.7 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Fetched 135 kB in 2s (63.8 kB/s)
+Reading package lists...
++ apt-cache policy docker-ce</pre>

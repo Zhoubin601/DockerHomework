@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-22",
+  "version": "v6",
+  "scope": "Word report only",
+  "file": "output\\v6\\20261022-docker-lab-report-v6.docx",
+  "bytes": 2137161,
+  "sha256": "0e7da8d82e69a5ccc9492cd99ed77d17f3ffe5bb5e0260d05b0de264ac2f4294",
+  "pages": 31,
+  "figures": 22,
+  "tables": 9,
+  "tocEntries": 42,
+  "languageRecommendationGroupsApplied": 15,
+  "strictOOXMLValidation": "passed, 0 errors",
+  "allPagesVisuallyReviewed": true,
+  "historicalFilesUnchanged": 26,
+  "sourceSnapshotSHA256": "59dcc175d7ba3cb2a9afb67f68ee3d8b07430d1928c058d64c063337ab16ac87",
+  "noPushRequested": true
+}

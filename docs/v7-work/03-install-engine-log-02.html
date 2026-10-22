@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#fff;color:#111;font-family:Arial,"Microsoft YaHei",sans-serif}h1{font-size:25px;margin:0 0 10px}p{font-size:17px;margin:5px 0 12px;color:#444}pre{font-family:Consolas,monospace;font-size:21px;line-height:1.35;white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;border:1px solid #b4bac2;padding:17px;margin:0}</style><h1>Docker 6085 补充实验 · 实际命令日志</h1><p>03-install-engine.txt · 原日志第 32—45 行 · UTC 时间按日志保留</p><pre>+ dpkg-query -W docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+containerd.io	2.4.2-3~ubuntu.24.04~noble
+docker-buildx-plugin	0.38.1-1~ubuntu.24.04~noble
+docker-ce	5:29.9.2-1~ubuntu.24.04~noble
+docker-ce-cli	5:29.9.2-1~ubuntu.24.04~noble
+docker-compose-plugin	5.6.1-1~ubuntu.24.04~noble
++ docker --version
+Docker version 29.9.2, build a82e528
++ dockerd --version
+Docker version 29.9.2, build 0367cbe
++ docker compose version
+Docker Compose version v5.6.1
+
+Actual exit code: 0</pre>

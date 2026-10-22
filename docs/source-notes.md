@@ -1,5 +1,21 @@
 # 资料来源
 
+## 2026-10-22 v7安装补图与远端交接
+
+- 用户明确授权清除失效引用并补安装、首次配置及资源创建配置图，随后要求先提交远端，剩下远端完成。
+- 实测来源：`docs/v7-work/01-before-install.txt`、`02-official-repository.txt`、`03-install-engine.txt`，对应result.json均退出码0；apt完整日志同步保存。5张PNG是实际日志浏览器显示截屏，不冒充历史Windows安装界面。
+- Docker CE/CLI实际安装29.9.2、Compose5.6.1；配置启动和后续阶段未执行，Word尚未修改。详情见远端交接文档。
+- 来源名称：Docker官方文档 Install Docker Engine on Ubuntu；链接：https://docs.docker.com/engine/install/ubuntu/；引用日期：2026-10-22；用途：核对官方APT源、GPG及安装包。
+- 来源名称：Docker官方文档 Install Docker Engine from binaries；链接：https://docs.docker.com/engine/install/binaries/；引用日期：2026-10-22；用途：比较安装方式，实际未采用静态二进制流程。
+
+## 2026-10-22 当前 v6 两文件提交核查
+
+- 教师原始依据：`raw/要求.png`，本轮直接查看，明确“所有过程进行截屏放在一个Word文件里上交”。
+- 被检实物：`output/v6/memory-game6085.docx`（SHA-256 `fd4787b33ed40fede5c035b55a4779e346cedf982fe68c61b702d91409d8b28f`）、`output/v6/memory-game6085.zip`，不使用旧版本统计替代。
+- 本机Word只读副本原生分页为18页、11图、6表；11图逐字节匹配v5证据ZIP。第3页表格及第4/5页引用附录A/B，但当前文件没有附录与相应11图。
+- 源码ZIP与v5对应ZIP字节一致，34项CRC通过，包内文件与Code对应内容一致，JAR摘要匹配。历史运行验收仅作背景，本轮未运行构建/Docker测试。
+- 检查记录：`docs/20261022-v6-submission-review.md`；机器结果：`docs/v6-submission-audit-20261022/`。没有查询外部资料，没有修改raw/output。
+
 ## 2026-10-21 v4 修订来源
 
 - 最终独立核查：docs/v4-work/content-review.md验证11条新增命令与原脚本／日志一致；final-evidence-verification.json验证21张图与源PNG、两个ZIP及旧证据字节一致。全部29页视觉检查分别记录于docs/v4-report-work/visual-qa-pages1-15.md和visual-qa-pages16-29.md，两份均绑定最终DOCX摘要。
@@ -201,3 +217,21 @@
 - 直接测试output/v5实际源码ZIP，重构建成功，后端3/3；Docker源码构建复用缓存；精确交付JAR容器浏览器3/3，独立15087仓库push、移除本地标签后pull、18088新容器完整榜单保留均通过。三份JAR的BOOT-INF 61项均一致。
 - 直接核验v5五份文件摘要、ZIP CRC及131项证据清单；Word严格校验0错误，本机Word只读副本31页，42项目录均对实际PDF页通过。22张内嵌图全部匹配证据ZIP原图。
 - 来源日志与结果：docs/v5-local-acceptance-20261022/；提交判断：docs/20261022-v5-local-submission-review.md。raw/output 26份摘要无变化，原有容器ID和状态不变。未查询外部技术资料。
+
+## 2026-10-22 v5 语言审阅来源
+
+- 用户当前要求：检查 v5 报告有无 AI 写作观感或生硬措辞；本轮仅审阅，不改写报告。
+- 原始作业图：`raw/要求.png`，本轮直接查看。要求为 Docker 环境、Spring Boot 项目打包发布、项目名末尾加学号后四位、发布后拉取、截图汇总 Word；没有提供所谓 AI 检测标准。
+- 直接审阅文件：`output/v5/20261022-docker-lab-report-v5.docx`；SHA-256：`397fd74b20f657f391f26137b13b1c8a2103976a39564b2520ae28156645dc1e`，与 v5 发布清单一致。
+- OfficeCLI 全文及独立 XML 提取：`docs/v5-language-review/officecli-text.txt`、`extracted-content.json`、`tables.md`。直接覆盖 261 个正文顶层段落（含目录等）、9 个表格及文档核心属性；OfficeCLI 的普通 text 视图仅提示表格存在，已另行读取全部单元格。
+- 定位依据：DOCX 原有 paraId、章节及 `docs/v5-report-work/native-pagination-verification.json` 已核验的原生 Word 页码。本轮没有重新分页或修改成品。
+- 事实保留依据：`docs/20261022-v5-changes.md`、`docs/local-test-20261022/docker-roundtrip/results.json` 及既有项目确认记录；保留历史安装图缺失、三轮实验来源及 JAR 整包摘要与应用内容不同层次的说明。
+- 使用现有 `officecli-docx`；项目指定的 `minimax-docx` 当前不可用。本轮没有联网、没有使用 AI 检测服务，也不根据措辞反推作者身份或生成概率。
+
+## 2026-10-22 v6 报告语言修订来源
+
+- 用户当前明确要求：“修改生成v6报告即可”；沿用现有大纲，授权落实前轮 15 组语言建议，仅生成报告。
+- 原始作业要求仍为 `raw/要求.png`。现行 v5 报告 SHA-256 为 `59dcc175d7ba3cb2a9afb67f68ee3d8b07430d1928c058d64c063337ab16ac87`，已冻结副本到 `docs/v6-report-work/source-v5.docx`；与前轮提取的唯一正文差别为封面去掉复测日期，v6 保留当前写法。
+- 修订依据：`docs/20261022-v5-language-review-v1.md`；精确前后文本见 `docs/v6-report-work/applied-changes.json`。未增加实验事实、第一人称经历或外部资料。
+- 本轮独立内容及全 31 页视觉检查见 `docs/v6-report-work/independent-content-review.md`、三份 `visual-qa-pages*.md`；42 项目录实际页验证及原图/历史文件保留见同目录 `native-pagination-verification.json`、`final-checks.json`。
+- 正式报告：`output/v6/20261022-docker-lab-report-v6.docx`；SHA-256 为 `0e7da8d82e69a5ccc9492cd99ed77d17f3ffe5bb5e0260d05b0de264ac2f4294`。31 页、22 图、9 表、严格校验零错误；配套源码/证据包仍沿用 v5，本轮没有重打包。

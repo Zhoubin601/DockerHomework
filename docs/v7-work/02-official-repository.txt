@@ -1,0 +1,44 @@
+Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/02-official-repository.sh
+Started UTC: 2026-10-22T04:53:36.533086+00:00
+
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ date -Iseconds
+2026-10-22T04:53:36+00:00
++ apt-get update
++ apt-get install -y ca-certificates curl
++ install -m 0755 -d /etc/apt/keyrings
++ curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
++ chmod a+r /etc/apt/keyrings/docker.asc
++ cat
++ cat /etc/apt/sources.list.d/docker.sources
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: noble
+Components: stable
+Architectures: amd64
+Signed-By: /etc/apt/keyrings/docker.asc
++ apt-get update
++ tail -8 /lab/02-docker-repository-full.log
+Get:1 https://download.docker.com/linux/ubuntu noble InRelease [48.5 kB]
+Get:2 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages [86.7 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Fetched 135 kB in 2s (63.8 kB/s)
+Reading package lists...
++ apt-cache policy docker-ce
++ head -10
+docker-ce:
+  Installed: (none)
+  Candidate: 5:29.9.2-1~ubuntu.24.04~noble
+  Version table:
+     5:29.9.2-1~ubuntu.24.04~noble 500
+        500 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages
+     5:29.9.1-1~ubuntu.24.04~noble 500
+        500 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages
+     5:29.9.0-1~ubuntu.24.04~noble 500
+        500 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages
+
+Actual exit code: 0

@@ -71,3 +71,10 @@ Thumbs.db
 /docs/v5-local-acceptance-20261022/docker-roundtrip/source-image-app.jar
 /docs/v5-local-acceptance-20261022/docker-roundtrip/original-containers.*
 /docs/v5-local-acceptance-20261022/docker-roundtrip/final-containers.txt
+
+# Local v7 image transport and runtime snapshots; retain scripts and real evidence.
+/docs/v7-work/*.tar
+/docs/v7-work/baseline-containers.jsonl
+/docs/v7-work/renderer-probe/
+/docs/v6-submission-audit-20261022/inspection-copy.docx
+/docs/v6-submission-audit-20261022/inspection.html

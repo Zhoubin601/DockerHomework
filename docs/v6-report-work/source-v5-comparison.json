@@ -1,0 +1,13 @@
+{
+  "previousReviewSHA256": "397fd74b20f657f391f26137b13b1c8a2103976a39564b2520ae28156645dc1e",
+  "currentSourceSHA256": "59dcc175d7ba3cb2a9afb67f68ee3d8b07430d1928c058d64c063337ab16ac87",
+  "paragraphChanges": [
+    {
+      "paraId": "52BDA62F",
+      "old": "实验日期：2026年10月21日；复测：10月22日",
+      "current": "实验日期：2026年10月21日"
+    }
+  ],
+  "newParagraphIds": [],
+  "tableTextUnchanged": true
+}

@@ -1,0 +1,136 @@
+{
+  "source": "D:\\2026Autumn Semester File\\云计算\\Docker作业\\docs\\v6-report-work\\source-v5.docx",
+  "source_sha256": "59dcc175d7ba3cb2a9afb67f68ee3d8b07430d1928c058d64c063337ab16ac87",
+  "candidate": "D:\\2026Autumn Semester File\\云计算\\Docker作业\\docs\\v6-report-work\\20261022-docker-lab-report-v6.docx",
+  "groups_applied": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "text_changes": [
+    {
+      "group": 1,
+      "paraId": "63C858E2",
+      "before": "本实验将 Vue3、Spring Boot 与 SQLite 记忆翻牌小游戏打包为 Docker 镜像，完成本机仓库发布、删除本地镜像后拉取和数据卷保留验证。正文记录2026年10月21日 Windows 实验，附录A记录当日 Linux 补充实验，附录B记录2026年10月22日本机复测。v5规范文档结构及排版，三轮实际版本、端口和结果分别保留。",
+      "after": "本实验将 Vue3、Spring Boot 与 SQLite 记忆翻牌小游戏打包为 Docker 镜像，完成本机仓库发布、删除本地镜像后拉取和数据卷保留验证。正文记录2026年10月21日 Windows 实验，附录A记录当日 Linux 补充实验，附录B记录2026年10月22日本机复测。"
+    },
+    {
+      "group": 2,
+      "paraId": "6F2333DD",
+      "before": "第二至九章记录原 Windows 实验。v3 的 Linux 补充部署使用独立资源，环境配置和实际操作截图见附录A。",
+      "after": "第二至九章记录原 Windows 实验。Linux 补充部署使用独立资源，环境配置和操作截图见附录 A。"
+    },
+    {
+      "group": 3,
+      "paraId": "7B2E61BC",
+      "before": "4.2 容器中的真实游戏操作",
+      "after": "4.2 容器中的游戏操作与成绩保存"
+    },
+    {
+      "group": 3,
+      "paraId": "688B7EBD",
+      "before": "4.2 容器中的真实游戏操作7",
+      "after": "4.2 容器中的游戏操作与成绩保存7"
+    },
+    {
+      "group": 3,
+      "paraId": "3D686D3F",
+      "before": "在实际应用容器中通过浏览器完成轻松难度一局，保存昵称“6085实验”。本次演示记录为 12 步、6.95 秒，记录编号 1。这些数值来自服务端实际返回，仅用于展示成绩保存流程。",
+      "after": "通过浏览器在应用容器中完成轻松难度的一局游戏，并以昵称“6085实验”保存成绩。服务端返回的记录编号为 1，成绩为 12 步、6.95 秒，用于演示成绩保存流程。"
+    },
+    {
+      "group": 4,
+      "paraId": "11ACE681",
+      "before": "新容器启动后，成绩编号、昵称、难度、步数、用时和创建时间均与重建前一致。程序对重建前后的完整排行榜 JSON 比较，结果为 LeaderboardPreserved=True。记录仍为 6085实验、12 步、6950 ms。",
+      "after": "新容器启动后，成绩编号、昵称、难度、步数、用时和创建时间均与重建前一致。程序比较了重建前后的完整排行榜 JSON，结果为 LeaderboardPreserved=True。记录仍为 6085实验、12 步、6950 ms。"
+    },
+    {
+      "group": 5,
+      "paraId": "1911E03C",
+      "before": "Docker Desktop 最初因遗留 socket 无法访问而退出。原运行时目录改名被 Windows 拒绝，最终通过仅为 Docker Desktop 子进程设置独立运行时缓存目录恢复启动，系统级环境变量未修改。恢复后以 Client 与 Server 响应以及实际容器结果验证环境可用。",
+      "after": "Docker Desktop 最初因遗留 socket 无法访问而退出。原运行时目录改名被 Windows 拒绝，最终通过仅为 Docker Desktop 子进程设置独立运行时缓存目录恢复启动，系统级环境变量未修改。恢复后，Client 与 Server 均能响应，容器也可正常运行。"
+    },
+    {
+      "group": 6,
+      "paraId": "45CBD8A4",
+      "before": "重建前后容器标识发生变化，但保存的成绩没有变化，说明 SQLite 文件与应用容器已经通过命名数据卷实现生命周期分离。后续复现实验时，应保持仓库地址、镜像版本、应用端口和数据卷名称一致。",
+      "after": "重建前后，容器标识发生变化，已保存的成绩保持不变，说明容器重建后仍能读取原数据卷中的 SQLite 数据。后续复现实验时，应保持仓库地址、镜像版本、应用端口和数据卷名称一致。"
+    },
+    {
+      "group": 7,
+      "paraId": "705C5D9C",
+      "before": "完整榜单对比一致，保存成绩保留",
+      "after": "重建前后的完整榜单一致，已保存成绩未丢失"
+    },
+    {
+      "group": 8,
+      "paraId": "6270524A",
+      "before": "分别计算交付JAR与容器/app/app.jar的SHA256，两个结果完全一致。这将本轮交付文件与实际部署镜像直接对应。",
+      "after": "分别计算配套 JAR 和容器内 /app/app.jar 的 SHA256，结果一致，确认容器内的 JAR 与配套 JAR 相同。"
+    },
+    {
+      "group": 9,
+      "paraId": "3E298FFB",
+      "before": "该轮同时采集1440宽桌面和375宽手机页面，手机页面未出现横向溢出；截图保留于证据包linux-v3目录。v5独立桌面及手机预览采用10月22日本机复测截图，两轮采集来源分别记录。",
+      "after": "该轮同时采集1440宽桌面和375宽手机页面，手机页面未出现横向溢出；截图保留于证据包linux-v3目录。"
+    },
+    {
+      "group": 10,
+      "paraId": "53698D40",
+      "before": "正文图1至图11沿用原Windows实验的真实截图；本附录图A1a、图A1b及图A2至图A9来自2026年10月21日Linux补充实验。终端图为实际窗口采集，浏览器图来自当次应用容器。图A1a在Word内仅裁去底部空白显示区，内嵌原PNG字节未改；所有关键命令与返回完整保留。",
+      "after": "正文图 1 至图 11 来自原 Windows 实验；本附录图 A1a、图 A1b 及图 A2 至图 A9 来自 2026 年 10 月 21 日的 Linux 补充实验。终端截图采集自当次窗口，浏览器截图采集自当次应用容器。"
+    },
+    {
+      "group": 11,
+      "paraId": "7E6FB9DB",
+      "before": "本附录证据目录为docs/v3-evidence，结果文件为results.json。Windows原实验镜像为1.0.0，Linux补充镜像为1.0.1-v3；v5修订报告结构，应用JAR及这些历史实验结果不变。2026年10月22日本机复测另见附录B。各实验仓库均仅绑定本机。",
+      "after": "本附录证据目录为docs/v3-evidence，结果文件为results.json。Windows 原实验镜像版本为 1.0.0，Linux 补充实验镜像版本为 1.0.1-v3。2026年10月22日本机复测另见附录B。各实验仓库均仅绑定本机。"
+    },
+    {
+      "group": 12,
+      "paraId": "71779011",
+      "before": "运行与JAR一致",
+      "after": "容器运行与 JAR 一致性校验"
+    },
+    {
+      "group": 13,
+      "paraId": "5CD5D184",
+      "before": "本轮源码镜像JAR与交付JAR的整包摘要不同，但BOOT-INF内的应用类、前端资源和依赖逐项相同；未把整包摘要与应用内容校验混同。上述步骤的完整命令、删除检查及真实输出收录在证据包windows-localtest-20261022目录中。",
+      "after": "本轮源码镜像 JAR 与配套 JAR 的整包摘要不同，但 BOOT-INF 内的应用类、前端资源和依赖逐项相同。完整命令、本地镜像移除检查及输出收录在证据包 windows-localtest-20261022 目录中。"
+    },
+    {
+      "group": 14,
+      "paraId": "696B62A0",
+      "before": "实际容器Playwright 3/3；应用以garden普通用户运行，健康检查UP。",
+      "after": "容器页面的 Playwright 测试 3/3 通过；应用以普通用户 garden 运行，健康检查返回 UP。"
+    },
+    {
+      "group": 14,
+      "paraId": "208D5DBF",
+      "before": "真实测试成绩",
+      "after": "测试成绩"
+    },
+    {
+      "group": 15,
+      "paraId": "35D6267B",
+      "before": "证据来源：docs/local-test-20261022/docker-roundtrip/results.json及after-recreate-ui.png；构建与浏览器测试日志同收录证据包。应用和历史证据未随v5文档修订改写；本轮未重新安装Docker，也未补造原机器安装过程截图。",
+      "after": "证据来源：docs/local-test-20261022/docker-roundtrip/results.json 及 after-recreate-ui.png；构建与浏览器测试日志同收录于证据包。本轮沿用已安装的 Docker，未重新安装。"
+    }
+  ],
+  "media_unchanged": true,
+  "figures": 22,
+  "tables": 9,
+  "cover_date_preserved": "实验日期：2026年10月21日"
+}

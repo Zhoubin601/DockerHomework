@@ -1,0 +1,71 @@
+{
+  "review": "D:\\2026Autumn Semester File\\云计算\\Docker作业\\docs\\20261022-v5-language-review-v1.md",
+  "source_sha256": "397fd74b20f657f391f26137b13b1c8a2103976a39564b2520ae28156645dc1e",
+  "source_matches_extraction": true,
+  "exact_quote_count": 15,
+  "quote_checks": [
+    {
+      "number": 1,
+      "exact_match": true
+    },
+    {
+      "number": 2,
+      "exact_match": true
+    },
+    {
+      "number": 3,
+      "exact_match": true
+    },
+    {
+      "number": 4,
+      "exact_match": true
+    },
+    {
+      "number": 5,
+      "exact_match": true
+    },
+    {
+      "number": 6,
+      "exact_match": true
+    },
+    {
+      "number": 7,
+      "exact_match": true
+    },
+    {
+      "number": 8,
+      "exact_match": true
+    },
+    {
+      "number": 9,
+      "exact_match": true
+    },
+    {
+      "number": 10,
+      "exact_match": true
+    },
+    {
+      "number": 11,
+      "exact_match": true
+    },
+    {
+      "number": 12,
+      "exact_match": true
+    },
+    {
+      "number": 13,
+      "exact_match": true
+    },
+    {
+      "number": 14,
+      "exact_match": true
+    },
+    {
+      "number": 15,
+      "exact_match": true
+    }
+  ],
+  "baseline_file_count": 26,
+  "changed_raw_or_output_files": [],
+  "passed": true
+}
