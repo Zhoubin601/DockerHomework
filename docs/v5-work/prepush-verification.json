@@ -1,0 +1,13 @@
+{
+  "stagedFiles": 186,
+  "stagedBytes": 51010228,
+  "largestFile": {
+    "path": "output/v5/20261022-memory-game6085-v5.zip",
+    "bytes": 31518816
+  },
+  "textEntriesScanned": 243,
+  "credentialPatternFailures": [],
+  "rawAndPriorReleasesUnchanged": 21,
+  "releaseManifestMatchesStaging": true,
+  "temporaryFilesExcluded": true
+}

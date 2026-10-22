@@ -1,0 +1,103 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 863B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/maven:3.9.9-eclipse-temurin-21
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/node:24-bookworm-slim
+#3 DONE 0.1s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-jammy
+#4 DONE 0.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 145B 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 DONE 0.0s
+
+#7 [frontend 1/6] FROM docker.io/library/node:24-bookworm-slim@sha256:91acba91b842bec0bf7ea6f5e09c644c7ccad72c4996ed9616d861d1c7cd60d4
+#7 resolve docker.io/library/node:24-bookworm-slim@sha256:91acba91b842bec0bf7ea6f5e09c644c7ccad72c4996ed9616d861d1c7cd60d4 0.1s done
+#7 DONE 0.1s
+
+#8 [backend 1/7] FROM docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b10211e
+#8 resolve docker.io/library/maven:3.9.9-eclipse-temurin-21@sha256:3a4ab3276a087bf276f79cae96b1af04f53731bec53fb2e651aca79e4b10211e 0.1s done
+#8 DONE 0.1s
+
+#9 [stage-2 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0
+#9 resolve docker.io/library/eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0 0.1s done
+#9 DONE 0.1s
+
+#6 [internal] load build context
+#6 transferring context: 10.63kB 0.0s done
+#6 DONE 0.1s
+
+#10 [frontend 2/6] WORKDIR /build/frontend
+#10 CACHED
+
+#11 [frontend 3/6] COPY frontend/package*.json ./
+#11 CACHED
+
+#12 [frontend 4/6] RUN npm ci --no-audit --no-fund
+#12 CACHED
+
+#13 [frontend 5/6] COPY frontend/ ./
+#13 DONE 0.1s
+
+#14 [frontend 6/6] RUN npm run build
+#14 0.784 
+#14 0.784 > memory-game6085@1.0.0 build
+#14 0.784 > vite build
+#14 0.784 
+#14 1.389 vite v7.3.7 building client environment for production...
+#14 1.481 transforming...
+#14 3.348 ✓ 1562 modules transformed.
+#14 3.445 rendering chunks...
+#14 3.456 computing gzip size...
+#14 3.468 dist/index.html                   0.67 kB │ gzip:  0.47 kB
+#14 3.468 dist/assets/index-BUufkFtO.css   25.58 kB │ gzip:  6.53 kB
+#14 3.468 dist/assets/index-Bvlb058h.js   101.41 kB │ gzip: 39.63 kB
+#14 3.469 ✓ built in 2.04s
+#14 DONE 3.6s
+
+#15 [stage-2 3/4] WORKDIR /app
+#15 CACHED
+
+#16 [backend 4/7] RUN mvn -B -ntp dependency:go-offline
+#16 CACHED
+
+#17 [stage-2 2/4] RUN groupadd --system garden && useradd --system --gid garden --home-dir /app garden     && mkdir -p /app/data && chown -R garden:garden /app
+#17 CACHED
+
+#18 [backend 6/7] COPY --from=frontend /build/frontend/dist /build/frontend/dist
+#18 CACHED
+
+#19 [backend 7/7] RUN mvn -B -ntp package
+#19 CACHED
+
+#20 [backend 2/7] WORKDIR /build/backend
+#20 CACHED
+
+#21 [backend 3/7] COPY backend/pom.xml ./
+#21 CACHED
+
+#22 [backend 5/7] COPY backend/src ./src
+#22 CACHED
+
+#23 [stage-2 4/4] COPY --from=backend --chown=garden:garden /build/backend/target/memory-game6085.jar /app/app.jar
+#23 CACHED
+
+#24 exporting to image
+#24 exporting layers done
+#24 exporting manifest sha256:a22ca7824c64cb723a5398cee61c4965217b1c18937edce3e9a69ee868f1633d 0.0s done
+#24 exporting config sha256:8e42e4cb509dcfdc8ba37f28b1aad56afaf672972c56ea5fad29fef3d82a383b 0.0s done
+#24 exporting attestation manifest sha256:7bfdbbb7d2c56e8bba7b018c8a39f22072029841f2d8d3d967120de0f50ef599 0.0s done
+#24 exporting manifest list sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38
+#24 exporting manifest list sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38 0.0s done
+#24 naming to docker.io/library/memory-game6085:localtest-20261022 done
+#24 unpacking to docker.io/library/memory-game6085:localtest-20261022 0.0s done
+#24 DONE 0.2s

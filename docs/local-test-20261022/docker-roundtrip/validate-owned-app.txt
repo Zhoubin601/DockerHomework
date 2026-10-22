@@ -1,0 +1,5 @@
+2026-10-22T03:17:21.652467+00:00
+> docker container inspect memory-game6085-localtest-20261022-app --format "{{json .Config.Labels}}"
+{"codex.memory6085.test":"20261022","org.opencontainers.image.version":"22.04"}
+
+ExitCode=0

@@ -1,0 +1,14 @@
+{
+  "scores": [
+    {
+      "id": 1,
+      "nickname": "测试花匠6085",
+      "difficulty": "easy",
+      "moves": 12,
+      "durationMs": 9271,
+      "createdAt": "2026-10-22T03:17:14.288809107Z"
+    }
+  ],
+  "total": 1,
+  "bestDurationMs": 9271
+}

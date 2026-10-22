@@ -45,3 +45,18 @@ Thumbs.db
 /docs/v4-report-work/*.docx
 /docs/v4-report-work/render-first/
 /docs/v4-report-work/render-layout/
+
+# Local test copies and transient runtime state; keep original logs and evidence.
+/docs/local-test-20261022/unpacked/
+/docs/local-test-20261022/*.docx
+/docs/local-test-20261022/deliverable-db/
+/docs/local-test-20261022/docker-roundtrip/source-image-app.jar
+/docs/local-test-20261022/ui-generated-original/
+
+# v5 authoring copies; reviewed deliverables are in output/v5.
+/docs/v5-work/packages/
+/docs/v5-report-work/*.docx
+/docs/v5-report-work/native-pass*.pdf
+/docs/v5-report-work/render-pass*/
+/docs/v5-report-work/*.html
+/docs/v5-work/*-local.txt

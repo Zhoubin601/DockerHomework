@@ -1,0 +1,12 @@
+{
+  "reproducible": true,
+  "files": {
+    "20261022-docker-evidence-v5.zip": "35455609c9a986f1bc448794140d05053e9a032354a9027cf6124a7be5ec82b3",
+    "20261022-memory-game6085-desktop-v5.png": "9b2455fd4982a04dd3f8c3b6a7e80a0193df6377323e2423196e90fbb1e2fd00",
+    "20261022-memory-game6085-mobile-v5.png": "7ee823e8976e292d740ca533acf63df196c35608984dd22e5af07b5fe8a7272a",
+    "20261022-memory-game6085-v5.zip": "1bfbf5399a7344ebc78f874b30c8e97dc52d9f111740437244417d296b05964c"
+  },
+  "plaintextMembersScanned": 120,
+  "credentialPatternFindings": [],
+  "note": "Pattern scan covers text payloads; retained historical PNGs remain original and are verified by digest."
+}

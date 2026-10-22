@@ -1,0 +1,318 @@
+{
+  "path": "D:\\2026Autumn Semester File\\云计算\\Docker作业\\docs\\v5-report-work\\20261022-docker-lab-report-v5.docx",
+  "sha256": "397fd74b20f657f391f26137b13b1c8a2103976a39564b2520ae28156645dc1e",
+  "crcError": null,
+  "xmlErrors": [],
+  "missingRelationshipTargets": [],
+  "historicalMediaMissing": [],
+  "media": [
+    {
+      "part": "word/media/image1.png",
+      "sha256": "76433e762d10d32c41d0513b1e5917e52f08531f0c44cb7a22e7fd33be41255e",
+      "source": [
+        "docs\\docker-evidence\\04-container-home.png"
+      ]
+    },
+    {
+      "part": "word/media/image10.png",
+      "sha256": "ac24868186a3984417047ed7249200219569a4de54a3e1335b68cf677e2d8c20",
+      "source": [
+        "docs\\docker-evidence\\08-run-pulled-image.png"
+      ]
+    },
+    {
+      "part": "word/media/image11.png",
+      "sha256": "cd3cdae7ba61c6f0d431c0a0c0a813da64dd9b81688a5255d3ac39aa953a242e",
+      "source": [
+        "docs\\docker-evidence\\09-data-after.png"
+      ]
+    },
+    {
+      "part": "word/media/image12.png",
+      "sha256": "ad191a1c8b4d93af6a701671a236f06e6cab9501b042bd02106e654ff4ae26d7",
+      "source": [
+        "docs\\v3-evidence\\01-resource-creation.png"
+      ]
+    },
+    {
+      "part": "word/media/image13.png",
+      "sha256": "3230eda4a029e38b911daaf1150a67303c7680451bc749fb8e7b42b9b05b862f",
+      "source": [
+        "docs\\v3-evidence\\01-config-review.png"
+      ]
+    },
+    {
+      "part": "word/media/image14.png",
+      "sha256": "a30c0dd7fcf61afd463ed6380ef14de0c74e1492ca4ea1356705e280be649e05",
+      "source": [
+        "docs\\v3-evidence\\02-build-review.png"
+      ]
+    },
+    {
+      "part": "word/media/image15.png",
+      "sha256": "5b072d87f1b7a5db2ad8e7141d20a9b621ceb384fca3ddaa9a826618c13aa19f",
+      "source": [
+        "docs\\v3-evidence\\03-container-run.png"
+      ]
+    },
+    {
+      "part": "word/media/image16.png",
+      "sha256": "654ec2ad3d94636f6001bd9f90f233d15340609322508793d10b2c8ef084d6aa",
+      "source": [
+        "docs\\v3-evidence\\05-game-saved.png"
+      ]
+    },
+    {
+      "part": "word/media/image17.png",
+      "sha256": "86a424c53ed592ad2ee01b7db3f173736de6135610ba8ea68ad529f131ac1f09",
+      "source": [
+        "docs\\v3-evidence\\04-registry-push.png"
+      ]
+    },
+    {
+      "part": "word/media/image18.png",
+      "sha256": "b093120f7b6661e38df43faee26bfc908396d5106296a56360e3db54b386eb8d",
+      "source": [
+        "docs\\v3-evidence\\07-remove-local.png"
+      ]
+    },
+    {
+      "part": "word/media/image19.png",
+      "sha256": "ba2ec6daa56499f08af42bd8e3b42ac1ec1d9df2c5eed64717785176fbb48194",
+      "source": [
+        "docs\\v3-evidence\\08-registry-pull.png"
+      ]
+    },
+    {
+      "part": "word/media/image2.png",
+      "sha256": "e2015352c4dfecf428dfeed99f31e10d2bb18ff1826cc1a98056b7f0ecfbaa04",
+      "source": [
+        "docs\\docker-evidence\\01-environment.png"
+      ]
+    },
+    {
+      "part": "word/media/image20.png",
+      "sha256": "85af099a81e4f583c9341e98a72aec6e864bee1341c922b77b388e78d60f1709",
+      "source": [
+        "docs\\v3-evidence\\09-recreate-verify.png"
+      ]
+    },
+    {
+      "part": "word/media/image21.png",
+      "sha256": "7ed03f381dc1bd11523bd715090e43cccbfedadacaffaf4a497b9d9d2db99509",
+      "source": [
+        "docs\\v3-evidence\\10-after-recreate-ui.png"
+      ]
+    },
+    {
+      "part": "word/media/image22.png",
+      "sha256": "4d7bed3389ffd8535c53350d6e88582ca4b53f6bc5da457db7f14d1119af85cb",
+      "source": [
+        "docs\\local-test-20261022\\docker-roundtrip\\after-recreate-ui.png"
+      ]
+    },
+    {
+      "part": "word/media/image3.png",
+      "sha256": "f84f894f17227220c570d0030698447db9159197fcb7dea239ed5efb5bfac941",
+      "source": [
+        "docs\\docker-evidence\\05-container-completed.png"
+      ]
+    },
+    {
+      "part": "word/media/image4.png",
+      "sha256": "771e7ca6b90a30573133ceee92352345709c4541e74948aeb8735235dc85f4f9",
+      "source": [
+        "docs\\docker-evidence\\02-build-progress.png"
+      ]
+    },
+    {
+      "part": "word/media/image5.png",
+      "sha256": "ac018982ea66eae7bde4be81233b44787d360202b7d8f867305db6ef5f5a00a8",
+      "source": [
+        "docs\\docker-evidence\\03b-container-run.png"
+      ]
+    },
+    {
+      "part": "word/media/image6.png",
+      "sha256": "650fd64f00fb6a7cda6aebea81b9a68c154ec687eeea931ef3871859fc1dffa2",
+      "source": [
+        "docs\\docker-evidence\\05-registry-push.png"
+      ]
+    },
+    {
+      "part": "word/media/image7.png",
+      "sha256": "c2d8d272f833d9a0155e7f14c06cfb2e5fa2f01b0f1b6eb5bba08df69e1ca8d0",
+      "source": [
+        "docs\\docker-evidence\\06-remove-local.png"
+      ]
+    },
+    {
+      "part": "word/media/image8.png",
+      "sha256": "b3d4ec093b80595174644ca0dbe3fca1284dbfa44e4eca0eafca5bc7616f1fd1",
+      "source": [
+        "docs\\docker-evidence\\07-registry-pull.png"
+      ]
+    },
+    {
+      "part": "word/media/image9.png",
+      "sha256": "ed80b8d3eac7954f7170c96a351b5c41244c08a213ef21d6a513ac9ab530c65a",
+      "source": [
+        "docs\\docker-evidence\\04-data-before.png"
+      ]
+    }
+  ],
+  "inlineImageCount": 22,
+  "tableCount": 9,
+  "bodyFields": [
+    " TOC \\o \"1-2\" \\h \\u ",
+    " ",
+    "PAGEREF _Toc243563128 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563129 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563130 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563131 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563132 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563133 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563134 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563135 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563136 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563137 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563138 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563139 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563140 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563141 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563142 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563143 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563144 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563145 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563146 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563147 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563148 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563149 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563150 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563151 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563152 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563153 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563154 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563155 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563156 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563157 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563158 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563159 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563160 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563161 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563162 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563163 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563164 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563165 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563166 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563167 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563168 \\h",
+    " ",
+    " ",
+    "PAGEREF _Toc243563169 \\h",
+    " "
+  ],
+  "headerFooterFields": {
+    "word/footer1.xml": [
+      " PAGE "
+    ],
+    "word/header1.xml": []
+  },
+  "revisionCount": 0,
+  "crops": [
+    {
+      "b": "41000"
+    }
+  ],
+  "expectedLocalEvidenceKeys": {
+    "6085": true,
+    "localtest-20261022": true,
+    "18087": true,
+    "15086": true,
+    "9271": true,
+    "91b23f11f6da": true,
+    "cdb872c45267": true,
+    "1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38": true
+  },
+  "unresolvedMarkerLines": []
+}

@@ -1,0 +1,43 @@
+2026-10-22T03:17:19.881876+00:00
+> docker push localhost:15086/memory-game6085:localtest-20261022
+The push refers to repository [localhost:15086/memory-game6085]
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+44136fa355b3: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+44136fa355b3: Pushed
+22d3391d8c49: Waiting
+1b27b73de186: Pushed
+f5c13179339d: Pushed
+cf1a5487baaf: Pushed
+9ddd6de30055: Pushed
+d18e088bcb32: Pushed
+4f4fb700ef54: Waiting
+a58c83948cbd: Waiting
+4f4fb700ef54: Pushed
+875cadd98702: Pushed
+a58c83948cbd: Pushed
+22d3391d8c49: Pushed
+localtest-20261022: digest: sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38 size: 856
+
+ExitCode=0

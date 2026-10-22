@@ -1,0 +1,7 @@
+2026-10-22T03:17:22.717720+00:00
+> docker image rm localhost:15086/memory-game6085:localtest-20261022 memory-game6085:localtest-20261022
+Untagged: localhost:15086/memory-game6085:localtest-20261022
+Untagged: memory-game6085:localtest-20261022
+Deleted: sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38
+
+ExitCode=0

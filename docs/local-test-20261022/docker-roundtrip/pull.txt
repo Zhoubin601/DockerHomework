@@ -1,0 +1,10 @@
+2026-10-22T03:17:23.525078+00:00
+> docker pull localhost:15086/memory-game6085:localtest-20261022
+localtest-20261022: Pulling from memory-game6085
+44136fa355b3: Already exists
+1b27b73de186: Download complete
+Digest: sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38
+Status: Downloaded newer image for localhost:15086/memory-game6085:localtest-20261022
+localhost:15086/memory-game6085:localtest-20261022
+
+ExitCode=0

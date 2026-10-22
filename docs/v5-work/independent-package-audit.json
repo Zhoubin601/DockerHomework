@@ -1,0 +1,39 @@
+{
+  "evidence": {
+    "entries": 132,
+    "crc": null,
+    "manifestEntries": 131,
+    "manifestMissing": [],
+    "manifestExtra": [],
+    "manifestFailures": [],
+    "historicalEntries": 75,
+    "historicalChanged": [],
+    "newSourceNotFound": [],
+    "newSourceChanged": [],
+    "historicalRootREADMEPreserved": true,
+    "historicalRootManifestPreserved": true
+  },
+  "previews": {
+    "desktop": {
+      "sha256": "9b2455fd4982a04dd3f8c3b6a7e80a0193df6377323e2423196e90fbb1e2fd00",
+      "exactSourceMatch": true
+    },
+    "mobile": {
+      "sha256": "7ee823e8976e292d740ca533acf63df196c35608984dd22e5af07b5fe8a7272a",
+      "exactSourceMatch": true
+    }
+  },
+  "source": {
+    "entries": 34,
+    "crc": null,
+    "memberChanges": [
+      "memory-game6085/README.md"
+    ],
+    "entryNamesSame": true,
+    "jarSha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0",
+    "jarExactHistoricalMatch": true,
+    "jarCRC": null,
+    "bootInfEntries": 61,
+    "sha256sums": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  dist-artifacts/memory-game6085.jar\n"
+  }
+}

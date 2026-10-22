@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-22",
+  "version": "v5",
+  "pages": 31,
+  "figures": 22,
+  "tables": 9,
+  "tocEntries": 42,
+  "strictOOXMLValidation": "passed, 0 errors",
+  "nativeWordRender": "31 pages; TOC pages verified",
+  "historicalFilesUnchanged": 21,
+  "files": [
+    {
+      "path": "output\\v5\\20261022-docker-evidence-v5.zip",
+      "bytes": 3445380,
+      "sha256": "35455609c9a986f1bc448794140d05053e9a032354a9027cf6124a7be5ec82b3"
+    },
+    {
+      "path": "output\\v5\\20261022-docker-lab-report-v5.docx",
+      "bytes": 2137937,
+      "sha256": "397fd74b20f657f391f26137b13b1c8a2103976a39564b2520ae28156645dc1e"
+    },
+    {
+      "path": "output\\v5\\20261022-memory-game6085-desktop-v5.png",
+      "bytes": 198125,
+      "sha256": "9b2455fd4982a04dd3f8c3b6a7e80a0193df6377323e2423196e90fbb1e2fd00"
+    },
+    {
+      "path": "output\\v5\\20261022-memory-game6085-mobile-v5.png",
+      "bytes": 126728,
+      "sha256": "7ee823e8976e292d740ca533acf63df196c35608984dd22e5af07b5fe8a7272a"
+    },
+    {
+      "path": "output\\v5\\20261022-memory-game6085-v5.zip",
+      "bytes": 31518816,
+      "sha256": "1bfbf5399a7344ebc78f874b30c8e97dc52d9f111740437244417d296b05964c"
+    }
+  ]
+}

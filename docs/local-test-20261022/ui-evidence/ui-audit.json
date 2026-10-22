@@ -1,0 +1,82 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 1100,
+    "overflow": {
+      "actual": 1440,
+      "viewport": 1440
+    },
+    "violations": []
+  },
+  {
+    "name": "tablet",
+    "width": 768,
+    "height": 1024,
+    "overflow": {
+      "actual": 768,
+      "viewport": 768
+    },
+    "violations": []
+  },
+  {
+    "name": "mobile",
+    "width": 375,
+    "height": 812,
+    "overflow": {
+      "actual": 375,
+      "viewport": 375
+    },
+    "violations": []
+  },
+  {
+    "name": "landscape",
+    "width": 812,
+    "height": 375,
+    "overflow": {
+      "actual": 812,
+      "viewport": 812
+    },
+    "violations": []
+  },
+  {
+    "name": "small",
+    "width": 320,
+    "height": 740,
+    "overflow": {
+      "actual": 320,
+      "viewport": 320
+    },
+    "violations": []
+  },
+  {
+    "name": "rules-dialog",
+    "width": 375,
+    "height": 812,
+    "overflow": {
+      "actual": 375,
+      "viewport": 375
+    },
+    "violations": []
+  },
+  {
+    "name": "playing",
+    "width": 1440,
+    "height": 1100,
+    "overflow": {
+      "actual": 1440,
+      "viewport": 1440
+    },
+    "violations": []
+  },
+  {
+    "name": "paused",
+    "width": 1440,
+    "height": 1100,
+    "overflow": {
+      "actual": 1440,
+      "viewport": 1440
+    },
+    "violations": []
+  }
+]

@@ -1,0 +1,6 @@
+2026-10-22T03:16:24.073479+00:00
+> docker network inspect memory-game6085-localtest-20261022-net
+[]
+Error response from daemon: network memory-game6085-localtest-20261022-net not found
+
+ExitCode=1

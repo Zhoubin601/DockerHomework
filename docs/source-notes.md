@@ -155,3 +155,41 @@
 链接或文件名：https://github.com/docker/for-win/issues/15064
 引用日期：2026-10-21
 用途：对照 Windows 遗留 AF_UNIX socket 的启动症状。本机目录改名被拒绝，最终采用子进程独立 LOCALAPPDATA 运行时目录启动；Client/Server 已实际恢复，不将问题报告内容当作本机成功证据。
+
+## 2026-10-22 本机验收来源
+
+- 原始指导要求：raw/要求.png，本轮直接查看原图，六项要求沿用原文。
+- 最新代码来源：origin/main，GitHub 仓库 https://github.com/Zhoubin601/DockerHomework ，2026-10-22 拉取到 392870d；由 2a7be0c 快进，无本地修改冲突。
+- 被查交付：output/v4/ 下正式 Word、源码/JAR ZIP、证据 ZIP；本轮独立验证结果另记，不将历史结果替代本轮实测。
+- 参考过程：docs/20261021-v4-changes.md、docs/v4-work/content-review.md、docs/v4-work/evidence-review.md；项目技术及身份确认见 memory-bank/project-context.md。
+- 当前未查询外部技术资料。依赖及镜像下载为执行用户要求的本机测试，不作为新增作业要求来源。
+
+### 本轮直接实测补充
+
+- 本机原生Word渲染v4检查副本29页，21张图片原字节均与docs/docker-evidence或docs/v3-evidence匹配。
+- officecli严格OOXML验证213条报错（5类），与XML可解析/ZIP CRC通过是不同检查层次。
+- 本机源码构建、3项后端测试、3项浏览器测试、8个UI检查场景、交付JAR重启数据保留均通过；Compose配置校验退出码0。
+- Docker本轮原始错误取自两个测试运行时目录的Docker/backend.error.json；仅提取错误记录到docs/local-test-20261022/docker-errors.json。进一步恢复动作被自动审批拒绝，未执行。
+- 全部结果及限制见docs/20261022-local-submission-review.md；raw/及output/摘要复核不变。
+
+## 2026-10-22 Docker继续实测来源
+
+- 用户当前消息：已打开Docker，继续验收。
+- 直接事实来源：docs/local-test-20261022/docker-source-build.log、docker-browser-tests.log、docker-roundtrip/中的实际命令输出及results.json。
+- 实测：源码Docker构建退出码0（复用缓存），容器浏览器3/3，通过独立Registry push、删除本地标签后pull、新容器完整榜单一致。
+- 原始要求仍为raw/要求.png，未新增外部规则；Word及raw/output旧文件未修改。
+
+## 2026-10-22 v5修复依据
+
+- 用户已明确要求修复、生成v5并推送。
+- raw/要求.png为唯一教师原始指导图，本轮重新查看；报告身份和结构沿用既有确认。
+- Word错误来源：docs/local-test-20261022/v4-schema-validation.txt（213条5类）；显示与格式对照：word-contact.png和v4-issues.txt。
+- 新增实测来源：docs/local-test-20261022/docker-roundtrip/results.json、source-image-vs-delivery.json、真实浏览器截图及Docker命令日志；测试通过事实已逐项核验，不改写既有Windows/Linux实验版本。
+- 本轮使用officecli-docx及本机Word；minimax-docx不可用，无新增外部技术资料。
+
+### v5正式交付来源复核
+
+- output/v5/20261022-docker-lab-report-v5.docx：最终31页22图9表，严格校验0错误，Word原生42目录项全部真实页核验；SHA-256见docs/v5-work/release-manifest.json。
+- 21张历史图保持原字节，新图来自docs/local-test-20261022/docker-roundtrip/after-recreate-ui.png；附录B的数字、摘要和容器标识来自results.json原件。
+- 源码包及证据包来源、132项证据成员、131项摘要清单、两张预览准确来源见docs/v5-work/package-validation.json和independent-package-audit.json。
+- 最终独立复核见docs/v5-work/independent-final-review.md；raw/与历史21份文件基线核验通过。

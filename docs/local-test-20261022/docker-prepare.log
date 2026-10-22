@@ -1,0 +1,38 @@
+original-containers 0 ose.project.config_files=D:\\2026Autumn Semester File\\classroom-ai-demo\\scripts\\deploy\\docker-compose.yml,com.docker.compose.project.working_dir=D:\\2026Autumn Semester File\\classroom-ai-demo\\scripts\\deploy,com.docker.compose.project=classroom-ai-demo,com.docker.compose.service=mysql,com.docker.compose.version=5.1.4,desktop.docker.io/binds/0/Source=D:\\2026Autumn Semester File\\classroom-ai-demo\\scripts\\deploy\\mysql\\init\\initialize.sql,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/docker-entrypoint-initdb.d/initialize.sql,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/3306/tcp=:3308","LocalVolumes":"1","Mounts":"/run/desktop/m��,classroom_mysq��","Names":"classroom-mysql","Networks":"classroom-ai-demo_default","Platform":{"architecture":"amd64","os":"linux"},"Ports":"0.0.0.0:3308-\u003e3306/tcp, [::]:3308-\u003e3306/tcp","RunningFor":"10 days ago","Size":"45.1kB (virtual 852MB)","State":"running","Status":"Up 8 minutes (healthy)"}
+
+preflight-memory-game6085-localtest-20261022-app 1 []
+Error response from daemon: No such container: memory-game6085-localtest-20261022-app
+
+preflight-memory-game6085-localtest-20261022-pulled 1 []
+Error response from daemon: No such container: memory-game6085-localtest-20261022-pulled
+
+preflight-memory-game6085-localtest-20261022-registry 1 []
+Error response from daemon: No such container: memory-game6085-localtest-20261022-registry
+
+preflight-memory-game6085-localtest-20261022-data 1 []
+Error response from daemon: get memory-game6085-localtest-20261022-data: no such volume
+
+preflight-memory-game6085-localtest-20261022-registry-data 1 []
+Error response from daemon: get memory-game6085-localtest-20261022-registry-data: no such volume
+
+preflight-memory-game6085-localtest-20261022-net 1 []
+Error response from daemon: network memory-game6085-localtest-20261022-net not found
+
+network-create 0 b4272169f714880be2ecd69c4d984d2fa2a200078347169f28d14dc513b69962
+
+data-create 0 memory-game6085-localtest-20261022-data
+
+registry-data-create 0 memory-game6085-localtest-20261022-registry-data
+
+registry-run 0 ad214ac737ae1cb4554070a2935dc2e6b64d62ff83542fbe95856345b0bceafd
+
+run-memory-game6085-localtest-20261022-app 0 91b23f11f6da13cf1504991fb7d8ea856a76c3c4a7a9bb98c1a751ac1ee4cd3b
+
+source-image 0 re":"amd64","Os":"linux","Size":468816241,"RootFS":{"Type":"layers","Layers":["sha256:129f77d88403f1d66805466da50673bab10cf6052bdf1fe422b0341b51a55da2","sha256:34af552be1819ff331f28033c2831ed2515ba874b890da165e2dfe00515044d7","sha256:98bd9880f8104bc73ec9647fe652669b2bd9c404b127e5242c7a12e7f786f3da","sha256:82b978d0aab52e6391f855dff3f6879433e7236b0844a321517f5d784c8ac91e","sha256:2302df99c4d0ddb429bb4772d5d7133eb9b00504d452200d5c0ac73f0b8d3001","sha256:b443788e0a3e8186b63c85b0347089191905aed2a02d41ef689d5cdcfd1f3280","sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef","sha256:9a51bfd3fe79034a17abc5cf30c18b1bbd84bb2bacf572d77b010eace11f903a"]},"Metadata":{"LastTagTime":"2026-10-22T03:15:11.900867612Z"},"Descriptor":{"mediaType":"application/vnd.oci.image.index.v1+json","digest":"sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38","size":856},"Identity":{"Build":[{"Ref":"aonsnd6o830917lgs3mmagqnu","CreatedAt":"2026-10-22T03:15:11.922798186Z"}]}}
+
+container-user 0 uid=999(garden) gid=999(garden) groups=999(garden)
+
+container-jar 0 6126a1faf7e80ec948c5be2b50d834c7f3a4ef9f65089fcd49431f532a1b1389  /app/app.jar
+
+copy-container-jar 0 
+READY FOR BROWSER TESTS

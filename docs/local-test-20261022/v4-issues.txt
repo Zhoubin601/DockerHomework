@@ -1,0 +1,301 @@
+Found 140 issue(s):
+
+Content Issues (43):
+  [C1] /body/p[@paraId=52F5AFD4]/r[1]: Consecutive spaces
+       Context: "图1  记忆花园容器运行页面"
+       Suggestion: Merge into a single space
+  [C41] /body/p[@paraId=0D4AE83B]/r[1]: Mixed CJK/Latin punctuation
+       Context: "原始作业要求来自 raw/要求.png：在机器上部署 Docker 环境，将一个已有 Spring Boot 项目打包到 Docker 上发布，项目名称末尾加学号后四位；发布后演示拉取，所有过程截图放在一个 Word 文件中提交。"
+  [C42] /body/p[@paraId=4E570088]/r[1]: Mixed CJK/Latin punctuation
+       Context: "frontend 保存 Vue 页面和图案，backend 保存 Spring Boot 接口及数据库逻辑，scripts 保存本地构建与实验辅助脚本。Dockerfile 与 compose.yaml 位于项目根目录。8080 被已有课堂项目占用，因此本实验采用 18085 作为宿主机端口。"
+  [C44] /body/p[62]/r[1]: Mixed CJK/Latin punctuation
+       Context: "引擎启动后，在项目根目录执行版本与命名检查。docker version 同时返回 Client 和 Server 29.8.2，Engine 为 linux/amd64；Compose 返回 5.6.0，项目目录为 memory-game6085。随后执行第五章的构建与运行操作。"
+  [C48] /body/p[@paraId=2308A840]/r[1]: Consecutive spaces
+       Context: "图2  Docker Client 与 Server 版本及项目名称检查"
+       Suggestion: Merge into a single space
+  [C51] /body/p[@paraId=28A256B8]/r[1]: Consecutive spaces
+       Context: "  - garden-data:/app/data"
+       Suggestion: Merge into a single space
+  [C56] /body/p[@paraId=7B59C7ED]/r[1]: Mixed CJK/Latin punctuation
+       Context: "在实际应用容器中通过浏览器完成轻松难度一局，保存昵称“6085实验”。本次演示记录为 12 步、6.95 秒，记录编号 1。这些数值来自服务端实际返回，仅用于展示成绩保存流程。"
+  [C57] /body/p[@paraId=49961045]/r[1]: Consecutive spaces
+       Context: "图3  容器中完成配对并保存演示成绩"
+       Suggestion: Merge into a single space
+  [C79] /body/p[@paraId=6F16D492]/r[1]: Mixed CJK/Latin punctuation
+       Context: "构建日志显示 Maven BUILD SUCCESS，最终镜像命名为 memory-game6085:1.0.0。Docker CLI 显示磁盘占用约 469 MB。首次基础镜像下载曾发生短读错误，完成基础镜像拉取后重新构建成功。"
+  [C80] /body/p[@paraId=62F48BA5]/r[1]: Consecutive spaces
+       Context: "图4  Spring Boot JAR 打包成功并导出 Docker 镜像"
+       Suggestion: Merge into a single space
+  [C85] /body/p[@paraId=0ABE9545]/r[1]: Consecutive spaces
+       Context: "图5  应用容器运行状态 端口映射 健康检查与普通用户"
+       Suggestion: Merge into a single space
+  [C86] /body/p[@paraId=4C712BEB]/r[1]: Mixed CJK/Latin punctuation
+       Context: "浏览器访问 http://localhost:18085 可进入游戏。该地址映射至应用容器的 8080，前端和后端同源访问，SQLite 无需额外数据库容器。"
+  [C87] /body/p[@paraId=36763E54]/r[1]: Mixed CJK/Latin punctuation
+       Context: "本实验使用本机私有 Registry，仓库端口绑定 127.0.0.1:5000，镜像数据保存在 memory-game6085-registry-data 数据卷。仓库用于本机课程实验。"
+  [C92] /body/p[@paraId=640B6E20]/r[1]: Mixed CJK/Latin punctuation
+       Context: "推送日志显示镜像层 Pushed，仓库标签查询返回 1.0.0。发布路径为 localhost:5000/memory-game6085:1.0.0。"
+  [C93] /body/p[@paraId=20B8D8F0]/r[1]: Consecutive spaces
+       Context: "图6  镜像实际推送成功与仓库标签查询"
+       Suggestion: Merge into a single space
+  [C98] /body/p[@paraId=2D5D70AE]/r[1]: Consecutive spaces
+       Context: "图7  移除实验容器和本地镜像 数据卷仍然保留"
+       Suggestion: Merge into a single space
+  [C99] /body/p[@paraId=68095D6E]/r[1]: Consecutive spaces
+       Context: "图8  从 Registry 重新拉取成功"
+       Suggestion: Merge into a single space
+  [C101] /body/p[@paraId=7057BE84]/r[1]: Consecutive spaces
+       Context: "图9  重建前的容器标识 成绩与数据卷"
+       Suggestion: Merge into a single space
+  [C103] /body/p[@paraId=400E8421]/r[1]: Consecutive spaces
+       Context: "图10  使用拉取镜像创建新容器并确认容器标识"
+       Suggestion: Merge into a single space
+  [C104] /body/p[@paraId=0E1B45B6]/r[1]: Consecutive spaces
+       Context: "图11  重建后榜单一致 数据卷仍挂载到同一目录"
+       Suggestion: Merge into a single space
+  [C105] /body/p[@paraId=1F8AC913]/r[1]: Mixed CJK/Latin punctuation
+       Context: "原始作业要求：raw/要求.png。实验项目为记忆花园 memory-game6085，采用 Vue3、Spring Boot 和 SQLite，镜像仓库为本机 Registry。"
+  [C106] /body/p[@paraId=2A508E9B]/r[1]: Mixed CJK/Latin punctuation
+       Context: "项目源代码：Code/memory-game6085/；实验结果：docs/docker-evidence/results.json；各图来自同目录的真实终端和浏览器截图。"
+  [C108] /body/p[@paraId=769D0114]/r[1]: Mixed CJK/Latin punctuation
+       Context: "Vue 官方文档：https://vuejs.org/guide/essentials/reactivity-fundamentals.html"
+  [C110] /body/p[@paraId=003F42FF]/r[1]: Mixed CJK/Latin punctuation
+       Context: "Vite 官方文档：https://vite.dev/guide/"
+  [C111] /body/p[@paraId=15F9E550]/r[1]: Mixed CJK/Latin punctuation
+       Context: "Spring Boot 官方文档：https://docs.spring.io/spring-boot/maven-plugin/packaging.html"
+  [C112] /body/p[@paraId=2EDEFC24]/r[1]: Mixed CJK/Latin punctuation
+       Context: "SQLite JDBC 官方仓库：https://github.com/xerial/sqlite-jdbc"
+  [C113] /body/p[@paraId=3B7BBD43]/r[1]: Mixed CJK/Latin punctuation
+       Context: "Docker 数据卷官方文档：https://docs.docker.com/engine/storage/volumes/"
+  [C114] /body/p[@paraId=15188AA2]/r[1]: Mixed CJK/Latin punctuation
+       Context: "CNCF Distribution 官方部署文档：https://distribution.github.io/distribution/about/deploying/"
+  [C115] /body/p[@paraId=386144DF]/r[1]: Mixed CJK/Latin punctuation
+       Context: "截图源文件统一位于 docs/docker-evidence/。终端图片采集自专用 Windows 控制台窗口，浏览器图片采集自实际运行的应用容器。完整实验标识、镜像摘要和成绩对比保存在同目录 results.json。"
+  [C116] /body/p[185]/r[1]: Mixed CJK/Latin punctuation
+       Context: "2026年10月21日在 Debian GNU/Linux 13 云工作区补做部署。平台已提供 Docker Engine，本轮沿用其本地守护进程；Client 与 Server 均为28.4.0，Compose为2.40.3，存储驱动为vfs。"
+  [C118] /body/p[187]/r[1]: Consecutive spaces
+       Context: "docker network create --label course=memory-game6085-v3 \  memory-game6085-v3-netdocker volume create --label course=memory-game6085-v3 \  memory-game6085-v3-datadocker volume create --label course=memory-game6085-v3 \  memory-game6085-v3-registry-data"
+       Suggestion: Merge into a single space
+  [C120] /body/p[196]/r[1]: Mixed CJK/Latin punctuation
+       Context: "使用 Dockerfile.prebuilt 将配套可执行 JAR 复制到 Temurin 21 JRE 镜像，配置普通用户garden和数据目录/app/data。此步骤使用已完成 Maven 打包的交付 JAR；源码多阶段构建流程仍见第五章。"
+  [C123] /body/p[202]/r[1]: Mixed CJK/Latin punctuation
+       Context: "将镜像运行在独立网络中，宿主机127.0.0.1:18086映射容器8080，并挂载memory-game6085-v3-data。健康接口返回UP，进程身份为garden。"
+  [C124] /body/p[203]/r[1]: Mixed CJK/Latin punctuation
+       Context: "分别计算交付JAR与容器/app/app.jar的SHA256，两个结果完全一致。这将本轮交付文件与实际部署镜像直接对应。"
+  [C125] /body/p[204]/r[1]: Mixed CJK/Latin punctuation
+       Context: "关键命令摘自03-container-run.txt。以下文本便于复制，实际返回结果见原图。"
+  [C127] /body/p[205]/r[1]: Consecutive spaces
+       Context: "docker run -d --name memory-game6085-v3-app \  --network memory-game6085-v3-net \  -p 127.0.0.1:18086:8080 -e DATA_DIR=/app/data \  --mount type=volume,source=memory-game6085-v3-data,target=/app/data \  memory-game6085:1.0.1-v3curl --fail --silent http://127.0.0.1:18086/api/healthdocker exec memory-game6085-v3-app sha256sum /app/app.jar"
+       Suggestion: Merge into a single space
+  [C129] /body/p[215]/r[1]: Mixed CJK/Latin punctuation
+       Context: "启动独立Registry容器，绑定127.0.0.1:15085，并使用专用仓库数据卷。将新镜像标记到localhost:15085后执行push，仓库标签查询返回1.0.1-v3。此地址仅用于本机实验。"
+  [C130] /body/p[216]/r[1]: Mixed CJK/Latin punctuation
+       Context: "关键命令及结果摘自04-registry-push.txt。"
+  [C132] /body/p[217]/r[1]: Consecutive spaces
+       Context: "docker tag memory-game6085:1.0.1-v3 \  localhost:15085/memory-game6085:1.0.1-v3docker push localhost:15085/memory-game6085:1.0.1-v3curl --fail --silent \  http://127.0.0.1:15085/v2/memory-game6085/tags/list"
+       Suggestion: Merge into a single space
+  [C134] /body/p[222]/r[1]: Mixed CJK/Latin punctuation
+       Context: "在发布成功并记录完整排行榜后，移除本轮应用容器和两个1.0.1-v3本地标签。按版本过滤的镜像列表为空；命名数据卷仍存在。移除操作仅针对本轮独立资源。"
+  [C136] /body/p[233]/r[1]: Mixed CJK/Latin punctuation
+       Context: "关键命令及结果摘自09-recreate-verify.txt；重建继续使用相同数据卷。"
+  [C138] /body/p[234]/r[1]: Consecutive spaces
+       Context: "docker run -d --name memory-game6085-v3-pulled \  --network memory-game6085-v3-net \  -p 127.0.0.1:18086:8080 -e DATA_DIR=/app/data \  --mount type=volume,source=memory-game6085-v3-data,target=/app/data \  localhost:15085/memory-game6085:1.0.1-v3docker exec memory-game6085-v3-pulled sha256sum /app/app.jar"
+       Suggestion: Merge into a single space
+  [C140] /body/p[244]/r[1]: Mixed CJK/Latin punctuation
+       Context: "补充证据目录为docs/v3-evidence，结果文件为results.json。Windows原实验镜像为1.0.0，Linux补充镜像为1.0.1-v3；v4为报告与交付资料修订，未更改应用JAR、镜像标签或实验结果。两套仓库均仅绑定本机，复现实验时应在实际执行机器上使用对应地址和数据卷。"
+
+Format Issues (97):
+  [F2] /body/p[12]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F3] /body/p[13]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F4] /body/p[14]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F5] /body/p[15]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F6] /body/p[16]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F7] /body/p[17]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F8] /body/p[18]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F9] /body/p[19]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F10] /body/p[20]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F11] /body/p[21]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F12] /body/p[22]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F13] /body/p[23]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F14] /body/p[24]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F15] /body/p[25]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F16] /body/p[26]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F17] /body/p[27]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F18] /body/p[28]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F19] /body/p[29]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F20] /body/p[30]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F21] /body/p[31]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F22] /body/p[32]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F23] /body/p[33]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F24] /body/p[34]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F25] /body/p[35]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F26] /body/p[36]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F27] /body/p[37]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F28] /body/p[38]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F29] /body/p[39]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F30] /body/p[40]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F31] /body/p[41]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F32] /body/p[42]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F33] /body/p[43]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F34] /body/p[44]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F35] /body/p[45]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F36] /body/p[46]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F37] /body/p[47]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F38] /body/p[48]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F39] /body/p[49]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F40] /body/p[50]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F43] /body/p[61]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F45] /body/p[64]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F46] /body/p[65]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F47] /body/p[66]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F49] /body/p[@paraId=0DEBC2F1]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F50] /body/p[@paraId=28A256B8]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F52] /body/p[@paraId=76E58909]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F53] /body/p[@paraId=5EC72750]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F54] /body/p[@paraId=1336743B]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F55] /body/p[@paraId=2B15B581]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F58] /body/p[@paraId=260F1FC9]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F59] /body/p[@paraId=2D4317D2]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F60] /body/p[@paraId=01F596CE]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F61] /body/p[@paraId=45A70333]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F62] /body/p[@paraId=3332955F]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F63] /body/p[@paraId=36991FD3]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F64] /body/p[@paraId=2B66B1FA]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F65] /body/p[@paraId=1DC692DF]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F66] /body/p[@paraId=65FD40B0]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F67] /body/p[@paraId=3FA78B4F]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F68] /body/p[@paraId=19983AB5]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F69] /body/p[@paraId=0010DF8A]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F70] /body/p[@paraId=225C63F0]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F71] /body/p[@paraId=4D72A782]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F72] /body/p[@paraId=42910BFB]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F73] /body/p[@paraId=51856949]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F74] /body/p[@paraId=0624EBD7]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F75] /body/p[@paraId=5178542C]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F76] /body/p[@paraId=1041F740]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F77] /body/p[@paraId=4DB70EDE]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F78] /body/p[@paraId=02C23278]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F81] /body/p[@paraId=7D96B093]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F82] /body/p[@paraId=1900F2BD]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F83] /body/p[@paraId=546CEF89]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F84] /body/p[@paraId=722E416B]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F88] /body/p[@paraId=7141FD05]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F89] /body/p[@paraId=60DFF9AA]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F90] /body/p[@paraId=0B79E54C]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F91] /body/p[@paraId=5E5E55B8]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F94] /body/p[@paraId=79C88E81]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F95] /body/p[@paraId=1E0FD138]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F96] /body/p[@paraId=5FDA099D]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F97] /body/p[@paraId=4AAFB5AF]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F100] /body/p[@paraId=4D405B74]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F102] /body/p[@paraId=1ACCABFE]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F107] /body/p[@paraId=6F7BACB1]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F109] /body/p[@paraId=003F42FF]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F117] /body/p[187]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F119] /body/p[190]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F121] /body/p[197]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F122] /body/p[198]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F126] /body/p[205]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F128] /body/p[206]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F131] /body/p[217]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F133] /body/p[218]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F135] /body/p[227]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F137] /body/p[234]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F139] /body/p[235]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters

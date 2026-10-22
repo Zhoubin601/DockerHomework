@@ -1,0 +1,111 @@
+[
+  {
+    "runtime": "C:\\Users\\a3185\\AppData\\Local\\docker6085-runtime",
+    "error": {
+      "type": "*fmt.wrapError",
+      "error": {
+        "type": "*errors.withStack",
+        "error": {
+          "type": "*errors.withMessage",
+          "error": {
+            "type": "*errordef.dockerDesktopError",
+            "component": "services",
+            "originalError": {
+              "type": "*errors.fundamental",
+              "description": "listening on unix://C:/Users/a3185/AppData/Local/docker6085-runtime/Docker/run/sailor-ingest.sock: rename C:/Users/a3185/AppData/Local/docker6085-runtime/Docker/run/sailor-ingest.sock C:/Users/a3185/AppData/Local/docker6085-runtime/Docker/run/sailor-ingest.sock.stale: The file cannot be accessed by the system.",
+              "stacktrace": [
+                "github.com/docker/pinata/common/pkg/errordef.helper.Wrapf\n\tgithub.com/docker/pinata/common/pkg/errordef/helper.go:70",
+                "github.com/docker/pinata/common/cmd/com.docker.backend/services.ListenUnix\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/services/helpers.go:19",
+                "github.com/docker/pinata/common/cmd/com.docker.backend/services.ListenAndRun\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/services/helpers.go:25",
+                "github.com/docker/pinata/common/cmd/com.docker.backend/services.(*Services).startSailorRouter\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/services/services.go:521",
+                "github.com/docker/pinata/common/cmd/com.docker.backend/services.(*Services).addErrorRecovery.func1\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/services/services.go:309",
+                "github.com/docker/pinata/linuxkit/pkg/services.initServices\n\tgithub.com/docker/pinata/linuxkit/pkg/services/start.go:164",
+                "github.com/docker/pinata/linuxkit/pkg/services.Start\n\tgithub.com/docker/pinata/linuxkit/pkg/services/start.go:61",
+                "github.com/docker/pinata/common/cmd/com.docker.backend/services.(*Services).Start\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/services/services.go:274",
+                "main.start\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/backend.go:624",
+                "main.run\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/backend.go:454",
+                "main.checkAndRun.func2\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/backend.go:97",
+                "github.com/docker/pinata/common/pkg/mainthread.(*mt).Run.func1\n\tgithub.com/docker/pinata/common/pkg/mainthread/mainthread.go:43",
+                "runtime.goexit\n\truntime/asm_amd64.s:1264"
+              ]
+            },
+            "creationTime": 1792638280051074800,
+            "creationFile": "common/cmd/com.docker.backend/services/services.go",
+            "creationLine": 521,
+            "wrappedError": {
+              "type": "*os.LinkError",
+              "error": {
+                "type": "syscall.Errno",
+                "description": "The file cannot be accessed by the system."
+              },
+              "message": "rename C:/Users/a3185/AppData/Local/docker6085-runtime/Docker/run/sailor-ingest.sock C:/Users/a3185/AppData/Local/docker6085-runtime/Docker/run/sailor-ingest.sock.stale"
+            },
+            "debuggingData": {
+              "listener": "The file cannot be accessed by the system."
+            },
+            "message": "listening on unix://C:/Users/a3185/AppData/Local/docker6085-runtime/Docker/run/sailor-ingest.sock: ",
+            "innerWrapped": true
+          },
+          "message": "initializing Ingest server"
+        },
+        "stacktrace": [
+          "github.com/docker/pinata/linuxkit/pkg/services.initServices\n\tgithub.com/docker/pinata/linuxkit/pkg/services/start.go:175",
+          "github.com/docker/pinata/linuxkit/pkg/services.Start\n\tgithub.com/docker/pinata/linuxkit/pkg/services/start.go:61",
+          "github.com/docker/pinata/common/cmd/com.docker.backend/services.(*Services).Start\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/services/services.go:274",
+          "main.start\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/backend.go:624",
+          "main.run\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/backend.go:454",
+          "main.checkAndRun.func2\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/backend.go:97",
+          "github.com/docker/pinata/common/pkg/mainthread.(*mt).Run.func1\n\tgithub.com/docker/pinata/common/pkg/mainthread/mainthread.go:43",
+          "runtime.goexit\n\truntime/asm_amd64.s:1264"
+        ]
+      },
+      "message": "starting services"
+    }
+  },
+  {
+    "runtime": "C:\\Users\\a3185\\AppData\\Local\\docker6085-test-20261022-110533",
+    "error": {
+      "type": "*errors.withStack",
+      "error": {
+        "type": "*errors.withMessage",
+        "error": {
+          "type": "*fmt.wrapError",
+          "error": {
+            "type": "*errordef.dockerDesktopError",
+            "component": "services",
+            "originalError": {
+              "type": "*errors.fundamental",
+              "description": "Volume Backup Scheduler: rename C:\\Users\\a3185\\AppData\\Local\\docker6085-test-20261022-110533\\Docker\\volume-backup-schedule.json.tmp-1458979997 C:\\Users\\a3185\\AppData\\Local\\docker6085-test-20261022-110533\\Docker\\volume-backup-schedule.json: The system cannot move the file to a different disk drive.",
+              "stacktrace": [
+                "github.com/docker/pinata/common/pkg/errordef.helper.Wrap\n\tgithub.com/docker/pinata/common/pkg/errordef/helper.go:60",
+                "github.com/docker/pinata/common/cmd/com.docker.backend/services.(*Services).wrapRun.func1\n\tgithub.com/docker/pinata/common/cmd/com.docker.backend/services/services.go:754",
+                "github.com/docker/pinata/linuxkit/pkg/services.runServers.func1\n\tgithub.com/docker/pinata/linuxkit/pkg/services/start.go:139",
+                "golang.org/x/sync/errgroup.(*Group).Go.func1\n\tgolang.org/x/sync@v0.23.0/errgroup/errgroup.go:93",
+                "runtime.goexit\n\truntime/asm_amd64.s:1264"
+              ]
+            },
+            "creationTime": 1792638335388645700,
+            "creationFile": "common/cmd/com.docker.backend/services/services.go",
+            "creationLine": 754,
+            "wrappedError": {
+              "type": "*os.LinkError",
+              "error": {
+                "type": "syscall.Errno",
+                "description": "The system cannot move the file to a different disk drive."
+              },
+              "message": "rename C:\\Users\\a3185\\AppData\\Local\\docker6085-test-20261022-110533\\Docker\\volume-backup-schedule.json.tmp-1458979997 C:\\Users\\a3185\\AppData\\Local\\docker6085-test-20261022-110533\\Docker\\volume-backup-schedule.json"
+            },
+            "message": "Volume Backup Scheduler: ",
+            "innerWrapped": true
+          },
+          "message": "running Volume Backup Scheduler"
+        },
+        "message": "running services"
+      },
+      "stacktrace": [
+        "github.com/docker/pinata/linuxkit/pkg/services.Start.func1.2\n\tgithub.com/docker/pinata/linuxkit/pkg/services/start.go:100",
+        "runtime.goexit\n\truntime/asm_amd64.s:1264"
+      ]
+    }
+  }
+]

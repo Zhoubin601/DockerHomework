@@ -1,0 +1,270 @@
+[/body/p[@paraId=7A48EC30]] Spring Boot 小游戏Docker 容器化实验报告
+[/body/p[@paraId=5A99EEEA]] 记忆花园 memory-game6085
+[/body/p[@paraId=5E6F5C0D]] 课程：2026云计算技术与架构
+[/body/p[@paraId=712B3EC7]] 姓名：周宇斌
+[/body/p[@paraId=23145341]] 班级：软件2401
+[/body/p[@paraId=5DCA9AEF]] 学号：20246085
+[/body/p[@paraId=40A6B71D]] 实验日期：2026年10月21日；复测：10月22日
+[/body/p[@paraId=56CBA9C7]] 
+[/body/p[@paraId=5E3D13C1]] 图1 记忆花园容器运行页面
+[/body/p[@paraId=682BB27F]] 本实验将 Vue3、Spring Boot 与 SQLite 记忆翻牌小游戏打包为 Docker 镜像，完成本机仓库发布、删除本地镜像后拉取和数据卷保留验证。正文记录2026年10月21日 Windows 实验，附录A记录当日 Linux 补充实验，附录B记录2026年10月22日本机复测。v5规范文档结构及排版，三轮实际版本、端口和结果分别保留。
+[/body/p[@paraId=6F6B94BD]] 目录
+[/body/p[@paraId=671B69C4]] 一 实验目的与任务要求	3
+[/body/p[@paraId=21B55F8B]] 二 实验环境与项目结构	4
+[/body/p[@paraId=461F1B15]] 2.1 实验配置与项目目录	4
+[/body/p[@paraId=325EC853]] 2.2 环境启动与验证	5
+[/body/p[@paraId=7937EDDE]] 三 系统设计与持久化	6
+[/body/p[@paraId=71AD560E]] 3.1 应用结构	6
+[/body/p[@paraId=21CB5365]] 3.2 SQLite 数据设计	6
+[/body/p[@paraId=104B0A5C]] 3.3 容器数据卷	6
+[/body/p[@paraId=29D91589]] 四 本地构建与功能验证	7
+[/body/p[@paraId=081BDF65]] 4.1 本地构建与自动验证	7
+[/body/p[@paraId=3055E921]] 4.2 容器中的真实游戏操作	7
+[/body/p[@paraId=6ADD5CBF]] 五 Docker 镜像构建与运行	8
+[/body/p[@paraId=493BE959]] 5.1 多阶段构建	8
+[/body/p[@paraId=1A73CCC8]] 5.2 JAR 打包与镜像导出	9
+[/body/p[@paraId=6783D923]] 5.3 启动容器与接口检查	10
+[/body/p[@paraId=482E14AB]] 六 镜像发布与拉取	11
+[/body/p[@paraId=2ADBAEC0]] 6.1 启动本机镜像仓库	11
+[/body/p[@paraId=48CBD24B]] 6.2 标记与推送镜像	11
+[/body/p[@paraId=4E4F5938]] 6.3 删除本地镜像后重新拉取	12
+[/body/p[@paraId=551E883E]] 七 容器重建与持久化验证	14
+[/body/p[@paraId=0F5D96A2]] 7.1 记录重建前的数据	14
+[/body/p[@paraId=14686BBE]] 7.2 使用拉取镜像创建新容器	15
+[/body/p[@paraId=04FA15EB]] 7.3 对比重建后的成绩	16
+[/body/p[@paraId=09278D33]] 八 实验结果与问题分析	17
+[/body/p[@paraId=4D60932D]] 8.1 启动与端口问题	17
+[/body/p[@paraId=0CFB014A]] 8.2 实验总结	17
+[/body/p[@paraId=146D227E]] 九 参考资料与证据来源	18
+[/body/p[@paraId=39D0EE80]] 9.1 原Windows实验截图来源索引	18
+[/body/p[@paraId=1F5A7D38]] 附录A Linux补充部署与复现	19
+[/body/p[@paraId=6D828337]] A1 环境来源与独立资源配置	19
+[/body/p[@paraId=42F0C5D3]] A2 配套JAR打包为新镜像	21
+[/body/p[@paraId=29E1F869]] A3 容器运行与交付文件校验	22
+[/body/p[@paraId=5D0395EE]] A4 实际游戏与成绩保存	23
+[/body/p[@paraId=6D9BB7BB]] A5 本机仓库发布镜像	24
+[/body/p[@paraId=09E46CD5]] A6 移除本地镜像并保留数据卷	25
+[/body/p[@paraId=1B2FF070]] A7 从仓库重新拉取	26
+[/body/p[@paraId=1927AFFD]] A8 重建容器并核对成绩保留	27
+[/body/p[@paraId=22973256]] A9 浏览器复核重建后的榜单	28
+[/body/p[@paraId=1D72D447]] A10 补充证据来源与版本对应	29
+[/body/p[@paraId=594662C3]] 附录B 本机复测与结果核对	30
+[/body/p[@paraId=7C47AACD]] B1 2026年10月22日本机验证	30
+[/body/p[@paraId=6470841D]] B2 拉取重建后的浏览器复核	31
+[/body/p[@paraId=5084DB75]] 
+[/body/p[@paraId=13E403A1]] 一 实验目的与任务要求
+[/body/p[@paraId=2D6BEF16]] 本实验的目的是掌握 Spring Boot 应用容器化的基本过程，理解 Docker 镜像、容器、镜像仓库和持久化数据卷的作用，并通过实际命令和访问结果验证部署流程。
+[/body/p[@paraId=20BFF04B]] 原始作业要求来自 raw/要求.png：在机器上部署 Docker 环境，将一个已有 Spring Boot 项目打包到 Docker 上发布，项目名称末尾加学号后四位；发布后演示拉取，所有过程截图放在一个 Word 文件中提交。
+[/body/tbl[1]] [Table: 6 rows]
+[/body/p[@paraId=086262F9]] 二 实验环境与项目结构
+[/body/p[@paraId=417BA31A]] 第二至九章记录原 Windows 实验。v3 的 Linux 补充部署使用独立资源，环境配置和实际操作截图见附录A。
+[/body/p[@paraId=3F2D0293]] 2.1 实验配置与项目目录
+[/body/tbl[2]] [Table: 10 rows]
+[/body/p[@paraId=63B68696]] frontend 保存 Vue 页面和图案，backend 保存 Spring Boot 接口及数据库逻辑，scripts 保存本地构建与实验辅助脚本。Dockerfile 与 compose.yaml 位于项目根目录。8080 被已有课堂项目占用，因此本实验采用 18085 作为宿主机端口。
+[/body/p[@paraId=6C561270]] 2.2 环境启动与验证
+[/body/p[@paraId=3D0E4CBF]] 本实验沿用 Windows 上已安装的 Docker Desktop，使用 WSL2 的 Linux 容器引擎。原有 WSL 数据目录继续使用。表中的环境版本取自本次实验机器，图2展示恢复启动后的实际验证结果。
+[/body/p[@paraId=68A3112D]] 启动时遇到遗留 socket 故障，Docker Desktop 无法正常提供服务。为恢复启动，在 Docker Desktop 停止时执行下面的辅助脚本，仅为该子进程设置独立的 LOCALAPPDATA 运行时缓存目录，保留系统级环境变量。
+[/body/p[@paraId=52D6EABA]] .\scripts\start-docker-runtime.ps1
+[/body/p[@paraId=19F7B352]] 引擎启动后，在项目根目录执行版本与命名检查。docker version 同时返回 Client 和 Server 29.8.2，Engine 为 linux/amd64；Compose 返回 5.6.0，项目目录为 memory-game6085。随后执行第五章的构建与运行操作。
+[/body/p[@paraId=4EA70AC8]] 原 Windows 环境沿用既有安装。本报告附录A补充本轮 Linux 环境的网络、数据卷、镜像及容器配置操作截图，两次环境的记录分别保留。
+[/body/p[@paraId=79558B1F]] docker version
+[/body/p[@paraId=61C716C0]] docker compose version
+[/body/p[@paraId=2DC0B292]] Get-Item . | Select-Object Name, FullName
+[/body/p[@paraId=548F5751]] 
+[/body/p[@paraId=1A1594D2]] 图2 Docker Client 与 Server 版本及项目名称检查
+[/body/p[@paraId=48FB0053]] 三 系统设计与持久化
+[/body/p[@paraId=6048474B]] 3.1 应用结构
+[/body/p[@paraId=4FE3EB9A]] 浏览器通过 Vue3 页面操作游戏，Spring Boot 提供牌局、翻牌、暂停、成绩提交和排行榜接口。前端构建结果复制到后端静态资源目录，再打入可执行 JAR，因此一个应用容器即可同时提供页面和接口。
+[/body/p[@paraId=75D2473D]] 游戏提供轻松 6 对、标准 8 对和挑战 12 对三种难度。后端随机生成卡牌顺序并判断配对，负责步数和计时。未翻开的答案不会直接传给浏览器；暂停时保留本局状态并停止计时，恢复后继续游戏。
+[/body/p[@paraId=1F03D644]] 3.2 SQLite 数据设计
+[/body/tbl[3]] [Table: 5 rows]
+[/body/p[@paraId=542F5812]] 运行中的牌局保存在服务端内存中；服务重启后需要重新开局。已提交成绩保存在 SQLite 数据库，排行榜按步数升序排列，步数相同再比较用时。持久化对象是已保存成绩，不包括未完成牌局。
+[/body/p[@paraId=375296F6]] 3.3 容器数据卷
+[/body/p[@paraId=76762ED6]] volumes:
+[/body/p[@paraId=2EEFAEEB]]   - garden-data:/app/data
+[/body/p[@paraId=3C164BDB]] # 命名数据卷的实际名称
+[/body/p[@paraId=3E68EC45]] name: memory-game6085-data
+[/body/p[@paraId=5A3CF97E]] 镜像保存应用程序，数据库由运行时生成并写入 /app/data。该目录挂载到命名数据卷后，删除应用容器不会自动删除成绩文件。实验重建容器时继续挂载同一数据卷，以验证程序与数据的生命周期可以分离。
+[/body/p[@paraId=703C3C39]] 四 本地构建与功能验证
+[/body/p[@paraId=51DF54A9]] 4.1 本地构建与自动验证
+[/body/p[@paraId=7FBFBE44]] .\scripts\build.ps1
+[/body/p[@paraId=79F345F6]] java -jar backend/target/memory-game6085.jar
+[/body/p[@paraId=04CFF9F6]] 本地构建已生成可执行 JAR。后端测试覆盖隐藏牌面、无效操作、暂停状态、服务端成绩统计和 SQLite 重新打开后的数据保留。浏览器测试覆盖完整配对、昵称校验、成绩提交、榜单刷新、窄屏布局以及接口失败后的重试。
+[/body/tbl[4]] [Table: 6 rows]
+[/body/p[@paraId=0B34E1F3]] 4.2 容器中的真实游戏操作
+[/body/p[@paraId=06CCCB2C]] 在实际应用容器中通过浏览器完成轻松难度一局，保存昵称“6085实验”。本次演示记录为 12 步、6.95 秒，记录编号 1。这些数值来自服务端实际返回，仅用于展示成绩保存流程。
+[/body/p[@paraId=799B0AAF]] 
+[/body/p[@paraId=4BF5C227]] 图3 容器中完成配对并保存演示成绩
+[/body/p[@paraId=2E261F45]] 五 Docker 镜像构建与运行
+[/body/p[@paraId=078A7063]] 5.1 多阶段构建
+[/body/p[@paraId=65064308]] 第一阶段使用 Node 构建 Vue，第二阶段使用 Maven 编译和打包 Spring Boot，第三阶段只复制 JAR 到 Java 运行环境。以下为实际 Dockerfile 的关键流程；完整文件位于项目根目录。
+[/body/p[@paraId=3C46652B]] FROM node:24-bookworm-slim AS frontend
+[/body/p[@paraId=73A40599]] WORKDIR /build/frontend
+[/body/p[@paraId=7677BCC2]] COPY frontend/package*.json ./
+[/body/p[@paraId=6A915A2E]] RUN npm ci --no-audit --no-fund
+[/body/p[@paraId=653D92B7]] COPY frontend/ ./
+[/body/p[@paraId=063267ED]] RUN npm run build
+[/body/p[@paraId=56C9A2B9]] FROM maven:3.9.9-eclipse-temurin-21 AS backend
+[/body/p[@paraId=107472D2]] WORKDIR /build/backend
+[/body/p[@paraId=5E658D12]] COPY backend/pom.xml ./
+[/body/p[@paraId=78E1E0E0]] RUN mvn -B -ntp dependency:go-offline
+[/body/p[@paraId=0C7CDC73]] COPY backend/src ./src
+[/body/p[@paraId=2D21F0FC]] COPY --from=frontend /build/frontend/dist /build/frontend/dist
+[/body/p[@paraId=0A26B8C9]] RUN mvn -B -ntp package
+[/body/p[@paraId=0A8BA434]] FROM eclipse-temurin:21-jre-jammy
+[/body/p[@paraId=2A2726AC]] # 创建普通用户与数据目录后复制 JAR
+[/body/p[@paraId=3B036EC6]] COPY --from=backend --chown=garden:garden /build/backend/target/memory-game6085.jar /app/app.jar
+[/body/p[@paraId=0DBD770D]] USER garden
+[/body/p[@paraId=388CEE63]] ENV DATA_DIR=/app/data PORT=8080
+[/body/p[@paraId=11A21C71]] EXPOSE 8080
+[/body/p[@paraId=1329D1AD]] ENTRYPOINT ["java", "-XX:MaxRAMPercentage=70.0", "-jar", "/app/app.jar"]
+[/body/p[@paraId=465D9D48]] 5.2 JAR 打包与镜像导出
+[/body/p[@paraId=1067BF48]] docker compose --progress plain build
+[/body/p[@paraId=7721E4C0]] 构建日志显示 Maven BUILD SUCCESS，最终镜像命名为 memory-game6085:1.0.0。Docker CLI 显示磁盘占用约 469 MB。首次基础镜像下载曾发生短读错误，完成基础镜像拉取后重新构建成功。
+[/body/p[@paraId=6A519169]] 
+[/body/p[@paraId=56444621]] 图4 Spring Boot JAR 打包成功并导出 Docker 镜像
+[/body/p[@paraId=144349CA]] 5.3 启动容器与接口检查
+[/body/p[@paraId=74729023]] docker compose up -d --no-build
+[/body/p[@paraId=6A109309]] docker compose ps
+[/body/p[@paraId=18E5B815]] curl.exe -s http://localhost:18085/api/health
+[/body/p[@paraId=3FD3C21D]] docker exec memory-game6085-garden-1 id
+[/body/p[@paraId=39CAAD20]] 应用容器运行后，18085 端口可访问游戏和 API。健康检查返回 status 为 UP，database 为 SQLite。容器内运行身份为 garden，UID 和 GID 均为 999，应用不使用 root 用户运行。
+[/body/p[@paraId=2F606F41]] 
+[/body/p[@paraId=2198E728]] 图5 应用容器运行状态 端口映射 健康检查与普通用户
+[/body/p[@paraId=01E8BB82]] 浏览器访问 http://localhost:18085 可进入游戏。该地址映射至应用容器的 8080，前端和后端同源访问，SQLite 无需额外数据库容器。
+[/body/p[@paraId=586E12C3]] 六 镜像发布与拉取
+[/body/p[@paraId=11D2A6F3]] 6.1 启动本机镜像仓库
+[/body/p[@paraId=595B762B]] 本实验使用本机私有 Registry，仓库端口绑定 127.0.0.1:5000，镜像数据保存在 memory-game6085-registry-data 数据卷。仓库用于本机课程实验。
+[/body/p[@paraId=24D12AD0]] docker run -d --name memory-game6085-registry -p 127.0.0.1:5000:5000 -e OTEL_TRACES_EXPORTER=none --mount type=volume,source=memory-game6085-registry-data,target=/var/lib/registry registry:3
+[/body/p[@paraId=07642337]] 6.2 标记与推送镜像
+[/body/p[@paraId=27A7AA8E]] docker tag memory-game6085:1.0.0 localhost:5000/memory-game6085:1.0.0
+[/body/p[@paraId=6646DE8D]] docker push localhost:5000/memory-game6085:1.0.0
+[/body/p[@paraId=47D4C6AD]] curl.exe -s http://localhost:5000/v2/memory-game6085/tags/list
+[/body/p[@paraId=48D6B390]] 推送日志显示镜像层 Pushed，仓库标签查询返回 1.0.0。发布路径为 localhost:5000/memory-game6085:1.0.0。
+[/body/p[@paraId=6FB3778C]] 
+[/body/p[@paraId=52FE26B3]] 图6 镜像实际推送成功与仓库标签查询
+[/body/p[@paraId=7B1F9025]] 6.3 删除本地镜像后重新拉取
+[/body/p[@paraId=04E9C398]] 为验证镜像来自仓库，先移除本实验应用容器，保留数据卷，并删除本地的两个实验镜像标签。镜像列表确认本地不存在 memory-game6085 后，再执行 pull。
+[/body/p[@paraId=17016448]] docker compose down
+[/body/p[@paraId=2B70CB44]] docker image rm localhost:5000/memory-game6085:1.0.0 memory-game6085:1.0.0
+[/body/p[@paraId=2132B085]] docker image ls
+[/body/p[@paraId=30AA965D]] docker pull localhost:5000/memory-game6085:1.0.0
+[/body/p[@paraId=1B574288]] 
+[/body/p[@paraId=7DA01F96]] 图7 移除实验容器和本地镜像 数据卷仍然保留
+[/body/p[@paraId=02E8C8F0]] 
+[/body/p[@paraId=37715403]] 图8 从 Registry 重新拉取成功
+[/body/p[@paraId=11B0D31B]] 拉取结果为 Downloaded newer image。推送与拉取的摘要一致，说明使用的是已发布的同一版本镜像。摘要记录如下：
+[/body/p[@paraId=479F7F63]] sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a15e66
+[/body/p[@paraId=4CE6C4DE]] 七 容器重建与持久化验证
+[/body/p[@paraId=4C1B5290]] 7.1 记录重建前的数据
+[/body/p[@paraId=4F3B36F4]] 原容器中已保存轻松难度演示成绩。实验记录了原容器标识和完整排行榜响应；移除容器时未使用删除数据卷的参数。
+[/body/p[@paraId=2DB803E9]] 
+[/body/p[@paraId=077AD040]] 图9 重建前的容器标识 成绩与数据卷
+[/body/tbl[5]] [Table: 5 rows]
+[/body/p[@paraId=335B952E]] 7.2 使用拉取镜像创建新容器
+[/body/p[@paraId=5B76CD31]] docker run -d --name memory-game6085-pulled -p 127.0.0.1:18085:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-data,target=/app/data localhost:5000/memory-game6085:1.0.0
+[/body/p[@paraId=77AAB594]] 新容器标识前 12 位为 dd8b4bb17b50，与原容器不同。新容器直接使用拉取的仓库镜像，并继续挂载 memory-game6085-data 到 /app/data。
+[/body/p[@paraId=6B04D45E]] 
+[/body/p[@paraId=3353FFAD]] 图10 使用拉取镜像创建新容器并确认容器标识
+[/body/p[@paraId=38846E7C]] 7.3 对比重建后的成绩
+[/body/p[@paraId=4B8F4E55]] 新容器启动后，成绩编号、昵称、难度、步数、用时和创建时间均与重建前一致。程序对重建前后的完整排行榜 JSON 比较，结果为 LeaderboardPreserved=True。记录仍为 6085实验、12 步、6950 ms。
+[/body/p[@paraId=53BCF110]] 
+[/body/p[@paraId=1278D905]] 图11 重建后榜单一致 数据卷仍挂载到同一目录
+[/body/p[@paraId=412A3F00]] 八 实验结果与问题分析
+[/body/tbl[6]] [Table: 9 rows]
+[/body/p[@paraId=3C1F73A2]] 8.1 启动与端口问题
+[/body/p[@paraId=1DA3EB5D]] Docker Desktop 最初因遗留 socket 无法访问而退出。原运行时目录改名被 Windows 拒绝，最终通过仅为 Docker Desktop 子进程设置独立运行时缓存目录恢复启动，系统级环境变量未修改。恢复后以 Client 与 Server 响应以及实际容器结果验证环境可用。
+[/body/p[@paraId=34891CA3]] 首次构建遇到基础镜像下载中断；重新拉取所需基础镜像后完成构建。现有课堂项目占用 8080，因此将本实验宿主机端口调整为 18085，同时保留容器内部端口 8080。
+[/body/p[@paraId=0B1C687E]] 8.2 实验总结
+[/body/p[@paraId=5BE163FE]] 本实验完成了应用打包、镜像构建、容器访问、镜像发布与拉取，以及数据卷跨容器保留的完整验证。镜像用于分发应用程序，容器是运行实例，Registry 用于保存和分发镜像，数据卷用于保存独立于容器生命周期的数据库文件。
+[/body/p[@paraId=70C5E648]] 重建前后容器标识发生变化，但保存的成绩没有变化，说明 SQLite 文件与应用容器已经通过命名数据卷实现生命周期分离。后续复现实验时，应保持仓库地址、镜像版本、应用端口和数据卷名称一致。
+[/body/p[@paraId=73203E48]] 九 参考资料与证据来源
+[/body/p[@paraId=3702402D]] 原始作业要求：raw/要求.png。实验项目为记忆花园 memory-game6085，采用 Vue3、Spring Boot 和 SQLite，镜像仓库为本机 Registry。
+[/body/p[@paraId=6C64C71A]] 项目源代码：Code/memory-game6085/；实验结果：docs/docker-evidence/results.json；各图来自同目录的真实终端和浏览器截图。
+[/body/p[@paraId=71371898]] 技术资料查阅日期：2026年10月21日。
+[/body/p[@paraId=69B76BA3]] Vue 官方文档：https://vuejs.org/guide/essentials/reactivity-fundamentals.html
+[/body/p[@paraId=3CA94620]] Vite 官方文档：https://vite.dev/guide/
+[/body/p[@paraId=44F40168]] Spring Boot 官方文档：https://docs.spring.io/spring-boot/maven-plugin/packaging.html
+[/body/p[@paraId=5FE6CD11]] SQLite JDBC 官方仓库：https://github.com/xerial/sqlite-jdbc
+[/body/p[@paraId=345600A9]] Docker 数据卷官方文档：https://docs.docker.com/engine/storage/volumes/
+[/body/p[@paraId=6264140E]] CNCF Distribution 官方部署文档：https://distribution.github.io/distribution/about/deploying/
+[/body/p[@paraId=346253EC]] 9.1 原Windows实验截图来源索引
+[/body/tbl[7]] [Table: 12 rows]
+[/body/p[@paraId=0783BE92]] 截图源文件统一位于 docs/docker-evidence/。终端图片采集自专用 Windows 控制台窗口，浏览器图片采集自实际运行的应用容器。完整实验标识、镜像摘要和成绩对比保存在同目录 results.json。
+[/body/p[@paraId=64328D67]] 附录A Linux补充部署与复现
+[/body/p[@paraId=02678243]] A1 环境来源与独立资源配置
+[/body/p[@paraId=57FCEFA6]] 2026年10月21日在 Debian GNU/Linux 13 云工作区补做部署。平台已提供 Docker Engine，本轮沿用其本地守护进程；Client 与 Server 均为28.4.0，Compose为2.40.3，存储驱动为vfs。
+[/body/p[@paraId=1D828CB3]] 实际创建独立网络 memory-game6085-v3-net，以及应用和仓库数据卷。图A1a记录首次创建命令及返回结果，图A1b记录随后配置检查；完整日志保存在证据包。两次实验分别使用独立资源。
+[/body/p[@paraId=345C6DE5]] docker network create --label course=memory-game6085-v3 \  memory-game6085-v3-netdocker volume create --label course=memory-game6085-v3 \  memory-game6085-v3-datadocker volume create --label course=memory-game6085-v3 \  memory-game6085-v3-registry-data
+[/body/p[@paraId=58F0ACE0]] 
+[/body/p[@paraId=2425008B]] 图A1a 首次创建独立网络及数据卷
+[/body/p[@paraId=3A928EF1]] 资源创建后的配置检查
+[/body/p[@paraId=2382811B]] 创建资源后，分别检查引擎与Compose版本、网络驱动和应用及仓库数据卷。检查返回network为bridge、volume为local，与首次创建结果对应。
+[/body/p[@paraId=609F9C35]] 
+[/body/p[@paraId=66388E52]] 图A1b Linux引擎及网络和数据卷配置验证
+[/body/p[@paraId=22B8BD4D]] 两轮实验均沿用已安装的Docker引擎。本附录记录当前环境的资源配置与应用部署；本报告未附原Windows安装、首次配置和启动恢复的历史操作截图，现有记录不包含引擎安装全过程。
+[/body/p[@paraId=244300D3]] A2 配套JAR打包为新镜像
+[/body/p[@paraId=39836DED]] 使用 Dockerfile.prebuilt 将配套可执行 JAR 复制到 Temurin 21 JRE 镜像，配置普通用户garden和数据目录/app/data。此步骤使用已完成 Maven 打包的交付 JAR；源码多阶段构建流程仍见第五章。
+[/body/p[@paraId=021CFDAF]] 交付JAR的SHA2562e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0
+[/body/p[@paraId=2D3CDB39]] docker build --progress=plain --pull=false -f Dockerfile.prebuilt -t memory-game6085:1.0.1-v3 .
+[/body/p[@paraId=12B2D97A]] 
+[/body/p[@paraId=724DD789]] 图A2 校验交付JAR并成功构建1.0.1-v3镜像
+[/body/p[@paraId=2F52A825]] A3 容器运行与交付文件校验
+[/body/p[@paraId=11095335]] 将镜像运行在独立网络中，宿主机127.0.0.1:18086映射容器8080，并挂载memory-game6085-v3-data。健康接口返回UP，进程身份为garden。
+[/body/p[@paraId=2DC9E1D6]] 分别计算交付JAR与容器/app/app.jar的SHA256，两个结果完全一致。这将本轮交付文件与实际部署镜像直接对应。
+[/body/p[@paraId=34E99075]] 关键命令摘自03-container-run.txt。以下文本便于复制，实际返回结果见原图。
+[/body/p[@paraId=7F579771]] docker run -d --name memory-game6085-v3-app \  --network memory-game6085-v3-net \  -p 127.0.0.1:18086:8080 -e DATA_DIR=/app/data \  --mount type=volume,source=memory-game6085-v3-data,target=/app/data \  memory-game6085:1.0.1-v3curl --fail --silent http://127.0.0.1:18086/api/healthdocker exec memory-game6085-v3-app sha256sum /app/app.jar
+[/body/p[@paraId=5E59BA11]] 交付JAR与容器内文件SHA256相同2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0
+[/body/p[@paraId=33440D4C]] 
+[/body/p[@paraId=54BEDE65]] 图A3 新容器运行成功且容器内外JAR摘要相同
+[/body/p[@paraId=3966B4F7]] A4 实际游戏与成绩保存
+[/body/p[@paraId=34392D44]] 通过浏览器在本轮Linux容器完成轻松难度牌局，并提交昵称“6085v3实验”。实际记录编号为1，11步，用时7268 ms；数据由服务端生成并保存到SQLite。
+[/body/p[@paraId=108A52C3]] 本轮同时采集1440宽桌面和375宽手机页面，手机页面未出现横向溢出。配套预览图片来自本次容器访问。
+[/body/p[@paraId=2595BA24]] 
+[/body/p[@paraId=7C12AC80]] 图A4 Linux容器内完成牌局并实际保存成绩
+[/body/p[@paraId=737097E4]] A5 本机仓库发布镜像
+[/body/p[@paraId=41800D86]] 启动独立Registry容器，绑定127.0.0.1:15085，并使用专用仓库数据卷。将新镜像标记到localhost:15085后执行push，仓库标签查询返回1.0.1-v3。此地址仅用于本机实验。
+[/body/p[@paraId=6893A5B8]] 关键命令及结果摘自04-registry-push.txt。
+[/body/p[@paraId=03496E19]] docker tag memory-game6085:1.0.1-v3 \  localhost:15085/memory-game6085:1.0.1-v3docker push localhost:15085/memory-game6085:1.0.1-v3curl --fail --silent \  http://127.0.0.1:15085/v2/memory-game6085/tags/list
+[/body/p[@paraId=331157ED]] 推送与后续拉取的仓库摘要一致sha256:fe814da12f1ebd9dbbfc85dcab5af55d9ef098b9261bc706f0df362746f78c85
+[/body/p[@paraId=3B66E456]] 
+[/body/p[@paraId=75527B6D]] 图A5 启动本机Registry并实际推送新镜像
+[/body/p[@paraId=7855E9AC]] A6 移除本地镜像并保留数据卷
+[/body/p[@paraId=12F26D0A]] 在发布成功并记录完整排行榜后，移除本轮应用容器和两个1.0.1-v3本地标签。按版本过滤的镜像列表为空；命名数据卷仍存在。移除操作仅针对本轮独立资源。
+[/body/p[@paraId=794DCE5A]] 
+[/body/p[@paraId=38F25BF7]] 图A6 应用容器及本地镜像已移除而数据卷保留
+[/body/p[@paraId=44BEE394]] A7 从仓库重新拉取
+[/body/p[@paraId=6A2D7E3A]] 本地版本移除后执行docker pull，结果为Downloaded newer image。推送与拉取的仓库摘要一致，与原Windows实验的摘要分别记录。
+[/body/p[@paraId=6E5072A0]] Linux补充实验仓库摘要sha256:fe814da12f1ebd9dbbfc85dcab5af55d9ef098b9261bc706f0df362746f78c85
+[/body/p[@paraId=1F4A521F]] 
+[/body/p[@paraId=013D3B9E]] 图A7 本地镜像移除后从Registry实际拉取成功
+[/body/p[@paraId=2524D366]] A8 重建容器并核对成绩保留
+[/body/p[@paraId=10CEAFF9]] 使用刚拉取的仓库镜像创建新容器，并挂载相同命名数据卷。原容器前12位为263d322a4f4c，新容器前12位为50fb7d90259a；新旧标识不同。
+[/body/p[@paraId=6441A01C]] 健康检查再次通过，容器内JAR仍与交付文件一致，重建前后的完整排行榜JSON相同。比较结果为LeaderboardPreserved=True、ContainerChanged=True。
+[/body/p[@paraId=44A840A7]] 关键命令及结果摘自09-recreate-verify.txt；重建继续使用相同数据卷。
+[/body/p[@paraId=05C52D2C]] docker run -d --name memory-game6085-v3-pulled \  --network memory-game6085-v3-net \  -p 127.0.0.1:18086:8080 -e DATA_DIR=/app/data \  --mount type=volume,source=memory-game6085-v3-data,target=/app/data \  localhost:15085/memory-game6085:1.0.1-v3docker exec memory-game6085-v3-pulled sha256sum /app/app.jar
+[/body/p[@paraId=7862B70A]] 容器内JAR SHA2562e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0LeaderboardPreserved=True ContainerChanged=True
+[/body/p[@paraId=7E14F476]] 
+[/body/p[@paraId=04F3608F]] 图A8 拉取镜像重建后JAR及完整排行榜校验通过
+[/body/p[@paraId=07CC1403]] A9 浏览器复核重建后的榜单
+[/body/p[@paraId=3B286433]] 重新访问本轮应用端口并切换到轻松难度，页面仍显示先前保存的真实成绩。该页面由新容器提供，与终端JSON比较结果一致。
+[/body/p[@paraId=1798B958]] 
+[/body/p[@paraId=590B1D04]] 图A9 新容器页面仍显示原已保存成绩
+[/body/p[@paraId=1A64F733]] A10 补充证据来源与版本对应
+[/body/p[@paraId=2E6C23B7]] 正文图1至图11沿用原Windows实验的真实截图；本附录图A1a、图A1b及图A2至图A9来自2026年10月21日Linux补充实验。终端图为实际窗口采集，浏览器图来自当次应用容器。图A1a在Word内仅裁去底部空白显示区，内嵌原PNG字节未改；所有关键命令与返回完整保留。
+[/body/tbl[8]] [Table: 11 rows]
+[/body/p[@paraId=1EA8605A]] 本附录证据目录为docs/v3-evidence，结果文件为results.json。Windows原实验镜像为1.0.0，Linux补充镜像为1.0.1-v3；v5修订报告结构，应用JAR及这些历史实验结果不变。2026年10月22日本机复测另见附录B。各实验仓库均仅绑定本机。
+[/body/p[@paraId=3C8524DA]] 附录B 本机复测与结果核对
+[/body/p[@paraId=5AE395F6]] B1 2026年10月22日本机验证
+[/body/p[@paraId=67FCE53E]] 在原Windows机器恢复Docker引擎后，使用独立网络、容器和数据卷复测最新源码与交付包。Docker Client和Server均为29.8.2。本轮保留既有课堂项目及历史实验容器，未将测试成绩写入原作业数据库。
+[/body/tbl[9]] [Table: 7 rows]
+[/body/p[@paraId=65AF4D81]] 本轮push/pull的同一仓库摘要
+[/body/p[@paraId=113D36D7]] sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38
+[/body/p[@paraId=746D9BF0]] 仓库命令（项目目录内执行）
+[/body/p[@paraId=2C042B1E]] docker push localhost:15086/memory-game6085:localtest-20261022docker pull localhost:15086/memory-game6085:localtest-20261022
+[/body/p[@paraId=36F6EB26]] 本轮源码镜像JAR与交付JAR的整包摘要不同，但BOOT-INF内的应用类、前端资源和依赖逐项相同；未把整包摘要与应用内容校验混同。上述步骤的完整命令、删除检查及真实输出收录在证据包windows-localtest-20261022目录中。
+[/body/p[@paraId=39A7F50F]] B2 拉取重建后的浏览器复核
+[/body/p[@paraId=7B711BA2]] 重新访问18087端口并切换到轻松排行榜，页面仍显示前一容器保存的“测试花匠6085”。浏览器无脚本错误，所见记录与重建前后相同的JSON响应一致。
+[/body/p[@paraId=3D3E183A]] 
+[/body/p[@paraId=12344503]] 图B1 本机拉取镜像重建后仍保留原测试成绩
+[/body/p[@paraId=7A4832B1]] 证据来源：docs/local-test-20261022/docker-roundtrip/results.json及after-recreate-ui.png；构建与浏览器测试日志同收录证据包。应用和历史证据未随v5文档修订改写；本轮未重新安装Docker，也未补造原机器安装过程截图。

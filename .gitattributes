@@ -1,2 +1,5 @@
 # Preserve original terminal transcripts, including CR/LF and ANSI control bytes.
 docs/v3-evidence/*.txt -text -whitespace
+docs/local-test-20261022/** -text -whitespace
+docs/v5-report-work/*.txt -text -whitespace
+docs/v5-work/*.txt -text -whitespace

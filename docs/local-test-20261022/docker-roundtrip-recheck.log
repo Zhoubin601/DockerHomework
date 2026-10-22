@@ -1,0 +1,55 @@
+{
+  "completedAt": "2026-10-22T03:17:29.621582+00:00",
+  "sourceBuild": "Dockerfile, BuildKit cache reused",
+  "oldContainer": "91b23f11f6da13cf1504991fb7d8ea856a76c3c4a7a9bb98c1a751ac1ee4cd3b",
+  "newContainer": "cdb872c452673b08c70f5f6dc63398825e1fe96285bdc8c14457e6a4bc624d33",
+  "containerChanged": true,
+  "leaderboardPreserved": true,
+  "beforeLeaderboard": {
+    "scores": [
+      {
+        "id": 1,
+        "nickname": "���Ի���6085",
+        "difficulty": "easy",
+        "moves": 12,
+        "durationMs": 9271,
+        "createdAt": "2026-10-22T03:17:14.288809107Z"
+      }
+    ],
+    "total": 1,
+    "bestDurationMs": 9271
+  },
+  "afterLeaderboard": {
+    "scores": [
+      {
+        "id": 1,
+        "nickname": "���Ի���6085",
+        "difficulty": "easy",
+        "moves": 12,
+        "durationMs": 9271,
+        "createdAt": "2026-10-22T03:17:14.288809107Z"
+      }
+    ],
+    "total": 1,
+    "bestDurationMs": 9271
+  },
+  "pushRepoDigests": [
+    "memory-game6085@sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38",
+    "localhost:15086/memory-game6085@sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38"
+  ],
+  "pullRepoDigests": [
+    "localhost:15086/memory-game6085@sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38"
+  ],
+  "repoDigestsMatch": true,
+  "localTagsAbsentBeforePull": true,
+  "originalContainersUnchanged": true,
+  "applicationUrl": "http://127.0.0.1:18087",
+  "registry": "localhost:15086",
+  "dataVolume": "memory-game6085-localtest-20261022-data",
+  "health": {
+    "application": "memory-game6085",
+    "database": "SQLite",
+    "status": "UP"
+  },
+  "digestComparisonNote": "Compare digests for localhost:15086/memory-game6085 only; pre-pull inspect also included a source-repository alias. Raw push/pull logs retained."
+}

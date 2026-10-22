@@ -1,0 +1,22 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-22T11:09:36.496+08:00  INFO 27680 --- [memory-game6085] [           main] cn.memorygarden.GardenApplication        : Starting GardenApplication v1.0.0 using Java 21.0.11 with PID 27680 (D:\2026Autumn Semester File\云计算\Docker作业\docs\local-test-20261022\unpacked\memory-game6085\dist-artifacts\memory-game6085.jar started by a3185 in D:\2026Autumn Semester File\云计算\Docker作业)
+2026-10-22T11:09:36.501+08:00  INFO 27680 --- [memory-game6085] [           main] cn.memorygarden.GardenApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T11:09:38.029+08:00  INFO 27680 --- [memory-game6085] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 18080 (http)
+2026-10-22T11:09:38.049+08:00  INFO 27680 --- [memory-game6085] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T11:09:38.049+08:00  INFO 27680 --- [memory-game6085] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22T11:09:38.110+08:00  INFO 27680 --- [memory-game6085] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1551 ms
+2026-10-22T11:09:38.423+08:00  INFO 27680 --- [memory-game6085] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-10-22T11:09:38.780+08:00  INFO 27680 --- [memory-game6085] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 18080 (http) with context path '/'
+2026-10-22T11:09:38.798+08:00  INFO 27680 --- [memory-game6085] [           main] cn.memorygarden.GardenApplication        : Started GardenApplication in 2.783 seconds (process running for 3.364)
+2026-10-22T11:09:46.308+08:00  INFO 27680 --- [memory-game6085] [io-18080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T11:09:46.309+08:00  INFO 27680 --- [memory-game6085] [io-18080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T11:09:46.310+08:00  INFO 27680 --- [memory-game6085] [io-18080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

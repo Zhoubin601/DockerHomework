@@ -1,0 +1,5 @@
+2026-10-22T03:17:25.333582+00:00
+> docker run -d --name memory-game6085-localtest-20261022-pulled --label codex.memory6085.test=20261022 --network memory-game6085-localtest-20261022-net -p 127.0.0.1:18087:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-localtest-20261022-data,target=/app/data localhost:15086/memory-game6085:localtest-20261022
+cdb872c452673b08c70f5f6dc63398825e1fe96285bdc8c14457e6a4bc624d33
+
+ExitCode=0

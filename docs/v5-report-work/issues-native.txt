@@ -1,0 +1,109 @@
+Found 45 issue(s):
+
+Format Issues (31):
+  [F1] /body/p[@paraId=417BA31A]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F2] /body/p[@paraId=3D0E4CBF]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F3] /body/p[@paraId=68A3112D]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F4] /body/p[@paraId=19F7B352]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F5] /body/p[@paraId=4EA70AC8]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F7] /body/p[@paraId=57FCEFA6]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F8] /body/p[@paraId=1D828CB3]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F12] /body/p[@paraId=2382811B]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F13] /body/p[@paraId=22B8BD4D]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F14] /body/p[@paraId=39836DED]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F15] /body/p[@paraId=11095335]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F16] /body/p[@paraId=2DC9E1D6]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F17] /body/p[@paraId=34E99075]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F22] /body/p[@paraId=34392D44]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F23] /body/p[@paraId=108A52C3]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F24] /body/p[@paraId=41800D86]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F25] /body/p[@paraId=6893A5B8]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F28] /body/p[@paraId=12F26D0A]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F29] /body/p[@paraId=6A2D7E3A]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F30] /body/p[@paraId=10CEAFF9]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F31] /body/p[@paraId=6441A01C]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F32] /body/p[@paraId=44A840A7]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F37] /body/p[@paraId=3B286433]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F38] /body/p[@paraId=2E6C23B7]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F39] /body/p[@paraId=1EA8605A]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F40] /body/p[@paraId=67FCE53E]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F41] /body/p[@paraId=65AF4D81]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F42] /body/p[@paraId=746D9BF0]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F43] /body/p[@paraId=36F6EB26]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F44] /body/p[@paraId=7B711BA2]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F45] /body/p[@paraId=7A4832B1]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+
+Content Issues (14):
+  [C6] /body/p[@paraId=2EEFAEEB]/r[1]: Consecutive spaces
+       Context: "  - garden-data:/app/data"
+       Suggestion: Merge into a single space
+  [C9] /body/p[@paraId=345C6DE5]/r[2]: Consecutive spaces
+       Context: "  memory-game6085-v3-net"
+       Suggestion: Merge into a single space
+  [C10] /body/p[@paraId=345C6DE5]/r[5]: Consecutive spaces
+       Context: "  memory-game6085-v3-data"
+       Suggestion: Merge into a single space
+  [C11] /body/p[@paraId=345C6DE5]/r[7]: Consecutive spaces
+       Context: "  memory-game6085-v3-registry-data"
+       Suggestion: Merge into a single space
+  [C18] /body/p[@paraId=7F579771]/r[2]: Consecutive spaces
+       Context: "  --network memory-game6085-v3-net \"
+       Suggestion: Merge into a single space
+  [C19] /body/p[@paraId=7F579771]/r[3]: Consecutive spaces
+       Context: "  -p 127.0.0.1:18086:8080 -e DATA_DIR=/app/data \"
+       Suggestion: Merge into a single space
+  [C20] /body/p[@paraId=7F579771]/r[4]: Consecutive spaces
+       Context: "  --mount type=volume,source=memory-game6085-v3-data,target=/app/data \"
+       Suggestion: Merge into a single space
+  [C21] /body/p[@paraId=7F579771]/r[5]: Consecutive spaces
+       Context: "  memory-game6085:1.0.1-v3"
+       Suggestion: Merge into a single space
+  [C26] /body/p[@paraId=03496E19]/r[2]: Consecutive spaces
+       Context: "  localhost:15085/memory-game6085:1.0.1-v3"
+       Suggestion: Merge into a single space
+  [C27] /body/p[@paraId=03496E19]/r[6]: Consecutive spaces
+       Context: "  http://127.0.0.1:15085/v2/memory-game6085/tags/list"
+       Suggestion: Merge into a single space
+  [C33] /body/p[@paraId=05C52D2C]/r[2]: Consecutive spaces
+       Context: "  --network memory-game6085-v3-net \"
+       Suggestion: Merge into a single space
+  [C34] /body/p[@paraId=05C52D2C]/r[3]: Consecutive spaces
+       Context: "  -p 127.0.0.1:18086:8080 -e DATA_DIR=/app/data \"
+       Suggestion: Merge into a single space
+  [C35] /body/p[@paraId=05C52D2C]/r[4]: Consecutive spaces
+       Context: "  --mount type=volume,source=memory-game6085-v3-data,target=/app/data \"
+       Suggestion: Merge into a single space
+  [C36] /body/p[@paraId=05C52D2C]/r[5]: Consecutive spaces
+       Context: "  localhost:15085/memory-game6085:1.0.1-v3"
+       Suggestion: Merge into a single space

@@ -1,0 +1,27 @@
+{
+  "rawAndOutputUnchanged": true,
+  "sourceBuildVsDeliveryBOOT_INF": {
+    "entriesBuilt": 61,
+    "entriesDelivery": 61,
+    "differences": []
+  },
+  "evidenceManifestEntries": 76,
+  "evidenceManifestValid": true,
+  "jarRestart": {
+    "health": {
+      "application": "memory-game6085",
+      "database": "SQLite",
+      "status": "UP"
+    },
+    "leaderboardPreserved": true,
+    "total": 1
+  },
+  "wordSchemaErrors": {
+    "The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:tcBorders'.": 3,
+    "The required attribute 'val' is missing.": 3,
+    "The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:snapToGrid'.": 128,
+    "The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:color'.": 78,
+    "The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:updateFields'.": 1
+  },
+  "wordSchemaErrorTotal": 213
+}

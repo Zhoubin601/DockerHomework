@@ -54,3 +54,9 @@ https://github.com/Zhoubin601/DockerHomework 。
 - 对待提交文件及 ZIP/DOCX 内 81 个文本条目进行常见凭据模式扫描，未检出凭据模式。HTML 内嵌图片的 Base64 数据不作为文本密钥判断。
 - raw/要求.png、正式 Word 的暂存内容与本地原文件逐字节一致，SHA-256 与既有验证记录相同。
 - 原文件已有的空白格式提示未做改写，保留本次上传前的文件内容。
+
+## 2026-10-22 v5提交范围
+
+用户明确要求“修复所有错误。生成v5推送”。本轮提交v5五份正式交付、Word修复及本机Word重排脚本、README新版本说明、10月22日本机验收和必要过程/复核证据。目标仍为origin/main（https://github.com/Zhoubin601/DockerHomework）。
+
+新增.gitignore规则仅排除本轮临时解压、检查DOCX、运行DB、重复JAR、候选副本及非最终渲染；不删除本地用户文件。原始要求及v1—v4保持原字节，应用源代码与交付JAR不变。完整交付清单、摘要、严格Word验证及独立审查记录位于docs/v5-work。推送前核对暂存范围、文件大小与常见凭据模式，推送后核对远端main与本地HEAD一致。

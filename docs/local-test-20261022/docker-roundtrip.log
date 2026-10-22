@@ -1,0 +1,95 @@
+tag 0 
+push 0 The push refers to repository [localhost:15086/memory-game6085]
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+44136fa355b3: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+f5c13179339d: Waiting
+1b27b73de186: Waiting
+cf1a5487baaf: Waiting
+44136fa355b3: Waiting
+44136fa355b3: Pushed
+22d3391d8c49: Waiting
+1b27b73de186: Pushed
+f5c13179339d: Pushed
+cf1a5487baaf: Pushed
+9ddd6de30055: Pushed
+d18e088bcb32: Pushed
+4f4fb700ef54: Waiting
+a58c83948cbd: Waiting
+4f4fb700ef54: Pushed
+875cadd98702: Pushed
+a58c83948cbd: Pushed
+22d3391d8c49: Pushed
+localtest-20261022: digest: sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38 size: 856
+
+image-after-push 0 ["memory-game6085@sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38","localhost:15086/memory-game6085@sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38"]
+
+validate-owned-app 0 {"codex.memory6085.test":"20261022","org.opencontainers.image.version":"22.04"}
+
+app-stop 0 memory-game6085-localtest-20261022-app
+
+app-remove 0 memory-game6085-localtest-20261022-app
+
+image-remove 0 Untagged: localhost:15086/memory-game6085:localtest-20261022
+Untagged: memory-game6085:localtest-20261022
+Deleted: sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38
+
+check-image-absent-remote 1 []
+Error response from daemon: No such image: localhost:15086/memory-game6085:localtest-20261022
+
+check-image-absent-source 1 []
+Error response from daemon: No such image: memory-game6085:localtest-20261022
+
+volume-retained 0 [
+    {
+        "CreatedAt": "2026-10-22T03:16:24Z",
+        "Driver": "local",
+        "Labels": {
+            "codex.memory6085.test": "20261022"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/memory-game6085-localtest-20261022-data/_data",
+        "Name": "memory-game6085-localtest-20261022-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
+pull 0 localtest-20261022: Pulling from memory-game6085
+44136fa355b3: Already exists
+1b27b73de186: Download complete
+Digest: sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38
+Status: Downloaded newer image for localhost:15086/memory-game6085:localtest-20261022
+localhost:15086/memory-game6085:localtest-20261022
+
+image-after-pull 0 ["localhost:15086/memory-game6085@sha256:1333c043c6b02570c3df12afaa82559359e459bcdd58a69e30ec88a01da2ac38"]
+
+run-memory-game6085-localtest-20261022-pulled 0 cdb872c452673b08c70f5f6dc63398825e1fe96285bdc8c14457e6a4bc624d33
+
+pulled-container-jar 0 6126a1faf7e80ec948c5be2b50d834c7f3a4ef9f65089fcd49431f532a1b1389  /app/app.jar
+
+pulled-container-mounts 0 [{"Type":"volume","Name":"memory-game6085-localtest-20261022-data","Source":"/var/lib/docker/volumes/memory-game6085-localtest-20261022-data/_data","Destination":"/app/data","Driver":"local","Mode":"z","RW":true,"Propagation":""}]
+
+final-containers 0 ose.project.config_files=D:\\2026Autumn Semester File\\classroom-ai-demo\\scripts\\deploy\\docker-compose.yml,com.docker.compose.project.working_dir=D:\\2026Autumn Semester File\\classroom-ai-demo\\scripts\\deploy,com.docker.compose.project=classroom-ai-demo,com.docker.compose.service=mysql,com.docker.compose.version=5.1.4,desktop.docker.io/binds/0/Source=D:\\2026Autumn Semester File\\classroom-ai-demo\\scripts\\deploy\\mysql\\init\\initialize.sql,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/docker-entrypoint-initdb.d/initialize.sql,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/3306/tcp=:3308","LocalVolumes":"1","Mounts":"/run/desktop/m��,classroom_mysq��","Names":"classroom-mysql","Networks":"classroom-ai-demo_default","Platform":{"architecture":"amd64","os":"linux"},"Ports":"0.0.0.0:3308-\u003e3306/tcp, [::]:3308-\u003e3306/tcp","RunningFor":"10 days ago","Size":"45.1kB (virtual 852MB)","State":"running","Status":"Up 9 minutes (healthy)"}
+
+Traceback (most recent call last):
+  File "D:\2026Autumn Semester File\�Ƽ���\Docker��ҵ\docs\local-test-20261022\docker-roundtrip.py", line 96, in <module>
+    assert all(result[k] for k in ['containerChanged','leaderboardPreserved','repoDigestsMatch','originalContainersUnchanged'])
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
