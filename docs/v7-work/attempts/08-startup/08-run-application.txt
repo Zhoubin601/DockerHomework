@@ -1,0 +1,11 @@
+Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/08-run-application.sh
+Started UTC: 2026-10-22T06:39:28.045780+00:00
+
++ date -Iseconds
+2026-10-22T06:39:28+00:00
++ docker run -d --name garden6085 --network memory-game6085-v7-net -p 18085:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-v7-data,target=/app/data memory-game6085:1.0.2-v7
+7cf33fd8d6d897c0726420f6599b32ee8b3d7e36ffb3a00ad7e2a9472ceb9996
++ curl --retry 30 --retry-connrefused --retry-delay 1 -fsS http://127.0.0.1:18085/api/health
+curl: (56) Recv failure: Connection reset by peer
+
+Actual exit code: 56

@@ -1,0 +1,6 @@
+<!doctype html><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#fff;color:#111;font-family:Arial,"Microsoft YaHei",sans-serif}h1{font-size:25px;margin:0 0 10px}p{font-size:17px;margin:5px 0 12px;color:#444}pre{font-family:Consolas,monospace;font-size:21px;line-height:1.35;white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;border:1px solid #b4bac2;padding:17px;margin:0}</style><h1>Docker 6085 补充实验 · 实际命令日志</h1><p>05-verify-installation.txt · 原日志第 32—37 行 · UTC 时间按日志保留</p><pre>
++ docker ps -a --filter name=hello6085 --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'
+NAMES       IMAGE         STATUS
+hello6085   hello-world   Exited (0) Less than a second ago
+
+Actual exit code: 0</pre>

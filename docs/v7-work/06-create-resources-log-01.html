@@ -1,0 +1,26 @@
+<!doctype html><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#fff;color:#111;font-family:Arial,"Microsoft YaHei",sans-serif}h1{font-size:25px;margin:0 0 10px}p{font-size:17px;margin:5px 0 12px;color:#444}pre{font-family:Consolas,monospace;font-size:21px;line-height:1.35;white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;border:1px solid #b4bac2;padding:17px;margin:0}</style><h1>Docker 6085 补充实验 · 实际命令日志</h1><p>06-create-resources.txt · 原日志第 1—26 行 · UTC 时间按日志保留</p><pre>Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/06-create-resources.sh
+Started UTC: 2026-10-22T06:39:21.776747+00:00
+
++ date -Iseconds
+2026-10-22T06:39:21+00:00
++ docker network create memory-game6085-v7-net
+fadef90bd60d90b2a879cc393ed6a7265856816f32eba9241acec06ba229b08c
++ docker volume create memory-game6085-v7-data
+memory-game6085-v7-data
++ docker volume create memory-game6085-v7-registry
+memory-game6085-v7-registry
++ docker run -d --name registry6085 --network memory-game6085-v7-net -p 127.0.0.1:5000:5000 -e OTEL_TRACES_EXPORTER=none --mount type=volume,source=memory-game6085-v7-registry,target=/var/lib/registry registry:3
+99815ee6cf396d76f1ad930f5592dace565949340f3586658736afec2b7bf685
++ docker network inspect memory-game6085-v7-net --format 'Network={{.Name}} Driver={{.Driver}} Subnet={{(index .IPAM.Config 0).Subnet}}'
+Network=memory-game6085-v7-net Driver=bridge Subnet=172.19.0.0/16
++ docker volume inspect memory-game6085-v7-data memory-game6085-v7-registry --format 'Volume={{.Name}} Driver={{.Driver}}'
+Volume=memory-game6085-v7-data Driver=local
+Volume=memory-game6085-v7-registry Driver=local
++ docker ps --filter name=registry6085 --format 'table {{.Names}}\t{{.Image}}\t{{.Ports}}'
+NAMES          IMAGE        PORTS
+registry6085   registry:3   127.0.0.1:5000-&gt;5000/tcp
++ curl --retry 10 --retry-connrefused --retry-delay 1 -fsS http://127.0.0.1:5000/v2/
+{}+ echo
+
+
+Actual exit code: 0</pre>

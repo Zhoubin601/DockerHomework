@@ -1,0 +1,207 @@
+{
+  "pages": 33,
+  "tables": 7,
+  "inlineShapes": 31,
+  "tablesOfContents": 1,
+  "headings": [
+    {
+      "heading": "一 实验目的与任务要求",
+      "level": 1,
+      "page": 3
+    },
+    {
+      "heading": "二 实验环境与项目结构",
+      "level": 1,
+      "page": 4
+    },
+    {
+      "heading": "2.1 实验配置与项目目录",
+      "level": 2,
+      "page": 4
+    },
+    {
+      "heading": "2.2 环境启动与验证",
+      "level": 2,
+      "page": 5
+    },
+    {
+      "heading": "三 系统设计与持久化",
+      "level": 1,
+      "page": 6
+    },
+    {
+      "heading": "3.1 应用结构",
+      "level": 2,
+      "page": 6
+    },
+    {
+      "heading": "3.2 SQLite 数据设计",
+      "level": 2,
+      "page": 6
+    },
+    {
+      "heading": "3.3 容器数据卷",
+      "level": 2,
+      "page": 6
+    },
+    {
+      "heading": "四 本地构建与功能验证",
+      "level": 1,
+      "page": 7
+    },
+    {
+      "heading": "4.1 本地构建与自动验证",
+      "level": 2,
+      "page": 7
+    },
+    {
+      "heading": "4.2 容器中的游戏操作与成绩保存",
+      "level": 2,
+      "page": 7
+    },
+    {
+      "heading": "五 Docker 镜像构建与运行",
+      "level": 1,
+      "page": 8
+    },
+    {
+      "heading": "5.1 多阶段构建",
+      "level": 2,
+      "page": 8
+    },
+    {
+      "heading": "5.2 JAR 打包与镜像导出",
+      "level": 2,
+      "page": 9
+    },
+    {
+      "heading": "5.3 启动容器与接口检查",
+      "level": 2,
+      "page": 10
+    },
+    {
+      "heading": "六 镜像发布与拉取",
+      "level": 1,
+      "page": 11
+    },
+    {
+      "heading": "6.1 启动本机镜像仓库",
+      "level": 2,
+      "page": 11
+    },
+    {
+      "heading": "6.2 标记与推送镜像",
+      "level": 2,
+      "page": 11
+    },
+    {
+      "heading": "6.3 删除本地镜像后重新拉取",
+      "level": 2,
+      "page": 12
+    },
+    {
+      "heading": "七 容器重建与持久化验证",
+      "level": 1,
+      "page": 14
+    },
+    {
+      "heading": "7.1 记录重建前的数据",
+      "level": 2,
+      "page": 14
+    },
+    {
+      "heading": "7.2 使用拉取镜像创建新容器",
+      "level": 2,
+      "page": 15
+    },
+    {
+      "heading": "7.3 对比重建后的成绩",
+      "level": 2,
+      "page": 16
+    },
+    {
+      "heading": "八 实验结果与问题分析",
+      "level": 1,
+      "page": 17
+    },
+    {
+      "heading": "8.1 启动与端口问题",
+      "level": 2,
+      "page": 17
+    },
+    {
+      "heading": "8.2 实验总结",
+      "level": 2,
+      "page": 17
+    },
+    {
+      "heading": "九 参考资料与证据来源",
+      "level": 1,
+      "page": 18
+    },
+    {
+      "heading": "附录 A Docker 安装与配置补充实验",
+      "level": 1,
+      "page": 19
+    },
+    {
+      "heading": "A1 安装前检查",
+      "level": 2,
+      "page": 20
+    },
+    {
+      "heading": "A2 配置 Docker 官方软件源",
+      "level": 2,
+      "page": 21
+    },
+    {
+      "heading": "A3 安装 Docker Engine 和插件",
+      "level": 2,
+      "page": 22
+    },
+    {
+      "heading": "A4 首次配置与引擎启动",
+      "level": 2,
+      "page": 24
+    },
+    {
+      "heading": "A5 导入基础镜像并验证安装",
+      "level": 2,
+      "page": 25
+    },
+    {
+      "heading": "A6 创建网络 数据卷和镜像仓库",
+      "level": 2,
+      "page": 26
+    },
+    {
+      "heading": "A7 构建应用镜像并核对 JAR",
+      "level": 2,
+      "page": 27
+    },
+    {
+      "heading": "A8 配置应用容器并保存成绩",
+      "level": 2,
+      "page": 28
+    },
+    {
+      "heading": "A9 标记并发布镜像",
+      "level": 2,
+      "page": 30
+    },
+    {
+      "heading": "A10 删除本地标签后重新拉取",
+      "level": 2,
+      "page": 31
+    },
+    {
+      "heading": "A11 重建容器并核对持久化数据",
+      "level": 2,
+      "page": 32
+    }
+  ],
+  "tocText": [
+    "一 实验目的与任务要求\t3\r二 实验环境与项目结构\t4\r2.1 实验配置与项目目录\t4\r2.2 环境启动与验证\t5\r三 系统设计与持久化\t6\r3.1 应用结构\t6\r3.2 SQLite 数据设计\t6\r3.3 容器数据卷\t6\r四 本地构建与功能验证\t7\r4.1 本地构建与自动验证\t7\r4.2 容器中的游戏操作与成绩保存\t7\r五 Docker 镜像构建与运行\t8\r5.1 多阶段构建\t8\r5.2 JAR 打包与镜像导出\t9\r5.3 启动容器与接口检查\t10\r六 镜像发布与拉取\t11\r6.1 启动本机镜像仓库\t11\r6.2 标记与推送镜像\t11\r6.3 删除本地镜像后重新拉取\t12\r七 容器重建与持久化验证\t14\r7.1 记录重建前的数据\t14\r7.2 使用拉取镜像创建新容器\t15\r7.3 对比重建后的成绩\t16\r八 实验结果与问题分析\t17\r8.1 启动与端口问题\t17\r8.2 实验总结\t17\r九 参考资料与证据来源\t18\r附录 A Docker 安装与配置补充实验\t19\rA1 安装前检查\t20\rA2 配置 Docker 官方软件源\t21\rA3 安装 Docker Engine 和插件\t22\rA4 首次配置与引擎启动\t24\rA5 导入基础镜像并验证安装\t25\rA6 创建网络 数据卷和镜像仓库\t26\rA7 构建应用镜像并核对 JAR\t27\rA8 配置应用容器并保存成绩\t28\rA9 标记并发布镜像\t30\rA10 删除本地标签后重新拉取\t31\rA11 重建容器并核对持久化数据\t32\r"
+  ],
+  "pdf": "D:\\2026Autumn Semester File\\云计算\\Docker作业\\docs\\v7-work\\native-final.pdf"
+}

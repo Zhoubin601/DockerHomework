@@ -78,3 +78,10 @@ Thumbs.db
 /docs/v7-work/renderer-probe/
 /docs/v6-submission-audit-20261022/inspection-copy.docx
 /docs/v6-submission-audit-20261022/inspection.html
+
+# v7 authoring/inspection duplicates; final deliverables and verified evidence remain.
+/docs/v7-work/*.docx
+/docs/v7-work/report-preview.html
+/docs/v7-work/final-preview.html
+/docs/v7-work/release-preview.html
+/docs/v7-work/qa-previous-render/

@@ -1,0 +1,50 @@
+{
+  "reason": "Keep both A7 log figures on the same page after prose edit",
+  "scale": 0.92,
+  "changes": [
+    {
+      "image_index": 21,
+      "before": {
+        "cx": "5669280",
+        "cy": "5056632"
+      },
+      "after": {
+        "cx": "5215738",
+        "cy": "4652101"
+      }
+    },
+    {
+      "image_index": 21,
+      "before": {
+        "cx": "5669280",
+        "cy": "5056632"
+      },
+      "after": {
+        "cx": "5215738",
+        "cy": "4652101"
+      }
+    },
+    {
+      "image_index": 22,
+      "before": {
+        "cx": "5669280",
+        "cy": "2464308"
+      },
+      "after": {
+        "cx": "5215738",
+        "cy": "2267163"
+      }
+    },
+    {
+      "image_index": 22,
+      "before": {
+        "cx": "5669280",
+        "cy": "2464308"
+      },
+      "after": {
+        "cx": "5215738",
+        "cy": "2267163"
+      }
+    }
+  ]
+}

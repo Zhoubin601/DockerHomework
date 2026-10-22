@@ -1,0 +1,52 @@
+Found 23 issue(s):
+
+Format Issues (22):
+  [F1] /body/p[@paraId=57420516]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F2] /body/p[@paraId=3EE8EC6C]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F3] /body/p[@paraId=08C2B1D2]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F4] /body/p[@paraId=35BD01E4]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F5] /body/p[@paraId=2EFE68DD]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F7] /body/p[@paraId=5DE56B62]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F8] /body/p[@paraId=4555715B]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F9] /body/p[@paraId=79EA9954]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F10] /body/p[@paraId=16EC8742]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F11] /body/p[@paraId=0957CFF6]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F12] /body/p[@paraId=3848348F]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F13] /body/p[@paraId=325854C0]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F14] /body/p[@paraId=24FFA5C8]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F15] /body/p[@paraId=1E9FD98A]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F16] /body/p[@paraId=3DD924A6]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F17] /body/p[@paraId=3F7729CC]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F18] /body/p[@paraId=598B4170]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F19] /body/p[@paraId=36F169E5]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F20] /body/p[@paraId=4295FB1E]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F21] /body/p[@paraId=6C92DC27]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F22] /body/p[@paraId=08CA6FC9]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+  [F23] /body/p[@paraId=733A6987]: Body paragraph missing first-line indent
+       Suggestion: Set first-line indent to 2 characters
+
+Content Issues (1):
+  [C6] /body/p[@paraId=2B26CA39]/r[1]: Consecutive spaces
+       Context: "  - garden-data:/app/data"
+       Suggestion: Merge into a single space

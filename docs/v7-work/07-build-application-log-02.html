@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#fff;color:#111;font-family:Arial,"Microsoft YaHei",sans-serif}h1{font-size:25px;margin:0 0 10px}p{font-size:17px;margin:5px 0 12px;color:#444}pre{font-family:Consolas,monospace;font-size:21px;line-height:1.35;white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;border:1px solid #b4bac2;padding:17px;margin:0}</style><h1>Docker 6085 补充实验 · 实际命令日志</h1><p>07-build-application.txt · 原日志第 32—43 行 · UTC 时间按日志保留</p><pre>Image=sha256:fdd03c0bf4b44385e2ddcc411693f5b541b9139f4971e20156aa5cb4f168ca70 User=garden
++ docker create --name jarcheck6085 memory-game6085:1.0.2-v7
+c6f060f8dcdfee48dbd4d735fa1a09e6388a72f70dba5eecf984fa0815266061
++ docker cp jarcheck6085:/app/app.jar /lab/container-app.jar
++ sha256sum /lab/container-app.jar /lab/dist-artifacts/memory-game6085.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /lab/container-app.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /lab/dist-artifacts/memory-game6085.jar
++ cmp /lab/container-app.jar /lab/dist-artifacts/memory-game6085.jar
+Container JAR matches the submitted JAR byte-for-byte
++ echo 'Container JAR matches the submitted JAR byte-for-byte'
+
+Actual exit code: 0</pre>

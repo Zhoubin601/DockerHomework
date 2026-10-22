@@ -1,0 +1,87 @@
+{
+  "stages": {
+    "01-before-install": {
+      "stage": "01-before-install",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T04:53:35.963679+00:00",
+      "finished_utc": "2026-10-22T04:53:36.131236+00:00"
+    },
+    "02-official-repository": {
+      "stage": "02-official-repository",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T04:53:36.533086+00:00",
+      "finished_utc": "2026-10-22T04:54:59.488501+00:00"
+    },
+    "03-install-engine": {
+      "stage": "03-install-engine",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T04:55:33.471383+00:00",
+      "finished_utc": "2026-10-22T04:58:25.796004+00:00"
+    },
+    "04-first-configuration": {
+      "stage": "04-first-configuration",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T06:33:28.496851+00:00",
+      "finished_utc": "2026-10-22T06:33:30.070849+00:00"
+    },
+    "05-verify-installation": {
+      "stage": "05-verify-installation",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T06:39:13.669479+00:00",
+      "finished_utc": "2026-10-22T06:39:21.340103+00:00"
+    },
+    "06-create-resources": {
+      "stage": "06-create-resources",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T06:39:21.776747+00:00",
+      "finished_utc": "2026-10-22T06:39:22.536503+00:00"
+    },
+    "07-build-application": {
+      "stage": "07-build-application",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T06:39:22.955601+00:00",
+      "finished_utc": "2026-10-22T06:39:27.611511+00:00"
+    },
+    "08-run-application": {
+      "stage": "08-run-application",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T06:43:24.613282+00:00",
+      "finished_utc": "2026-10-22T06:43:31.034501+00:00"
+    },
+    "09-publish-image": {
+      "stage": "09-publish-image",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T06:46:37.388365+00:00",
+      "finished_utc": "2026-10-22T06:46:43.169220+00:00"
+    },
+    "10-remove-and-pull": {
+      "stage": "10-remove-and-pull",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T06:46:43.628882+00:00",
+      "finished_utc": "2026-10-22T06:46:45.115130+00:00"
+    },
+    "11-recreate-and-verify": {
+      "stage": "11-recreate-and-verify",
+      "exit_code": 0,
+      "started_utc": "2026-10-22T06:46:46.129666+00:00",
+      "finished_utc": "2026-10-22T06:46:52.656195+00:00"
+    }
+  },
+  "engine": "29.9.2",
+  "compose": "5.6.1",
+  "image": "localhost:5000/memory-game6085:1.0.2-v7",
+  "push_digest": "sha256:bf7de8b8e400c33013aa3bacbb96e206df824dcf8346b0db0468023d390fd20e",
+  "pull_digest": "sha256:bf7de8b8e400c33013aa3bacbb96e206df824dcf8346b0db0468023d390fd20e",
+  "before_container": "186285d65c93d996c49cc20dadb1ad1c5f54c47382af3a4f737009d14dd36904",
+  "after_container": "00a18a115fb401d926753cae3bf408d85a755e90c69a55a7ce2a62718c604004",
+  "score": {
+    "id": 1,
+    "nickname": "6085补充实验",
+    "difficulty": "easy",
+    "moves": 10,
+    "durationMs": 4737,
+    "createdAt": "2026-10-22T06:45:40.193313517Z"
+  },
+  "full_leaderboard_preserved": true,
+  "base": "http://127.0.0.1:18089"
+}

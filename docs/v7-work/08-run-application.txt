@@ -1,0 +1,27 @@
+Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/08-run-application.sh
+Started UTC: 2026-10-22T06:43:24.613282+00:00
+
++ date -Iseconds
+2026-10-22T06:43:24+00:00
++ docker run -d --name garden6085 --network memory-game6085-v7-net -p 18085:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-v7-data,target=/app/data memory-game6085:1.0.2-v7
+186285d65c93d996c49cc20dadb1ad1c5f54c47382af3a4f737009d14dd36904
++ curl --retry 30 --retry-all-errors --retry-delay 1 -fsS http://127.0.0.1:18085/api/health
+curl: (56) Recv failure: Connection reset by peer
+curl: (56) Recv failure: Connection reset by peer
+curl: (56) Recv failure: Connection reset by peer
+{"status":"UP","database":"SQLite","application":"memory-game6085"}+ echo
++ docker ps --filter name=garden6085 --format 'table {{.Names}}\t{{.Image}}\t{{.Ports}}'
+
+NAMES        IMAGE                      PORTS
+garden6085   memory-game6085:1.0.2-v7   0.0.0.0:18085->8080/tcp, [::]:18085->8080/tcp
++ docker inspect garden6085 --format 'Network={{json .NetworkSettings.Networks}}'
+Network={"memory-game6085-v7-net":{"IPAMConfig":null,"Links":null,"Aliases":null,"DriverOpts":null,"GwPriority":0,"NetworkID":"fadef90bd60d90b2a879cc393ed6a7265856816f32eba9241acec06ba229b08c","EndpointID":"5a8dc1c743b08d7b0e7c76fcaba5ee1bace1b27599b11e25912764962595f3f8","Gateway":"172.19.0.1","IPAddress":"172.19.0.3","MacAddress":"b6:c8:5e:34:a5:a2","IPPrefixLen":16,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"DNSNames":["garden6085","186285d65c93"]}}
++ docker inspect garden6085 --format '{{range .Mounts}}Volume={{.Name}} Destination={{.Destination}}{{end}}'
+Volume=memory-game6085-v7-data Destination=/app/data
++ docker exec garden6085 id
+uid=999(garden) gid=999(garden) groups=999(garden)
++ curl -fsS 'http://127.0.0.1:18085/api/leaderboard?difficulty=easy'
+{"scores":[],"total":0,"bestDurationMs":null}+ echo
+
+
+Actual exit code: 0

@@ -1,0 +1,37 @@
+Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/05-verify-installation.sh
+Started UTC: 2026-10-22T06:39:13.669479+00:00
+
++ date -Iseconds
+2026-10-22T06:39:13+00:00
++ docker load -i /lab/base-images.tar
+Loaded image: registry:3
+Loaded image: hello-world:latest
+Loaded image: eclipse-temurin:21-jre-jammy
++ docker run --name hello6085 hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
++ docker ps -a --filter name=hello6085 --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'
+NAMES       IMAGE         STATUS
+hello6085   hello-world   Exited (0) Less than a second ago
+
+Actual exit code: 0

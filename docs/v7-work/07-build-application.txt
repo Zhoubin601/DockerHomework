@@ -1,0 +1,43 @@
+Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/07-build-application.sh
+Started UTC: 2026-10-22T06:39:22.955601+00:00
+
++ date -Iseconds
+2026-10-22T06:39:23+00:00
++ cd /lab
++ sha256sum dist-artifacts/memory-game6085.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  dist-artifacts/memory-game6085.jar
++ docker build --pull=false --network=none -f Dockerfile.prebuilt -t memory-game6085:1.0.2-v7 .
++ tail -20 /lab/07-image-build-full.log
+
+#4 [internal] load build context
+#4 transferring context: 33.64MB 0.2s done
+#4 DONE 0.3s
+
+#6 [2/4] RUN groupadd --system garden && useradd --system --gid garden --home-dir /app garden     && mkdir -p /app/data && chown -R garden:garden /app
+#6 DONE 0.9s
+
+#7 [3/4] WORKDIR /app
+#7 DONE 0.6s
+
+#8 [4/4] COPY --chown=garden:garden dist-artifacts/memory-game6085.jar /app/app.jar
+#8 DONE 0.7s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:fdd03c0bf4b44385e2ddcc411693f5b541b9139f4971e20156aa5cb4f168ca70 done
+#9 naming to docker.io/library/memory-game6085:1.0.2-v7 done
+#9 DONE 0.3s
++ docker image inspect memory-game6085:1.0.2-v7 --format 'Image={{.Id}} User={{.Config.User}}'
+Image=sha256:fdd03c0bf4b44385e2ddcc411693f5b541b9139f4971e20156aa5cb4f168ca70 User=garden
++ docker create --name jarcheck6085 memory-game6085:1.0.2-v7
+c6f060f8dcdfee48dbd4d735fa1a09e6388a72f70dba5eecf984fa0815266061
++ docker cp jarcheck6085:/app/app.jar /lab/container-app.jar
++ sha256sum /lab/container-app.jar /lab/dist-artifacts/memory-game6085.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /lab/container-app.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  /lab/dist-artifacts/memory-game6085.jar
++ cmp /lab/container-app.jar /lab/dist-artifacts/memory-game6085.jar
+Container JAR matches the submitted JAR byte-for-byte
++ echo 'Container JAR matches the submitted JAR byte-for-byte'
+
+Actual exit code: 0

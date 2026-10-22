@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#fff;color:#111;font-family:Arial,"Microsoft YaHei",sans-serif}h1{font-size:25px;margin:0 0 10px}p{font-size:17px;margin:5px 0 12px;color:#444}pre{font-family:Consolas,monospace;font-size:21px;line-height:1.35;white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;border:1px solid #b4bac2;padding:17px;margin:0}</style><h1>Docker 6085 补充实验 · 实际命令日志</h1><p>07-build-application.txt · 原日志第 1—31 行 · UTC 时间按日志保留</p><pre>Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/07-build-application.sh
+Started UTC: 2026-10-22T06:39:22.955601+00:00
+
++ date -Iseconds
+2026-10-22T06:39:23+00:00
++ cd /lab
++ sha256sum dist-artifacts/memory-game6085.jar
+2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0  dist-artifacts/memory-game6085.jar
++ docker build --pull=false --network=none -f Dockerfile.prebuilt -t memory-game6085:1.0.2-v7 .
++ tail -20 /lab/07-image-build-full.log
+
+#4 [internal] load build context
+#4 transferring context: 33.64MB 0.2s done
+#4 DONE 0.3s
+
+#6 [2/4] RUN groupadd --system garden &amp;&amp; useradd --system --gid garden --home-dir /app garden     &amp;&amp; mkdir -p /app/data &amp;&amp; chown -R garden:garden /app
+#6 DONE 0.9s
+
+#7 [3/4] WORKDIR /app
+#7 DONE 0.6s
+
+#8 [4/4] COPY --chown=garden:garden dist-artifacts/memory-game6085.jar /app/app.jar
+#8 DONE 0.7s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:fdd03c0bf4b44385e2ddcc411693f5b541b9139f4971e20156aa5cb4f168ca70 done
+#9 naming to docker.io/library/memory-game6085:1.0.2-v7 done
+#9 DONE 0.3s
++ docker image inspect memory-game6085:1.0.2-v7 --format 'Image={{.Id}} User={{.Config.User}}'</pre>

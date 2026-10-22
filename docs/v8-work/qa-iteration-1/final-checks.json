@@ -1,0 +1,565 @@
+{
+  "sha256": "c007a45420314d01bb90e6e1d0c4ba3ab9942c08045c6ebc9ebab2720cb98374",
+  "pages": 34,
+  "tables": 7,
+  "images": 31,
+  "toc_entries": 39,
+  "code_paragraphs_preserved": 47,
+  "unchanged_paragraphs_verified": 280,
+  "changed_paragraphs_verified": 35,
+  "image_hashes_preserved": 31,
+  "captions_same_page_as_images": [
+    {
+      "caption": "图1 记忆花园容器运行页面",
+      "image_page": 1,
+      "caption_page": 1,
+      "same_page": true
+    },
+    {
+      "caption": "图2 Docker Client 与 Server 版本及项目名称检查",
+      "image_page": 5,
+      "caption_page": 5,
+      "same_page": true
+    },
+    {
+      "caption": "图3 容器中完成配对并保存演示成绩",
+      "image_page": 7,
+      "caption_page": 7,
+      "same_page": true
+    },
+    {
+      "caption": "图4 Spring Boot JAR 打包成功并导出 Docker 镜像",
+      "image_page": 9,
+      "caption_page": 9,
+      "same_page": true
+    },
+    {
+      "caption": "图5 应用容器运行状态、端口映射、健康检查与运行用户",
+      "image_page": 10,
+      "caption_page": 10,
+      "same_page": true
+    },
+    {
+      "caption": "图6 镜像推送成功与仓库标签查询",
+      "image_page": 11,
+      "caption_page": 11,
+      "same_page": true
+    },
+    {
+      "caption": "图7 移除实验容器和本地镜像，数据卷仍然保留",
+      "image_page": 12,
+      "caption_page": 12,
+      "same_page": true
+    },
+    {
+      "caption": "图8 从 Registry 重新拉取成功",
+      "image_page": 13,
+      "caption_page": 13,
+      "same_page": true
+    },
+    {
+      "caption": "图9 重建前的容器标识、成绩与数据卷",
+      "image_page": 14,
+      "caption_page": 14,
+      "same_page": true
+    },
+    {
+      "caption": "图10 使用拉取镜像创建新容器并确认容器标识",
+      "image_page": 15,
+      "caption_page": 15,
+      "same_page": true
+    },
+    {
+      "caption": "图11 重建后榜单一致，数据卷仍挂载到同一目录",
+      "image_page": 16,
+      "caption_page": 16,
+      "same_page": true
+    },
+    {
+      "caption": "图A1 安装前检查（操作日志）",
+      "image_page": 20,
+      "caption_page": 20,
+      "same_page": true
+    },
+    {
+      "caption": "图A2a 配置 Docker 官方软件源（操作日志，第1部分）",
+      "image_page": 21,
+      "caption_page": 21,
+      "same_page": true
+    },
+    {
+      "caption": "图A2b 配置 Docker 官方软件源（操作日志，第2部分）",
+      "image_page": 21,
+      "caption_page": 21,
+      "same_page": true
+    },
+    {
+      "caption": "图A3a 安装 Docker Engine 和插件（操作日志，第1部分）",
+      "image_page": 22,
+      "caption_page": 22,
+      "same_page": true
+    },
+    {
+      "caption": "图A3b 安装 Docker Engine 和插件（操作日志，第2部分）",
+      "image_page": 23,
+      "caption_page": 23,
+      "same_page": true
+    },
+    {
+      "caption": "图A4 首次配置与引擎启动（操作日志）",
+      "image_page": 24,
+      "caption_page": 24,
+      "same_page": true
+    },
+    {
+      "caption": "图A5a 导入基础镜像并验证安装（操作日志，第1部分）",
+      "image_page": 25,
+      "caption_page": 25,
+      "same_page": true
+    },
+    {
+      "caption": "图A5b 导入基础镜像并验证安装（操作日志，第2部分）",
+      "image_page": 25,
+      "caption_page": 25,
+      "same_page": true
+    },
+    {
+      "caption": "图A6 创建网络、数据卷和镜像仓库（操作日志）",
+      "image_page": 26,
+      "caption_page": 26,
+      "same_page": true
+    },
+    {
+      "caption": "图A7a 构建应用镜像并核对 JAR（操作日志，第1部分）",
+      "image_page": 27,
+      "caption_page": 27,
+      "same_page": true
+    },
+    {
+      "caption": "图A7b 构建应用镜像并核对 JAR（操作日志，第2部分）",
+      "image_page": 28,
+      "caption_page": 28,
+      "same_page": true
+    },
+    {
+      "caption": "图A8a 配置应用容器并保存成绩（操作日志）",
+      "image_page": 29,
+      "caption_page": 29,
+      "same_page": true
+    },
+    {
+      "caption": "图A8b 浏览器完成游戏并保存成绩",
+      "image_page": 30,
+      "caption_page": 30,
+      "same_page": true
+    },
+    {
+      "caption": "图A9a 标记并发布镜像（操作日志，第1部分）",
+      "image_page": 31,
+      "caption_page": 31,
+      "same_page": true
+    },
+    {
+      "caption": "图A9b 标记并发布镜像（操作日志，第2部分）",
+      "image_page": 31,
+      "caption_page": 31,
+      "same_page": true
+    },
+    {
+      "caption": "图A10a 删除本地标签后重新拉取（操作日志，第1部分）",
+      "image_page": 32,
+      "caption_page": 32,
+      "same_page": true
+    },
+    {
+      "caption": "图A10b 删除本地标签后重新拉取（操作日志，第2部分）",
+      "image_page": 32,
+      "caption_page": 32,
+      "same_page": true
+    },
+    {
+      "caption": "图A11a 重建容器并核对持久化数据（操作日志，第1部分）",
+      "image_page": 33,
+      "caption_page": 33,
+      "same_page": true
+    },
+    {
+      "caption": "图A11b 重建容器并核对持久化数据（操作日志，第2部分）",
+      "image_page": 33,
+      "caption_page": 33,
+      "same_page": true
+    },
+    {
+      "caption": "图A11c 拉取镜像重建后的浏览器排行榜",
+      "image_page": 34,
+      "caption_page": 34,
+      "same_page": true
+    }
+  ],
+  "page_checks": [
+    {
+      "page": 1,
+      "text_characters": 254,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 2,
+      "text_characters": 5958,
+      "images": 0,
+      "out_of_page_words": []
+    },
+    {
+      "page": 3,
+      "text_characters": 513,
+      "images": 0,
+      "out_of_page_words": []
+    },
+    {
+      "page": 4,
+      "text_characters": 763,
+      "images": 0,
+      "out_of_page_words": []
+    },
+    {
+      "page": 5,
+      "text_characters": 691,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 6,
+      "text_characters": 677,
+      "images": 0,
+      "out_of_page_words": []
+    },
+    {
+      "page": 7,
+      "text_characters": 515,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 8,
+      "text_characters": 864,
+      "images": 0,
+      "out_of_page_words": []
+    },
+    {
+      "page": 9,
+      "text_characters": 248,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 10,
+      "text_characters": 413,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 11,
+      "text_characters": 639,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 12,
+      "text_characters": 323,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 13,
+      "text_characters": 200,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 14,
+      "text_characters": 243,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 15,
+      "text_characters": 361,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 16,
+      "text_characters": 193,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 17,
+      "text_characters": 741,
+      "images": 0,
+      "out_of_page_words": []
+    },
+    {
+      "page": 18,
+      "text_characters": 814,
+      "images": 0,
+      "out_of_page_words": []
+    },
+    {
+      "page": 19,
+      "text_characters": 908,
+      "images": 0,
+      "out_of_page_words": []
+    },
+    {
+      "page": 20,
+      "text_characters": 163,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 21,
+      "text_characters": 245,
+      "images": 2,
+      "out_of_page_words": []
+    },
+    {
+      "page": 22,
+      "text_characters": 263,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 23,
+      "text_characters": 78,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 24,
+      "text_characters": 225,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 25,
+      "text_characters": 255,
+      "images": 2,
+      "out_of_page_words": []
+    },
+    {
+      "page": 26,
+      "text_characters": 225,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 27,
+      "text_characters": 364,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 28,
+      "text_characters": 71,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 29,
+      "text_characters": 318,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 30,
+      "text_characters": 59,
+      "images": 1,
+      "out_of_page_words": []
+    },
+    {
+      "page": 31,
+      "text_characters": 212,
+      "images": 2,
+      "out_of_page_words": []
+    },
+    {
+      "page": 32,
+      "text_characters": 329,
+      "images": 2,
+      "out_of_page_words": []
+    },
+    {
+      "page": 33,
+      "text_characters": 392,
+      "images": 2,
+      "out_of_page_words": []
+    },
+    {
+      "page": 34,
+      "text_characters": 160,
+      "images": 1,
+      "out_of_page_words": []
+    }
+  ],
+  "toc_entries_verified": [
+    {
+      "heading": "一 实验目的与任务要求",
+      "page": 3
+    },
+    {
+      "heading": "二 实验环境与项目结构",
+      "page": 4
+    },
+    {
+      "heading": "2.1 实验配置与项目目录",
+      "page": 4
+    },
+    {
+      "heading": "2.2 环境启动与验证",
+      "page": 5
+    },
+    {
+      "heading": "三 系统设计与持久化",
+      "page": 6
+    },
+    {
+      "heading": "3.1 应用结构",
+      "page": 6
+    },
+    {
+      "heading": "3.2 SQLite 数据设计",
+      "page": 6
+    },
+    {
+      "heading": "3.3 容器数据卷",
+      "page": 6
+    },
+    {
+      "heading": "四 本地构建与功能验证",
+      "page": 7
+    },
+    {
+      "heading": "4.1 本地构建与自动验证",
+      "page": 7
+    },
+    {
+      "heading": "4.2 容器中的游戏操作与成绩保存",
+      "page": 7
+    },
+    {
+      "heading": "五 Docker 镜像构建与运行",
+      "page": 8
+    },
+    {
+      "heading": "5.1 多阶段构建",
+      "page": 8
+    },
+    {
+      "heading": "5.2 JAR 打包与镜像导出",
+      "page": 9
+    },
+    {
+      "heading": "5.3 启动容器与接口检查",
+      "page": 10
+    },
+    {
+      "heading": "六 镜像发布与拉取",
+      "page": 11
+    },
+    {
+      "heading": "6.1 启动本机镜像仓库",
+      "page": 11
+    },
+    {
+      "heading": "6.2 标记与推送镜像",
+      "page": 11
+    },
+    {
+      "heading": "6.3 删除本地镜像后重新拉取",
+      "page": 12
+    },
+    {
+      "heading": "七 容器重建与持久化验证",
+      "page": 14
+    },
+    {
+      "heading": "7.1 记录重建前的数据",
+      "page": 14
+    },
+    {
+      "heading": "7.2 使用拉取镜像创建新容器",
+      "page": 15
+    },
+    {
+      "heading": "7.3 对比重建后的成绩",
+      "page": 16
+    },
+    {
+      "heading": "八 实验结果与问题分析",
+      "page": 17
+    },
+    {
+      "heading": "8.1 启动与端口问题",
+      "page": 17
+    },
+    {
+      "heading": "8.2 实验总结",
+      "page": 17
+    },
+    {
+      "heading": "九 参考资料与证据来源",
+      "page": 18
+    },
+    {
+      "heading": "附录 A Docker 安装与配置补充实验",
+      "page": 19
+    },
+    {
+      "heading": "A1 安装前检查",
+      "page": 20
+    },
+    {
+      "heading": "A2 配置 Docker 官方软件源",
+      "page": 21
+    },
+    {
+      "heading": "A3 安装 Docker Engine 和插件",
+      "page": 22
+    },
+    {
+      "heading": "A4 首次配置与引擎启动",
+      "page": 24
+    },
+    {
+      "heading": "A5 导入基础镜像并验证安装",
+      "page": 25
+    },
+    {
+      "heading": "A6 创建网络、数据卷和镜像仓库",
+      "page": 26
+    },
+    {
+      "heading": "A7 构建应用镜像并核对 JAR",
+      "page": 27
+    },
+    {
+      "heading": "A8 配置应用容器并保存成绩",
+      "page": 29
+    },
+    {
+      "heading": "A9 标记并发布镜像",
+      "page": 31
+    },
+    {
+      "heading": "A10 删除本地标签后重新拉取",
+      "page": 32
+    },
+    {
+      "heading": "A11 重建容器并核对持久化数据",
+      "page": 33
+    }
+  ],
+  "baseline_files_unchanged": 10,
+  "renderer": "documents render_docx.py Poppler stage with native Word PDF adapter"
+}

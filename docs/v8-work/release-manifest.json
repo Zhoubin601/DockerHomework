@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-22",
+  "path": "output/v8/20261022-docker-lab-report-v8.docx",
+  "bytes": 3888186,
+  "sha256": "45bd2d4f5efe4b21620b70d2809b96bb1e56633094c38192b0e27fefaaf84212",
+  "pages": 33,
+  "images": 31,
+  "tables": 7,
+  "toc_entries": 39,
+  "source_v7_sha256": "762780c6d3ed8001d6120b853f56fd619b3e1c12e400d95c36b1d37c8844fd7b",
+  "previous_files_unchanged": 10,
+  "strict_validation": "passed",
+  "visual_review": "all 33 final PNG pages inspected",
+  "code_paragraphs_preserved": 47,
+  "source_zip_updated": false,
+  "pushed": false
+}

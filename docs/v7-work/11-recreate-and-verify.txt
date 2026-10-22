@@ -1,0 +1,32 @@
+Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/11-recreate-and-verify.sh
+Started UTC: 2026-10-22T06:46:46.129666+00:00
+
++ date -Iseconds
+2026-10-22T06:46:46+00:00
++ docker run -d --name garden6085-pulled --network memory-game6085-v7-net -p 18085:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-v7-data,target=/app/data localhost:5000/memory-game6085:1.0.2-v7
+00a18a115fb401d926753cae3bf408d85a755e90c69a55a7ce2a62718c604004
++ curl --retry 30 --retry-all-errors --retry-delay 1 -fsS http://127.0.0.1:18085/api/health
+curl: (56) Recv failure: Connection reset by peer
+curl: (56) Recv failure: Connection reset by peer
+curl: (56) Recv failure: Connection reset by peer
+{"status":"UP","database":"SQLite","application":"memory-game6085"}+ echo
+
++ docker inspect garden6085-pulled --format '{{.Id}}'
++ tee /lab/after-container.txt
+00a18a115fb401d926753cae3bf408d85a755e90c69a55a7ce2a62718c604004
++ curl -fsS 'http://127.0.0.1:18085/api/leaderboard?difficulty=easy'
++ tee /lab/after-leaderboard.json
+{"scores":[{"id":1,"nickname":"6085补充实验","difficulty":"easy","moves":10,"durationMs":4737,"createdAt":"2026-10-22T06:45:40.193313517Z"}],"total":1,"bestDurationMs":4737}+ echo
++ cmp /lab/before-leaderboard.json /lab/after-leaderboard.json
+
+++ cat /lab/before-container.txt
+++ cat /lab/after-container.txt
++ test 186285d65c93d996c49cc20dadb1ad1c5f54c47382af3a4f737009d14dd36904 '!=' 00a18a115fb401d926753cae3bf408d85a755e90c69a55a7ce2a62718c604004
++ echo 'NewContainer=True; FullLeaderboardPreserved=True'
++ docker inspect garden6085-pulled --format '{{range .Mounts}}Volume={{.Name}} Destination={{.Destination}}{{end}}'
+NewContainer=True; FullLeaderboardPreserved=True
+Volume=memory-game6085-v7-data Destination=/app/data
++ docker exec garden6085-pulled id
+uid=999(garden) gid=999(garden) groups=999(garden)
+
+Actual exit code: 0

@@ -1,0 +1,147 @@
+{
+  "source": "D:\\2026Autumn Semester File\\云计算\\Docker作业\\output\\v6\\memory-game6085.docx",
+  "candidate": "D:\\2026Autumn Semester File\\云计算\\Docker作业\\docs\\v7-work\\20261022-docker-lab-report-v7.docx",
+  "source_sha256": "fd4787b33ed40fede5c035b55a4779e346cedf982fe68c61b702d91409d8b28f",
+  "images": 31,
+  "tables": 7,
+  "text_changes": [
+    {
+      "before": "实验日期：2026年10月21日",
+      "after": "实验日期：2026年10月21日；补充实验：10月22日"
+    },
+    {
+      "before": "第二至九章记录原 Windows 实验。Linux 补充部署使用独立资源，环境配置和操作截图见附录 A。",
+      "after": "第二至九章记录 2026 年 10 月 21 日的 Windows 实验。附录 A 记录 10 月 22 日在本机隔离 Ubuntu 环境中新安装 Docker Engine 及后续部署的补充实验，环境、资源和结果分别列示。"
+    },
+    {
+      "before": "原 Windows 环境沿用既有安装。本报告附录A补充本轮 Linux 环境的网络、数据卷、镜像及容器配置操作截图，两次环境的记录分别保留。",
+      "after": "原 Windows 环境沿用既有安装，历史安装过程截图未提供。附录 A 补充 2026 年 10 月 22 日在本机隔离 Ubuntu 环境中实际安装 Docker Engine、首次配置以及网络、数据卷和容器创建的操作记录。"
+    },
+    {
+      "before": "项目源代码：Code/memory-game6085/；实验结果：docs/docker-evidence/results.json；各图来自同目录的真实终端和浏览器截图。",
+      "after": "源码包解压后的项目目录为 memory-game6085/。正文图 1 至图 11 来自原 Windows 实验，其结果记录在 docs/docker-evidence/results.json；附录 A 来自本轮补充实验，命令、完整日志和原图记录在 docs/v7-work/。报告中的过程截图均为内嵌图片。"
+    },
+    {
+      "before": "技术资料查阅日期：2026年10月21日。",
+      "after": "正文技术资料查阅日期为 2026 年 10 月 21 日；Docker Engine 安装文档核对日期为 10 月 22 日。"
+    },
+    {
+      "before": "Windows多阶段构建见第五章；Linux配套JAR及镜像见附录A2—A3",
+      "after": "Windows 多阶段构建见第五章；补充环境的配套 JAR 镜像构建见附录 A7。"
+    },
+    {
+      "before": "Windows仓库localhost:5000见第六章；Linux仓库localhost:15085见附录A5—A8",
+      "after": "Windows 仓库发布与拉取见第六章；补充环境的发布与拉取见附录 A9 至 A10。"
+    },
+    {
+      "before": "Windows图1—11；Linux图A1a、A1b及A2—A9；本机重建后图B1，均嵌入本Word",
+      "after": "正文图1至图11，以及附录图A1至图A11（含分图），均嵌入本Word。"
+    },
+    {
+      "before": "沿用已装引擎；Windows启动验证见2.2，Linux资源配置见附录A1",
+      "after": "Windows 版本验证见2.2；补充环境的安装、首次配置、验证及资源创建见附录A1至A6。"
+    }
+  ],
+  "new_figures": [
+    {
+      "caption": "图A1 安装前检查 操作日志",
+      "source": "docs\\v7-work\\01-before-install-log-01.png",
+      "sha256": "de91bba007dd8c91cddf02848d8c724fea1f44f45573dfb277d6abe0a8bbbbb6"
+    },
+    {
+      "caption": "图A2a 配置 Docker 官方软件源 操作日志第1部分",
+      "source": "docs\\v7-work\\02-official-repository-log-01.png",
+      "sha256": "ac35787c90ab9f0f06bb9bcb80dae382bfaca6369e0fabbadb2c6bf5430a0379"
+    },
+    {
+      "caption": "图A2b 配置 Docker 官方软件源 操作日志第2部分",
+      "source": "docs\\v7-work\\02-official-repository-log-02.png",
+      "sha256": "8239162860ab29353352ce25904281a2e751968bf3a99d9250e76d5d4907f413"
+    },
+    {
+      "caption": "图A3a 安装 Docker Engine 和插件 操作日志第1部分",
+      "source": "docs\\v7-work\\03-install-engine-log-01.png",
+      "sha256": "02fdcbc4cf5a106e3b6547aef189137335214111c783ef1ba26a51f0a51f1c6d"
+    },
+    {
+      "caption": "图A3b 安装 Docker Engine 和插件 操作日志第2部分",
+      "source": "docs\\v7-work\\03-install-engine-log-02.png",
+      "sha256": "d37013bced9de752f67cfa1bac7c8bd002a7d4b9a600f3f4f89f4aa971ec98cd"
+    },
+    {
+      "caption": "图A4 首次配置与引擎启动 操作日志",
+      "source": "docs\\v7-work\\04-first-configuration-log-01.png",
+      "sha256": "6091d8fa6cf198415fea44577ff17e8fd9bb78851f90c123d7ff11549f40a3e4"
+    },
+    {
+      "caption": "图A5a 导入基础镜像并验证安装 操作日志第1部分",
+      "source": "docs\\v7-work\\05-verify-installation-log-01.png",
+      "sha256": "909354f5c2756eccf2d753bbf366ee328202d84eec462a8fee78d0d3b493d885"
+    },
+    {
+      "caption": "图A5b 导入基础镜像并验证安装 操作日志第2部分",
+      "source": "docs\\v7-work\\05-verify-installation-log-02.png",
+      "sha256": "9688d84975501104bb068725a54b1a15e869b75ee6e70c796c32f1906668ead1"
+    },
+    {
+      "caption": "图A6 创建网络 数据卷和镜像仓库 操作日志",
+      "source": "docs\\v7-work\\06-create-resources-log-01.png",
+      "sha256": "ff17a3bc8ee8aa2ac67b5b22534aa3a48ccb93dc9725604434c32800410f0b7f"
+    },
+    {
+      "caption": "图A7a 构建应用镜像并核对 JAR 操作日志第1部分",
+      "source": "docs\\v7-work\\07-build-application-log-01.png",
+      "sha256": "99768c1cafb8f925435a8d86065977ee890cd1c1524a810aa0f59b8543d2d2f9"
+    },
+    {
+      "caption": "图A7b 构建应用镜像并核对 JAR 操作日志第2部分",
+      "source": "docs\\v7-work\\07-build-application-log-02.png",
+      "sha256": "c476ba431a3bad805f3a1ae5d439374d4d9a0ef321028343f5b9930fa9bf2356"
+    },
+    {
+      "caption": "图A8a 配置应用容器并保存成绩 操作日志",
+      "source": "docs\\v7-work\\08-run-application-log-01.png",
+      "sha256": "663bf0376390867e52375fa94090aef85cc6fa8e20fa841eb98622b6a8349651"
+    },
+    {
+      "caption": "图A8b 浏览器完成游戏并保存成绩",
+      "source": "docs\\v7-work\\08-browser-saved.png",
+      "sha256": "79c40ee07d05519c5d4fd746d6d385e5e960e77885384f58c569e16ae6d18efd"
+    },
+    {
+      "caption": "图A9a 标记并发布镜像 操作日志第1部分",
+      "source": "docs\\v7-work\\09-publish-image-log-01.png",
+      "sha256": "a9b3738e4e514ffd7b4199b36be7f3748c23e47064ede58b3bf7648581f1808a"
+    },
+    {
+      "caption": "图A9b 标记并发布镜像 操作日志第2部分",
+      "source": "docs\\v7-work\\09-publish-image-log-02.png",
+      "sha256": "cf6dc9dd149fb884f0bb36af0bde090e77560d52015dd352b5bbdf2687b19a78"
+    },
+    {
+      "caption": "图A10a 删除本地标签后重新拉取 操作日志第1部分",
+      "source": "docs\\v7-work\\10-remove-and-pull-log-01.png",
+      "sha256": "615c03fe311d5f45d76963a92277da25c3f01e71892ba4f3d09c017c9b44ccb2"
+    },
+    {
+      "caption": "图A10b 删除本地标签后重新拉取 操作日志第2部分",
+      "source": "docs\\v7-work\\10-remove-and-pull-log-02.png",
+      "sha256": "086915dc4aa6737710d3f9213b76e4d045616388b2266f5a552de5371aba1471"
+    },
+    {
+      "caption": "图A11a 重建容器并核对持久化数据 操作日志第1部分",
+      "source": "docs\\v7-work\\11-recreate-and-verify-log-01.png",
+      "sha256": "98409c6bc380786c48aa3b8e7ddc3e0d0ce1f750b6d00e93c8e45733f35935f6"
+    },
+    {
+      "caption": "图A11b 重建容器并核对持久化数据 操作日志第2部分",
+      "source": "docs\\v7-work\\11-recreate-and-verify-log-02.png",
+      "sha256": "a254e7bbd297335597d24ee0363e3dcc2120870260f67afff931ccee7e8f1f01"
+    },
+    {
+      "caption": "图A11c 拉取镜像重建后的浏览器排行榜",
+      "source": "docs\\v7-work\\11-browser-recreated.png",
+      "sha256": "8545262b43cd682e54a4bf190c8d6cc788f72b47e1e7a9203d4b5cf28c447e46"
+    }
+  ]
+}

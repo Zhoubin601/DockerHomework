@@ -1,5 +1,15 @@
 # 资料来源
 
+## 2026-10-22 v7 本机完成与交付
+
+- 最新用户指令为继续在本机完成。此前远端交接条目属于历史快照，不能作为当前未完成状态。
+- 原始教师资料：raw/要求.png；基底：当前 output/v6/memory-game6085.docx、memory-game6085.zip。本轮没有改动原始图或旧成品，8 个现存基线文件摘要复验全部不变。
+- 事实来源：docs/v7-work/01—11 对应脚本、原始日志及 result.json，全部最终退出码 0；browser-before/after.json 均 passed，before/after-leaderboard.json 逐字节一致，results.json 汇总实际版本、成绩和镜像摘要。
+- 新增 20 张图包括 18 张实际日志浏览器截图和 2 张实际应用页面；图题、文件名及来源摘要逐项记录于 report-build.json，内嵌匹配结果见 final-checks.json。未生成虚构的安装向导图。
+- 最终 Word 33 页、31 图、7 表，39 目录项；严格校验零错误。原 11 图保持字节。正式源码 ZIP 与 v6 相同，34 项 CRC 通过，配套 JAR 与本轮容器 JAR 摘要及字节一致。
+- 正式交付路径和 SHA-256：docs/v7-work/release-manifest.json；视觉检查：visual-review.md；完整变更：docs/20261022-v7-changes.md。
+- 技术资料仍仅使用下面记录的 Docker 官方来源，引用日期 2026-10-22。安装及配置为本机新做的隔离 Linux 实验，不当作原 Windows 历史安装过程。
+
 ## 2026-10-22 v7安装补图与远端交接
 
 - 用户明确授权清除失效引用并补安装、首次配置及资源创建配置图，随后要求先提交远端，剩下远端完成。
@@ -235,3 +245,21 @@
 - 修订依据：`docs/20261022-v5-language-review-v1.md`；精确前后文本见 `docs/v6-report-work/applied-changes.json`。未增加实验事实、第一人称经历或外部资料。
 - 本轮独立内容及全 31 页视觉检查见 `docs/v6-report-work/independent-content-review.md`、三份 `visual-qa-pages*.md`；42 项目录实际页验证及原图/历史文件保留见同目录 `native-pagination-verification.json`、`final-checks.json`。
 - 正式报告：`output/v6/20261022-docker-lab-report-v6.docx`；SHA-256 为 `0e7da8d82e69a5ccc9492cd99ed77d17f3ffe5bb5e0260d05b0de264ac2f4294`。31 页、22 图、9 表、严格校验零错误；配套源码/证据包仍沿用 v5，本轮没有重打包。
+
+## 2026-10-22 当前 v7 语言审阅来源
+
+- 用户当前指令：检查 v7 报告有无 AI 编写观感或生硬措辞，只检查，不改稿。
+- 原始资料：`raw/要求.png`，本轮直接查看；原图没有提供 AI 判定标准。
+- 直接审阅当前 `output/v7/20261022-docker-lab-report-v7.docx`，253 个顶层段落、全部 7 表及图题；SHA-256 为 `762780c6d3ed8001d6120b853f56fd619b3e1c12e400d95c36b1d37c8844fd7b`。与历史 release-manifest 的摘要不同，本次使用当前章节及 paraId 定位，不沿用历史分页/验收结论。
+- 直接事实对照：`docs/v7-work/06-create-resources.txt`、`07-build-application.txt`、`08-run-application.txt`、`10-remove-and-pull.txt`、`11-recreate-and-verify.txt`。特别确认镜像列表命令带应用名称筛选、拉取输出部分层 Already exists、容器内外 JAR 摘要及字节一致。
+- 历史修订背景：`docs/20261022-v7-changes.md`、`docs/20261022-v5-language-review-v1.md`、`memory-bank/project-context.md`；不以历史结论替代当前正文检查。
+- 检查数据：`docs/v7-language-review/document-inspection.json`；建议：`docs/20261022-v7-language-review-v1.md`。机器初始表格文本提取未保留分行，已另行直接核对相关原 XML，未将正常分行误判为粘连。
+- 使用 officecli-docx；项目指定 minimax-docx 当前未找到，已说明替代。没有联网，没有使用检测服务；语言判断不能证明作者身份或生成概率。
+
+## 2026-10-22 v8 报告修订来源
+
+- 用户明确授权“修改生成v8”，落实前轮语言建议，只生成报告。
+- 基底为当前 `output/v7/20261022-docker-lab-report-v7.docx`，SHA-256 `762780c6d3ed8001d6120b853f56fd619b3e1c12e400d95c36b1d37c8844fd7b`；冻结副本及全部修改对照见 `docs/v8-work/source-v7.docx`、`applied-changes.json`。
+- 原始资料 `raw/要求.png` 保持；实验事实沿用 v7 已有日志。界面宽度已对照 `docs/ui-review.md` 和 `Code/memory-game6085/frontend/tests/garden.spec.js`，只补单位和横屏标注，不编造尺寸。
+- 最终 `output/v8/20261022-docker-lab-report-v8.docx`，SHA-256 `45bd2d4f5efe4b21620b70d2809b96bb1e56633094c38192b0e27fefaaf84212`；33 页、31 图、7 表、39 项目录，严格校验通过；所有页面 PNG 已查看，31 图和 47 段代码/摘要保持。
+- 生成及核验采用 officecli-docx、documents、本机 Word 及 Codex 运行时；minimax-docx 当前不可用。没有新增外部资料、没有重新运行实验、没有改源码包或推送。过程见 `docs/20261022-v8-changes.md`。

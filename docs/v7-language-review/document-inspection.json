@@ -1,0 +1,1528 @@
+{
+  "report": "D:\\2026Autumn Semester File\\云计算\\Docker作业\\output\\v7\\20261022-docker-lab-report-v7.docx",
+  "sha256": "762780c6d3ed8001d6120b853f56fd619b3e1c12e400d95c36b1d37c8844fd7b",
+  "paragraph_count": 253,
+  "table_count": 7,
+  "image_count": 31,
+  "paragraphs": [
+    {
+      "index": 1,
+      "paraId": "79E0AD23",
+      "text": "Spring Boot 小游戏Docker 容器化实验报告"
+    },
+    {
+      "index": 2,
+      "paraId": "3B5F0722",
+      "text": "记忆花园 memory-game6085"
+    },
+    {
+      "index": 3,
+      "paraId": "47A18116",
+      "text": "课程：2026云计算技术与架构"
+    },
+    {
+      "index": 4,
+      "paraId": "19E20BC0",
+      "text": "姓名：周宇斌"
+    },
+    {
+      "index": 5,
+      "paraId": "0FE987AA",
+      "text": "班级：软件2401"
+    },
+    {
+      "index": 6,
+      "paraId": "0D06401B",
+      "text": "学号：20246085"
+    },
+    {
+      "index": 7,
+      "paraId": "43D5F9E4",
+      "text": "实验日期：2026年10月21日"
+    },
+    {
+      "index": 8,
+      "paraId": "02E06E82",
+      "text": ""
+    },
+    {
+      "index": 9,
+      "paraId": "76FC1A0F",
+      "text": "图1 记忆花园容器运行页面"
+    },
+    {
+      "index": 10,
+      "paraId": "4080B16E",
+      "text": "本实验将 Vue3、Spring Boot 与 SQLite 记忆翻牌小游戏打包为 Docker 镜像，完成本机仓库发布、删除本地镜像后拉取和数据卷保留验证。"
+    },
+    {
+      "index": 11,
+      "paraId": "24239CCF",
+      "text": "目录"
+    },
+    {
+      "index": 12,
+      "paraId": "60810471",
+      "text": "一 实验目的与任务要求3"
+    },
+    {
+      "index": 13,
+      "paraId": "50945F35",
+      "text": "二 实验环境与项目结构4"
+    },
+    {
+      "index": 14,
+      "paraId": "67156445",
+      "text": "2.1 实验配置与项目目录4"
+    },
+    {
+      "index": 15,
+      "paraId": "3AB49A1C",
+      "text": "2.2 环境启动与验证5"
+    },
+    {
+      "index": 16,
+      "paraId": "3D89055B",
+      "text": "三 系统设计与持久化6"
+    },
+    {
+      "index": 17,
+      "paraId": "4C9F3E16",
+      "text": "3.1 应用结构6"
+    },
+    {
+      "index": 18,
+      "paraId": "141DBD84",
+      "text": "3.2 SQLite 数据设计6"
+    },
+    {
+      "index": 19,
+      "paraId": "53FC3D87",
+      "text": "3.3 容器数据卷6"
+    },
+    {
+      "index": 20,
+      "paraId": "0ED15650",
+      "text": "四 本地构建与功能验证7"
+    },
+    {
+      "index": 21,
+      "paraId": "0FE8EE9E",
+      "text": "4.1 本地构建与自动验证7"
+    },
+    {
+      "index": 22,
+      "paraId": "7616D5AC",
+      "text": "4.2 容器中的游戏操作与成绩保存7"
+    },
+    {
+      "index": 23,
+      "paraId": "6510231D",
+      "text": "五 Docker 镜像构建与运行8"
+    },
+    {
+      "index": 24,
+      "paraId": "372004A6",
+      "text": "5.1 多阶段构建8"
+    },
+    {
+      "index": 25,
+      "paraId": "625F2A78",
+      "text": "5.2 JAR 打包与镜像导出9"
+    },
+    {
+      "index": 26,
+      "paraId": "77ED3972",
+      "text": "5.3 启动容器与接口检查10"
+    },
+    {
+      "index": 27,
+      "paraId": "62C1D448",
+      "text": "六 镜像发布与拉取11"
+    },
+    {
+      "index": 28,
+      "paraId": "40F9B063",
+      "text": "6.1 启动本机镜像仓库11"
+    },
+    {
+      "index": 29,
+      "paraId": "45F0A4D3",
+      "text": "6.2 标记与推送镜像11"
+    },
+    {
+      "index": 30,
+      "paraId": "3BF00AD8",
+      "text": "6.3 删除本地镜像后重新拉取12"
+    },
+    {
+      "index": 31,
+      "paraId": "02DCD24B",
+      "text": "七 容器重建与持久化验证14"
+    },
+    {
+      "index": 32,
+      "paraId": "6C7C4835",
+      "text": "7.1 记录重建前的数据14"
+    },
+    {
+      "index": 33,
+      "paraId": "76EB0599",
+      "text": "7.2 使用拉取镜像创建新容器15"
+    },
+    {
+      "index": 34,
+      "paraId": "3142C887",
+      "text": "7.3 对比重建后的成绩16"
+    },
+    {
+      "index": 35,
+      "paraId": "6A13A5F4",
+      "text": "八 实验结果与问题分析17"
+    },
+    {
+      "index": 36,
+      "paraId": "0ED2635A",
+      "text": "8.1 启动与端口问题17"
+    },
+    {
+      "index": 37,
+      "paraId": "383A21C7",
+      "text": "8.2 实验总结17"
+    },
+    {
+      "index": 38,
+      "paraId": "292E9DF8",
+      "text": "九 参考资料与证据来源18"
+    },
+    {
+      "index": 39,
+      "paraId": "7C6F024A",
+      "text": "附录 A Docker 安装与配置补充实验19"
+    },
+    {
+      "index": 40,
+      "paraId": "49B7D0DC",
+      "text": "A1 安装前检查20"
+    },
+    {
+      "index": 41,
+      "paraId": "2BD46B0E",
+      "text": "A2 配置 Docker 官方软件源21"
+    },
+    {
+      "index": 42,
+      "paraId": "0F1BB77B",
+      "text": "A3 安装 Docker Engine 和插件22"
+    },
+    {
+      "index": 43,
+      "paraId": "355A906C",
+      "text": "A4 首次配置与引擎启动24"
+    },
+    {
+      "index": 44,
+      "paraId": "6E63558D",
+      "text": "A5 导入基础镜像并验证安装25"
+    },
+    {
+      "index": 45,
+      "paraId": "73D5E5A6",
+      "text": "A6 创建网络 数据卷和镜像仓库26"
+    },
+    {
+      "index": 46,
+      "paraId": "6FD81301",
+      "text": "A7 构建应用镜像并核对 JAR27"
+    },
+    {
+      "index": 47,
+      "paraId": "4F5DF763",
+      "text": "A8 配置应用容器并保存成绩28"
+    },
+    {
+      "index": 48,
+      "paraId": "62E86BB4",
+      "text": "A9 标记并发布镜像30"
+    },
+    {
+      "index": 49,
+      "paraId": "0978B0F6",
+      "text": "A10 删除本地标签后重新拉取31"
+    },
+    {
+      "index": 50,
+      "paraId": "7629754D",
+      "text": "A11 重建容器并核对持久化数据32"
+    },
+    {
+      "index": 51,
+      "paraId": "517EDB5A",
+      "text": ""
+    },
+    {
+      "index": 52,
+      "paraId": "0AB1DB33",
+      "text": "一 实验目的与任务要求"
+    },
+    {
+      "index": 53,
+      "paraId": "6432DC49",
+      "text": "本实验的目的是掌握 Spring Boot 应用容器化的基本过程，理解 Docker 镜像、容器、镜像仓库和持久化数据卷的作用，并通过实际命令和访问结果验证部署流程。"
+    },
+    {
+      "index": 54,
+      "paraId": "0E39D588",
+      "text": "在机器上部署 Docker 环境，将一个已有 Spring Boot 项目打包到 Docker 上发布，项目名称末尾加学号后四位；发布后演示拉取，所有过程截图放在一个 Word 文件中提交。"
+    },
+    {
+      "index": 55,
+      "paraId": "33802CC3",
+      "text": "二 实验环境与项目结构"
+    },
+    {
+      "index": 56,
+      "paraId": "57420516",
+      "text": "第二至九章记录 2026 年 10 月 21 日的 Windows 实验。附录 A 记录 10 月 22 日在本机隔离 Ubuntu 环境中新安装 Docker Engine 及后续部署的补充实验，环境、资源和结果分别列示。"
+    },
+    {
+      "index": 57,
+      "paraId": "1ACA0B70",
+      "text": "2.1 实验配置与项目目录"
+    },
+    {
+      "index": 58,
+      "paraId": "7CEFFA31",
+      "text": "frontend 保存 Vue 页面和图案，backend 保存 Spring Boot 接口及数据库逻辑，scripts 保存本地构建与实验辅助脚本。Dockerfile 与 compose.yaml 位于项目根目录。本实验采用 18085 作为宿主机端口。"
+    },
+    {
+      "index": 59,
+      "paraId": "1D5E1F71",
+      "text": "2.2 环境启动与验证"
+    },
+    {
+      "index": 60,
+      "paraId": "3EE8EC6C",
+      "text": "本实验沿用 Windows 上已安装的 Docker Desktop，使用 WSL2 的 Linux 容器引擎。原有 WSL 数据目录继续使用。表中的环境版本取自本次实验机器，图2展示恢复启动后的实际验证结果。"
+    },
+    {
+      "index": 61,
+      "paraId": "08C2B1D2",
+      "text": "启动时遇到遗留 socket 故障，Docker Desktop 无法正常提供服务。为恢复启动，在 Docker Desktop 停止时执行下面的辅助脚本，仅为该子进程设置独立的 LOCALAPPDATA 运行时缓存目录，保留系统级环境变量。"
+    },
+    {
+      "index": 62,
+      "paraId": "302C7CD0",
+      "text": ".\\scripts\\start-docker-runtime.ps1"
+    },
+    {
+      "index": 63,
+      "paraId": "35BD01E4",
+      "text": "引擎启动后，在项目根目录执行版本与命名检查。docker version 同时返回 Client 和 Server 29.8.2，Engine 为 linux/amd64；Compose 返回 5.6.0，项目目录为 memory-game6085。随后执行第五章的构建与运行操作。"
+    },
+    {
+      "index": 64,
+      "paraId": "2EFE68DD",
+      "text": "原 Windows 环境沿用既有安装，历史安装过程截图未提供。附录 A 补充 2026 年 10 月 22 日在本机隔离 Ubuntu 环境中实际安装 Docker Engine、首次配置以及网络、数据卷和容器创建的操作记录。"
+    },
+    {
+      "index": 65,
+      "paraId": "7109A260",
+      "text": "docker version"
+    },
+    {
+      "index": 66,
+      "paraId": "19A730A4",
+      "text": "docker compose version"
+    },
+    {
+      "index": 67,
+      "paraId": "3E01CF7B",
+      "text": "Get-Item . | Select-Object Name, FullName"
+    },
+    {
+      "index": 68,
+      "paraId": "66817B98",
+      "text": ""
+    },
+    {
+      "index": 69,
+      "paraId": "106F753A",
+      "text": "图2 Docker Client 与 Server 版本及项目名称检查"
+    },
+    {
+      "index": 70,
+      "paraId": "1EF0E0FA",
+      "text": "三 系统设计与持久化"
+    },
+    {
+      "index": 71,
+      "paraId": "19F3A56C",
+      "text": "3.1 应用结构"
+    },
+    {
+      "index": 72,
+      "paraId": "331DE877",
+      "text": "浏览器通过 Vue3 页面操作游戏，Spring Boot 提供牌局、翻牌、暂停、成绩提交和排行榜接口。前端构建结果复制到后端静态资源目录，再打入可执行 JAR，因此一个应用容器即可同时提供页面和接口。"
+    },
+    {
+      "index": 73,
+      "paraId": "1D6BFAF8",
+      "text": "游戏提供轻松 6 对、标准 8 对和挑战 12 对三种难度。后端随机生成卡牌顺序并判断配对，负责步数和计时。未翻开的答案不会直接传给浏览器；暂停时保留本局状态并停止计时，恢复后继续游戏。"
+    },
+    {
+      "index": 74,
+      "paraId": "5287B87C",
+      "text": "3.2 SQLite 数据设计"
+    },
+    {
+      "index": 75,
+      "paraId": "2A2A9FB6",
+      "text": "运行中的牌局保存在服务端内存中；服务重启后需要重新开局。已提交成绩保存在 SQLite 数据库，排行榜按步数升序排列，步数相同再比较用时。持久化对象是已保存成绩，不包括未完成牌局。"
+    },
+    {
+      "index": 76,
+      "paraId": "403DC62F",
+      "text": "3.3 容器数据卷"
+    },
+    {
+      "index": 77,
+      "paraId": "1CE8D457",
+      "text": "volumes:"
+    },
+    {
+      "index": 78,
+      "paraId": "2B26CA39",
+      "text": "  - garden-data:/app/data"
+    },
+    {
+      "index": 79,
+      "paraId": "0A28C487",
+      "text": "# 命名数据卷的实际名称"
+    },
+    {
+      "index": 80,
+      "paraId": "59081E06",
+      "text": "name: memory-game6085-data"
+    },
+    {
+      "index": 81,
+      "paraId": "2774A1C0",
+      "text": "镜像保存应用程序，数据库由运行时生成并写入 /app/data。该目录挂载到命名数据卷后，删除应用容器不会自动删除成绩文件。实验重建容器时继续挂载同一数据卷，以验证程序与数据的生命周期可以分离。"
+    },
+    {
+      "index": 82,
+      "paraId": "406E06DC",
+      "text": "四 本地构建与功能验证"
+    },
+    {
+      "index": 83,
+      "paraId": "580A0408",
+      "text": "4.1 本地构建与自动验证"
+    },
+    {
+      "index": 84,
+      "paraId": "13498625",
+      "text": ".\\scripts\\build.ps1"
+    },
+    {
+      "index": 85,
+      "paraId": "06ABE7C0",
+      "text": "java -jar backend/target/memory-game6085.jar"
+    },
+    {
+      "index": 86,
+      "paraId": "0BE66DF8",
+      "text": "本地构建已生成可执行 JAR。后端测试覆盖隐藏牌面、无效操作、暂停状态、服务端成绩统计和 SQLite 重新打开后的数据保留。浏览器测试覆盖完整配对、昵称校验、成绩提交、榜单刷新、窄屏布局以及接口失败后的重试。"
+    },
+    {
+      "index": 87,
+      "paraId": "2923D6FA",
+      "text": "4.2 容器中的游戏操作与成绩保存"
+    },
+    {
+      "index": 88,
+      "paraId": "5EFAF3E9",
+      "text": "通过浏览器在应用容器中完成轻松难度的一局游戏，并以昵称“6085实验”保存成绩。服务端返回的记录编号为 1，成绩为 12 步、6.95 秒，用于演示成绩保存流程。"
+    },
+    {
+      "index": 89,
+      "paraId": "5C6C093C",
+      "text": ""
+    },
+    {
+      "index": 90,
+      "paraId": "37AB2999",
+      "text": "图3 容器中完成配对并保存演示成绩"
+    },
+    {
+      "index": 91,
+      "paraId": "3C67B484",
+      "text": "五 Docker 镜像构建与运行"
+    },
+    {
+      "index": 92,
+      "paraId": "7184EEF0",
+      "text": "5.1 多阶段构建"
+    },
+    {
+      "index": 93,
+      "paraId": "13CF55DE",
+      "text": "第一阶段使用 Node 构建 Vue，第二阶段使用 Maven 编译和打包 Spring Boot，第三阶段只复制 JAR 到 Java 运行环境。以下为实际 Dockerfile 的关键流程；完整文件位于项目根目录。"
+    },
+    {
+      "index": 94,
+      "paraId": "141DCFB0",
+      "text": "FROM node:24-bookworm-slim AS frontend"
+    },
+    {
+      "index": 95,
+      "paraId": "56B54297",
+      "text": "WORKDIR /build/frontend"
+    },
+    {
+      "index": 96,
+      "paraId": "02C888C8",
+      "text": "COPY frontend/package*.json ./"
+    },
+    {
+      "index": 97,
+      "paraId": "6233FFAD",
+      "text": "RUN npm ci --no-audit --no-fund"
+    },
+    {
+      "index": 98,
+      "paraId": "7FE47154",
+      "text": "COPY frontend/ ./"
+    },
+    {
+      "index": 99,
+      "paraId": "79DCA06B",
+      "text": "RUN npm run build"
+    },
+    {
+      "index": 100,
+      "paraId": "20032148",
+      "text": "FROM maven:3.9.9-eclipse-temurin-21 AS backend"
+    },
+    {
+      "index": 101,
+      "paraId": "33209D1A",
+      "text": "WORKDIR /build/backend"
+    },
+    {
+      "index": 102,
+      "paraId": "0537AF0A",
+      "text": "COPY backend/pom.xml ./"
+    },
+    {
+      "index": 103,
+      "paraId": "4442B5C6",
+      "text": "RUN mvn -B -ntp dependency:go-offline"
+    },
+    {
+      "index": 104,
+      "paraId": "4E444E09",
+      "text": "COPY backend/src ./src"
+    },
+    {
+      "index": 105,
+      "paraId": "2D7298B2",
+      "text": "COPY --from=frontend /build/frontend/dist /build/frontend/dist"
+    },
+    {
+      "index": 106,
+      "paraId": "2058ADF2",
+      "text": "RUN mvn -B -ntp package"
+    },
+    {
+      "index": 107,
+      "paraId": "0515E91F",
+      "text": "FROM eclipse-temurin:21-jre-jammy"
+    },
+    {
+      "index": 108,
+      "paraId": "349CF353",
+      "text": "# 创建普通用户与数据目录后复制 JAR"
+    },
+    {
+      "index": 109,
+      "paraId": "042F7F50",
+      "text": "COPY --from=backend --chown=garden:garden /build/backend/target/memory-game6085.jar /app/app.jar"
+    },
+    {
+      "index": 110,
+      "paraId": "2D33D078",
+      "text": "USER garden"
+    },
+    {
+      "index": 111,
+      "paraId": "37D14C1C",
+      "text": "ENV DATA_DIR=/app/data PORT=8080"
+    },
+    {
+      "index": 112,
+      "paraId": "736190B5",
+      "text": "EXPOSE 8080"
+    },
+    {
+      "index": 113,
+      "paraId": "00F954FC",
+      "text": "ENTRYPOINT [\"java\", \"-XX:MaxRAMPercentage=70.0\", \"-jar\", \"/app/app.jar\"]"
+    },
+    {
+      "index": 114,
+      "paraId": "783E0A4E",
+      "text": "5.2 JAR 打包与镜像导出"
+    },
+    {
+      "index": 115,
+      "paraId": "7F1E4C77",
+      "text": "docker compose --progress plain build"
+    },
+    {
+      "index": 116,
+      "paraId": "48687FD2",
+      "text": "构建日志显示 Maven BUILD SUCCESS，最终镜像命名为 memory-game6085:1.0.0。Docker CLI 显示磁盘占用约 469 MB。首次基础镜像下载曾发生短读错误，完成基础镜像拉取后重新构建成功。"
+    },
+    {
+      "index": 117,
+      "paraId": "6BFC683D",
+      "text": ""
+    },
+    {
+      "index": 118,
+      "paraId": "4D37DAE7",
+      "text": "图4 Spring Boot JAR 打包成功并导出 Docker 镜像"
+    },
+    {
+      "index": 119,
+      "paraId": "72D5BBBD",
+      "text": "5.3 启动容器与接口检查"
+    },
+    {
+      "index": 120,
+      "paraId": "0C902A1D",
+      "text": "docker compose up -d --no-build"
+    },
+    {
+      "index": 121,
+      "paraId": "11AC561B",
+      "text": "docker compose ps"
+    },
+    {
+      "index": 122,
+      "paraId": "1B700CCC",
+      "text": "curl.exe -s http://localhost:18085/api/health"
+    },
+    {
+      "index": 123,
+      "paraId": "34A7B06C",
+      "text": "docker exec memory-game6085-garden-1 id"
+    },
+    {
+      "index": 124,
+      "paraId": "2027EF8F",
+      "text": "应用容器运行后，18085 端口可访问游戏和 API。健康检查返回 status 为 UP，database 为 SQLite。容器内运行身份为 garden，UID 和 GID 均为 999，应用不使用 root 用户运行。"
+    },
+    {
+      "index": 125,
+      "paraId": "371E1000",
+      "text": ""
+    },
+    {
+      "index": 126,
+      "paraId": "17589BAE",
+      "text": "图5 应用容器运行状态 端口映射 健康检查与普通用户"
+    },
+    {
+      "index": 127,
+      "paraId": "3D592738",
+      "text": "浏览器访问 http://localhost:18085 可进入游戏。该地址映射至应用容器的 8080，前端和后端同源访问，SQLite 无需额外数据库容器。"
+    },
+    {
+      "index": 128,
+      "paraId": "20427459",
+      "text": "六 镜像发布与拉取"
+    },
+    {
+      "index": 129,
+      "paraId": "30764E7A",
+      "text": "6.1 启动本机镜像仓库"
+    },
+    {
+      "index": 130,
+      "paraId": "45AD777C",
+      "text": "本实验使用本机私有 Registry，仓库端口绑定 127.0.0.1:5000，镜像数据保存在 memory-game6085-registry-data 数据卷。仓库用于本机课程实验。"
+    },
+    {
+      "index": 131,
+      "paraId": "2ACDAFBB",
+      "text": "docker run -d --name memory-game6085-registry -p 127.0.0.1:5000:5000 -e OTEL_TRACES_EXPORTER=none --mount type=volume,source=memory-game6085-registry-data,target=/var/lib/registry registry:3"
+    },
+    {
+      "index": 132,
+      "paraId": "2FDB710D",
+      "text": "6.2 标记与推送镜像"
+    },
+    {
+      "index": 133,
+      "paraId": "108CCA94",
+      "text": "docker tag memory-game6085:1.0.0 localhost:5000/memory-game6085:1.0.0"
+    },
+    {
+      "index": 134,
+      "paraId": "044454DA",
+      "text": "docker push localhost:5000/memory-game6085:1.0.0"
+    },
+    {
+      "index": 135,
+      "paraId": "4C77F4CE",
+      "text": "curl.exe -s http://localhost:5000/v2/memory-game6085/tags/list"
+    },
+    {
+      "index": 136,
+      "paraId": "30F752DC",
+      "text": "推送日志显示镜像层 Pushed，仓库标签查询返回 1.0.0。发布路径为 localhost:5000/memory-game6085:1.0.0。"
+    },
+    {
+      "index": 137,
+      "paraId": "1B329B77",
+      "text": ""
+    },
+    {
+      "index": 138,
+      "paraId": "7F82DA07",
+      "text": "图6 镜像实际推送成功与仓库标签查询"
+    },
+    {
+      "index": 139,
+      "paraId": "59F3286A",
+      "text": "6.3 删除本地镜像后重新拉取"
+    },
+    {
+      "index": 140,
+      "paraId": "60625DAC",
+      "text": "为验证镜像来自仓库，先移除本实验应用容器，保留数据卷，并删除本地的两个实验镜像标签。镜像列表确认本地不存在 memory-game6085 后，再执行 pull。"
+    },
+    {
+      "index": 141,
+      "paraId": "38B0704B",
+      "text": "docker compose down"
+    },
+    {
+      "index": 142,
+      "paraId": "63D0BACC",
+      "text": "docker image rm localhost:5000/memory-game6085:1.0.0 memory-game6085:1.0.0"
+    },
+    {
+      "index": 143,
+      "paraId": "599AFDDF",
+      "text": "docker image ls"
+    },
+    {
+      "index": 144,
+      "paraId": "2A0A4515",
+      "text": "docker pull localhost:5000/memory-game6085:1.0.0"
+    },
+    {
+      "index": 145,
+      "paraId": "6708EDC6",
+      "text": ""
+    },
+    {
+      "index": 146,
+      "paraId": "5C96B924",
+      "text": "图7 移除实验容器和本地镜像 数据卷仍然保留"
+    },
+    {
+      "index": 147,
+      "paraId": "1D498FB8",
+      "text": ""
+    },
+    {
+      "index": 148,
+      "paraId": "2A1B4011",
+      "text": "图8 从 Registry 重新拉取成功"
+    },
+    {
+      "index": 149,
+      "paraId": "727584D2",
+      "text": "拉取结果为 Downloaded newer image。推送与拉取的摘要一致，说明使用的是已发布的同一版本镜像。摘要记录如下："
+    },
+    {
+      "index": 150,
+      "paraId": "2175526B",
+      "text": "sha256:e4eb4cb25dd64d18b05daac257940e3f15115d2cbe62d5c748bc351cd7a15e66"
+    },
+    {
+      "index": 151,
+      "paraId": "2CE79C87",
+      "text": "七 容器重建与持久化验证"
+    },
+    {
+      "index": 152,
+      "paraId": "4C6CAFB9",
+      "text": "7.1 记录重建前的数据"
+    },
+    {
+      "index": 153,
+      "paraId": "009E2D65",
+      "text": "原容器中已保存轻松难度演示成绩。实验记录了原容器标识和完整排行榜响应；移除容器时未使用删除数据卷的参数。"
+    },
+    {
+      "index": 154,
+      "paraId": "4F401F5B",
+      "text": ""
+    },
+    {
+      "index": 155,
+      "paraId": "69FFD194",
+      "text": "图9 重建前的容器标识 成绩与数据卷"
+    },
+    {
+      "index": 156,
+      "paraId": "5E737BB9",
+      "text": "7.2 使用拉取镜像创建新容器"
+    },
+    {
+      "index": 157,
+      "paraId": "0F5E4B0A",
+      "text": "docker run -d --name memory-game6085-pulled -p 127.0.0.1:18085:8080 -e DATA_DIR=/app/data --mount type=volume,source=memory-game6085-data,target=/app/data localhost:5000/memory-game6085:1.0.0"
+    },
+    {
+      "index": 158,
+      "paraId": "2F718883",
+      "text": "新容器标识前 12 位为 dd8b4bb17b50，与原容器不同。新容器直接使用拉取的仓库镜像，并继续挂载 memory-game6085-data 到 /app/data。"
+    },
+    {
+      "index": 159,
+      "paraId": "318EE72D",
+      "text": ""
+    },
+    {
+      "index": 160,
+      "paraId": "52477E2A",
+      "text": "图10 使用拉取镜像创建新容器并确认容器标识"
+    },
+    {
+      "index": 161,
+      "paraId": "1BC002C7",
+      "text": "7.3 对比重建后的成绩"
+    },
+    {
+      "index": 162,
+      "paraId": "303746E3",
+      "text": "新容器启动后，成绩编号、昵称、难度、步数、用时和创建时间均与重建前一致。程序比较了重建前后的完整排行榜 JSON，结果为 LeaderboardPreserved=True。记录仍为 6085实验、12 步、6950 ms。"
+    },
+    {
+      "index": 163,
+      "paraId": "53A74DF4",
+      "text": ""
+    },
+    {
+      "index": 164,
+      "paraId": "54665B29",
+      "text": "图11 重建后榜单一致 数据卷仍挂载到同一目录"
+    },
+    {
+      "index": 165,
+      "paraId": "75C425B5",
+      "text": "八 实验结果与问题分析"
+    },
+    {
+      "index": 166,
+      "paraId": "754E169C",
+      "text": "8.1 启动与端口问题"
+    },
+    {
+      "index": 167,
+      "paraId": "4FC6640B",
+      "text": "Docker Desktop 最初因遗留 socket 无法访问而退出。原运行时目录改名被 Windows 拒绝，最终通过仅为 Docker Desktop 子进程设置独立运行时缓存目录恢复启动，系统级环境变量未修改。恢复后，Client 与 Server 均能响应，容器也可正常运行。"
+    },
+    {
+      "index": 168,
+      "paraId": "08F8E021",
+      "text": "首次构建遇到基础镜像下载中断；重新拉取所需基础镜像后完成构建。现有课堂项目占用 8080，因此将本实验宿主机端口调整为 18085，同时保留容器内部端口 8080。"
+    },
+    {
+      "index": 169,
+      "paraId": "4EBAF534",
+      "text": "8.2 实验总结"
+    },
+    {
+      "index": 170,
+      "paraId": "755DB3F7",
+      "text": "本实验完成了应用打包、镜像构建、容器访问、镜像发布与拉取，以及数据卷跨容器保留的完整验证。镜像用于分发应用程序，容器是运行实例，Registry 用于保存和分发镜像，数据卷用于保存独立于容器生命周期的数据库文件。"
+    },
+    {
+      "index": 171,
+      "paraId": "26CDF009",
+      "text": "重建前后，容器标识发生变化，已保存的成绩保持不变，说明容器重建后仍能读取原数据卷中的 SQLite 数据。后续复现实验时，应保持仓库地址、镜像版本、应用端口和数据卷名称一致。"
+    },
+    {
+      "index": 172,
+      "paraId": "457E52ED",
+      "text": "九 参考资料与证据来源"
+    },
+    {
+      "index": 173,
+      "paraId": "1A4016C8",
+      "text": "实验项目为记忆花园 memory-game6085，采用 Vue3、Spring Boot 和 SQLite，镜像仓库为本机 Registry。"
+    },
+    {
+      "index": 174,
+      "paraId": "27B6B17A",
+      "text": "源码包解压后的项目目录为 memory-game6085/。正文图 1 至图 11 来自原 Windows 实验，其结果记录在 docs/docker-evidence/results.json；附录 A 来自本轮补充实验，命令、完整日志和原图记录在 docs/v7-work/。报告中的过程截图均为内嵌图片。"
+    },
+    {
+      "index": 175,
+      "paraId": "26C35F5A",
+      "text": "正文技术资料查阅日期为 2026 年 10 月 21 日；Docker Engine 安装文档核对日期为 10 月 22 日。"
+    },
+    {
+      "index": 176,
+      "paraId": "302DC4DB",
+      "text": "Vue 官方文档：https://vuejs.org/guide/essentials/reactivity-fundamentals.html"
+    },
+    {
+      "index": 177,
+      "paraId": "66E5D222",
+      "text": "Vite 官方文档：https://vite.dev/guide/"
+    },
+    {
+      "index": 178,
+      "paraId": "19BB549F",
+      "text": "Spring Boot 官方文档：https://docs.spring.io/spring-boot/maven-plugin/packaging.html"
+    },
+    {
+      "index": 179,
+      "paraId": "42AA0B50",
+      "text": "SQLite JDBC 官方仓库：https://github.com/xerial/sqlite-jdbc"
+    },
+    {
+      "index": 180,
+      "paraId": "1080D4B5",
+      "text": "Docker 数据卷官方文档：https://docs.docker.com/engine/storage/volumes/"
+    },
+    {
+      "index": 181,
+      "paraId": "396CD2A9",
+      "text": "CNCF Distribution 官方部署文档：https://distribution.github.io/distribution/about/deploying/"
+    },
+    {
+      "index": 182,
+      "paraId": "1EDA6BFF",
+      "text": "Docker Engine 官方 Ubuntu 安装文档：https://docs.docker.com/engine/install/ubuntu/"
+    },
+    {
+      "index": 183,
+      "paraId": "3C6DDDDE",
+      "text": "附录 A Docker 安装与配置补充实验"
+    },
+    {
+      "index": 184,
+      "paraId": "5DE56B62",
+      "text": "本附录记录从未安装 Docker 的 Ubuntu 环境开始，依次完成软件源配置、Docker Engine 安装、首次配置、资源创建和应用发布拉取。原 Windows 实验与本轮补充实验使用不同引擎和资源。"
+    },
+    {
+      "index": 185,
+      "paraId": "4555715B",
+      "text": "外层环境是本机 Docker Desktop，提供隔离 Ubuntu 容器；Docker Engine 29.9.2 安装在该容器内部，未挂载宿主机 Docker socket。后续应用镜像、网络、数据卷和 Registry 均由新安装的内层引擎管理。该环境用于课程补充实验。"
+    },
+    {
+      "index": 186,
+      "paraId": "79EA9954",
+      "text": "图中的安装和命令操作记录为实际执行日志在浏览器中的截屏，按原日志顺序保留命令、输出与退出码；游戏页面图直接采集自本轮运行的应用容器。日志中的时间使用 UTC，与北京时间相差 8 小时。"
+    },
+    {
+      "index": 187,
+      "paraId": "601B6B34",
+      "text": "A1 安装前检查"
+    },
+    {
+      "index": 188,
+      "paraId": "16EC8742",
+      "text": "在新建的 Ubuntu 环境中检查系统版本、CPU 架构、Docker 命令和 socket。检查时 docker、dockerd 尚未安装，/var/run/docker.sock 不存在。"
+    },
+    {
+      "index": 189,
+      "paraId": "0B0D9F89",
+      "text": ""
+    },
+    {
+      "index": 190,
+      "paraId": "24ADF2DC",
+      "text": "图A1 安装前检查 操作日志"
+    },
+    {
+      "index": 191,
+      "paraId": "404A9C37",
+      "text": "A2 配置 Docker 官方软件源"
+    },
+    {
+      "index": 192,
+      "paraId": "0957CFF6",
+      "text": "先安装 ca-certificates 和 curl，再保存 Docker 官方 GPG 公钥，添加 noble stable 软件源并更新软件包索引。apt-cache 显示此时 Docker CE 尚未安装，候选版本为 29.9.2。"
+    },
+    {
+      "index": 193,
+      "paraId": "08D1CC04",
+      "text": ""
+    },
+    {
+      "index": 194,
+      "paraId": "738C590B",
+      "text": "图A2a 配置 Docker 官方软件源 操作日志第1部分"
+    },
+    {
+      "index": 195,
+      "paraId": "6A40DF8C",
+      "text": ""
+    },
+    {
+      "index": 196,
+      "paraId": "55CCF512",
+      "text": "图A2b 配置 Docker 官方软件源 操作日志第2部分"
+    },
+    {
+      "index": 197,
+      "paraId": "32E28D01",
+      "text": "A3 安装 Docker Engine 和插件"
+    },
+    {
+      "index": 198,
+      "paraId": "3848348F",
+      "text": "通过 apt-get 安装 docker-ce、docker-ce-cli、containerd.io、Buildx 和 Compose 插件。软件包配置完成后，分别查看包版本及 docker、dockerd、Compose 的版本，实际安装 Docker Engine 29.9.2 和 Compose 5.6.1。"
+    },
+    {
+      "index": 199,
+      "paraId": "45151995",
+      "text": ""
+    },
+    {
+      "index": 200,
+      "paraId": "5583357B",
+      "text": "图A3a 安装 Docker Engine 和插件 操作日志第1部分"
+    },
+    {
+      "index": 201,
+      "paraId": "25A78D0C",
+      "text": ""
+    },
+    {
+      "index": 202,
+      "paraId": "27DAC546",
+      "text": "图A3b 安装 Docker Engine 和插件 操作日志第2部分"
+    },
+    {
+      "index": 203,
+      "paraId": "0ECEE5F3",
+      "text": "A4 首次配置与引擎启动"
+    },
+    {
+      "index": 204,
+      "paraId": "325854C0",
+      "text": "创建 /etc/docker/daemon.json，设置独立数据目录、vfs 存储驱动及 json-file 日志轮转。vfs 用于本次嵌套实验环境。dockerd --validate 返回 configuration OK 后，启动新引擎并核对 Client、Server、数据目录与日志驱动。"
+    },
+    {
+      "index": 205,
+      "paraId": "01B80971",
+      "text": ""
+    },
+    {
+      "index": 206,
+      "paraId": "0C4EF6AA",
+      "text": "图A4 首次配置与引擎启动 操作日志"
+    },
+    {
+      "index": 207,
+      "paraId": "4C599D98",
+      "text": "A5 导入基础镜像并验证安装"
+    },
+    {
+      "index": 208,
+      "paraId": "24FFA5C8",
+      "text": "为复用已下载的基础镜像，先在外层导出 Temurin、Registry 和 hello-world，再通过 docker load 导入本轮独立引擎。运行 hello-world 后出现 Hello from Docker，容器以退出码 0 结束，验证新安装的引擎能够实际运行容器。"
+    },
+    {
+      "index": 209,
+      "paraId": "7E879E7A",
+      "text": ""
+    },
+    {
+      "index": 210,
+      "paraId": "33D7B0B2",
+      "text": "图A5a 导入基础镜像并验证安装 操作日志第1部分"
+    },
+    {
+      "index": 211,
+      "paraId": "74A27899",
+      "text": ""
+    },
+    {
+      "index": 212,
+      "paraId": "17F980EB",
+      "text": "图A5b 导入基础镜像并验证安装 操作日志第2部分"
+    },
+    {
+      "index": 213,
+      "paraId": "59D36A3F",
+      "text": "A6 创建网络 数据卷和镜像仓库"
+    },
+    {
+      "index": 214,
+      "paraId": "1E9FD98A",
+      "text": "依次创建 memory-game6085-v7-net 网络、应用数据卷和仓库数据卷，再启动 Registry 容器。inspect 核对 bridge 网络及 local 数据卷驱动，仓库端口绑定补充环境内部的 127.0.0.1:5000，/v2/ 接口返回空 JSON 对象。"
+    },
+    {
+      "index": 215,
+      "paraId": "75695720",
+      "text": ""
+    },
+    {
+      "index": 216,
+      "paraId": "65405837",
+      "text": "图A6 创建网络 数据卷和镜像仓库 操作日志"
+    },
+    {
+      "index": 217,
+      "paraId": "70851DE7",
+      "text": "A7 构建应用镜像并核对 JAR"
+    },
+    {
+      "index": 218,
+      "paraId": "3DD924A6",
+      "text": "采用源码包内的 Dockerfile.prebuilt 和配套 JAR，在新安装的引擎内构建 memory-game6085:1.0.2-v7。该步骤复用已打包的应用，不重新执行正文的 npm 与 Maven 构建。随后从容器复制 /app/app.jar，与配套 JAR 计算 SHA-256 并逐字节比较，结果一致。"
+    },
+    {
+      "index": 219,
+      "paraId": "4E5FC65A",
+      "text": "docker build --pull=false --network=none -f Dockerfile.prebuilt -t memory-game6085:1.0.2-v7 ."
+    },
+    {
+      "index": 220,
+      "paraId": "4B494090",
+      "text": ""
+    },
+    {
+      "index": 221,
+      "paraId": "543EB44B",
+      "text": "图A7a 构建应用镜像并核对 JAR 操作日志第1部分"
+    },
+    {
+      "index": 222,
+      "paraId": "0497953D",
+      "text": ""
+    },
+    {
+      "index": 223,
+      "paraId": "4644FF87",
+      "text": "图A7b 构建应用镜像并核对 JAR 操作日志第2部分"
+    },
+    {
+      "index": 224,
+      "paraId": "600BCAFD",
+      "text": "A8 配置应用容器并保存成绩"
+    },
+    {
+      "index": 225,
+      "paraId": "3F7729CC",
+      "text": "启动应用容器时明确指定网络、18085:8080 端口映射、DATA_DIR 和数据卷挂载。健康接口返回 UP，运行用户为 garden，UID/GID 为 999。外层把本机 127.0.0.1:18089 转发到该环境的 18085，浏览器通过此地址完成一局轻松模式并保存成绩。"
+    },
+    {
+      "index": 226,
+      "paraId": "598B4170",
+      "text": "本次保存的记录编号为 1，昵称为“6085补充实验”，成绩为 10 步、4737 ms。启动健康检查曾早于应用就绪，补充重试后通过；该次初始失败记录另行保存在过程文档中。"
+    },
+    {
+      "index": 227,
+      "paraId": "4E5A46B8",
+      "text": ""
+    },
+    {
+      "index": 228,
+      "paraId": "7857E34C",
+      "text": "图A8a 配置应用容器并保存成绩 操作日志"
+    },
+    {
+      "index": 229,
+      "paraId": "5EB7CE5F",
+      "text": ""
+    },
+    {
+      "index": 230,
+      "paraId": "4C7504C7",
+      "text": "图A8b 浏览器完成游戏并保存成绩"
+    },
+    {
+      "index": 231,
+      "paraId": "40452035",
+      "text": "A9 标记并发布镜像"
+    },
+    {
+      "index": 232,
+      "paraId": "36F169E5",
+      "text": "保存原容器标识和非空排行榜后，将镜像标记为 localhost:5000/memory-game6085:1.0.2-v7，并推送到本轮仓库。push 输出 Pushed 和镜像摘要，仓库标签接口返回 1.0.2-v7。"
+    },
+    {
+      "index": 233,
+      "paraId": "66784B75",
+      "text": ""
+    },
+    {
+      "index": 234,
+      "paraId": "2FF3BC78",
+      "text": "图A9a 标记并发布镜像 操作日志第1部分"
+    },
+    {
+      "index": 235,
+      "paraId": "34920FD3",
+      "text": ""
+    },
+    {
+      "index": 236,
+      "paraId": "6275EF63",
+      "text": "图A9b 标记并发布镜像 操作日志第2部分"
+    },
+    {
+      "index": 237,
+      "paraId": "616D8BB8",
+      "text": "A10 删除本地标签后重新拉取"
+    },
+    {
+      "index": 238,
+      "paraId": "4295FB1E",
+      "text": "移除本轮应用容器和 JAR 校验容器，再删除应用镜像的两个本地标签。inspect 确认标签不存在、镜像列表为空后，才从 Registry 执行 pull。拉取返回 Downloaded newer image，目标镜像摘要与 push 一致。构建缓存及其他基础镜像未作为本地应用标签存在的依据。"
+    },
+    {
+      "index": 239,
+      "paraId": "0ECF8F9C",
+      "text": ""
+    },
+    {
+      "index": 240,
+      "paraId": "4BC501C1",
+      "text": "图A10a 删除本地标签后重新拉取 操作日志第1部分"
+    },
+    {
+      "index": 241,
+      "paraId": "5FE117C9",
+      "text": ""
+    },
+    {
+      "index": 242,
+      "paraId": "595A6F95",
+      "text": "图A10b 删除本地标签后重新拉取 操作日志第2部分"
+    },
+    {
+      "index": 243,
+      "paraId": "7D7780BD",
+      "text": "A11 重建容器并核对持久化数据"
+    },
+    {
+      "index": 244,
+      "paraId": "6C92DC27",
+      "text": "使用拉取的仓库镜像创建 garden6085-pulled，重新挂载同一应用数据卷。新旧容器标识不同，完整排行榜 JSON 逐字节一致，输出 FullLeaderboardPreserved=True。最后在新容器的浏览器页面再次查看原成绩。"
+    },
+    {
+      "index": 245,
+      "paraId": "5914A9FF",
+      "text": "sha256:bf7de8b8e400c33013aa3bacbb96e206df824dcf8346b0db0468023d390fd20e"
+    },
+    {
+      "index": 246,
+      "paraId": "08CA6FC9",
+      "text": "原容器标识前12位为 186285d65c93，新容器为 00a18a115fb4。重建前后保留同一条成绩，昵称、难度、步数、用时和创建时间均一致。"
+    },
+    {
+      "index": 247,
+      "paraId": "592F24D2",
+      "text": ""
+    },
+    {
+      "index": 248,
+      "paraId": "00A46BFA",
+      "text": "图A11a 重建容器并核对持久化数据 操作日志第1部分"
+    },
+    {
+      "index": 249,
+      "paraId": "3ECF0793",
+      "text": ""
+    },
+    {
+      "index": 250,
+      "paraId": "27625D42",
+      "text": "图A11b 重建容器并核对持久化数据 操作日志第2部分"
+    },
+    {
+      "index": 251,
+      "paraId": "03A07D87",
+      "text": ""
+    },
+    {
+      "index": 252,
+      "paraId": "3EFC61A2",
+      "text": "图A11c 拉取镜像重建后的浏览器排行榜"
+    },
+    {
+      "index": 253,
+      "paraId": "733A6987",
+      "text": "本轮从空白 Linux 环境安装 Docker Engine 后完成应用镜像构建、发布和拉取。新容器标识发生变化，原数据卷及已保存成绩保留；完整排行榜比较和浏览器结果相互对应。正文的原 Windows 实验记录与本轮补充记录分别保留。"
+    }
+  ],
+  "tables": [
+    {
+      "index": 1,
+      "rows": [
+        [
+          "任务要求",
+          "本实验对应方式"
+        ],
+        [
+          "项目名称包含学号后四位",
+          "memory-game6085，学号后四位为 6085"
+        ],
+        [
+          "Spring Boot 项目打包发布",
+          "Windows 多阶段构建见第五章；补充环境的配套 JAR 镜像构建见附录 A7。"
+        ],
+        [
+          "发布后演示拉取",
+          "Windows 仓库发布与拉取见第六章；补充环境的发布与拉取见附录 A9 至 A10。"
+        ],
+        [
+          "全过程截图汇总",
+          "正文图1至图11，以及附录图A1至图A11（含分图），均嵌入本Word。"
+        ],
+        [
+          "Docker 环境部署与验证",
+          "Windows 版本验证见2.2；补充环境的安装、首次配置、验证及资源创建见附录A1至A6。"
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "rows": [
+        [
+          "项目",
+          "本次实际配置"
+        ],
+        [
+          "操作系统",
+          "Windows 11 家庭版 中文版 64 位，10.0.26300"
+        ],
+        [
+          "本地开发工具",
+          "Java 21.0.11；Node.js 24.14.1；npm 11.11.0；Maven 3.9.16"
+        ],
+        [
+          "应用技术栈",
+          "Vue 3.5.44、Vite 7.3.7、Spring Boot 4.1.1、SQLite JDBC 3.53.4.0"
+        ],
+        [
+          "Docker 环境",
+          "Docker Desktop 4.95.0；Client / Server 29.8.2；Compose 5.6.0"
+        ],
+        [
+          "构建与运行镜像",
+          "Node 24；Maven 3.9.9 + Java 21；Temurin 21 JRE"
+        ],
+        [
+          "源码目录",
+          "Code/memory-game6085/"
+        ],
+        [
+          "应用端口",
+          "宿主机 127.0.0.1:18085 → 容器 8080"
+        ],
+        [
+          "镜像仓库",
+          "本机 Registry，127.0.0.1:5000"
+        ],
+        [
+          "持久化目录",
+          "memory-game6085-data → /app/data，数据库 garden.db"
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "rows": [
+        [
+          "字段",
+          "用途"
+        ],
+        [
+          "game_id",
+          "牌局唯一标识，防止同一局重复写入"
+        ],
+        [
+          "nickname / difficulty",
+          "玩家昵称与难度，按难度分别查询排行榜"
+        ],
+        [
+          "moves / duration_ms",
+          "服务端生成的步数与用时，作为排序依据"
+        ],
+        [
+          "created_at",
+          "成绩记录创建时间"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "rows": [
+        [
+          "检查项目",
+          "结果"
+        ],
+        [
+          "npm run build",
+          "成功生成前端静态资源"
+        ],
+        [
+          "后端测试",
+          "3 项通过，0 失败，0 错误"
+        ],
+        [
+          "浏览器端到端测试",
+          "3 项全部通过"
+        ],
+        [
+          "界面检查",
+          "1440、768、375、812 横屏及 320 宽度无横向溢出"
+        ],
+        [
+          "数据保存",
+          "完成牌局后可提交昵称并进入对应难度榜单"
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "rows": [
+        [
+          "对比项",
+          "重建前的实际值"
+        ],
+        [
+          "容器标识前 12 位",
+          "c247b7360b52"
+        ],
+        [
+          "成绩编号 / 昵称",
+          "1 / 6085实验"
+        ],
+        [
+          "步数 / 用时",
+          "12 / 6950 ms"
+        ],
+        [
+          "数据卷",
+          "memory-game6085-data"
+        ]
+      ]
+    },
+    {
+      "index": 6,
+      "rows": [
+        [
+          "实验环节",
+          "实际结果"
+        ],
+        [
+          "Docker 环境",
+          "Client / Server 正常，Linux 引擎可用"
+        ],
+        [
+          "应用与镜像构建",
+          "前端构建、后端测试和 Spring Boot JAR 打包成功"
+        ],
+        [
+          "容器运行",
+          "页面和 API 可访问，健康检查 UP"
+        ],
+        [
+          "镜像发布",
+          "本机 Registry push 成功，可查询标签 1.0.0"
+        ],
+        [
+          "镜像拉取",
+          "删除本地镜像后 pull 成功，摘要与推送一致"
+        ],
+        [
+          "容器重建",
+          "新容器使用拉取镜像，容器标识与原容器不同"
+        ],
+        [
+          "SQLite 数据卷",
+          "重建前后的完整榜单一致，已保存成绩未丢失"
+        ],
+        [
+          "实验截图",
+          "真实终端窗口与容器浏览器页面均已采集"
+        ]
+      ]
+    },
+    {
+      "index": 7,
+      "rows": [
+        [
+          "项目",
+          "本轮补充实验实际配置"
+        ],
+        [
+          "安装系统",
+          "Ubuntu 24.04.5 LTS，amd64；全新隔离环境内安装"
+        ],
+        [
+          "Docker 组件",
+          "Engine / CLI 29.9.2；Compose 5.6.1Buildx 0.38.1；containerd.io 2.4.2"
+        ],
+        [
+          "引擎配置",
+          "数据目录 /var/lib/docker-lab6085；vfs；json-file 日志轮转"
+        ],
+        [
+          "应用与仓库",
+          "镜像 memory-game6085:1.0.2-v7；内层 Registry localhost:5000"
+        ],
+        [
+          "网络和数据卷",
+          "memory-game6085-v7-netmemory-game6085-v7-datamemory-game6085-v7-registry"
+        ],
+        [
+          "访问路径",
+          "本机127.0.0.1:18089 → 隔离环境18085 → 应用容器8080"
+        ],
+        [
+          "应用JAR",
+          "沿用源码包配套JAR；容器内外SHA-256及字节比较一致"
+        ],
+        [
+          "演示成绩",
+          "6085补充实验；编号1；10步；4737 ms"
+        ],
+        [
+          "重建验证",
+          "186285d65c93 → 00a18a115fb4；完整排行榜一致"
+        ]
+      ]
+    }
+  ],
+  "word_counts": {
+    "实际": 13,
+    "真实": 1,
+    "本轮": 9,
+    "补充实验": 9,
+    "完整": 10,
+    "验证": 23
+  },
+  "marker_hits_in_word_parts": [],
+  "marker_hits_in_core_metadata": [],
+  "comments": 0,
+  "insertions": 0,
+  "deletions": 0
+}

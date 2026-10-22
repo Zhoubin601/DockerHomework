@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-22",
+  "files": [
+    {
+      "path": "output\\v7\\20261022-docker-lab-report-v7.docx",
+      "bytes": 3888050,
+      "sha256": "2e3c666015b9535557feffadf6182957e9f12ee8ab8fc3465a3550ea27bc4233"
+    },
+    {
+      "path": "output\\v7\\20261022-memory-game6085-v7.zip",
+      "bytes": 31518816,
+      "sha256": "1bfbf5399a7344ebc78f874b30c8e97dc52d9f111740437244417d296b05964c"
+    }
+  ],
+  "report": {
+    "pages": 33,
+    "images": 31,
+    "tables": 7,
+    "toc_entries": 39
+  },
+  "baseline_files_unchanged": 8,
+  "source_zip_unchanged": true,
+  "source_zip_members": 34,
+  "jar_sha256": "2e97ff46f2acfc1bfe0411a22f3f61a3ef4b8958e4ba5fff609d0350853852a0"
+}

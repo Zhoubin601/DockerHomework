@@ -1,0 +1,31 @@
+Actual command: docker exec memory-game6085-v7-install-20261022 bash /lab/04-first-configuration.sh
+Started UTC: 2026-10-22T06:33:28.496851+00:00
+
++ date -Iseconds
+2026-10-22T06:33:28+00:00
++ mkdir -p /etc/docker
++ cat
++ cat /etc/docker/daemon.json
+{
+  "data-root": "/var/lib/docker-lab6085",
+  "storage-driver": "vfs",
+  "log-driver": "json-file",
+  "log-opts": {"max-size": "10m", "max-file": "3"}
+}
++ dockerd --validate --config-file=/etc/docker/daemon.json
+configuration OK
++ nohup dockerd --config-file=/etc/docker/daemon.json
+++ seq 1 60
++ for n in $(seq 1 60)
++ docker info
++ break
++ docker version --format 'Client={{.Client.Version}} Server={{.Server.Version}}'
+Client=29.9.2 Server=29.9.2
++ docker info --format 'Name={{.Name}} Driver={{.Driver}} Root={{.DockerRootDir}} Cgroup={{.CgroupVersion}}'
+Name=docker-lab6085 Driver=vfs Root=/var/lib/docker-lab6085 Cgroup=2
++ docker compose version
+Docker Compose version v5.6.1
++ docker info --format '{{json .LoggingDriver}}'
+"json-file"
+
+Actual exit code: 0
